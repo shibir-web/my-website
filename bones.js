@@ -1,0 +1,147 @@
+/* bones.js — Skeletal System: হাড়ে ট্যাপ করলে নাম দেখায়
+   ব্যবহার: index.html এর </body> এর আগে  <script src="bones.js"></script>  যোগ করুন।
+   SKELETON.glb এর প্রতিটা হাড়ের material এর নাম (যেমন femur_L) এই INFO টেবিলের key এর সাথে মেলে। */
+(function () {
+  "use strict";
+  var INFO = {"skull_frontal": ["Frontal bone", "ফ্রন্টাল হাড় (কপালের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "কপাল ও চোখের ওপরের অংশ গঠন করে।", "Skull"], "skull_occipital": ["Occipital bone", "অক্সিপিটাল হাড় (মাথার পেছনের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "খুলির পেছন ও তলা গঠন করে; এখানে foramen magnum আছে।", "Skull"], "skull_parietal_L": ["Left parietal bone", "বাম প্যারাইটাল হাড়", "Axial skeleton / অক্ষীয় কঙ্কাল", "খুলির ছাদ ও পাশের বড় অংশ।", "Skull"], "skull_parietal_R": ["Right parietal bone", "ডান প্যারাইটাল হাড়", "Axial skeleton / অক্ষীয় কঙ্কাল", "খুলির ছাদ ও পাশের বড় অংশ।", "Skull"], "skull_temporal_L": ["Left temporal bone", "বাম টেম্পোরাল হাড় (রগের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "কানের ভেতরের অংশ ধারণ করে।", "Skull"], "skull_temporal_R": ["Right temporal bone", "ডান টেম্পোরাল হাড় (রগের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "কানের ভেতরের অংশ ধারণ করে।", "Skull"], "face_nasal": ["Nasal bone", "নাসাস্থি (নাকের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "নাকের ওপরের শক্ত অংশ গঠন করে।", "Skull"], "face_maxilla": ["Maxilla", "ম্যাক্সিলা (ঊর্ধ্ব চোয়াল)", "Axial skeleton / অক্ষীয় কঙ্কাল", "উপরের দাঁতের সারি ধারণ করে।", "Skull"], "face_zygomatic_L": ["Left zygomatic bone", "বাম জাইগোমেটিক হাড় (গালের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "গালের উঁচু অংশ গঠন করে।", "Skull"], "face_zygomatic_R": ["Right zygomatic bone", "ডান জাইগোমেটিক হাড় (গালের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "গালের উঁচু অংশ গঠন করে।", "Skull"], "face_mandible": ["Mandible", "ম্যান্ডিবল (নিম্ন চোয়াল)", "Axial skeleton / অক্ষীয় কঙ্কাল", "খুলির একমাত্র নড়াচড়া করা হাড়; নিচের দাঁত ধারণ করে।", "Skull"], "teeth": ["Teeth", "দাঁত", "Axial skeleton / অক্ষীয় কঙ্কাল", "খাদ্য চিবাতে সাহায্য করে।", "Skull"], "vert_C1": ["Atlas (C1) - 1st cervical vertebra", "অ্যাটলাস (C1) - ১ম সার্ভাইক্যাল কশেরুকা", "Axial skeleton / অক্ষীয় কঙ্কাল", "মাথার খুলিকে ধরে রাখে; কোনো বডি নেই, রিং আকৃতির।", "Vertebral column"], "vert_C2": ["Axis (C2) - 2nd cervical vertebra", "অ্যাক্সিস (C2) - ২য় সার্ভাইক্যাল কশেরুকা", "Axial skeleton / অক্ষীয় কঙ্কাল", "ওপরের দিকে dens (odontoid process) আছে, যাতে মাথা ঘোরানো যায়।", "Vertebral column"], "vert_C3": ["3rd cervical vertebra (C3)", "৩য় সার্ভাইক্যাল কশেরুকা (C3)", "Axial skeleton / অক্ষীয় কঙ্কাল", "ঘাড় গঠন করে (মোট ৭টি সার্ভাইক্যাল)।", "Vertebral column"], "vert_C4": ["4th cervical vertebra (C4)", "৪র্থ সার্ভাইক্যাল কশেরুকা (C4)", "Axial skeleton / অক্ষীয় কঙ্কাল", "ঘাড় গঠন করে (মোট ৭টি সার্ভাইক্যাল)।", "Vertebral column"], "vert_C5": ["5th cervical vertebra (C5)", "৫ম সার্ভাইক্যাল কশেরুকা (C5)", "Axial skeleton / অক্ষীয় কঙ্কাল", "ঘাড় গঠন করে (মোট ৭টি সার্ভাইক্যাল)।", "Vertebral column"], "vert_C6": ["6th cervical vertebra (C6)", "৬ষ্ঠ সার্ভাইক্যাল কশেরুকা (C6)", "Axial skeleton / অক্ষীয় কঙ্কাল", "ঘাড় গঠন করে (মোট ৭টি সার্ভাইক্যাল)।", "Vertebral column"], "vert_C7": ["7th cervical vertebra (C7)", "৭ম সার্ভাইক্যাল কশেরুকা (C7)", "Axial skeleton / অক্ষীয় কঙ্কাল", "লম্বা spinous process আছে, ঘাড়ের নিচে হাত দিলে অনুভব করা যায় (vertebra prominens)।", "Vertebral column"], "vert_T1": ["1st thoracic vertebra (T1)", "১ম থোরাসিক কশেরুকা (T1)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T2": ["2nd thoracic vertebra (T2)", "২য় থোরাসিক কশেরুকা (T2)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T3": ["3rd thoracic vertebra (T3)", "৩য় থোরাসিক কশেরুকা (T3)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T4": ["4th thoracic vertebra (T4)", "৪র্থ থোরাসিক কশেরুকা (T4)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T5": ["5th thoracic vertebra (T5)", "৫ম থোরাসিক কশেরুকা (T5)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T6": ["6th thoracic vertebra (T6)", "৬ষ্ঠ থোরাসিক কশেরুকা (T6)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T7": ["7th thoracic vertebra (T7)", "৭ম থোরাসিক কশেরুকা (T7)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T8": ["8th thoracic vertebra (T8)", "৮ম থোরাসিক কশেরুকা (T8)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T9": ["9th thoracic vertebra (T9)", "৯ম থোরাসিক কশেরুকা (T9)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T10": ["10th thoracic vertebra (T10)", "১০ম থোরাসিক কশেরুকা (T10)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T11": ["11th thoracic vertebra (T11)", "১১তম থোরাসিক কশেরুকা (T11)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_T12": ["12th thoracic vertebra (T12)", "১২তম থোরাসিক কশেরুকা (T12)", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরের সাথে যুক্ত হয় (মোট ১২টি থোরাসিক)।", "Vertebral column"], "vert_L1": ["1st lumbar vertebra (L1)", "১ম লাম্বার কশেরুকা (L1)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সবচেয়ে বড় ও শক্তিশালী কশেরুকা, দেহের ভার বহন করে (মোট ৫টি লাম্বার)।", "Vertebral column"], "vert_L2": ["2nd lumbar vertebra (L2)", "২য় লাম্বার কশেরুকা (L2)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সবচেয়ে বড় ও শক্তিশালী কশেরুকা, দেহের ভার বহন করে (মোট ৫টি লাম্বার)।", "Vertebral column"], "vert_L3": ["3rd lumbar vertebra (L3)", "৩য় লাম্বার কশেরুকা (L3)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সবচেয়ে বড় ও শক্তিশালী কশেরুকা, দেহের ভার বহন করে (মোট ৫টি লাম্বার)।", "Vertebral column"], "vert_L4": ["4th lumbar vertebra (L4)", "৪র্থ লাম্বার কশেরুকা (L4)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সবচেয়ে বড় ও শক্তিশালী কশেরুকা, দেহের ভার বহন করে (মোট ৫টি লাম্বার)।", "Vertebral column"], "vert_L5": ["5th lumbar vertebra (L5)", "৫ম লাম্বার কশেরুকা (L5)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সবচেয়ে বড় ও শক্তিশালী কশেরুকা, দেহের ভার বহন করে (মোট ৫টি লাম্বার)।", "Vertebral column"], "sacrum": ["Sacrum", "স্যাক্রাম (ত্রিকাস্থি)", "Axial skeleton / অক্ষীয় কঙ্কাল", "৫টি কশেরুকা জুড়ে তৈরি, শ্রোণির পেছনের অংশ।", "Pelvis"], "coccyx": ["Coccyx", "কক্সিক্স (অনুত্রিকাস্থি / লেজের হাড়)", "Axial skeleton / অক্ষীয় কঙ্কাল", "মেরুদণ্ডের সবচেয়ে নিচের ছোট হাড়।", "Pelvis"], "rib_L_1": ["Left 1st rib (true rib)", "বাম ১ম পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_1": ["Right 1st rib (true rib)", "ডান ১ম পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_1": ["Left costal cartilage of 1st rib", "বাম ১ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_1": ["Right costal cartilage of 1st rib", "ডান ১ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_2": ["Left 2nd rib (true rib)", "বাম ২য় পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_2": ["Right 2nd rib (true rib)", "ডান ২য় পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_2": ["Left costal cartilage of 2nd rib", "বাম ২য় পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_2": ["Right costal cartilage of 2nd rib", "ডান ২য় পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_3": ["Left 3rd rib (true rib)", "বাম ৩য় পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_3": ["Right 3rd rib (true rib)", "ডান ৩য় পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_3": ["Left costal cartilage of 3rd rib", "বাম ৩য় পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_3": ["Right costal cartilage of 3rd rib", "ডান ৩য় পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_4": ["Left 4th rib (true rib)", "বাম ৪র্থ পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_4": ["Right 4th rib (true rib)", "ডান ৪র্থ পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_4": ["Left costal cartilage of 4th rib", "বাম ৪র্থ পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_4": ["Right costal cartilage of 4th rib", "ডান ৪র্থ পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_5": ["Left 5th rib (true rib)", "বাম ৫ম পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_5": ["Right 5th rib (true rib)", "ডান ৫ম পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_5": ["Left costal cartilage of 5th rib", "বাম ৫ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_5": ["Right costal cartilage of 5th rib", "ডান ৫ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_6": ["Left 6th rib (true rib)", "বাম ৬ষ্ঠ পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_6": ["Right 6th rib (true rib)", "ডান ৬ষ্ঠ পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_6": ["Left costal cartilage of 6th rib", "বাম ৬ষ্ঠ পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_6": ["Right costal cartilage of 6th rib", "ডান ৬ষ্ঠ পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_7": ["Left 7th rib (true rib)", "বাম ৭ম পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_7": ["Right 7th rib (true rib)", "ডান ৭ম পঞ্জর (প্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সরাসরি কোস্টাল তরুণাস্থি দিয়ে বক্ষাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_7": ["Left costal cartilage of 7th rib", "বাম ৭ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_7": ["Right costal cartilage of 7th rib", "ডান ৭ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_8": ["Left 8th rib (false rib)", "বাম ৮ম পঞ্জর (অপ্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "তরুণাস্থি দিয়ে ওপরের পাঁজরের তরুণাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_8": ["Right 8th rib (false rib)", "ডান ৮ম পঞ্জর (অপ্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "তরুণাস্থি দিয়ে ওপরের পাঁজরের তরুণাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_8": ["Left costal cartilage of 8th rib", "বাম ৮ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_8": ["Right costal cartilage of 8th rib", "ডান ৮ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_9": ["Left 9th rib (false rib)", "বাম ৯ম পঞ্জর (অপ্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "তরুণাস্থি দিয়ে ওপরের পাঁজরের তরুণাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_9": ["Right 9th rib (false rib)", "ডান ৯ম পঞ্জর (অপ্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "তরুণাস্থি দিয়ে ওপরের পাঁজরের তরুণাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_9": ["Left costal cartilage of 9th rib", "বাম ৯ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_9": ["Right costal cartilage of 9th rib", "ডান ৯ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_10": ["Left 10th rib (false rib)", "বাম ১০ম পঞ্জর (অপ্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "তরুণাস্থি দিয়ে ওপরের পাঁজরের তরুণাস্থির সাথে যুক্ত।", "Thorax"], "rib_R_10": ["Right 10th rib (false rib)", "ডান ১০ম পঞ্জর (অপ্রকৃত পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "তরুণাস্থি দিয়ে ওপরের পাঁজরের তরুণাস্থির সাথে যুক্ত।", "Thorax"], "cart_L_10": ["Left costal cartilage of 10th rib", "বাম ১০ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "cart_R_10": ["Right costal cartilage of 10th rib", "ডান ১০ম পঞ্জরের কোস্টাল তরুণাস্থি", "Axial skeleton / অক্ষীয় কঙ্কাল", "পাঁজরকে নমনীয়ভাবে বক্ষাস্থির সাথে যুক্ত করে (হাড় নয়, তরুণাস্থি)।", "Thorax"], "rib_L_11": ["Left 11th rib (floating rib)", "বাম ১১তম পঞ্জর (ভাসমান পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সামনে বক্ষাস্থির সাথে যুক্ত নয়।", "Thorax"], "rib_R_11": ["Right 11th rib (floating rib)", "ডান ১১তম পঞ্জর (ভাসমান পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সামনে বক্ষাস্থির সাথে যুক্ত নয়।", "Thorax"], "rib_L_12": ["Left 12th rib (floating rib)", "বাম ১২তম পঞ্জর (ভাসমান পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সামনে বক্ষাস্থির সাথে যুক্ত নয়।", "Thorax"], "rib_R_12": ["Right 12th rib (floating rib)", "ডান ১২তম পঞ্জর (ভাসমান পঞ্জর)", "Axial skeleton / অক্ষীয় কঙ্কাল", "সামনে বক্ষাস্থির সাথে যুক্ত নয়।", "Thorax"], "sternum_manubrium": ["Manubrium of sternum", "স্টার্নামের ম্যানুব্রিয়াম", "Axial skeleton / অক্ষীয় কঙ্কাল", "বক্ষাস্থির ওপরের অংশ; কণ্ঠাস্থি ও ১ম পঞ্জরের সাথে যুক্ত।", "Thorax"], "sternum_body": ["Body of sternum", "স্টার্নামের দেহ (বক্ষাস্থি)", "Axial skeleton / অক্ষীয় কঙ্কাল", "বুকের মাঝের লম্বা চ্যাপ্টা হাড়।", "Thorax"], "sternum_xiphoid": ["Xiphoid process", "জিফয়েড প্রসেস", "Axial skeleton / অক্ষীয় কঙ্কাল", "বক্ষাস্থির সবচেয়ে নিচের ছোট অংশ।", "Thorax"], "clavicle_L": ["Left clavicle", "বাম ক্লাভিকল (কণ্ঠাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বুকের সাথে কাঁধ যুক্ত করে।", "Upper limb"], "clavicle_R": ["Right clavicle", "ডান ক্লাভিকল (কণ্ঠাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বুকের সাথে কাঁধ যুক্ত করে।", "Upper limb"], "scapula_L": ["Left scapula", "বাম স্ক্যাপুলা (অংসফলক)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "কাঁধের পেছনের ত্রিকোণাকার চ্যাপ্টা হাড়।", "Upper limb"], "scapula_R": ["Right scapula", "ডান স্ক্যাপুলা (অংসফলক)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "কাঁধের পেছনের ত্রিকোণাকার চ্যাপ্টা হাড়।", "Upper limb"], "humerus_L": ["Left humerus", "বাম হিউমেরাস (প্রগণ্ডাস্থি / বাহুর হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বাহুর একমাত্র হাড়; কাঁধ থেকে কনুই পর্যন্ত।", "Upper limb"], "humerus_R": ["Right humerus", "ডান হিউমেরাস (প্রগণ্ডাস্থি / বাহুর হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বাহুর একমাত্র হাড়; কাঁধ থেকে কনুই পর্যন্ত।", "Upper limb"], "ulna_L": ["Left ulna", "বাম আলনা (অন্তঃপ্রকোষ্ঠাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "সামনের বাহুর ভেতরের (কনিষ্ঠা আঙুলের দিকের) হাড়।", "Upper limb"], "ulna_R": ["Right ulna", "ডান আলনা (অন্তঃপ্রকোষ্ঠাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "সামনের বাহুর ভেতরের (কনিষ্ঠা আঙুলের দিকের) হাড়।", "Upper limb"], "radius_L": ["Left radius", "বাম রেডিয়াস (বহির্প্রকোষ্ঠাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "সামনের বাহুর বাইরের (বুড়ো আঙুলের দিকের) হাড়।", "Upper limb"], "radius_R": ["Right radius", "ডান রেডিয়াস (বহির্প্রকোষ্ঠাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "সামনের বাহুর বাইরের (বুড়ো আঙুলের দিকের) হাড়।", "Upper limb"], "carpals_L": ["Left carpal bones (wrist)", "বাম কার্পাল হাড় (কব্জির ৮টি হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "কব্জি গঠনকারী ৮টি ছোট হাড়।", "Upper limb"], "carpals_R": ["Right carpal bones (wrist)", "ডান কার্পাল হাড় (কব্জির ৮টি হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "কব্জি গঠনকারী ৮টি ছোট হাড়।", "Upper limb"], "metacarpals_L": ["Left metacarpal bones", "বাম মেটাকার্পাল হাড় (করতলের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "করতল গঠনকারী ৫টি হাড়।", "Upper limb"], "metacarpals_R": ["Right metacarpal bones", "ডান মেটাকার্পাল হাড় (করতলের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "করতল গঠনকারী ৫টি হাড়।", "Upper limb"], "phalanges_hand_L": ["Left phalanges of the fingers", "বাম ফ্যালাঞ্জেস (হাতের আঙুলের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "প্রতি আঙুলে ৩টি (বুড়ো আঙুলে ২টি) ফ্যালাঞ্জ।", "Upper limb"], "phalanges_hand_R": ["Right phalanges of the fingers", "ডান ফ্যালাঞ্জেস (হাতের আঙুলের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "প্রতি আঙুলে ৩টি (বুড়ো আঙুলে ২টি) ফ্যালাঞ্জ।", "Upper limb"], "ilium_L": ["Left ilium", "বাম ইলিয়াম (শ্রোণির ওপরের চওড়া হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "হিপ বোনের সবচেয়ে বড় ও ওপরের অংশ; কোমরে হাত রাখলে এই হাড় পাওয়া যায়।", "Pelvis"], "ilium_R": ["Right ilium", "ডান ইলিয়াম (শ্রোণির ওপরের চওড়া হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "হিপ বোনের সবচেয়ে বড় ও ওপরের অংশ; কোমরে হাত রাখলে এই হাড় পাওয়া যায়।", "Pelvis"], "ischium_L": ["Left ischium", "বাম ইসচিয়াম (শ্রোণির নিচের পেছনের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বসলে এই হাড়ের ওপর ভর পড়ে।", "Pelvis"], "ischium_R": ["Right ischium", "ডান ইসচিয়াম (শ্রোণির নিচের পেছনের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বসলে এই হাড়ের ওপর ভর পড়ে।", "Pelvis"], "pubis_L": ["Left pubis", "বাম পিউবিস (শ্রোণির সামনের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "দুই পাশের পিউবিস সামনে pubic symphysis এ মিলিত হয়।", "Pelvis"], "pubis_R": ["Right pubis", "ডান পিউবিস (শ্রোণির সামনের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "দুই পাশের পিউবিস সামনে pubic symphysis এ মিলিত হয়।", "Pelvis"], "femur_L": ["Left femur (thigh bone)", "বাম ফিমার (ঊরুর হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "দেহের সবচেয়ে লম্বা ও শক্তিশালী হাড়।", "Lower limb"], "femur_R": ["Right femur (thigh bone)", "ডান ফিমার (ঊরুর হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "দেহের সবচেয়ে লম্বা ও শক্তিশালী হাড়।", "Lower limb"], "patella_L": ["Left patella (kneecap)", "বাম প্যাটেলা (হাঁটুর বাটি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "দেহের সবচেয়ে বড় sesamoid হাড়; হাঁটু রক্ষা করে।", "Lower limb"], "patella_R": ["Right patella (kneecap)", "ডান প্যাটেলা (হাঁটুর বাটি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "দেহের সবচেয়ে বড় sesamoid হাড়; হাঁটু রক্ষা করে।", "Lower limb"], "tibia_L": ["Left tibia (shin bone)", "বাম টিবিয়া (অন্তর্জঙ্ঘাস্থি / পায়ের গোড়ালির সামনের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "নিচের পায়ের বড় ও ভার বহনকারী হাড়।", "Lower limb"], "tibia_R": ["Right tibia (shin bone)", "ডান টিবিয়া (অন্তর্জঙ্ঘাস্থি / পায়ের গোড়ালির সামনের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "নিচের পায়ের বড় ও ভার বহনকারী হাড়।", "Lower limb"], "fibula_L": ["Left fibula", "বাম ফিবুলা (বহির্জঙ্ঘাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "টিবিয়ার পাশের সরু হাড়; ভার কম বহন করে।", "Lower limb"], "fibula_R": ["Right fibula", "ডান ফিবুলা (বহির্জঙ্ঘাস্থি)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "টিবিয়ার পাশের সরু হাড়; ভার কম বহন করে।", "Lower limb"], "talus_L": ["Left talus", "বাম ট্যালাস", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "গোড়ালির জয়েন্টে টিবিয়ার সাথে যুক্ত টার্সাল হাড়।", "Lower limb"], "talus_R": ["Right talus", "ডান ট্যালাস", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "গোড়ালির জয়েন্টে টিবিয়ার সাথে যুক্ত টার্সাল হাড়।", "Lower limb"], "calcaneus_L": ["Left calcaneus (heel bone)", "বাম ক্যালকেনিয়াস (গোড়ালির হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "পায়ের সবচেয়ে বড় টার্সাল হাড়; গোড়ালি গঠন করে।", "Lower limb"], "calcaneus_R": ["Right calcaneus (heel bone)", "ডান ক্যালকেনিয়াস (গোড়ালির হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "পায়ের সবচেয়ে বড় টার্সাল হাড়; গোড়ালি গঠন করে।", "Lower limb"], "tarsal_other_L": ["Left other tarsal bones (navicular, cuboid, cuneiforms)", "বাম অন্যান্য টার্সাল হাড় (নেভিকুলার, কিউবয়েড, কিউনিফর্ম)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "পায়ের পাতার মাঝের ছোট হাড়গুলো।", "Lower limb"], "tarsal_other_R": ["Right other tarsal bones (navicular, cuboid, cuneiforms)", "ডান অন্যান্য টার্সাল হাড় (নেভিকুলার, কিউবয়েড, কিউনিফর্ম)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "পায়ের পাতার মাঝের ছোট হাড়গুলো।", "Lower limb"], "metatarsals_L": ["Left metatarsal bones", "বাম মেটাটার্সাল হাড় (পায়ের পাতার হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "পায়ের পাতা গঠনকারী ৫টি হাড়।", "Lower limb"], "metatarsals_R": ["Right metatarsal bones", "ডান মেটাটার্সাল হাড় (পায়ের পাতার হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "পায়ের পাতা গঠনকারী ৫টি হাড়।", "Lower limb"], "phalanges_foot_L": ["Left phalanges of the toes", "বাম ফ্যালাঞ্জেস (পায়ের আঙুলের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বুড়ো আঙুলে ২টি, বাকি আঙুলে ৩টি করে ফ্যালাঞ্জ।", "Lower limb"], "phalanges_foot_R": ["Right phalanges of the toes", "ডান ফ্যালাঞ্জেস (পায়ের আঙুলের হাড়)", "Appendicular skeleton / উপাঙ্গীয় কঙ্কাল", "বুড়ো আঙুলে ২টি, বাকি আঙুলে ৩টি করে ফ্যালাঞ্জ।", "Lower limb"]};
+
+  var GROUPS = ["Skull", "Vertebral column", "Thorax", "Upper limb", "Pelvis", "Lower limb"];
+  var GROUP_BN = {
+    "Skull": "মাথার খুলি", "Vertebral column": "মেরুদণ্ড", "Thorax": "বক্ষ (পাঁজর ও বক্ষাস্থি)",
+    "Upper limb": "কাঁধ ও হাত", "Pelvis": "শ্রোণি", "Lower limb": "পা"
+  };
+  var HILITE = [1.0, 0.72, 0.12, 1];
+
+  var st = document.createElement("style");
+  st.textContent =
+    ".bone-info{margin:0;padding:14px 16px;border-top:1px solid var(--line);background:rgba(230,198,92,.07);min-height:96px}" +
+    ".bone-info .bi-hint{color:var(--mu);font-size:14px;text-align:center;padding:14px 0}" +
+    ".bone-info .bi-en{color:var(--gold);font-size:19px;font-weight:700;line-height:1.3}" +
+    ".bone-info .bi-bn{color:var(--tx);font-size:16px;margin-top:2px}" +
+    ".bone-info .bi-meta{display:inline-block;margin-top:8px;padding:3px 12px;border-radius:99px;border:1px solid var(--line);color:var(--gold);font-size:12.5px}" +
+    ".bone-info .bi-note{color:var(--mu);font-size:14.5px;margin-top:8px}" +
+    ".bone-tools{display:flex;gap:8px;flex-wrap:wrap;padding:10px 14px;border-top:1px solid var(--line)}" +
+    ".bone-tools select{flex:1 1 220px;min-width:0;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font:inherit;font-size:14.5px}" +
+    ".bone-tools button{padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--gold);font:inherit;font-size:14px;font-weight:600;cursor:pointer}" +
+    ".bone-tools button:active{transform:scale(.96)}";
+  document.head.appendChild(st);
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+
+  function setup() {
+    var mv = document.querySelector("#apContent model-viewer");
+    if (!mv) return;
+    var src = mv.getAttribute("src") || "";
+    if (!/SKELETON\.glb$/i.test(src)) return;
+    var box = mv.closest(".model-box");
+    if (!box || box.dataset.bones) return;
+    box.dataset.bones = "1";
+
+    mv.setAttribute("environment-image", "neutral");
+    mv.setAttribute("exposure", "1.1");
+    mv.setAttribute("shadow-intensity", "0.6");
+    mv.setAttribute("touch-action", "pan-y");
+    mv.setAttribute("camera-orbit", "0deg 80deg auto");
+    mv.setAttribute("interaction-prompt", "none");
+    mv.style.height = Math.min(560, Math.round(window.innerHeight * 0.62)) + "px";
+
+    var head = box.querySelector(".model-head p");
+    if (head) head.textContent = "যেকোনো হাড়ে ট্যাপ/ক্লিক করুন — নাম দেখাবে। আঙুল দিয়ে ঘোরান, দুই আঙুলে Zoom করুন।";
+
+    var infoBox = document.createElement("div");
+    infoBox.className = "bone-info";
+    infoBox.innerHTML = '<div class="bi-hint">👆 কঙ্কালের যেকোনো হাড়ে ট্যাপ করুন</div>';
+
+    var tools = document.createElement("div");
+    tools.className = "bone-tools";
+    var sel = document.createElement("select");
+    var html = '<option value="">📋 তালিকা থেকে হাড় বাছাই করুন…</option>';
+    GROUPS.forEach(function (g) {
+      html += '<optgroup label="' + esc(g + " — " + GROUP_BN[g]) + '">';
+      Object.keys(INFO).forEach(function (k) {
+        if (INFO[k][4] === g) html += '<option value="' + esc(k) + '">' + esc(INFO[k][0]) + "</option>";
+      });
+      html += "</optgroup>";
+    });
+    sel.innerHTML = html;
+    var bRot = document.createElement("button"); bRot.textContent = "⏸ ঘোরা বন্ধ";
+    var bClr = document.createElement("button"); bClr.textContent = "↺ রিসেট";
+    tools.appendChild(sel); tools.appendChild(bRot); tools.appendChild(bClr);
+
+    var helpEl = box.querySelector(".model-help");
+    box.insertBefore(infoBox, helpEl); box.insertBefore(tools, helpEl);
+
+    var cur = null, curOrig = null;
+    function restore() {
+      if (cur && curOrig) { try { cur.pbrMetallicRoughness.setBaseColorFactor(curOrig); } catch (e) {} }
+      cur = null; curOrig = null;
+    }
+    function findMat(key) {
+      if (!mv.model || !mv.model.materials) return null;
+      var ms = mv.model.materials;
+      for (var i = 0; i < ms.length; i++) if (ms[i].name === key) return ms[i];
+      return null;
+    }
+    function show(key, mat) {
+      var d = INFO[key];
+      if (!d) return false;
+      restore();
+      if (mat) {
+        try {
+          curOrig = mat.pbrMetallicRoughness.baseColorFactor.slice();
+          mat.pbrMetallicRoughness.setBaseColorFactor(HILITE);
+          cur = mat;
+        } catch (e) {}
+      }
+      infoBox.innerHTML =
+        '<div class="bi-en">' + esc(d[0]) + "</div>" +
+        '<div class="bi-bn">' + esc(d[1]) + "</div>" +
+        '<span class="bi-meta">' + esc(d[2]) + "</span>" +
+        (d[3] ? '<div class="bi-note">' + esc(d[3]) + "</div>" : "");
+      sel.value = key;
+      return true;
+    }
+
+    var down = null;
+    mv.addEventListener("pointerdown", function (e) { down = [e.clientX, e.clientY]; });
+    mv.addEventListener("click", function (e) {
+      if (down && Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) return; // drag, not tap
+      if (!mv.model || typeof mv.materialFromPoint !== "function") {
+        infoBox.innerHTML = '<div class="bi-hint">মডেল এখনও লোড হচ্ছে বা ব্রাউজার সাপোর্ট করছে না। একটু পরে আবার চেষ্টা করুন।</div>';
+        return;
+      }
+      var m = mv.materialFromPoint(e.clientX, e.clientY);
+      if (!m) return;
+      if (!show(m.name, m)) { /* চোখের গর্ত ইত্যাদি — নাম নেই */ }
+    });
+    sel.addEventListener("change", function () {
+      if (!sel.value) { restore(); infoBox.innerHTML = '<div class="bi-hint">👆 কঙ্কালের যেকোনো হাড়ে ট্যাপ করুন</div>'; return; }
+      show(sel.value, findMat(sel.value));
+    });
+    bRot.addEventListener("click", function () {
+      var on = mv.hasAttribute("auto-rotate");
+      if (on) { mv.removeAttribute("auto-rotate"); bRot.textContent = "▶ ঘুরুক"; }
+      else { mv.setAttribute("auto-rotate", ""); bRot.textContent = "⏸ ঘোরা বন্ধ"; }
+    });
+    bClr.addEventListener("click", function () {
+      restore(); sel.value = "";
+      infoBox.innerHTML = '<div class="bi-hint">👆 কঙ্কালের যেকোনো হাড়ে ট্যাপ করুন</div>';
+      mv.cameraOrbit = "0deg 80deg auto"; mv.fieldOfView = "auto";
+    });
+    // প্রথম ট্যাপে ঘোরা থামিয়ে দিই যাতে হাড় ঠিকমতো ধরা যায়
+    mv.addEventListener("pointerup", function () {
+      if (mv.hasAttribute("auto-rotate")) { mv.removeAttribute("auto-rotate"); bRot.textContent = "▶ ঘুরুক"; }
+    });
+  }
+
+  var prev = window.openAP;
+  if (typeof prev === "function") {
+    window.openAP = function (i) {
+      var r = prev.apply(this, arguments);
+      try { setup(); } catch (e) { console.error("bones.js:", e); }
+      return r;
+    };
+  } else {
+    console.warn("bones.js: openAP পাওয়া যায়নি — script টা index.html এর মূল <script> এর পরে বসান।");
+  }
+})();
