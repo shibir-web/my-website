@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>সাপ্তাহিক পরীক্ষা</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#070b16;--bg2:#0d1426;--card:#111a30;--line:rgba(212,175,55,.25);--gold:#e6c65c;--gold2:#b8912a;--tx:#eef1f8;--mu:#9aa6c2;--ok:#7ee0a0;--bad:#ff8a8a;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -62,6 +63,119 @@ small.h{display:block;color:var(--mu);font-size:12.5px;margin:-6px 0 10px}
 .alert{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(255,90,90,.12);border:1px solid rgba(255,90,90,.35);color:#ffb3b3;margin-bottom:14px;cursor:pointer}
 .mt{color:var(--ok);font-size:13px}
 .mm{color:var(--bad);font-size:13px}
+
+/* ===== PREMIUM UNIVERSITY EXAM UI — visual layer only ===== */
+:root{
+ --bg:#f5f3ee;--bg2:#fffdfa;--card:#fffefa;--line:#e7e0d6;
+ --gold:#8e2638;--gold2:#641a2a;--tx:#20252d;--mu:#777b83;
+ --ok:#24734e;--bad:#b33b46;color-scheme:light;
+ --shadow:0 18px 48px rgba(35,27,24,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:
+  radial-gradient(ellipse at 12% 0%,rgba(142,38,56,.055),transparent 34rem),
+  linear-gradient(180deg,#f8f6f1 0%,#f1eee8 100%);
+ color:var(--tx);font-family:'DM Sans','Hind Siliguri',sans-serif;
+ line-height:1.7;letter-spacing:.005em;
+}
+#app{max-width:960px;margin:0 auto;padding:clamp(18px,4vw,42px) 20px calc(env(safe-area-inset-bottom,0px) + 56px)}
+.top{padding:8px 0 22px;margin-bottom:12px;border-bottom:1px solid rgba(100,26,42,.12)}
+.top a{color:var(--gold2);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.top a:hover{color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+h1{font-family:'Noto Serif Bengali','Hind Siliguri',serif;font-size:clamp(27px,4vw,36px);font-weight:700;letter-spacing:-.035em;line-height:1.35;color:#641a2a;margin:18px 0 22px}
+h1:after{content:"";display:block;width:54px;height:3px;border-radius:3px;background:#a77a52;margin-top:13px}
+h2{font-family:'Noto Serif Bengali','Hind Siliguri',serif;font-size:clamp(19px,2.6vw,23px);line-height:1.55;color:#282a30;margin-bottom:16px}
+.card,.st{
+ background:rgba(255,254,250,.94);border:1px solid #e8e1d8;border-radius:20px;
+ padding:clamp(18px,3vw,28px);margin-bottom:18px;
+ box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.card:hover{border-color:#d8c8bd;box-shadow:0 22px 55px rgba(35,27,24,.095)}
+.card p{color:#686d75;font-size:15px;margin:5px 0}
+.card b{color:#272a31;font-weight:700}
+label{display:block;color:#555b65;font-weight:700;font-size:13px;letter-spacing:.035em;margin:12px 0 5px}
+input,select,textarea{
+ width:100%;padding:13px 15px;margin:5px 0 12px;border-radius:12px;
+ border:1px solid #ded8cf;background:#fff;color:#242830;font:inherit;font-size:15px;
+ outline:none;box-shadow:0 1px 2px rgba(30,25,20,.025);transition:border-color .18s,box-shadow .18s,background .18s;
+}
+input:hover,select:hover,textarea:hover{border-color:#c9b7ac}
+input:focus,select:focus,textarea:focus{border-color:#8e2638;box-shadow:0 0 0 4px rgba(142,38,56,.10);background:#fff}
+input[readonly]{background:#f5f1ed;color:#6f6a68}
+textarea{min-height:250px;line-height:1.8}
+small.h{color:#85818a;font-size:12px}
+.btn{
+ display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+ border:1px solid #641a2a;padding:14px 20px;border-radius:12px;
+ background:linear-gradient(135deg,#762337,#501522);color:#fff;
+ font-weight:700;font-size:15px;letter-spacing:.015em;margin-top:12px;
+ text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(100,26,42,.17);
+ transition:transform .18s,box-shadow .18s,filter .18s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(100,26,42,.22);filter:brightness(1.06)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.48;cursor:not-allowed;box-shadow:none;transform:none}
+.ghost{background:#fff;border:1px solid #ddd2c9;color:#6c2636;border-radius:10px;padding:8px 15px;font-weight:700;transition:.18s}
+.ghost:hover{background:#f7eff0;border-color:#c9aeb4}
+.tabs{display:flex;gap:7px;background:#ebe6df;border:1px solid #e1d9d0;border-radius:14px;padding:5px;margin:0 0 18px}
+.tabs button{flex:1;border:0;background:transparent;color:#77747a;padding:11px 8px;border-radius:10px;font-weight:700;transition:.18s}
+.tabs button:hover{background:rgba(255,255,255,.65);color:#51202d}
+.tabs button.on{background:#fffefa;color:#762337;box-shadow:0 2px 8px rgba(40,25,20,.09)}
+.row{display:flex;gap:10px;margin-top:14px}
+.row button{flex:1;border:0;border-radius:11px;padding:12px;font-weight:700;transition:transform .18s,filter .18s}
+.row button:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.y{background:#e7f2eb;color:#226342;border:1px solid #c9e2d2!important}
+.n{background:#faeded;color:#a33440;border:1px solid #efcdd0!important}
+.tag{display:inline-flex;align-items:center;padding:4px 11px;border-radius:99px;font-size:12px;font-weight:700;border:1px solid #dfc9cd;background:#f8eff1;color:#81283b}
+.tag.ok{color:#24734e;background:#edf6f0;border-color:#d2e8d9}
+.tag.bad{color:#ae3541;background:#fbefef;border-color:#efd1d3}
+.big{font-family:'DM Sans',sans-serif;font-size:clamp(42px,8vw,58px);font-weight:800;color:#762337;text-align:center;margin:18px 0;letter-spacing:-.05em}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#666c75;font-size:14px;font-weight:700}
+.bar b{font-size:30px;color:#762337;font-variant-numeric:tabular-nums}
+.pg{height:7px;border-radius:20px;background:#e8e2dc;overflow:hidden;margin-bottom:24px}
+.pg i{display:block;height:100%;background:linear-gradient(90deg,#762337,#bd8b67);border-radius:20px;transition:width .2s}
+.st{padding:18px 20px;border-radius:15px;margin-bottom:12px;box-shadow:0 5px 18px rgba(35,27,24,.045)}
+.st p{margin-bottom:14px;color:#343941;font-size:16px;font-weight:600;line-height:1.65}
+.tf{display:flex;gap:10px}
+.tf button{flex:1;padding:12px;border-radius:10px;border:1px solid #ded8d0;background:#fff;color:#515660;font-weight:700;transition:.18s}
+.tf button:hover{border-color:#b98d96;background:#fbf6f6}
+.tf button.on{background:#762337;color:#fff;border-color:#762337;box-shadow:0 5px 12px rgba(118,35,55,.16)}
+.ex{user-select:none;-webkit-user-select:none}
+.err{color:#b33b46;font-size:13px;min-height:20px;margin-top:8px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#25232a;color:#fff;padding:12px 20px;border:1px solid rgba(255,255,255,.12);border-radius:12px;font-weight:600;box-shadow:0 12px 35px rgba(0,0,0,.18);z-index:20;max-width:90vw;text-align:center}
+a.tel{color:#762337;font-weight:700;text-decoration:none}
+.prof{display:flex;gap:16px;align-items:center}
+.av{width:60px;height:60px;border-radius:17px;flex:none;display:grid;place-items:center;font-size:23px;font-weight:800;color:#fff;background:linear-gradient(145deg,#8d3348,#511827);box-shadow:0 8px 18px rgba(100,26,42,.16)}
+.un{font-size:19px;font-weight:800;color:#762337;word-break:break-all}
+.kv{display:flex;gap:8px;font-size:14px;color:#777b83;margin:4px 0}
+.kv b{color:#30343b;font-weight:600;word-break:break-word}
+.uin{display:flex;align-items:center;border:1px solid #ded8cf;border-radius:12px;background:#fff;margin:5px 0 12px;padding-left:15px}
+.uin:focus-within{border-color:#8e2638;box-shadow:0 0 0 4px rgba(142,38,56,.09)}
+.uin span{color:#762337;font-weight:800}
+.uin input{border:0;margin:0;background:none;padding-left:7px;box-shadow:none}
+.badge{display:inline-block;min-width:20px;padding:0 7px;margin-left:6px;border-radius:99px;background:#a83340;color:#fff;font-size:11px;line-height:20px;text-align:center}
+.alert{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;border-radius:13px;background:#fbefef;border:1px solid #efd1d3;color:#983342;margin-bottom:16px;cursor:pointer;font-weight:600}
+.mt{color:#24734e;font-size:12px;font-weight:700}
+.mm{color:#b33b46;font-size:12px;font-weight:700}
+::selection{background:rgba(142,38,56,.18);color:#35131d}
+@media(min-width:760px){
+ #app{padding-top:42px}
+ .card{padding:26px 30px}
+}
+@media(max-width:520px){
+ #app{padding-left:14px;padding-right:14px}
+ .card{border-radius:16px;padding:17px}
+ .row{gap:8px}
+ .row button{padding:11px 7px;font-size:14px}
+ .tabs button{font-size:13px;padding:10px 4px}
+ .st{padding:15px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -71,17 +185,15 @@ small.h{display:block;color:var(--mu);font-size:12.5px;margin:-6px 0 10px}
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {getAuth,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {getFirestore,doc,getDoc,getDocFromServer,getDocs,setDoc,updateDoc,collection,query,orderBy,limit,where,serverTimestamp,Timestamp,increment,arrayUnion,writeBatch,onSnapshot} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
 /* index.html এর সাথে একই Firebase প্রজেক্ট — একই লগইন এখানেও চলবে */
 const firebaseConfig = {
-  apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",
-  authDomain:"cornea-help-center.firebaseapp.com",
-  projectId:"cornea-help-center",
-  storageBucket:"cornea-help-center.firebasestorage.app",
-  messagingSenderId:"755555154486",
-  appId:"1:755555154486:web:df02dec5573a7a9f203697"
+  apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",
+  authDomain:"cornea-help-center.firebaseapp.com",
+  projectId:"cornea-help-center",
+  storageBucket:"cornea-help-center.firebasestorage.app",
+  messagingSenderId:"755555154486",
+  appId:"1:755555154486:web:df02dec5573a7a9f203697"
 };
-
 const fb=initializeApp(firebaseConfig), auth=getAuth(fb), db=getFirestore(fb);
 const S={user:null,isAdmin:false,off:0,exam:null,tk:null,kyc:null,prof:null};
 const AD={tab:'exam',exams:[],id:null,pend:0,unsub:null};
@@ -101,315 +213,306 @@ const topbar=()=>`<div class="top"><a href="index.html">← হোম</a><button
 const act={};
 app.addEventListener('click',ev=>{const b=ev.target.closest('[data-a]');if(b&&act[b.dataset.a])act[b.dataset.a](b)});
 const val=id=>($('#'+id)?.value||'').trim();
-
 /* ---------- লগইন (মূল সাইটেই হয়) ---------- */
 function loginView(){
-  clearInterval(S.tk);stopWatch();
-  app.innerHTML=`<div class="top"><a href="index.html">← হোম</a></div><h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>পরীক্ষায় ঢুকতে আগে মূল সাইটে লগইন করুন। একই একাউন্টে এখানে নিজে থেকেই ঢুকে যাবেন।</p><a class="btn" style="margin-top:14px" href="index.html">মূল সাইটে লগইন করুন</a></div>`;
+  clearInterval(S.tk);stopWatch();
+  app.innerHTML=`<div class="top"><a href="index.html">← হোম</a></div><h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>পরীক্ষায় ঢুকতে আগে মূল সাইটে লগইন করুন। একই একাউন্টে এখানে নিজে থেকেই ঢুকে যাবেন।</p><a class="btn" style="margin-top:14px" href="index.html">মূল সাইটে লগইন করুন</a></div>`;
 }
 act.logout=()=>signOut(auth).then(()=>{location.href='index.html'});
-
 onAuthStateChanged(auth,async u=>{
-  S.user=u;
-  if(!u)return loginView();
-  app.innerHTML=`<div class="card"><p>লোড হচ্ছে…</p></div>`;
-  try{
-    await setDoc(doc(db,'ping',u.uid),{t:serverTimestamp()});
-    const p=await getDocFromServer(doc(db,'ping',u.uid));
-    S.off=p.data().t.toMillis()-Date.now();
-    S.isAdmin=(await getDoc(doc(db,'admins',u.uid))).exists();
-    if(S.isAdmin){startWatch();await adminView();return}
-    stopWatch();
-    await studentGate();
-  }catch(e){app.innerHTML=`<div class="card"><p>লোড করা যায়নি: ${esc(e.message)}</p></div>`}
+  S.user=u;
+  if(!u)return loginView();
+  app.innerHTML=`<div class="card"><p>লোড হচ্ছে…</p></div>`;
+  try{
+    await setDoc(doc(db,'ping',u.uid),{t:serverTimestamp()});
+    const p=await getDocFromServer(doc(db,'ping',u.uid));
+    S.off=p.data().t.toMillis()-Date.now();
+    S.isAdmin=(await getDoc(doc(db,'admins',u.uid))).exists();
+    if(S.isAdmin){startWatch();await adminView();return}
+    stopWatch();
+    await studentGate();
+  }catch(e){app.innerHTML=`<div class="card"><p>লোড করা যায়নি: ${esc(e.message)}</p></div>`}
 });
 async function loadExam(){
-  const q=await getDocs(query(collection(db,'exams'),orderBy('startAt','desc'),limit(1)));
-  S.exam=q.empty?null:norm(q.docs[0]);
+  const q=await getDocs(query(collection(db,'exams'),orderBy('startAt','desc'),limit(1)));
+  S.exam=q.empty?null:norm(q.docs[0]);
 }
-
 /* ---------- শিক্ষার্থী: KYC যাচাই → প্রোফাইল → হোম ---------- */
 async function studentGate(){
-  const u=S.user;
-  const sd=await getDoc(doc(db,'students',u.uid));
-  S.kyc=sd.exists()?sd.data():null;
-  const k=S.kyc;
-  if(!k||k.status!=='approved'){
-    const msg=!k?'আগে মূল সাইটে আইডি কার্ড যাচাই (KYC) সম্পন্ন করুন।':k.status==='pending'?'আপনার আইডি কার্ড যাচাই চলছে। অনুমোদন পেলে এখানে পরীক্ষার আবেদন করতে পারবেন।':'আপনার আইডি কার্ড যাচাই গৃহীত হয়নি। মূল সাইটে গিয়ে আবার তথ্য জমা দিন।';
-    app.innerHTML=topbar()+`<h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>${msg}</p><a class="btn" style="margin-top:14px" href="index.html">মূল সাইটে যান</a></div>`;
-    return;
-  }
-  const pd=await getDoc(doc(db,'profiles',u.uid));
-  S.prof=pd.exists()?pd.data():null;
-  S.prof?home():profileView();
+  const u=S.user;
+  const sd=await getDoc(doc(db,'students',u.uid));
+  S.kyc=sd.exists()?sd.data():null;
+  const k=S.kyc;
+  if(!k||k.status!=='approved'){
+    const msg=!k?'আগে মূল সাইটে আইডি কার্ড যাচাই (KYC) সম্পন্ন করুন।':k.status==='pending'?'আপনার আইডি কার্ড যাচাই চলছে। অনুমোদন পেলে এখানে পরীক্ষার আবেদন করতে পারবেন।':'আপনার আইডি কার্ড যাচাই গৃহীত হয়নি। মূল সাইটে গিয়ে আবার তথ্য জমা দিন।';
+    app.innerHTML=topbar()+`<h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>${msg}</p><a class="btn" style="margin-top:14px" href="index.html">মূল সাইটে যান</a></div>`;
+    return;
+  }
+  const pd=await getDoc(doc(db,'profiles',u.uid));
+  S.prof=pd.exists()?pd.data():null;
+  S.prof?home():profileView();
 }
 function profileView(){
-  const k=S.kyc;
-  app.innerHTML=topbar()+`<h1>প্রোফাইল তৈরি</h1><div class="card"><p>আপনার আইডি কার্ড যাচাই সম্পন্ন হয়েছে। পরীক্ষার জন্য একটি ইউজারনেম বেছে নিন। এটি পরে বদলানো যাবে না।</p>
-  <label style="display:block;margin-top:12px">ইউজারনেম</label><div class="uin"><span>@</span><input id="f_un" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="20" placeholder="যেমন: rahim_25"></div>
-  <small class="h">ইংরেজি ছোট হাতের অক্ষর, সংখ্যা ও _ (৩–২০ অক্ষর)</small>
-  ${kv('নাম',k.name)}${kv('ডিপার্টমেন্ট',k.department)}${kv('সেশন',k.session)}${kv('মোবাইল',k.mobile)}
-  <button class="btn" data-a="mkprof">প্রোফাইল তৈরি করুন</button><div class="err" id="er"></div></div>`;
+  const k=S.kyc;
+  app.innerHTML=topbar()+`<h1>প্রোফাইল তৈরি</h1><div class="card"><p>আপনার আইডি কার্ড যাচাই সম্পন্ন হয়েছে। পরীক্ষার জন্য একটি ইউজারনেম বেছে নিন। এটি পরে বদলানো যাবে না।</p>
+  <label style="display:block;margin-top:12px">ইউজারনেম</label><div class="uin"><span>@</span><input id="f_un" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="20" placeholder="যেমন: rahim_25"></div>
+  <small class="h">ইংরেজি ছোট হাতের অক্ষর, সংখ্যা ও _ (৩–২০ অক্ষর)</small>
+  ${kv('নাম',k.name)}${kv('ডিপার্টমেন্ট',k.department)}${kv('সেশন',k.session)}${kv('মোবাইল',k.mobile)}
+  <button class="btn" data-a="mkprof">প্রোফাইল তৈরি করুন</button><div class="err" id="er"></div></div>`;
 }
 act.mkprof=async b=>{
-  const un=val('f_un').toLowerCase().replace(/^@/,'');
-  if(!/^[a-z0-9_]{3,20}$/.test(un)){$('#er').textContent='ইউজারনেম ৩–২০ অক্ষরের হবে, শুধু a-z, 0-9 ও _ চলবে।';return}
-  b.disabled=true;
-  try{
-    const ex=await getDoc(doc(db,'usernames',un));
-    if(ex.exists()){b.disabled=false;$('#er').textContent='এই ইউজারনেম আগেই নেওয়া হয়েছে, অন্য একটা দিন।';return}
-    const w=writeBatch(db);
-    w.set(doc(db,'usernames',un),{uid:S.user.uid});
-    w.set(doc(db,'profiles',S.user.uid),{uid:S.user.uid,username:un,name:S.kyc.name||'',createdAt:serverTimestamp()});
-    await w.commit();
-    S.prof={uid:S.user.uid,username:un,name:S.kyc.name||''};
-    toast('প্রোফাইল তৈরি হয়েছে');home();
-  }catch(e){b.disabled=false;$('#er').textContent=e.code==='permission-denied'?'এই ইউজারনেম নেওয়া যাবে না, অন্য একটা চেষ্টা করুন।':e.message}
+  const un=val('f_un').toLowerCase().replace(/^@/,'');
+  if(!/^[a-z0-9_]{3,20}$/.test(un)){$('#er').textContent='ইউজারনেম ৩–২০ অক্ষরের হবে, শুধু a-z, 0-9 ও _ চলবে।';return}
+  b.disabled=true;
+  try{
+    const ex=await getDoc(doc(db,'usernames',un));
+    if(ex.exists()){b.disabled=false;$('#er').textContent='এই ইউজারনেম আগেই নেওয়া হয়েছে, অন্য একটা দিন।';return}
+    const w=writeBatch(db);
+    w.set(doc(db,'usernames',un),{uid:S.user.uid});
+    w.set(doc(db,'profiles',S.user.uid),{uid:S.user.uid,username:un,name:S.kyc.name||'',createdAt:serverTimestamp()});
+    await w.commit();
+    S.prof={uid:S.user.uid,username:un,name:S.kyc.name||''};
+    toast('প্রোফাইল তৈরি হয়েছে');home();
+  }catch(e){b.disabled=false;$('#er').textContent=e.code==='permission-denied'?'এই ইউজারনেম নেওয়া যাবে না, অন্য একটা চেষ্টা করুন।':e.message}
 };
 const profCard=()=>{const p=S.prof,k=S.kyc,u=S.user;return`<div class="card"><div class="prof"><div class="av">${esc((p.username[0]||'?').toUpperCase())}</div><div><div class="un">@${esc(p.username)}</div><div style="font-size:15px">${esc(k.name)}</div></div></div><div style="margin-top:10px">${kv('ডিপার্টমেন্ট',k.department)}${kv('সেশন',k.session)}${kv('মোবাইল',k.mobile)}${kv('ইমেইল',u.email)}</div></div>`};
-
 async function home(){
-  clearInterval(S.tk);
-  const u=S.user,k=S.kyc,p=S.prof;
-  await loadExam();
-  const e=S.exam;
-  let h=topbar()+`<h1>সাপ্তাহিক পরীক্ষা</h1>`+profCard();
-  if(!e){app.innerHTML=h+`<div class="card"><p>এখনো কোনো পরীক্ষা ঘোষণা হয়নি।</p></div>`;return}
-  const aid=e.id+'_'+u.uid;
-  const [ap,at]=await Promise.all([getDoc(doc(db,'apps',aid)),getDoc(doc(db,'attempts',aid))]);
-  h+=`<div class="card"><h2>${esc(e.title)}</h2><p>শুরু: <b>${fmt(e.s)}</b></p><p>শেষ: <b>${fmt(e.en)}</b></p><p>প্রশ্ন: <b>${bn(e.qCount||0)}টি</b> · প্রতি প্রশ্ন সর্বোচ্চ <b>${bn(e.secPerQ)} সেকেন্ড</b></p></div>`;
-  if(!ap.exists()){
-    h+= now()<e.en ? `<div class="card"><h2>পরীক্ষার আবেদন</h2>
-    <label>ইউজারনেম</label><div class="uin"><span>@</span><input id="f_un" value="${esc(p.username)}" readonly></div>
-    <label>মোবাইল নম্বর</label><input id="f_phone" type="tel" inputmode="tel" value="${esc(k.mobile)}">
-    <label>ডিপার্টমেন্ট / অনুষদ</label><input id="f_dept" value="${esc(k.department)}">
-    <label>সেশন</label><input id="f_sess" value="${esc(k.session)}">
-    <button class="btn" data-a="apply">আবেদন করুন</button><div class="err" id="er"></div></div>`
-    : `<div class="card"><p>এই পরীক্ষার আবেদনের সময় শেষ।</p></div>`;
-  }else{
-    const st=ap.data().status;
-    if(st==='pending')h+=`<div class="card"><span class="tag">যাচাই চলছে</span><p style="margin-top:8px">আপনার আবেদন জমা হয়েছে। অ্যাডমিন যাচাই করে অনুমোদন দিলে এখানে পরীক্ষা শুরুর বাটন আসবে।</p></div>`;
-    else if(st==='rejected')h+=`<div class="card"><span class="tag bad">আবেদন গৃহীত হয়নি</span></div>`;
-    else{
-      const A=at.exists()?at.data():null;
-      if((A&&(A.done||A.failed))||now()>=e.en){
-        if(e.resultsPublished){
-          let r=null;try{const rd=await getDoc(doc(db,'results',aid));r=rd.exists()?rd.data():null}catch(_){}
-          h+= r? `<div class="card"><p style="text-align:center">আপনার প্রাপ্ত নম্বর</p><div class="big">${bn(r.score)} / ${bn(e.qCount||0)}</div>${r.failed?'<p style="text-align:center;color:var(--bad)">বাতিল</p>':''}</div>`
-              : `<div class="card"><p>ফলাফল পাওয়া যায়নি।</p></div>`;
-        }else h+=`<div class="card"><span class="tag ok">${A?'পরীক্ষা জমা হয়েছে':'সময় শেষ'}</span><p style="margin-top:8px">ফলাফল প্রকাশের অপেক্ষা করুন।</p></div>`;
-      }else if(now()<e.s){
-        h+=`<div class="card"><span class="tag ok">অনুমোদিত</span><p style="margin-top:8px">পরীক্ষা শুরু হতে বাকি</p><div class="big" id="cd"></div></div>`;
-        S.tk=setInterval(()=>{const l=e.s-now();if(l<=0){clearInterval(S.tk);home()}else{const c=$('#cd');if(c)c.textContent=bn(Math.floor(l/36e5))+':'+bn(String(Math.floor(l/6e4)%60).padStart(2,'0'))+':'+bn(String(Math.floor(l/1e3)%60).padStart(2,'0'))}},500);
-      }else{
-        h+=`<div class="card"><span class="tag ok">পরীক্ষা চলছে</span><p style="margin:8px 0">শেষ হবে ${fmt(e.en)}। একবার পরের প্রশ্নে গেলে আগের প্রশ্নে ফেরা যাবে না। অন্য ট্যাব বা অ্যাপে গেলে তা রেকর্ড হবে।</p><button class="btn" data-a="start">${A?'চালিয়ে যান':'পরীক্ষা শুরু করুন'}</button></div>`;
-      }
-    }
-  }
-  app.innerHTML=h;
+  clearInterval(S.tk);
+  const u=S.user,k=S.kyc,p=S.prof;
+  await loadExam();
+  const e=S.exam;
+  let h=topbar()+`<h1>সাপ্তাহিক পরীক্ষা</h1>`+profCard();
+  if(!e){app.innerHTML=h+`<div class="card"><p>এখনো কোনো পরীক্ষা ঘোষণা হয়নি।</p></div>`;return}
+  const aid=e.id+'_'+u.uid;
+  const [ap,at]=await Promise.all([getDoc(doc(db,'apps',aid)),getDoc(doc(db,'attempts',aid))]);
+  h+=`<div class="card"><h2>${esc(e.title)}</h2><p>শুরু: <b>${fmt(e.s)}</b></p><p>শেষ: <b>${fmt(e.en)}</b></p><p>প্রশ্ন: <b>${bn(e.qCount||0)}টি</b> · প্রতি প্রশ্ন সর্বোচ্চ <b>${bn(e.secPerQ)} সেকেন্ড</b></p></div>`;
+  if(!ap.exists()){
+    h+= now()<e.en ? `<div class="card"><h2>পরীক্ষার আবেদন</h2>
+    <label>ইউজারনেম</label><div class="uin"><span>@</span><input id="f_un" value="${esc(p.username)}" readonly></div>
+    <label>মোবাইল নম্বর</label><input id="f_phone" type="tel" inputmode="tel" value="${esc(k.mobile)}">
+    <label>ডিপার্টমেন্ট / অনুষদ</label><input id="f_dept" value="${esc(k.department)}">
+    <label>সেশন</label><input id="f_sess" value="${esc(k.session)}">
+    <button class="btn" data-a="apply">আবেদন করুন</button><div class="err" id="er"></div></div>`
+    : `<div class="card"><p>এই পরীক্ষার আবেদনের সময় শেষ।</p></div>`;
+  }else{
+    const st=ap.data().status;
+    if(st==='pending')h+=`<div class="card"><span class="tag">যাচাই চলছে</span><p style="margin-top:8px">আপনার আবেদন জমা হয়েছে। অ্যাডমিন যাচাই করে অনুমোদন দিলে এখানে পরীক্ষা শুরুর বাটন আসবে।</p></div>`;
+    else if(st==='rejected')h+=`<div class="card"><span class="tag bad">আবেদন গৃহীত হয়নি</span></div>`;
+    else{
+      const A=at.exists()?at.data():null;
+      if((A&&(A.done||A.failed))||now()>=e.en){
+        if(e.resultsPublished){
+          let r=null;try{const rd=await getDoc(doc(db,'results',aid));r=rd.exists()?rd.data():null}catch(_){}
+          h+= r? `<div class="card"><p style="text-align:center">আপনার প্রাপ্ত নম্বর</p><div class="big">${bn(r.score)} / ${bn(e.qCount||0)}</div>${r.failed?'<p style="text-align:center;color:var(--bad)">বাতিল</p>':''}</div>`
+              : `<div class="card"><p>ফলাফল পাওয়া যায়নি।</p></div>`;
+        }else h+=`<div class="card"><span class="tag ok">${A?'পরীক্ষা জমা হয়েছে':'সময় শেষ'}</span><p style="margin-top:8px">ফলাফল প্রকাশের অপেক্ষা করুন।</p></div>`;
+      }else if(now()<e.s){
+        h+=`<div class="card"><span class="tag ok">অনুমোদিত</span><p style="margin-top:8px">পরীক্ষা শুরু হতে বাকি</p><div class="big" id="cd"></div></div>`;
+        S.tk=setInterval(()=>{const l=e.s-now();if(l<=0){clearInterval(S.tk);home()}else{const c=$('#cd');if(c)c.textContent=bn(Math.floor(l/36e5))+':'+bn(String(Math.floor(l/6e4)%60).padStart(2,'0'))+':'+bn(String(Math.floor(l/1e3)%60).padStart(2,'0'))}},500);
+      }else{
+        h+=`<div class="card"><span class="tag ok">পরীক্ষা চলছে</span><p style="margin:8px 0">শেষ হবে ${fmt(e.en)}। একবার পরের প্রশ্নে গেলে আগের প্রশ্নে ফেরা যাবে না। অন্য ট্যাব বা অ্যাপে গেলে তা রেকর্ড হবে।</p><button class="btn" data-a="start">${A?'চালিয়ে যান':'পরীক্ষা শুরু করুন'}</button></div>`;
+      }
+    }
+  }
+  app.innerHTML=h;
 }
 act.apply=async b=>{
-  if(!S.exam)return;
-  const d={username:S.prof.username,name:S.kyc.name||'',phone:val('f_phone'),dept:val('f_dept'),session:val('f_sess')};
-  if(d.phone.replace(/\D/g,'').length<11||!d.dept||!d.session){$('#er').textContent='মোবাইল নম্বর (১১ সংখ্যা), ডিপার্টমেন্ট ও সেশন দিন।';return}
-  b.disabled=true;
-  try{await setDoc(doc(db,'apps',S.exam.id+'_'+S.user.uid),{...d,uid:S.user.uid,email:S.user.email||'',examId:S.exam.id,status:'pending',createdAt:serverTimestamp()});toast('আবেদন জমা হয়েছে');home()}
-  catch(e){b.disabled=false;$('#er').textContent=e.message}
+  if(!S.exam)return;
+  const d={username:S.prof.username,name:S.kyc.name||'',phone:val('f_phone'),dept:val('f_dept'),session:val('f_sess')};
+  if(d.phone.replace(/\D/g,'').length<11||!d.dept||!d.session){$('#er').textContent='মোবাইল নম্বর (১১ সংখ্যা), ডিপার্টমেন্ট ও সেশন দিন।';return}
+  b.disabled=true;
+  try{await setDoc(doc(db,'apps',S.exam.id+'_'+S.user.uid),{...d,uid:S.user.uid,email:S.user.email||'',examId:S.exam.id,status:'pending',createdAt:serverTimestamp()});toast('আবেদন জমা হয়েছে');home()}
+  catch(e){b.disabled=false;$('#er').textContent=e.message}
 };
-
 /* ---------- পরীক্ষা ---------- */
 act.start=async()=>{
-  const e=S.exam,id=e.id+'_'+S.user.uid,ref=doc(db,'attempts',id);
-  let a=await getDoc(ref);
-  if(!a.exists()){
-    await setDoc(ref,{uid:S.user.uid,examId:e.id,name:S.kyc?.name||'',username:S.prof?.username||'',startedAt:serverTimestamp(),qStart:serverTimestamp(),idx:0,ans:{},flags:0,done:false,failed:false});
-    a=await getDocFromServer(ref);
-  }
-  const A=a.data();if(A.done||A.failed)return home();
-  const qs=(await getDoc(doc(db,'exams',e.id,'qs','main'))).data().items,n=qs.length;
-  const r=rng(hash(id)),order=shuf([...qs.keys()],r),sord=qs.map(()=>shuf([0,1,2,3,4],r));
-  let idx=A.idx,qMs=A.qStart.toMillis(),cur=[],last=0,over=false;
-  const per=e.secPerQ*1000;
-  const flag=()=>{if(over||Date.now()-last<1500)return;last=Date.now();
-    updateDoc(ref,{flags:increment(1),log:arrayUnion('প্রশ্ন'+(idx+1)+' @'+new Date(now()).toISOString().slice(11,19))}).catch(()=>{})};
-  const vis=()=>{if(document.hidden)flag()};
-  const stop=ev=>ev.preventDefault();
-  document.addEventListener('visibilitychange',vis);window.addEventListener('blur',flag);
-  ['contextmenu','copy','cut','paste'].forEach(t=>document.addEventListener(t,stop));
-  const cleanup=()=>{over=true;clearInterval(S.tk);document.removeEventListener('visibilitychange',vis);window.removeEventListener('blur',flag);['contextmenu','copy','cut','paste'].forEach(t=>document.removeEventListener(t,stop))};
-  const finish=async()=>{cleanup();try{await updateDoc(ref,{done:true,doneAt:serverTimestamp()})}catch(_){}home()};
-  const next=async()=>{
-    clearInterval(S.tk);idx++;
-    if(idx>=n)return finish();
-    updateDoc(ref,{idx,qStart:serverTimestamp()}).catch(()=>{});qMs=now();show();
-  };
-  function show(){
-    const q=order[idx],it=qs[q],so=sord[q];
-    cur=(A.ans[q]&&idx===A.idx?A.ans[q]:'-----').split('');
-    app.innerHTML=`<div class="ex"><div class="bar"><span>প্রশ্ন ${bn(idx+1)} / ${bn(n)}</span><b id="tm"></b></div><div class="pg"><i id="pb"></i></div><h2>${esc(it.t)}</h2>`+
-      so.map(si=>`<div class="st"><p>${esc(it.s[si])}</p><div class="tf" data-i="${si}"><button data-v="T" class="${cur[si]==='T'?'on':''}">সত্য</button><button data-v="F" class="${cur[si]==='F'?'on':''}">মিথ্যা</button></div></div>`).join('')+
-      `<button class="btn" id="nx">${idx===n-1?'জমা দিন':'পরের প্রশ্ন'}</button></div>`;
-    app.querySelectorAll('.tf button').forEach(bt=>bt.onclick=()=>{
-      const i=+bt.parentNode.dataset.i,v=bt.dataset.v;cur[i]=cur[i]===v?'-':v;
-      bt.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x.dataset.v===cur[i]));
-      updateDoc(ref,{['ans.'+q]:cur.join('')}).catch(()=>{});
-    });
-    $('#nx').onclick=next;
-    clearInterval(S.tk);
-    S.tk=setInterval(()=>{
-      const left=Math.min(per-(now()-qMs),e.en-now());
-      if(e.en-now()<=0)return finish();
-      if(left<=0)return next();
-      const tm=$('#tm'),pb=$('#pb');if(!tm)return;
-      tm.textContent=bn(Math.ceil(left/1000))+' সে.';pb.style.width=Math.max(0,left/per*100)+'%';
-    },250);
-  }
-  if(now()>=e.en||idx>=n)return finish();
-  show();
+  const e=S.exam,id=e.id+'_'+S.user.uid,ref=doc(db,'attempts',id);
+  let a=await getDoc(ref);
+  if(!a.exists()){
+    await setDoc(ref,{uid:S.user.uid,examId:e.id,name:S.kyc?.name||'',username:S.prof?.username||'',startedAt:serverTimestamp(),qStart:serverTimestamp(),idx:0,ans:{},flags:0,done:false,failed:false});
+    a=await getDocFromServer(ref);
+  }
+  const A=a.data();if(A.done||A.failed)return home();
+  const qs=(await getDoc(doc(db,'exams',e.id,'qs','main'))).data().items,n=qs.length;
+  const r=rng(hash(id)),order=shuf([...qs.keys()],r),sord=qs.map(()=>shuf([0,1,2,3,4],r));
+  let idx=A.idx,qMs=A.qStart.toMillis(),cur=[],last=0,over=false;
+  const per=e.secPerQ*1000;
+  const flag=()=>{if(over||Date.now()-last<1500)return;last=Date.now();
+    updateDoc(ref,{flags:increment(1),log:arrayUnion('প্রশ্ন'+(idx+1)+' @'+new Date(now()).toISOString().slice(11,19))}).catch(()=>{})};
+  const vis=()=>{if(document.hidden)flag()};
+  const stop=ev=>ev.preventDefault();
+  document.addEventListener('visibilitychange',vis);window.addEventListener('blur',flag);
+  ['contextmenu','copy','cut','paste'].forEach(t=>document.addEventListener(t,stop));
+  const cleanup=()=>{over=true;clearInterval(S.tk);document.removeEventListener('visibilitychange',vis);window.removeEventListener('blur',flag);['contextmenu','copy','cut','paste'].forEach(t=>document.removeEventListener(t,stop))};
+  const finish=async()=>{cleanup();try{await updateDoc(ref,{done:true,doneAt:serverTimestamp()})}catch(_){}home()};
+  const next=async()=>{
+    clearInterval(S.tk);idx++;
+    if(idx>=n)return finish();
+    updateDoc(ref,{idx,qStart:serverTimestamp()}).catch(()=>{});qMs=now();show();
+  };
+  function show(){
+    const q=order[idx],it=qs[q],so=sord[q];
+    cur=(A.ans[q]&&idx===A.idx?A.ans[q]:'-----').split('');
+    app.innerHTML=`<div class="ex"><div class="bar"><span>প্রশ্ন ${bn(idx+1)} / ${bn(n)}</span><b id="tm"></b></div><div class="pg"><i id="pb"></i></div><h2>${esc(it.t)}</h2>`+
+      so.map(si=>`<div class="st"><p>${esc(it.s[si])}</p><div class="tf" data-i="${si}"><button data-v="T" class="${cur[si]==='T'?'on':''}">সত্য</button><button data-v="F" class="${cur[si]==='F'?'on':''}">মিথ্যা</button></div></div>`).join('')+
+      `<button class="btn" id="nx">${idx===n-1?'জমা দিন':'পরের প্রশ্ন'}</button></div>`;
+    app.querySelectorAll('.tf button').forEach(bt=>bt.onclick=()=>{
+      const i=+bt.parentNode.dataset.i,v=bt.dataset.v;cur[i]=cur[i]===v?'-':v;
+      bt.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x.dataset.v===cur[i]));
+      updateDoc(ref,{['ans.'+q]:cur.join('')}).catch(()=>{});
+    });
+    $('#nx').onclick=next;
+    clearInterval(S.tk);
+    S.tk=setInterval(()=>{
+      const left=Math.min(per-(now()-qMs),e.en-now());
+      if(e.en-now()<=0)return finish();
+      if(left<=0)return next();
+      const tm=$('#tm'),pb=$('#pb');if(!tm)return;
+      tm.textContent=bn(Math.ceil(left/1000))+' সে.';pb.style.width=Math.max(0,left/per*100)+'%';
+    },250);
+  }
+  if(now()>=e.en||idx>=n)return finish();
+  show();
 };
-
 /* ---------- অ্যাডমিন (লগইন করলেই সরাসরি এখানে) ---------- */
 function startWatch(){
-  if(AD.unsub)return;
-  let first=true;
-  AD.unsub=onSnapshot(query(collection(db,'apps'),where('status','==','pending')),snap=>{
-    AD.pend=snap.size;
-    if(!first){
-      snap.docChanges().forEach(c=>{if(c.type==='added')toast('🔔 নতুন আবেদন: '+(c.doc.data().name||c.doc.data().username||''),5500)});
-      if(AD.tab==='apps'&&$('#tabc'))tabApps().catch(()=>{});
-    }
-    first=false;
-    document.title=(AD.pend?'('+AD.pend+') ':'')+'সাপ্তাহিক পরীক্ষা';
-    paintBadge();
-  },()=>{});
+  if(AD.unsub)return;
+  let first=true;
+  AD.unsub=onSnapshot(query(collection(db,'apps'),where('status','==','pending')),snap=>{
+    AD.pend=snap.size;
+    if(!first){
+      snap.docChanges().forEach(c=>{if(c.type==='added')toast('🔔 নতুন আবেদন: '+(c.doc.data().name||c.doc.data().username||''),5500)});
+      if(AD.tab==='apps'&&$('#tabc'))tabApps().catch(()=>{});
+    }
+    first=false;
+    document.title=(AD.pend?'('+AD.pend+') ':'')+'সাপ্তাহিক পরীক্ষা';
+    paintBadge();
+  },()=>{});
 }
 function stopWatch(){if(AD.unsub){AD.unsub();AD.unsub=null}AD.pend=0}
 function paintBadge(){
-  const b=$('#apbadge'),a=$('#alertbar');
-  if(b){b.textContent=bn(AD.pend);b.style.display=AD.pend?'inline-block':'none'}
-  if(a){a.style.display=AD.pend?'flex':'none';const s=a.querySelector('b');if(s)s.textContent=bn(AD.pend)}
+  const b=$('#apbadge'),a=$('#alertbar');
+  if(b){b.textContent=bn(AD.pend);b.style.display=AD.pend?'inline-block':'none'}
+  if(a){a.style.display=AD.pend?'flex':'none';const s=a.querySelector('b');if(s)s.textContent=bn(AD.pend)}
 }
 async function adminView(){
-  clearInterval(S.tk);
-  const q=await getDocs(query(collection(db,'exams'),orderBy('startAt','desc'),limit(30)));
-  AD.exams=q.docs.map(norm);
-  if(!AD.id||!AD.exams.find(x=>x.id===AD.id))AD.id=AD.exams[0]?.id||null;
-  renderAdmin();
+  clearInterval(S.tk);
+  const q=await getDocs(query(collection(db,'exams'),orderBy('startAt','desc'),limit(30)));
+  AD.exams=q.docs.map(norm);
+  if(!AD.id||!AD.exams.find(x=>x.id===AD.id))AD.id=AD.exams[0]?.id||null;
+  renderAdmin();
 }
 const ex=()=>AD.exams.find(x=>x.id===AD.id);
 async function renderAdmin(){
-  const T=[['exam','পরীক্ষা'],['apps','আবেদন'],['res','ফলাফল']];
-  app.innerHTML=`<div class="top"><a href="index.html">← হোম</a><button class="ghost" data-a="logout">লগআউট</button></div><h1>অ্যাডমিন প্যানেল</h1>
-  <div class="alert" id="alertbar" data-a="goapps" style="display:none"><span>🔔 নতুন আবেদন অপেক্ষায়: <b></b> টি</span><span>দেখুন →</span></div>
-  <label>পরীক্ষা বাছুন</label><select id="sel"><option value="">+ নতুন পরীক্ষা</option>${AD.exams.map(x=>`<option value="${x.id}" ${x.id===AD.id?'selected':''}>${esc(x.title)} (${fmt(x.s)})</option>`).join('')}</select>
-  <div class="tabs">${T.map(([k,t])=>`<button data-a="tab" data-k="${k}" class="${AD.tab===k?'on':''}">${t}${k==='apps'?'<span class="badge" id="apbadge" style="display:none"></span>':''}</button>`).join('')}</div><div id="tabc"><div class="card"><p>লোড হচ্ছে…</p></div></div>`;
-  $('#sel').onchange=e=>{AD.id=e.target.value||null;renderAdmin()};
-  paintBadge();
-  try{await ({exam:tabExam,apps:tabApps,res:tabRes})[AD.tab]()}catch(e){$('#tabc').innerHTML=`<div class="card"><p>${esc(e.message)}</p></div>`}
+  const T=[['exam','পরীক্ষা'],['apps','আবেদন'],['res','ফলাফল']];
+  app.innerHTML=`<div class="top"><a href="index.html">← হোম</a><button class="ghost" data-a="logout">লগআউট</button></div><h1>অ্যাডমিন প্যানেল</h1>
+  <div class="alert" id="alertbar" data-a="goapps" style="display:none"><span>🔔 নতুন আবেদন অপেক্ষায়: <b></b> টি</span><span>দেখুন →</span></div>
+  <label>পরীক্ষা বাছুন</label><select id="sel"><option value="">+ নতুন পরীক্ষা</option>${AD.exams.map(x=>`<option value="${x.id}" ${x.id===AD.id?'selected':''}>${esc(x.title)} (${fmt(x.s)})</option>`).join('')}</select>
+  <div class="tabs">${T.map(([k,t])=>`<button data-a="tab" data-k="${k}" class="${AD.tab===k?'on':''}">${t}${k==='apps'?'<span class="badge" id="apbadge" style="display:none"></span>':''}</button>`).join('')}</div><div id="tabc"><div class="card"><p>লোড হচ্ছে…</p></div></div>`;
+  $('#sel').onchange=e=>{AD.id=e.target.value||null;renderAdmin()};
+  paintBadge();
+  try{await ({exam:tabExam,apps:tabApps,res:tabRes})[AD.tab]()}catch(e){$('#tabc').innerHTML=`<div class="card"><p>${esc(e.message)}</p></div>`}
 }
 act.tab=b=>{AD.tab=b.dataset.k;renderAdmin()};
 act.goapps=()=>{AD.tab='apps';renderAdmin()};
-
 async function tabExam(){
-  const e=ex();let txt='';
-  if(e){
-    const qs=(await getDoc(doc(db,'exams',e.id,'qs','main'))).data()?.items||[];
-    const k=(await getDoc(doc(db,'exams',e.id,'secret','key'))).data()?.k||[];
-    txt=qs.map((it,i)=>[it.t,...it.s.map((s,j)=>s+' | '+(k[i]?.[j]==='1'?'T':'F'))].join('\n')).join('\n\n');
-  }
-  const st=e?.s||Math.ceil(Date.now()/9e5)*9e5, en=e?.en||st+750000;
-  $('#tabc').innerHTML=`<div class="card">
-  <label>শিরোনাম</label><input id="x_t" value="${esc(e?.title||'সাপ্তাহিক পরীক্ষা')}">
-  <label>শুরুর সময়</label><input id="x_s" type="datetime-local" value="${loc(st)}">
-  <label>শেষের সময় (সবার জন্য একই)</label><input id="x_e" type="datetime-local" value="${loc(en)}">
-  <small class="h">৩০ প্রশ্ন × ২৫ সেকেন্ড = ১২.৫ মিনিট, সেই হিসাবে শেষের সময় দিন।</small>
-  <label>প্রতি প্রশ্নের সময় (সেকেন্ড)</label><input id="x_p" type="number" min="5" value="${e?.secPerQ||25}">
-  <label>ভুল স্টেটমেন্টে নম্বর কাটা (০ = কাটবে না)</label><input id="x_n" type="number" step="0.05" min="0" value="${e?.neg||0}">
-  <label>প্রশ্ন (প্রতি প্রশ্নে ১ লাইন প্রশ্ন + ৫ লাইন "স্টেটমেন্ট | T বা F", প্রশ্নের মাঝে ফাঁকা লাইন)</label>
-  <textarea id="x_q" placeholder="প্রশ্ন লিখুন&#10;প্রথম স্টেটমেন্ট | T&#10;দ্বিতীয় | F&#10;তৃতীয় | T&#10;চতুর্থ | F&#10;পঞ্চম | T">${esc(txt)}</textarea>
-  <button class="btn" data-a="saveex">সংরক্ষণ করুন</button><div class="err" id="er"></div></div>`;
+  const e=ex();let txt='';
+  if(e){
+    const qs=(await getDoc(doc(db,'exams',e.id,'qs','main'))).data()?.items||[];
+    const k=(await getDoc(doc(db,'exams',e.id,'secret','key'))).data()?.k||[];
+    txt=qs.map((it,i)=>[it.t,...it.s.map((s,j)=>s+' | '+(k[i]?.[j]==='1'?'T':'F'))].join('\n')).join('\n\n');
+  }
+  const st=e?.s||Math.ceil(Date.now()/9e5)*9e5, en=e?.en||st+750000;
+  $('#tabc').innerHTML=`<div class="card">
+  <label>শিরোনাম</label><input id="x_t" value="${esc(e?.title||'সাপ্তাহিক পরীক্ষা')}">
+  <label>শুরুর সময়</label><input id="x_s" type="datetime-local" value="${loc(st)}">
+  <label>শেষের সময় (সবার জন্য একই)</label><input id="x_e" type="datetime-local" value="${loc(en)}">
+  <small class="h">৩০ প্রশ্ন × ২৫ সেকেন্ড = ১২.৫ মিনিট, সেই হিসাবে শেষের সময় দিন।</small>
+  <label>প্রতি প্রশ্নের সময় (সেকেন্ড)</label><input id="x_p" type="number" min="5" value="${e?.secPerQ||25}">
+  <label>ভুল স্টেটমেন্টে নম্বর কাটা (০ = কাটবে না)</label><input id="x_n" type="number" step="0.05" min="0" value="${e?.neg||0}">
+  <label>প্রশ্ন (প্রতি প্রশ্নে ১ লাইন প্রশ্ন + ৫ লাইন "স্টেটমেন্ট | T বা F", প্রশ্নের মাঝে ফাঁকা লাইন)</label>
+  <textarea id="x_q" placeholder="প্রশ্ন লিখুন&#10;প্রথম স্টেটমেন্ট | T&#10;দ্বিতীয় | F&#10;তৃতীয় | T&#10;চতুর্থ | F&#10;পঞ্চম | T">${esc(txt)}</textarea>
+  <button class="btn" data-a="saveex">সংরক্ষণ করুন</button><div class="err" id="er"></div></div>`;
 }
 function parseQ(t){
-  return t.trim().split(/\n\s*\n/).map(b=>{
-    const L=b.trim().split('\n').map(x=>x.trim()).filter(Boolean);
-    if(L.length!==6)throw new Error('প্রতি প্রশ্নে ১টি প্রশ্ন ও ৫টি স্টেটমেন্ট লাগবে: '+L[0]);
-    const s=[],k=[];
-    L.slice(1).forEach(l=>{const m=l.match(/^(.*)\|\s*([TFtf]|সত্য|মিথ্যা)\s*$/);if(!m)throw new Error('শেষে | T বা F নেই: '+l);s.push(m[1].trim());k.push(/^[Tt]|সত্য/.test(m[2]))});
-    return {t:L[0],s,k};
-  });
+  return t.trim().split(/\n\s*\n/).map(b=>{
+    const L=b.trim().split('\n').map(x=>x.trim()).filter(Boolean);
+    if(L.length!==6)throw new Error('প্রতি প্রশ্নে ১টি প্রশ্ন ও ৫টি স্টেটমেন্ট লাগবে: '+L[0]);
+    const s=[],k=[];
+    L.slice(1).forEach(l=>{const m=l.match(/^(.*)**\|**\s*([TFtf]|সত্য|মিথ্যা)\s*$/);if(!m)throw new Error('শেষে | T বা F নেই: '+l);s.push(m[1].trim());k.push(/^[Tt]|সত্য/.test(m[2]))});
+    return {t:L[0],s,k};
+  });
 }
 act.saveex=async b=>{
-  try{
-    const items=parseQ(val('x_q')),s=new Date(val('x_s')),en=new Date(val('x_e'));
-    if(isNaN(s)||isNaN(en)||en<=s)throw new Error('সময় ঠিক করুন।');
-    const ref=AD.id?doc(db,'exams',AD.id):doc(collection(db,'exams'));
-    const data={title:val('x_t'),startAt:Timestamp.fromDate(s),endAt:Timestamp.fromDate(en),secPerQ:+val('x_p')||25,neg:+val('x_n')||0,qCount:items.length};
-    if(!AD.id)data.resultsPublished=false;
-    b.disabled=true;
-    const w=writeBatch(db);
-    w.set(ref,data,{merge:true});
-    w.set(doc(db,'exams',ref.id,'qs','main'),{items:items.map(({t,s})=>({t,s}))});
-    w.set(doc(db,'exams',ref.id,'secret','key'),{k:items.map(i=>i.k.map(x=>x?1:0).join(''))});
-    await w.commit();AD.id=ref.id;toast('সংরক্ষিত হয়েছে');await adminView();
-  }catch(e){b.disabled=false;$('#er').textContent=e.message}
+  try{
+    const items=parseQ(val('x_q')),s=new Date(val('x_s')),en=new Date(val('x_e'));
+    if(isNaN(s)||isNaN(en)||en<=s)throw new Error('সময় ঠিক করুন।');
+    const ref=AD.id?doc(db,'exams',AD.id):doc(collection(db,'exams'));
+    const data={title:val('x_t'),startAt:Timestamp.fromDate(s),endAt:Timestamp.fromDate(en),secPerQ:+val('x_p')||25,neg:+val('x_n')||0,qCount:items.length};
+    if(!AD.id)data.resultsPublished=false;
+    b.disabled=true;
+    const w=writeBatch(db);
+    w.set(ref,data,{merge:true});
+    w.set(doc(db,'exams',ref.id,'qs','main'),{items:items.map(({t,s})=>({t,s}))});
+    w.set(doc(db,'exams',ref.id,'secret','key'),{k:items.map(i=>i.k.map(x=>x?1:0).join(''))});
+    await w.commit();AD.id=ref.id;toast('সংরক্ষিত হয়েছে');await adminView();
+  }catch(e){b.disabled=false;$('#er').textContent=e.message}
 };
-
 async function tabApps(){
-  if(!AD.id)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
-  const q=await getDocs(query(collection(db,'apps'),where('examId','==',AD.id)));
-  const L=q.docs.map(d=>({id:d.id,...d.data()}));
-  const ord={pending:0,approved:1,rejected:2};
-  L.sort((a,b)=>(ord[a.status]-ord[b.status])||((b.createdAt?.seconds||0)-(a.createdAt?.seconds||0)));
-  const ks=await Promise.all(L.map(x=>getDoc(doc(db,'students',x.uid)).then(s=>s.exists()?s.data():null).catch(()=>null)));
-  const nz=s=>String(s||'').toLowerCase().replace(/\s+/g,'');
-  const ph=s=>String(s||'').replace(/\D/g,'').slice(-10);
-  const row=(lab,v,kvv,isPh)=>{
-    let m='';
-    if(kvv!==undefined){const ok=isPh?(ph(v)&&ph(v)===ph(kvv)):(nz(v)&&nz(v)===nz(kvv));m=ok?' <span class="mt">✔ KYC-র সাথে মিলেছে</span>':` <span class="mm">✖ KYC: ${esc(kvv||'—')}</span>`}
-    return `<p>${lab}: <b>${esc(v)||'—'}</b>${m}</p>`;
-  };
-  $('#tabc').innerHTML=`<p style="color:var(--mu);margin-bottom:10px">মোট ${bn(L.length)} জন, অনুমোদিত ${bn(L.filter(x=>x.status==='approved').length)} জন</p>`+
-  (L.map((x,i)=>{const k=ks[i];return `<div class="card"><h2>${esc(x.name)} <span class="tag ${x.status==='approved'?'ok':x.status==='rejected'?'bad':''}">${x.status==='approved'?'অনুমোদিত':x.status==='rejected'?'বাতিল':'অপেক্ষমাণ'}</span></h2>
-  <p>ইউজারনেম: <b>@${esc(x.username||'—')}</b></p>
-  <p>ফোন: <a class="tel" href="tel:${esc(x.phone)}">${esc(x.phone)}</a>${k?(ph(x.phone)&&ph(x.phone)===ph(k.mobile)?' <span class="mt">✔ KYC-র সাথে মিলেছে</span>':` <span class="mm">✖ KYC: ${esc(k.mobile||'—')}</span>`):''}</p>
-  ${row('ডিপার্টমেন্ট',x.dept,k?(k.department||''):undefined)}
-  ${row('সেশন',x.session,k?(k.session||''):undefined)}
-  <p>ইমেইল: ${esc(x.email)}</p>
-  ${k?`<p>KYC নাম: <b>${esc(k.name)}</b> · বাবা: <b>${esc(k.father)}</b></p>`:`<p class="mm">⚠ KYC তথ্য পাওয়া যায়নি</p>`}
-  <div class="row"><button class="y" data-a="st" data-id="${esc(x.id)}" data-v="approved">অনুমোদন</button><button class="n" data-a="st" data-id="${esc(x.id)}" data-v="rejected">বাতিল</button></div></div>`}).join('')||`<div class="card"><p>কোনো আবেদন নেই।</p></div>`);
+  if(!AD.id)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
+  const q=await getDocs(query(collection(db,'apps'),where('examId','==',AD.id)));
+  const L=q.docs.map(d=>({id:d.id,...d.data()}));
+  const ord={pending:0,approved:1,rejected:2};
+  L.sort((a,b)=>(ord[a.status]-ord[b.status])||((b.createdAt?.seconds||0)-(a.createdAt?.seconds||0)));
+  const ks=await Promise.all(L.map(x=>getDoc(doc(db,'students',x.uid)).then(s=>s.exists()?s.data():null).catch(()=>null)));
+  const nz=s=>String(s||'').toLowerCase().replace(/\s+/g,'');
+  const ph=s=>String(s||'').replace(/\D/g,'').slice(-10);
+  const row=(lab,v,kvv,isPh)=>{
+    let m='';
+    if(kvv!==undefined){const ok=isPh?(ph(v)&&ph(v)===ph(kvv)):(nz(v)&&nz(v)===nz(kvv));m=ok?' <span class="mt">✔ KYC-র সাথে মিলেছে</span>':` <span class="mm">✖ KYC: ${esc(kvv||'—')}</span>`}
+    return `<p>${lab}: <b>${esc(v)||'—'}</b>${m}</p>`;
+  };
+  $('#tabc').innerHTML=`<p style="color:var(--mu);margin-bottom:10px">মোট ${bn(L.length)} জন, অনুমোদিত ${bn(L.filter(x=>x.status==='approved').length)} জন</p>`+
+  (L.map((x,i)=>{const k=ks[i];return `<div class="card"><h2>${esc(x.name)} <span class="tag ${x.status==='approved'?'ok':x.status==='rejected'?'bad':''}">${x.status==='approved'?'অনুমোদিত':x.status==='rejected'?'বাতিল':'অপেক্ষমাণ'}</span></h2>
+  <p>ইউজারনেম: <b>@${esc(x.username||'—')}</b></p>
+  <p>ফোন: <a class="tel" href="tel:${esc(x.phone)}">${esc(x.phone)}</a>${k?(ph(x.phone)&&ph(x.phone)===ph(k.mobile)?' <span class="mt">✔ KYC-র সাথে মিলেছে</span>':` <span class="mm">✖ KYC: ${esc(k.mobile||'—')}</span>`):''}</p>
+  ${row('ডিপার্টমেন্ট',x.dept,k?(k.department||''):undefined)}
+  ${row('সেশন',x.session,k?(k.session||''):undefined)}
+  <p>ইমেইল: ${esc(x.email)}</p>
+  ${k?`<p>KYC নাম: <b>${esc(k.name)}</b> · বাবা: <b>${esc(k.father)}</b></p>`:`<p class="mm">⚠ KYC তথ্য পাওয়া যায়নি</p>`}
+  <div class="row"><button class="y" data-a="st" data-id="${esc(x.id)}" data-v="approved">অনুমোদন</button><button class="n" data-a="st" data-id="${esc(x.id)}" data-v="rejected">বাতিল</button></div></div>`}).join('')||`<div class="card"><p>কোনো আবেদন নেই।</p></div>`);
 }
 act.st=async b=>{b.disabled=true;await updateDoc(doc(db,'apps',b.dataset.id),{status:b.dataset.v});toast('হয়েছে');tabApps()};
-
 async function tabRes(){
-  const e=ex();if(!e)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
-  const q=await getDocs(query(collection(db,'attempts'),where('examId','==',e.id)));
-  const L=q.docs.map(d=>({id:d.id,...d.data()}));
-  const rs=await getDocs(query(collection(db,'results'),where('examId','==',e.id)));
-  const R={};rs.docs.forEach(d=>R[d.id]=d.data());
-  $('#tabc').innerHTML=`<div class="card"><p>পরীক্ষা দিয়েছে: <b>${bn(L.length)}</b> জন · ফলাফল: <b>${e.resultsPublished?'প্রকাশিত':'অপ্রকাশিত'}</b></p>
-  <button class="btn" data-a="calc">ফলাফল গণনা করুন</button>
-  <button class="btn" data-a="pub" style="background:${e.resultsPublished?'var(--bad)':''}">${e.resultsPublished?'ফলাফল বন্ধ করুন':'ফলাফল প্রকাশ করুন'}</button></div>`+
-  L.map(x=>`<div class="card"><h2>${esc(x.name)} ${x.username?`<span style="color:var(--gold);font-size:15px">@${esc(x.username)}</span>`:''} ${x.failed?'<span class="tag bad">ফেল</span>':x.done?'<span class="tag ok">জমা</span>':'<span class="tag">চলছে</span>'}</h2>
-  <p>ট্যাব/অ্যাপ বদল: <b style="color:${x.flags?'var(--bad)':'inherit'}">${bn(x.flags||0)} বার</b></p>${(x.log||[]).length?`<p>${esc(x.log.join(', '))}</p>`:''}
-  <p>প্রাপ্ত নম্বর: <b>${R[x.id]?bn(R[x.id].score):'—'}</b></p>
-  <div class="row"><button class="n" data-a="fail" data-id="${esc(x.id)}" data-v="${x.failed?0:1}">${x.failed?'ফেল তুলে নিন':'ফেল করুন'}</button></div></div>`).join('');
+  const e=ex();if(!e)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
+  const q=await getDocs(query(collection(db,'attempts'),where('examId','==',e.id)));
+  const L=q.docs.map(d=>({id:d.id,...d.data()}));
+  const rs=await getDocs(query(collection(db,'results'),where('examId','==',e.id)));
+  const R={};rs.docs.forEach(d=>R[d.id]=d.data());
+  $('#tabc').innerHTML=`<div class="card"><p>পরীক্ষা দিয়েছে: <b>${bn(L.length)}</b> জন · ফলাফল: <b>${e.resultsPublished?'প্রকাশিত':'অপ্রকাশিত'}</b></p>
+  <button class="btn" data-a="calc">ফলাফল গণনা করুন</button>
+  <button class="btn" data-a="pub" style="background:${e.resultsPublished?'var(--bad)':''}">${e.resultsPublished?'ফলাফল বন্ধ করুন':'ফলাফল প্রকাশ করুন'}</button></div>`+
+  L.map(x=>`<div class="card"><h2>${esc(x.name)} ${x.username?`<span style="color:var(--gold);font-size:15px">@${esc(x.username)}</span>`:''} ${x.failed?'<span class="tag bad">ফেল</span>':x.done?'<span class="tag ok">জমা</span>':'<span class="tag">চলছে</span>'}</h2>
+  <p>ট্যাব/অ্যাপ বদল: <b style="color:${x.flags?'var(--bad)':'inherit'}">${bn(x.flags||0)} বার</b></p>${(x.log||[]).length?`<p>${esc(x.log.join(', '))}</p>`:''}
+  <p>প্রাপ্ত নম্বর: <b>${R[x.id]?bn(R[x.id].score):'—'}</b></p>
+  <div class="row"><button class="n" data-a="fail" data-id="${esc(x.id)}" data-v="${x.failed?0:1}">${x.failed?'ফেল তুলে নিন':'ফেল করুন'}</button></div></div>`).join('');
 }
 act.fail=async b=>{await updateDoc(doc(db,'attempts',b.dataset.id),{failed:b.dataset.v==='1'});tabRes()};
 act.calc=async b=>{
-  b.disabled=true;
-  try{
-    const e=ex(),key=(await getDoc(doc(db,'exams',e.id,'secret','key'))).data().k;
-    const q=await getDocs(query(collection(db,'attempts'),where('examId','==',e.id)));
-    const w=writeBatch(db);
-    q.docs.forEach(d=>{
-      const A=d.data();let sc=0;
-      key.forEach((kk,qi)=>{const a=A.ans?.[qi]||'-----';for(let i=0;i<5;i++){const c=a[i];if(c==='-')continue;((c==='T')===(kk[i]==='1'))?sc+=.2:sc-=(e.neg||0)}});
-      if(A.failed)sc=0;sc=Math.max(0,Math.round(sc*100)/100);
-      w.set(doc(db,'results',d.id),{uid:A.uid,examId:e.id,name:A.name||'',score:sc,failed:!!A.failed});
-    });
-    await w.commit();toast('গণনা সম্পন্ন');
-  }catch(er){toast(er.message)}
-  tabRes();
+  b.disabled=true;
+  try{
+    const e=ex(),key=(await getDoc(doc(db,'exams',e.id,'secret','key'))).data().k;
+    const q=await getDocs(query(collection(db,'attempts'),where('examId','==',e.id)));
+    const w=writeBatch(db);
+    q.docs.forEach(d=>{
+      const A=d.data();let sc=0;
+      key.forEach((kk,qi)=>{const a=A.ans?.[qi]||'-----';for(let i=0;i<5;i++){const c=a[i];if(c==='-')continue;((c==='T')===(kk[i]==='1'))?sc+=.2:sc-=(e.neg||0)}});
+      if(A.failed)sc=0;sc=Math.max(0,Math.round(sc*100)/100);
+      w.set(doc(db,'results',d.id),{uid:A.uid,examId:e.id,name:A.name||'',score:sc,failed:!!A.failed});
+    });
+    await w.commit();toast('গণনা সম্পন্ন');
+  }catch(er){toast(er.message)}
+  tabRes();
 };
 act.pub=async()=>{const e=ex();await updateDoc(doc(db,'exams',e.id),{resultsPublished:!e.resultsPublished});await adminView()};
 </script>
