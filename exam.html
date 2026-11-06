@@ -20,12 +20,12 @@ h2{font-size:19px;line-height:1.5;margin-bottom:14px}
 input,select,textarea{width:100%;padding:12px 14px;margin:4px 0 10px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font:inherit;font-size:16px;outline:none}
 textarea{min-height:240px;font-size:14px}
 input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+input[readonly]{opacity:.75}
 label{font-size:13.5px;color:var(--mu)}
 button{font:inherit;cursor:pointer}
-.btn{width:100%;border:0;padding:13px;border-radius:99px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;font-weight:700;font-size:16px;margin-top:6px}
+.btn{display:block;width:100%;border:0;padding:13px;border-radius:99px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;font-weight:700;font-size:16px;margin-top:6px;text-align:center;text-decoration:none}
 .btn:disabled{opacity:.5}
 .ghost{background:none;border:1px solid var(--line);color:var(--gold);border-radius:99px;padding:7px 16px;font-size:14px}
-.gb{width:100%;padding:13px;border-radius:99px;border:0;background:#fff;color:#222;font-weight:600;font-size:16px;margin-bottom:12px}
 .tabs{display:flex;gap:6px;background:rgba(255,255,255,.05);border-radius:14px;padding:4px;margin-bottom:14px}
 .tabs button{flex:1;border:0;background:none;color:var(--mu);padding:10px 4px;border-radius:11px;font-weight:600}
 .tabs button.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}
@@ -47,71 +47,80 @@ button{font:inherit;cursor:pointer}
 .tf button.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;border-color:transparent}
 .ex{user-select:none;-webkit-user-select:none}
 .err{color:var(--bad);font-size:14px;min-height:20px;margin-top:6px}
-#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--gold);color:#1a1300;padding:10px 20px;border-radius:99px;font-weight:600;display:none;z-index:9}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--gold);color:#1a1300;padding:10px 20px;border-radius:99px;font-weight:600;display:none;z-index:9;max-width:90vw;text-align:center}
 a.tel{color:var(--gold)}
 small.h{display:block;color:var(--mu);font-size:12.5px;margin:-6px 0 10px}
+.prof{display:flex;gap:14px;align-items:center}
+.av{width:56px;height:56px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:24px;font-weight:700;color:#1a1300;background:linear-gradient(135deg,var(--gold),var(--gold2))}
+.un{font-size:18px;font-weight:700;color:var(--gold);word-break:break-all}
+.kv{display:flex;gap:8px;font-size:14px;color:var(--mu);margin:2px 0}
+.kv b{color:var(--tx);font-weight:500;word-break:break-word}
+.uin{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;background:var(--bg2);margin:4px 0 10px;padding-left:14px}
+.uin span{color:var(--gold);font-weight:700}
+.uin input{border:0;margin:0;background:none;padding-left:4px}
+.badge{display:inline-block;min-width:20px;padding:0 6px;margin-left:6px;border-radius:99px;background:#ff5a5a;color:#fff;font-size:12px;line-height:20px;text-align:center}
+.alert{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(255,90,90,.12);border:1px solid rgba(255,90,90,.35);color:#ffb3b3;margin-bottom:14px;cursor:pointer}
+.mt{color:var(--ok);font-size:13px}
+.mm{color:var(--bad);font-size:13px}
 </style>
 </head>
 <body>
-<main id="app"></main>
+<main id="app"><div class="card"><p>লোড হচ্ছে…</p></div></main>
 <div id="toast"></div>
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import {getAuth,onAuthStateChanged,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import {getFirestore,doc,getDoc,getDocFromServer,getDocs,setDoc,updateDoc,collection,query,orderBy,limit,where,serverTimestamp,Timestamp,increment,arrayUnion,writeBatch} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {getAuth,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getFirestore,doc,getDoc,getDocFromServer,getDocs,setDoc,updateDoc,collection,query,orderBy,limit,where,serverTimestamp,Timestamp,increment,arrayUnion,writeBatch,onSnapshot} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-/* ====== এখানে আপনার index.html এর firebaseConfig বসান ====== */
-const firebaseConfig = { apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",
+/* index.html এর সাথে একই Firebase প্রজেক্ট — একই লগইন এখানেও চলবে */
+const firebaseConfig = {
+  apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",
   authDomain:"cornea-help-center.firebaseapp.com",
   projectId:"cornea-help-center",
   storageBucket:"cornea-help-center.firebasestorage.app",
   messagingSenderId:"755555154486",
-  appId:"1:755555154486:web:df02dec5573a7a9f203697",
-  measurementId:"G-57TLGQC5V6"
-  // apiKey:"...", authDomain:"...", projectId:"...", appId:"..."
+  appId:"1:755555154486:web:df02dec5573a7a9f203697"
 };
-/* ================================================================ */
 
 const fb=initializeApp(firebaseConfig), auth=getAuth(fb), db=getFirestore(fb);
-const S={user:null,isAdmin:false,off:0,exam:null,mode:'',tk:null};
-const AD={tab:'exam',exams:[],id:null};
+const S={user:null,isAdmin:false,off:0,exam:null,tk:null,kyc:null,prof:null};
+const AD={tab:'exam',exams:[],id:null,pend:0,unsub:null};
 const $=s=>document.querySelector(s), app=$('#app');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const now=()=>Date.now()+S.off;
 const fmt=ms=>new Date(ms).toLocaleString('bn-BD',{dateStyle:'medium',timeStyle:'short'});
 const loc=ms=>new Date(ms-new Date(ms).getTimezoneOffset()*6e4).toISOString().slice(0,16);
-const toast=m=>{const t=$('#toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2600)};
+const toast=(m,t=2600)=>{const x=$('#toast');x.textContent=m;x.style.display='block';clearTimeout(toast.h);toast.h=setTimeout(()=>x.style.display='none',t)};
 const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
 const hash=s=>{let h=1779033703^s.length;for(let i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353);h=h<<13|h>>>19}return h>>>0};
 const rng=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
 const shuf=(arr,r)=>{for(let i=arr.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr};
 const norm=d=>({...d.data(),id:d.id,s:d.data().startAt.toMillis(),en:d.data().endAt.toMillis()});
+const kv=(a,b)=>`<div class="kv"><span>${a}:</span><b>${esc(b)||'—'}</b></div>`;
+const topbar=()=>`<div class="top"><a href="index.html">← হোম</a><button class="ghost" data-a="logout">লগআউট</button></div>`;
 const act={};
 app.addEventListener('click',ev=>{const b=ev.target.closest('[data-a]');if(b&&act[b.dataset.a])act[b.dataset.a](b)});
 const val=id=>($('#'+id)?.value||'').trim();
 
-/* ---------- লগইন ---------- */
+/* ---------- লগইন (মূল সাইটেই হয়) ---------- */
 function loginView(){
-  clearInterval(S.tk);
-  app.innerHTML=`<h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><button class="gb" data-a="google">Google দিয়ে লগইন</button>
-  <label>ইমেইল</label><input id="em" type="email" autocomplete="email"><label>পাসওয়ার্ড</label><input id="pw" type="password" autocomplete="current-password">
-  <button class="btn" data-a="emlogin">ইমেইলে লগইন</button><button class="ghost" style="margin-top:10px;width:100%" data-a="emreg">নতুন অ্যাকাউন্ট খুলুন</button><div class="err" id="er"></div></div>`;
+  clearInterval(S.tk);stopWatch();
+  app.innerHTML=`<div class="top"><a href="index.html">← হোম</a></div><h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>পরীক্ষায় ঢুকতে আগে মূল সাইটে লগইন করুন। একই একাউন্টে এখানে নিজে থেকেই ঢুকে যাবেন।</p><a class="btn" style="margin-top:14px" href="index.html">মূল সাইটে লগইন করুন</a></div>`;
 }
-const fail=e=>{const x=$('#er');if(x)x.textContent=e.message;else toast(e.message)};
-act.google=()=>signInWithPopup(auth,new GoogleAuthProvider()).catch(fail);
-act.emlogin=()=>signInWithEmailAndPassword(auth,val('em'),val('pw')).catch(fail);
-act.emreg=()=>createUserWithEmailAndPassword(auth,val('em'),val('pw')).catch(fail);
-act.logout=()=>signOut(auth);
+act.logout=()=>signOut(auth).then(()=>{location.href='index.html'});
 
 onAuthStateChanged(auth,async u=>{
-  S.user=u;if(!u)return loginView();
+  S.user=u;
+  if(!u)return loginView();
+  app.innerHTML=`<div class="card"><p>লোড হচ্ছে…</p></div>`;
   try{
     await setDoc(doc(db,'ping',u.uid),{t:serverTimestamp()});
     const p=await getDocFromServer(doc(db,'ping',u.uid));
     S.off=p.data().t.toMillis()-Date.now();
     S.isAdmin=(await getDoc(doc(db,'admins',u.uid))).exists();
-    await loadExam();
-    (S.isAdmin&&S.mode!=='student')?adminView():home();
+    if(S.isAdmin){startWatch();await adminView();return}
+    stopWatch();
+    await studentGate();
   }catch(e){app.innerHTML=`<div class="card"><p>লোড করা যায়নি: ${esc(e.message)}</p></div>`}
 });
 async function loadExam(){
@@ -119,21 +128,62 @@ async function loadExam(){
   S.exam=q.empty?null:norm(q.docs[0]);
 }
 
-/* ---------- শিক্ষার্থী হোম ---------- */
+/* ---------- শিক্ষার্থী: KYC যাচাই → প্রোফাইল → হোম ---------- */
+async function studentGate(){
+  const u=S.user;
+  const sd=await getDoc(doc(db,'students',u.uid));
+  S.kyc=sd.exists()?sd.data():null;
+  const k=S.kyc;
+  if(!k||k.status!=='approved'){
+    const msg=!k?'আগে মূল সাইটে আইডি কার্ড যাচাই (KYC) সম্পন্ন করুন।':k.status==='pending'?'আপনার আইডি কার্ড যাচাই চলছে। অনুমোদন পেলে এখানে পরীক্ষার আবেদন করতে পারবেন।':'আপনার আইডি কার্ড যাচাই গৃহীত হয়নি। মূল সাইটে গিয়ে আবার তথ্য জমা দিন।';
+    app.innerHTML=topbar()+`<h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>${msg}</p><a class="btn" style="margin-top:14px" href="index.html">মূল সাইটে যান</a></div>`;
+    return;
+  }
+  const pd=await getDoc(doc(db,'profiles',u.uid));
+  S.prof=pd.exists()?pd.data():null;
+  S.prof?home():profileView();
+}
+function profileView(){
+  const k=S.kyc;
+  app.innerHTML=topbar()+`<h1>প্রোফাইল তৈরি</h1><div class="card"><p>আপনার আইডি কার্ড যাচাই সম্পন্ন হয়েছে। পরীক্ষার জন্য একটি ইউজারনেম বেছে নিন। এটি পরে বদলানো যাবে না।</p>
+  <label style="display:block;margin-top:12px">ইউজারনেম</label><div class="uin"><span>@</span><input id="f_un" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="20" placeholder="যেমন: rahim_25"></div>
+  <small class="h">ইংরেজি ছোট হাতের অক্ষর, সংখ্যা ও _ (৩–২০ অক্ষর)</small>
+  ${kv('নাম',k.name)}${kv('ডিপার্টমেন্ট',k.department)}${kv('সেশন',k.session)}${kv('মোবাইল',k.mobile)}
+  <button class="btn" data-a="mkprof">প্রোফাইল তৈরি করুন</button><div class="err" id="er"></div></div>`;
+}
+act.mkprof=async b=>{
+  const un=val('f_un').toLowerCase().replace(/^@/,'');
+  if(!/^[a-z0-9_]{3,20}$/.test(un)){$('#er').textContent='ইউজারনেম ৩–২০ অক্ষরের হবে, শুধু a-z, 0-9 ও _ চলবে।';return}
+  b.disabled=true;
+  try{
+    const ex=await getDoc(doc(db,'usernames',un));
+    if(ex.exists()){b.disabled=false;$('#er').textContent='এই ইউজারনেম আগেই নেওয়া হয়েছে, অন্য একটা দিন।';return}
+    const w=writeBatch(db);
+    w.set(doc(db,'usernames',un),{uid:S.user.uid});
+    w.set(doc(db,'profiles',S.user.uid),{uid:S.user.uid,username:un,name:S.kyc.name||'',createdAt:serverTimestamp()});
+    await w.commit();
+    S.prof={uid:S.user.uid,username:un,name:S.kyc.name||''};
+    toast('প্রোফাইল তৈরি হয়েছে');home();
+  }catch(e){b.disabled=false;$('#er').textContent=e.code==='permission-denied'?'এই ইউজারনেম নেওয়া যাবে না, অন্য একটা চেষ্টা করুন।':e.message}
+};
+const profCard=()=>{const p=S.prof,k=S.kyc,u=S.user;return`<div class="card"><div class="prof"><div class="av">${esc((p.username[0]||'?').toUpperCase())}</div><div><div class="un">@${esc(p.username)}</div><div style="font-size:15px">${esc(k.name)}</div></div></div><div style="margin-top:10px">${kv('ডিপার্টমেন্ট',k.department)}${kv('সেশন',k.session)}${kv('মোবাইল',k.mobile)}${kv('ইমেইল',u.email)}</div></div>`};
+
 async function home(){
   clearInterval(S.tk);
-  const u=S.user,e=S.exam;
-  let h=`<div class="top"><a href="/">← হোম</a><span>${S.isAdmin?'<button class="ghost" data-a="toadm">অ্যাডমিন</button> ':''}<button class="ghost" data-a="logout">লগআউট</button></span></div><h1>সাপ্তাহিক পরীক্ষা</h1>`;
+  const u=S.user,k=S.kyc,p=S.prof;
+  await loadExam();
+  const e=S.exam;
+  let h=topbar()+`<h1>সাপ্তাহিক পরীক্ষা</h1>`+profCard();
   if(!e){app.innerHTML=h+`<div class="card"><p>এখনো কোনো পরীক্ষা ঘোষণা হয়নি।</p></div>`;return}
   const aid=e.id+'_'+u.uid;
   const [ap,at]=await Promise.all([getDoc(doc(db,'apps',aid)),getDoc(doc(db,'attempts',aid))]);
   h+=`<div class="card"><h2>${esc(e.title)}</h2><p>শুরু: <b>${fmt(e.s)}</b></p><p>শেষ: <b>${fmt(e.en)}</b></p><p>প্রশ্ন: <b>${bn(e.qCount||0)}টি</b> · প্রতি প্রশ্ন সর্বোচ্চ <b>${bn(e.secPerQ)} সেকেন্ড</b></p></div>`;
   if(!ap.exists()){
     h+= now()<e.en ? `<div class="card"><h2>পরীক্ষার আবেদন</h2>
-    <label>পূর্ণ নাম</label><input id="f_name" value="${esc(u.displayName||'')}">
-    <label>মোবাইল নম্বর</label><input id="f_phone" type="tel" inputmode="tel">
-    <label>প্রতিষ্ঠান / কলেজ</label><input id="f_inst">
-    <label>ব্যাচ / বর্ষ</label><input id="f_batch">
+    <label>ইউজারনেম</label><div class="uin"><span>@</span><input id="f_un" value="${esc(p.username)}" readonly></div>
+    <label>মোবাইল নম্বর</label><input id="f_phone" type="tel" inputmode="tel" value="${esc(k.mobile)}">
+    <label>ডিপার্টমেন্ট / অনুষদ</label><input id="f_dept" value="${esc(k.department)}">
+    <label>সেশন</label><input id="f_sess" value="${esc(k.session)}">
     <button class="btn" data-a="apply">আবেদন করুন</button><div class="err" id="er"></div></div>`
     : `<div class="card"><p>এই পরীক্ষার আবেদনের সময় শেষ।</p></div>`;
   }else{
@@ -142,7 +192,7 @@ async function home(){
     else if(st==='rejected')h+=`<div class="card"><span class="tag bad">আবেদন গৃহীত হয়নি</span></div>`;
     else{
       const A=at.exists()?at.data():null;
-      if(A&&(A.done||A.failed||now()>=e.en)){
+      if((A&&(A.done||A.failed))||now()>=e.en){
         if(e.resultsPublished){
           let r=null;try{const rd=await getDoc(doc(db,'results',aid));r=rd.exists()?rd.data():null}catch(_){}
           h+= r? `<div class="card"><p style="text-align:center">আপনার প্রাপ্ত নম্বর</p><div class="big">${bn(r.score)} / ${bn(e.qCount||0)}</div>${r.failed?'<p style="text-align:center;color:var(--bad)">বাতিল</p>':''}</div>`
@@ -158,10 +208,10 @@ async function home(){
   }
   app.innerHTML=h;
 }
-act.toadm=()=>{S.mode='';adminView()};
 act.apply=async b=>{
-  const d={name:val('f_name'),phone:val('f_phone'),inst:val('f_inst'),batch:val('f_batch')};
-  if(!d.name||d.phone.length<11){$('#er').textContent='নাম এবং সঠিক মোবাইল নম্বর দিন।';return}
+  if(!S.exam)return;
+  const d={username:S.prof.username,name:S.kyc.name||'',phone:val('f_phone'),dept:val('f_dept'),session:val('f_sess')};
+  if(d.phone.replace(/\D/g,'').length<11||!d.dept||!d.session){$('#er').textContent='মোবাইল নম্বর (১১ সংখ্যা), ডিপার্টমেন্ট ও সেশন দিন।';return}
   b.disabled=true;
   try{await setDoc(doc(db,'apps',S.exam.id+'_'+S.user.uid),{...d,uid:S.user.uid,email:S.user.email||'',examId:S.exam.id,status:'pending',createdAt:serverTimestamp()});toast('আবেদন জমা হয়েছে');home()}
   catch(e){b.disabled=false;$('#er').textContent=e.message}
@@ -172,7 +222,7 @@ act.start=async()=>{
   const e=S.exam,id=e.id+'_'+S.user.uid,ref=doc(db,'attempts',id);
   let a=await getDoc(ref);
   if(!a.exists()){
-    await setDoc(ref,{uid:S.user.uid,examId:e.id,name:S.user.displayName||'',startedAt:serverTimestamp(),qStart:serverTimestamp(),idx:0,ans:{},flags:0,done:false,failed:false});
+    await setDoc(ref,{uid:S.user.uid,examId:e.id,name:S.kyc?.name||'',username:S.prof?.username||'',startedAt:serverTimestamp(),qStart:serverTimestamp(),idx:0,ans:{},flags:0,done:false,failed:false});
     a=await getDocFromServer(ref);
   }
   const A=a.data();if(A.done||A.failed)return home();
@@ -210,14 +260,35 @@ act.start=async()=>{
       const left=Math.min(per-(now()-qMs),e.en-now());
       if(e.en-now()<=0)return finish();
       if(left<=0)return next();
-      $('#tm').textContent=bn(Math.ceil(left/1000))+' সে.';$('#pb').style.width=Math.max(0,left/per*100)+'%';
+      const tm=$('#tm'),pb=$('#pb');if(!tm)return;
+      tm.textContent=bn(Math.ceil(left/1000))+' সে.';pb.style.width=Math.max(0,left/per*100)+'%';
     },250);
   }
   if(now()>=e.en||idx>=n)return finish();
   show();
 };
 
-/* ---------- অ্যাডমিন ---------- */
+/* ---------- অ্যাডমিন (লগইন করলেই সরাসরি এখানে) ---------- */
+function startWatch(){
+  if(AD.unsub)return;
+  let first=true;
+  AD.unsub=onSnapshot(query(collection(db,'apps'),where('status','==','pending')),snap=>{
+    AD.pend=snap.size;
+    if(!first){
+      snap.docChanges().forEach(c=>{if(c.type==='added')toast('🔔 নতুন আবেদন: '+(c.doc.data().name||c.doc.data().username||''),5500)});
+      if(AD.tab==='apps'&&$('#tabc'))tabApps().catch(()=>{});
+    }
+    first=false;
+    document.title=(AD.pend?'('+AD.pend+') ':'')+'সাপ্তাহিক পরীক্ষা';
+    paintBadge();
+  },()=>{});
+}
+function stopWatch(){if(AD.unsub){AD.unsub();AD.unsub=null}AD.pend=0}
+function paintBadge(){
+  const b=$('#apbadge'),a=$('#alertbar');
+  if(b){b.textContent=bn(AD.pend);b.style.display=AD.pend?'inline-block':'none'}
+  if(a){a.style.display=AD.pend?'flex':'none';const s=a.querySelector('b');if(s)s.textContent=bn(AD.pend)}
+}
 async function adminView(){
   clearInterval(S.tk);
   const q=await getDocs(query(collection(db,'exams'),orderBy('startAt','desc'),limit(30)));
@@ -227,15 +298,17 @@ async function adminView(){
 }
 const ex=()=>AD.exams.find(x=>x.id===AD.id);
 async function renderAdmin(){
-  let h=`<div class="top"><a href="/">← সাইট</a><span><button class="ghost" data-a="tostu">শিক্ষার্থী ভিউ</button> <button class="ghost" data-a="logout">লগআউট</button></span></div><h1>অ্যাডমিন প্যানেল</h1>
+  const T=[['exam','পরীক্ষা'],['apps','আবেদন'],['res','ফলাফল']];
+  app.innerHTML=`<div class="top"><a href="index.html">← হোম</a><button class="ghost" data-a="logout">লগআউট</button></div><h1>অ্যাডমিন প্যানেল</h1>
+  <div class="alert" id="alertbar" data-a="goapps" style="display:none"><span>🔔 নতুন আবেদন অপেক্ষায়: <b></b> টি</span><span>দেখুন →</span></div>
   <label>পরীক্ষা বাছুন</label><select id="sel"><option value="">+ নতুন পরীক্ষা</option>${AD.exams.map(x=>`<option value="${x.id}" ${x.id===AD.id?'selected':''}>${esc(x.title)} (${fmt(x.s)})</option>`).join('')}</select>
-  <div class="tabs">${[['exam','পরীক্ষা'],['apps','আবেদন'],['res','ফলাফল']].map(([k,t])=>`<button data-a="tab" data-k="${k}" class="${AD.tab===k?'on':''}">${t}</button>`).join('')}</div><div id="tabc"><div class="card"><p>লোড হচ্ছে…</p></div></div>`;
-  app.innerHTML=h;
+  <div class="tabs">${T.map(([k,t])=>`<button data-a="tab" data-k="${k}" class="${AD.tab===k?'on':''}">${t}${k==='apps'?'<span class="badge" id="apbadge" style="display:none"></span>':''}</button>`).join('')}</div><div id="tabc"><div class="card"><p>লোড হচ্ছে…</p></div></div>`;
   $('#sel').onchange=e=>{AD.id=e.target.value||null;renderAdmin()};
+  paintBadge();
   try{await ({exam:tabExam,apps:tabApps,res:tabRes})[AD.tab]()}catch(e){$('#tabc').innerHTML=`<div class="card"><p>${esc(e.message)}</p></div>`}
 }
 act.tab=b=>{AD.tab=b.dataset.k;renderAdmin()};
-act.tostu=()=>{S.mode='student';home()};
+act.goapps=()=>{AD.tab='apps';renderAdmin()};
 
 async function tabExam(){
   const e=ex();let txt='';
@@ -285,13 +358,27 @@ async function tabApps(){
   if(!AD.id)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
   const q=await getDocs(query(collection(db,'apps'),where('examId','==',AD.id)));
   const L=q.docs.map(d=>({id:d.id,...d.data()}));
-  const ord={pending:0,approved:1,rejected:2};L.sort((a,b)=>ord[a.status]-ord[b.status]);
+  const ord={pending:0,approved:1,rejected:2};
+  L.sort((a,b)=>(ord[a.status]-ord[b.status])||((b.createdAt?.seconds||0)-(a.createdAt?.seconds||0)));
+  const ks=await Promise.all(L.map(x=>getDoc(doc(db,'students',x.uid)).then(s=>s.exists()?s.data():null).catch(()=>null)));
+  const nz=s=>String(s||'').toLowerCase().replace(/\s+/g,'');
+  const ph=s=>String(s||'').replace(/\D/g,'').slice(-10);
+  const row=(lab,v,kvv,isPh)=>{
+    let m='';
+    if(kvv!==undefined){const ok=isPh?(ph(v)&&ph(v)===ph(kvv)):(nz(v)&&nz(v)===nz(kvv));m=ok?' <span class="mt">✔ KYC-র সাথে মিলেছে</span>':` <span class="mm">✖ KYC: ${esc(kvv||'—')}</span>`}
+    return `<p>${lab}: <b>${esc(v)||'—'}</b>${m}</p>`;
+  };
   $('#tabc').innerHTML=`<p style="color:var(--mu);margin-bottom:10px">মোট ${bn(L.length)} জন, অনুমোদিত ${bn(L.filter(x=>x.status==='approved').length)} জন</p>`+
-  (L.map(x=>`<div class="card"><h2>${esc(x.name)} <span class="tag ${x.status==='approved'?'ok':x.status==='rejected'?'bad':''}">${x.status==='approved'?'অনুমোদিত':x.status==='rejected'?'বাতিল':'অপেক্ষমাণ'}</span></h2>
-  <p>ফোন: <a class="tel" href="tel:${esc(x.phone)}">${esc(x.phone)}</a></p><p>ইমেইল: ${esc(x.email)}</p><p>প্রতিষ্ঠান: ${esc(x.inst)}</p><p>ব্যাচ: ${esc(x.batch)}</p>
-  <div class="row"><button class="y" data-a="st" data-id="${x.id}" data-v="approved">অনুমোদন</button><button class="n" data-a="st" data-id="${x.id}" data-v="rejected">বাতিল</button></div></div>`).join('')||`<div class="card"><p>কোনো আবেদন নেই।</p></div>`);
+  (L.map((x,i)=>{const k=ks[i];return `<div class="card"><h2>${esc(x.name)} <span class="tag ${x.status==='approved'?'ok':x.status==='rejected'?'bad':''}">${x.status==='approved'?'অনুমোদিত':x.status==='rejected'?'বাতিল':'অপেক্ষমাণ'}</span></h2>
+  <p>ইউজারনেম: <b>@${esc(x.username||'—')}</b></p>
+  <p>ফোন: <a class="tel" href="tel:${esc(x.phone)}">${esc(x.phone)}</a>${k?(ph(x.phone)&&ph(x.phone)===ph(k.mobile)?' <span class="mt">✔ KYC-র সাথে মিলেছে</span>':` <span class="mm">✖ KYC: ${esc(k.mobile||'—')}</span>`):''}</p>
+  ${row('ডিপার্টমেন্ট',x.dept,k?(k.department||''):undefined)}
+  ${row('সেশন',x.session,k?(k.session||''):undefined)}
+  <p>ইমেইল: ${esc(x.email)}</p>
+  ${k?`<p>KYC নাম: <b>${esc(k.name)}</b> · বাবা: <b>${esc(k.father)}</b></p>`:`<p class="mm">⚠ KYC তথ্য পাওয়া যায়নি</p>`}
+  <div class="row"><button class="y" data-a="st" data-id="${esc(x.id)}" data-v="approved">অনুমোদন</button><button class="n" data-a="st" data-id="${esc(x.id)}" data-v="rejected">বাতিল</button></div></div>`}).join('')||`<div class="card"><p>কোনো আবেদন নেই।</p></div>`);
 }
-act.st=async b=>{await updateDoc(doc(db,'apps',b.dataset.id),{status:b.dataset.v});toast('হয়েছে');tabApps()};
+act.st=async b=>{b.disabled=true;await updateDoc(doc(db,'apps',b.dataset.id),{status:b.dataset.v});toast('হয়েছে');tabApps()};
 
 async function tabRes(){
   const e=ex();if(!e)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
@@ -302,10 +389,10 @@ async function tabRes(){
   $('#tabc').innerHTML=`<div class="card"><p>পরীক্ষা দিয়েছে: <b>${bn(L.length)}</b> জন · ফলাফল: <b>${e.resultsPublished?'প্রকাশিত':'অপ্রকাশিত'}</b></p>
   <button class="btn" data-a="calc">ফলাফল গণনা করুন</button>
   <button class="btn" data-a="pub" style="background:${e.resultsPublished?'var(--bad)':''}">${e.resultsPublished?'ফলাফল বন্ধ করুন':'ফলাফল প্রকাশ করুন'}</button></div>`+
-  L.map(x=>`<div class="card"><h2>${esc(x.name)} ${x.failed?'<span class="tag bad">ফেল</span>':x.done?'<span class="tag ok">জমা</span>':'<span class="tag">চলছে</span>'}</h2>
+  L.map(x=>`<div class="card"><h2>${esc(x.name)} ${x.username?`<span style="color:var(--gold);font-size:15px">@${esc(x.username)}</span>`:''} ${x.failed?'<span class="tag bad">ফেল</span>':x.done?'<span class="tag ok">জমা</span>':'<span class="tag">চলছে</span>'}</h2>
   <p>ট্যাব/অ্যাপ বদল: <b style="color:${x.flags?'var(--bad)':'inherit'}">${bn(x.flags||0)} বার</b></p>${(x.log||[]).length?`<p>${esc(x.log.join(', '))}</p>`:''}
   <p>প্রাপ্ত নম্বর: <b>${R[x.id]?bn(R[x.id].score):'—'}</b></p>
-  <div class="row"><button class="n" data-a="fail" data-id="${x.id}" data-v="${x.failed?0:1}">${x.failed?'ফেল তুলে নিন':'ফেল করুন'}</button></div></div>`).join('');
+  <div class="row"><button class="n" data-a="fail" data-id="${esc(x.id)}" data-v="${x.failed?0:1}">${x.failed?'ফেল তুলে নিন':'ফেল করুন'}</button></div></div>`).join('');
 }
 act.fail=async b=>{await updateDoc(doc(db,'attempts',b.dataset.id),{failed:b.dataset.v==='1'});tabRes()};
 act.calc=async b=>{
@@ -318,7 +405,7 @@ act.calc=async b=>{
       const A=d.data();let sc=0;
       key.forEach((kk,qi)=>{const a=A.ans?.[qi]||'-----';for(let i=0;i<5;i++){const c=a[i];if(c==='-')continue;((c==='T')===(kk[i]==='1'))?sc+=.2:sc-=(e.neg||0)}});
       if(A.failed)sc=0;sc=Math.max(0,Math.round(sc*100)/100);
-      w.set(doc(db,'results',d.id),{uid:A.uid,examId:e.id,name:A.name,score:sc,failed:!!A.failed});
+      w.set(doc(db,'results',d.id),{uid:A.uid,examId:e.id,name:A.name||'',score:sc,failed:!!A.failed});
     });
     await w.commit();toast('গণনা সম্পন্ন');
   }catch(er){toast(er.message)}

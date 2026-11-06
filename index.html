@@ -551,7 +551,7 @@ const lnk=s=>`<a href="${s.link||'#'}" ${s.link?'target="_blank" rel="noopener"'
 const book=b=>b.vols?`<div class="sg sg2"><button>${b.n}<i>⌄</i></button><div class="sb"><div>${b.vols.map(lnk).join('')}</div></div></div>`:lnk(b);
 const sub=s=>s.books?`<div class="sg"><button>${s.n}<i>⌄</i></button><div class="sb"><div>${s.books.map(book).join('')}</div></div></div>`:lnk(s);
 const grp=(n,arr,cls)=>`<div class="sg${cls?' '+cls:''}"><button>${n}<i>⌄</i></button><div class="sb"><div>${arr.map(lnk).join('')}</div></div></div>`;
-$('dl').innerHTML='<small>FIRST YEAR SUBJECTS</small>'+SUBJECTS.map(sub).join('')+'<small>PRACTICE</small>'+grp(BOARD_Q.n,BOARD_Q.subs,'q')+lnk(WEEKLY).replace('<a ','<a class="q" ');
+$('dl').innerHTML='<small>FIRST YEAR SUBJECTS</small>'+SUBJECTS.map(sub).join('')+'<small>PRACTICE</small>'+grp(BOARD_Q.n,BOARD_Q.subs,'q')+`<a class="q" href="exam.html">${WEEKLY.n}<em>Start →</em></a>`;
 document.querySelectorAll('.sg>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
 const t=()=>document.body.classList.toggle('m');
 $('bg').onclick=t;$('ov').onclick=t;$('cl').onclick=t;
