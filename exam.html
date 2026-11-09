@@ -126,14 +126,14 @@ async function loadExam(){
 async function home(){
   clearInterval(S.tk);
   const u=S.user,e=S.exam;
-  let h=`<div class="top"><a href="/">← হোম</a><span>${S.isAdmin?'<button class="ghost" data-a="toadm">অ্যাডমিন</button> ':''}<button class="ghost" data-a="logout">লগআউট</button></span></div><h1>সাপ্তাহিক পরীক্ষা</h1>`;
+  let h=`<div class="top"><a href="about">← হোম</a><span>${S.isAdmin?'<button class="ghost" data-a="toadm">অ্যাডমিন</button> ':''}<button class="ghost" data-a="logout">লগআউট</button></span></div><h1>সাপ্তাহিক পরীক্ষা</h1>`;
   if(!e){app.innerHTML=h+`<div class="card"><p>এখনো কোনো পরীক্ষা ঘোষণা হয়নি।</p></div>`;return}
   const aid=e.id+'_'+u.uid;
   const [ap,at]=await Promise.all([getDoc(doc(db,'apps',aid)),getDoc(doc(db,'attempts',aid))]);
   let stu=null;if(!ap.exists()){try{const sd=await getDoc(doc(db,'students',u.uid));stu=sd.exists()?sd.data():null}catch(_){}}
   h+=`<div class="card"><h2>${esc(e.title)}</h2><p>শুরু: <b>${fmt(e.s)}</b></p><p>শেষ: <b>${fmt(e.en)}</b></p><p>প্রশ্ন: <b>${bn(e.qCount||0)}টি</b> · প্রতি প্রশ্ন সর্বোচ্চ <b>${bn(e.secPerQ)} সেকেন্ড</b></p></div>`;
   if(!ap.exists()&&(!stu||stu.status!=='approved')){
-    h+=`<div class="card"><p>পরীক্ষার আবেদনের আগে মূল সাইটে আইডি কার্ড যাচাই (KYC) সম্পন্ন ও অনুমোদিত হতে হবে।</p><p><a class="tel" href="/">মূল সাইটে যান</a></p></div>`;
+    h+=`<div class="card"><p>পরীক্ষার আবেদনের আগে মূল সাইটে আইডি কার্ড যাচাই (KYC) সম্পন্ন ও অনুমোদিত হতে হবে।</p><p><a class="tel" href="index.html">মূল সাইটে যান</a></p></div>`;
   }else if(!ap.exists()){
     h+= now()<e.en ? `<div class="card"><h2>পরীক্ষার আবেদন</h2>
     <label>পূর্ণ নাম</label><input id="f_name" value="${esc(stu?.name||u.displayName||'')}">
