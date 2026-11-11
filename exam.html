@@ -169,8 +169,8 @@ async function profile(){
   try{
     const q=await getDocs(query(collection(db,'results'),where('uid','==',S.user.uid),where('published','==',true)));
     const L=q.docs.map(d=>d.data()).sort((a,b)=>a.at-b.at);
-    if(L.length)h+=`<div class="card"><h2>আমার ফলাফলের ইতিহাস</h2><p>গড় নম্বর: <b>${bn((L.reduce((s,x)=>s+x.score,0)/L.length).toFixed(2))}</b> · পরীক্ষা: <b>${bn(L.length)}টি</b></p><div style="display:flex;align-items:flex-end;gap:6px;height:100px;margin-top:10px">`+
-      L.slice(-10).map(x=>`<div style="flex:1;text-align:center"><div style="background:var(--gold);height:${Math.max(3,Math.round(x.score/(x.max||30)*70))}px;border-radius:6px 6px 0 0"></div><small style="font-size:11px;color:var(--mu)">${bn(x.score)}</small></div>`).join('')+`</div></div>`;
+    if(L.length)h+=`<div class="card"><h2>আমার ফলাফলের ইতিহাস</h2><p>গড় নম্বর: <b>${bn((L.reduce((s,x)=>s+x.score,0)/L.length).toFixed(2))}</b> · পরীক্ষা: <b>${bn(L.length)}টি</b></p><div style="display:flex;align-items:flex-end;justify-content:center;gap:8px;height:100px;margin-top:10px">`+
+      L.slice(-10).map(x=>`<div style="flex:1;max-width:56px;text-align:center"><div style="background:var(--gold);height:${Math.max(3,Math.round(x.score/(x.max||30)*70))}px;border-radius:6px 6px 0 0"></div><small style="font-size:11px;color:var(--mu)">${bn(x.score)}</small></div>`).join('')+`</div></div>`;
   }catch(_){}
   if(e&&e.resultsPublished&&e.board)try{
     const q=await getDocs(query(collection(db,'results'),where('examId','==',e.id),where('published','==',true),where('board','==',true)));
@@ -353,14 +353,15 @@ async function tabApps(){
   $('#tabc').innerHTML=`<p style="color:var(--mu);margin-bottom:10px">মোট ${bn(L.length)} জন, অনুমোদিত ${bn(L.filter(x=>x.status==='approved').length)} জন</p>`+
   (L.map(x=>x.status==='rejected'?`<div class="card"><p>বাতিল, ব্যক্তিগত তথ্য মুছে ফেলা হয়েছে</p></div>`:`<div class="card"><h2>${esc(x.name)} <span class="tag ${x.status==='approved'?'ok':x.status==='rejected'?'bad':''}">${x.status==='approved'?'অনুমোদিত':x.status==='rejected'?'বাতিল':'অপেক্ষমাণ'}</span></h2>
   <p>ফোন: <a class="tel" href="tel:${esc(x.phone)}">${esc(x.phone)}</a></p><p>ইমেইল: ${esc(x.email)}</p><p>প্রতিষ্ঠান: ${esc(x.inst)}</p><p>ব্যাচ: ${esc(x.batch)}</p>
-  <div class="row"><button class="y" data-a="st" data-id="${x.id}" data-v="approved">অনুমোদন</button><button class="n" data-a="st" data-id="${x.id}" data-v="rejected">বাতিল</button></div></div>`).join('')||`<div class="card"><p>কোনো আবেদন নেই।</p></div>`);
+  <div class="row">${x.status==='approved'?`<button class="ghost" style="border-radius:12px" data-a="st" data-id="${x.id}" data-v="pending">অনুমোদন তুলে নিন</button>`:`<button class="y" data-a="st" data-id="${x.id}" data-v="approved">অনুমোদন</button>`}<button class="n" data-a="st" data-id="${x.id}" data-v="rejected">বাতিল (তথ্য মুছবে)</button></div></div>`).join('')||`<div class="card"><p>কোনো আবেদন নেই।</p></div>`);
 }
 act.st=async b=>{
   const id=b.dataset.id,ref=doc(db,'apps',id);
   if(b.dataset.v==='rejected'){
-    if(!confirm('বাতিল করলে এই আবেদনকারীর নাম, ফোন, ইমেইল সব মুছে যাবে। নিশ্চিত?'))return;
+    if(!confirm('বাতিল করলে এই আবেদনকারীর নাম, ফোন, ইমেইল, পরীক্ষার উত্তর ও ফলাফল সব মুছে যাবে। নিশ্চিত?'))return;
     await setDoc(ref,{uid:id.slice(AD.id.length+1),examId:AD.id,status:'rejected'});
-  }else await updateDoc(ref,{status:'approved'});
+    try{await deleteDoc(doc(db,'attempts',id));await deleteDoc(doc(db,'results',id))}catch(_){}
+  }else await updateDoc(ref,{status:b.dataset.v});
   toast('হয়েছে');tabApps();
 };
 
