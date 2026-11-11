@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title> বাংলাদেশ ইসলামী ছাত্রশিবির ,আইএইচটি শাখা রাজশাহী “আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</title>
+<title> বাংলাদেশ ইসলামী ছাত্রশিবির ,আইএইচটি শাখা রাজশাহী| “আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</title>
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <style>
@@ -186,8 +186,7 @@ body.home footer,body.home .tabs,body.home .burger{display:none}
 .abox{display:flex;flex-direction:column}
 .abox .gb{order:-2}
 .abox .or{order:-1}
-
-/* ---- Admin KYC viewer ---- */
+/* ---- Admin: Students / Live Users viewer ---- */
 .vcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:16px}
 .vcard h4{font-size:18px;color:var(--gold);margin-bottom:10px}
 .irow{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px}
@@ -272,131 +271,114 @@ model-viewer{width:100%;height:420px;background:#05070d}
 body.ap-open{overflow:hidden}
 .kyc-logo{display:flex;justify-content:center;margin:0 auto 14px}
 .kyc-logo .logo-img{width:120px;height:auto;max-width:60vw;box-shadow:none!important;background:none!important;border-radius:0;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+.pprev{display:grid;place-items:center;width:108px;height:108px;margin:0 auto;border-radius:50%;border:2px dashed var(--gold);background:var(--bg2) center/cover no-repeat;color:var(--gold);font-size:36px;cursor:pointer;overflow:hidden}
+.pprev.has{border-style:solid}.pprev.has span{display:none}
+.req{color:#ff8a8a}
+.ac input[readonly]{opacity:.65}
+.avu{width:54px;height:54px;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--bg2);flex:none}
+img.avu.zi{cursor:zoom-in}
+.avn{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line);color:var(--gold);font-weight:700;font-size:20px;flex:none}
+.vtop .who{display:flex;align-items:center;gap:12px;min-width:0}
+.bd.active{background:rgba(126,224,160,.14);color:#7ee0a0;border:1px solid rgba(126,224,160,.35)}
+.bd.blocked{background:rgba(255,138,138,.14);color:#ff8a8a;border:1px solid rgba(255,138,138,.35)}
 </style>
+
 </head>
 <body>
 <div id="auth" class="ld"><div class="ac">
   <div class="logo">বাংলাদেশ ইসলামী ছাত্রশিবির</div>
-  <div class="asub">IHT Help Center • Pull the lapm cord</div>
+  <div class="asub">IHT Help Center • Sign in to continue</div>
   <div class="glass abox">
     <div class="tg"><button class="on" data-m="in">Sign in</button><button data-m="up">Create account</button></div>
     <input id="em" type="email" placeholder="Email address" autocomplete="email">
     <input id="pw" type="password" placeholder="Password" autocomplete="current-password">
     <button class="btn" id="go">Sign in</button>
     <div class="or">— or —</div>
-<button class="gb" id="gg"><svg width="18" hei    ght="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Continue with Google</button>
+<button class="gb" id="gg"><svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Continue with Google</button>
     <button class="fp" id="fp">Forgot password?</button>
     <div class="msg" id="ms"></div>
   </div>
   <button class="pv" id="pv">Preview site (Firebase setup pending)</button>
 </div></div>
-
-<div id="kyc" class="ov-screen"><div class="ac">
+<div id="profile" class="ov-screen"><div class="ac">
   <div class="kyc-logo"><img id="authLogo" src="logo.png" alt="Logo" class="logo-img"></div>
-  <div class="asub">Verify College ID Card</div>
+  <div class="asub">আপনার প্রোফাইল তৈরি করুন</div>
   <div class="glass abox">
-    <input id="kName" type="text" placeholder="পূর্ণ নাম (আইডি কার্ড অনুযায়ী)">
-    <input id="kFather" type="text" placeholder="বাবার নাম">
-    <select id="kDept"></select>
-    <input id="kSession" type="text" placeholder="Session (যেমন 2025-2026)">
-    <input id="kMobile" type="tel" placeholder="মোবাইল নম্বর">
-    <div class="flabel">Front of ID Card</div>
-    <input id="kFront" type="file" accept="image/*">
-    <div class="flabel">Backside of ID Card</div>
-    <input id="kBack" type="file" accept="image/*">
-    <button class="btn" id="kSubmit" style="margin-top:20px">Submit</button>
-    <div class="msg" id="kMsg"></div>
-  </div>
-</div></div>
-
-<div id="pending" class="ov-screen"><div class="ac">
-  <div class="logo" style="font-size:clamp(40px,10vw,64px)">আমার-শিবির</div>
-  <div class="glass abox" style="text-align:center">
-    <h3 style="color:var(--gold);margin-bottom:10px">Verification loading</h3>
-    <p style="color:var(--mu)">Data submitted.
-      Get the results after few hours
-    </p>
+    <label for="pPhoto" id="pPrev" class="pprev"><span>+</span></label>
+    <div class="flabel" style="margin:8px 0 14px;text-align:center">আপনার ছবি <b class="req">*</b></div>
+    <input id="pPhoto" type="file" accept="image/*" style="display:none">
+    <input id="pName" type="text" placeholder="পূর্ণ নাম *" autocomplete="name">
+    <input id="pMobile" type="tel" placeholder="মোবাইল নম্বর *" autocomplete="tel">
+    <input id="pEmail" type="email" placeholder="ইমেইল" readonly>
+    <div class="flabel">ঐচ্ছিক তথ্য (না দিলেও চলবে)</div>
+    <input id="pFather" type="text" placeholder="বাবার নাম">
+    <select id="pDept"></select>
+    <input id="pSession" type="text" placeholder="Session (যেমন 2025-2026)">
+    <input id="pAddr" type="text" placeholder="ঠিকানা">
+    <button class="btn" id="pSubmit" style="margin-top:16px">প্রোফাইল তৈরি করুন</button>
+    <div class="msg" id="pMsg"></div>
     <button class="fp" id="pLogout">Log out</button>
   </div>
 </div></div>
-
-<div id="rejected" class="ov-screen"><div class="ac">
+<div id="blocked" class="ov-screen"><div class="ac">
   <div class="logo" style="font-size:clamp(40px,10vw,64px)">আমার-শিবির</div>
   <div class="glass abox" style="text-align:center">
-    <h3 style="color:#ca1e1e;margin-bottom:10px">Data not accepted</h3>
-    <p style="color:var(--mu)" id="rReason">Try again with correct information</p>
-    <button class="btn" id="rRetry" style="margin-top:16px">Try again</button>
+    <h3 style="color:#ca1e1e;margin-bottom:10px">আপনার অ্যাকাউন্ট ব্লক করা হয়েছে</h3>
+    <p style="color:var(--mu)" id="bReason"></p>
+    <p style="color:var(--mu);margin-top:8px">প্রয়োজনে অ্যাডমিনের সাথে যোগাযোগ করুন।</p>
+    <button class="fp" id="bLogout">Log out</button>
   </div>
 </div></div>
-
 <div class="sov" id="advO"></div>
-<div class="sheet" id="advS"><button class="x sx" id="advX" aria-label="Close">×</button><h3 style="margin:6px 0 14px">Student Verifications</h3><div class="atabs" id="atabs"><button data-s="pending" class="on">Pending</button><button data-s="approved">Approved</button><button data-s="rejected">Rejected</button></div><input id="aq" type="search" placeholder="নাম / মোবাইল / ইমেইল দিয়ে খুঁজুন"><div class="acnt" id="acnt"></div><div id="advList"></div></div>
-
+<div class="sheet" id="advS"><button class="x sx" id="advX" aria-label="Close">×</button><h3 style="margin:6px 0 14px">Students</h3><div class="atabs" id="atabs"><button data-s="active" class="on">Active</button><button data-s="blocked">Blocked</button></div><input id="aq" type="search" placeholder="নাম / মোবাইল / ইমেইল দিয়ে খুঁজুন"><div class="acnt" id="acnt"></div><div id="advList"></div></div>
 <div class="lb" id="lb"><button class="x lbx" id="lbx" aria-label="Close">×</button><div class="lbs" id="lbs"><img id="lbi" alt="ID card"></div><div class="lbt"><button id="lbm" aria-label="Zoom out">−</button><span class="lbz" id="lbz">100%</span><button id="lbp" aria-label="Zoom in">+</button><button id="lbr" style="font-size:14px">Reset</button></div></div>
-
 <div class="sov" id="liveO"></div>
 <div class="sheet" id="liveS"><button class="x sx" id="liveX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">Live Users</h3><div class="acnt" id="liveSum"></div><div id="liveList"></div></div>
-
 <header>
   <div class="burger" id="bg" aria-label="Menu" role="button"><i></i><i></i><i></i></div>
-  <div class="brand" onclick="location.hash='home'">IHT campus ছাত্রশিবির</div>
-  <nav class="top"><a href="#about">About</a><a href="#anatomy">3D models</a><a href="#depts">Departments</a><a href="#notice">Notice</a><a href="#contact">Contact</a></nav>
+  <div class="brand" onclick="location.hash='home'">বাংলাদেশ ইসলামী ছাত্রশিবির</div>
+  <nav class="top"><a href="#about">About</a><a href="#anatomy">Anatomy</a><a href="#depts">Departments</a><a href="#notice">Notice</a><a href="#contact">Contact</a></nav>
 </header>
-
 <div class="ov" id="ov"></div>
 <aside class="drawer" id="dr">
   <div class="dh"><div class="brand">আমার-শিবির</div><button class="x" id="cl">×</button></div>
   <div class="dl" id="dl"></div>
   <div class="dl"><small>LEARNING</small><a href="#anatomy">🧠 Anatomy &amp; Physiology</a></div>
-  <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">Verify Students</a><a href="#" id="openLive">Live Users</a></div>
+  <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">Students</a><a href="#" id="openLive">Live Users</a><a href="exam.html" class="q">Exam &amp; KYC প্যানেল</a></div>
   <div class="dl"><small>ACCOUNT</small><div id="who" style="color:var(--mu);font-size:14px;margin:0 4px 10px;word-break:break-all"></div><a href="#" id="lo">Log out</a></div>
 </aside>
-
 <div class="hero pg" id="home">
-  <div class="eye rv">“আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</div>
+  <div class="eye rv">“আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</div>
   <img src="logo.png" alt="logo" class="site-logo">
   <h1 class="logo rv">আমার-শিবির</h1>
   <div class="pill rv">4-Year Diploma • IHT</div>
   <div class="orn"></div>
-  <p class="tag rv"><b>বিশেষ দ্রষ্টব্য:</b><br>সাপ্তাহিক পরীক্ষায় অংশগ্রহণ করতে ভুলবেন না যেন</p>
+  <p class="tag rv"><b>বিশেষ দ্রষ্টব্য:</b><br>এখানে শুধু আই এইচ টি ফার্স্ট ইয়ারের গাইড লাইন দেওয়া হয়।</p>
   <div class="rv" style="margin-top:30px"><a class="btn" href="#about">Explore</a></div>
 </div>
-
 <section id="about" class="pg"><div class="wrap">
   <div class="sec-h rv"><small>ABOUT US</small><h2>আমার-শিবির</h2></div>
   <div class="glass rv about">
-    <p>### একজন আদর্শ তরুণ গড়ার প্রত্যয়ে বাংলাদেশ ইসলামী ছাত্রশিবির
-
-দেশের প্রতিটি জনপদে নিরলসভাবে কাজ করে যাচ্ছে বাংলাদেশ ইসলামী ছাত্রশিবির। একজন তরুণকে একই সঙ্গে আদর্শ শিক্ষার্থী, সৎ, যোগ্য ও নৈতিকতাসম্পন্ন মানুষ হিসেবে গড়ে তোলাই সংগঠনটির অন্যতম লক্ষ্য।
-
-ইসলাম সকল মানুষের কল্যাণের বার্তা বহন করে। সেই বার্তা ও ইসলামের সুমহান সৌন্দর্য মুসলমান, হিন্দু, বৌদ্ধ, খ্রিস্টানসহ সব ধর্মের মানুষের কাছে সুন্দর ও ইতিবাচকভাবে তুলে ধরার প্রত্যয়ে এগিয়ে যাচ্ছে ইসলামী ছাত্রশিবির।
-
-শিক্ষা, নৈতিকতা, মানবিকতা ও চরিত্র গঠনের এই প্রচেষ্টায় অনুপ্রাণিত হয়ে দিন দিন মানুষের আগ্রহ ও সমর্থন বাড়ছে।
-
-আসুন, নিজেকে জ্ঞান, নৈতিকতা ও যোগ্যতায় সমৃদ্ধ করে একজন আদর্শ মানুষ হিসেবে গড়ে তুলি। অংশ হই একটি সুন্দর, মানবিক ও কল্যাণমুখী সমাজ গড়ার প্রচেষ্টায়।</p>
+    <p>আমার-শিবির হলো বাংলাদেশ ইসলামী ছাত্রশিবির রাজশাহী-শাখার প্রতিষ্ঠান, যেখানে IHT (Institute of Health Technology) First Year শিক্ষার্থীদের জন্য গোছানো গাইডলাইন, নোট ও পরীক্ষার প্রস্তুতির সহায়তা দেওয়া হয়।</p>
     <div class="stats"><div><b>6</b><span>Departments</span></div><div><b>4 Yrs</b><span>Diploma Course</span></div><div><b>5</b><span>1st Year Subjects</span></div></div>
   </div>
-
-  </div></section>
+</div></section>
 <section id="anatomy" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>ANATOMY &amp; PHYSIOLOGY</small><h2>Human Body Systems</h2><p style="color:var(--mu);margin-top:6px">Read the system and see the 3D model</p></div>
+  <div class="sec-h rv"><small>ANATOMY &amp; PHYSIOLOGY</small><h2>Human Body Systems</h2><p style="color:var(--mu);margin-top:6px">System নির্বাচন করে বিস্তারিত পড়ুন এবং 3D Model দেখে বুঝুন</p></div>
   <div class="ap-grid" id="apSystems"></div>
 </div></section>
 <section id="depts" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>DEPARTMENTS</small><h2>IHT Departments</h2><p style="color:var(--mu);margin-top:6px">4-Year Diploma Course • Tap department and view details</p></div>
+  <div class="sec-h rv"><small>DEPARTMENTS</small><h2>IHT Departments</h2><p style="color:var(--mu);margin-top:6px">4-Year Diploma Course • ডিপার্টমেন্টে ট্যাপ করলে সব details দেখা যাবে</p></div>
   <div class="depts" id="dp"></div>
 </div></section>
-
 <section id="notice" class="pg"><div class="wrap">
   <div class="sec-h rv"><small>NOTICE BOARD</small><h2>Notice Board</h2></div>
   <div class="notice" id="nb"></div>
 </div></section>
-
 <section id="contact" class="pg"><div class="wrap">
   <div class="sec-h rv"><small>CONTACT US</small><h2>Contact Us</h2></div>
   <div class="cgrid" id="ct"></div>
 </div></section>
-
 <section id="teachers" class="pg"><div class="wrap">
   <div class="sec-h rv"><small>TEACHERS SPECIAL</small><h2>Teachers Special</h2></div>
   <h3 class="sub-h rv">Teacher's Sheet</h3>
@@ -404,14 +386,11 @@ body.ap-open{overflow:hidden}
   <h3 class="sub-h rv" style="margin-top:40px">Tutorial / Class Slides</h3>
   <div class="acc" id="tut"></div>
 </div></section>
-
 <div class="sov" id="sov"></div>
 <div class="sheet" id="sh"><button class="x sx" id="sx" aria-label="Close">×</button><div id="sb2"></div></div>
 <nav class="tabs" id="tb"><a href="#about"><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 11v6M12 7.5v.01'/></svg>About</a><a href="#anatomy"><svg viewBox='0 0 24 24'><path d='M3 12h4l3-8 4 16 3-8h4'/></svg>Anatomy</a><a href="#depts"><svg viewBox='0 0 24 24'><path d='M2 9l10-5 10 5-10 5z'/><path d='M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5'/></svg>Depts</a><a href="#teachers"><svg viewBox='0 0 24 24'><path d='M3 6.5c3-1.5 6-1.5 9 0c3-1.5 6-1.5 9 0v12c-3-1.5-6-1.5-9 0c-3-1.5-6-1.5-9 0z'/><path d='M12 6.5v12'/></svg>Teachers</a><a href="#notice"><svg viewBox='0 0 24 24'><path d='M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z'/><path d='M10 21h4'/></svg>Notice</a><a href="#contact"><svg viewBox='0 0 24 24'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/></svg>Contact</a></nav>
 <div class="ap-detail" id="apDetail"><div class="ap-detail-inner"><button class="ap-close" id="apClose" aria-label="Close">×</button><div id="apContent"></div></div></div>
-
 <footer>Shaheed ali-Raihan developers<br>Website developed by:-<span style="color:var(--gold)" id="dev"></span></footer>
-
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -431,15 +410,15 @@ const FIREBASE_CONFIG={
 /* ============ এখানে সহজে এডিট করুন / EDIT HERE ============ */
 const NOTICES=[
   {date:"2 oct 2026",title:"Welcome to Cornea",text:"First Year guideline"},
-  {date:"2 oct 2026",title:"Anatomy & Physiology",text:"Thanks for yours priority"},
-  {date:"8 & 9 Jan 2027",title:"🎉 গৌরবের ৫০ বছর, স্মৃতির এক অনন্য অধ্যায়! 🎉",text:"আগামী ৮ ও ৯ জানুয়ারি ২০২৭ আমাদের প্রিয় কলেজের ৫০ বছর পূর্তি উপলক্ষে উদ্‌যাপিত হতে যাচ্ছে সুবর্ণজয়ন্তী উৎসব "}];
-
+  {date:"2 oct 2026",title:"Anatomy & Physiology",text:"Eleven Anatomical and Physiological systems are mentioned here"},
+  {date:"2 oct 2026",title:"Notes Upload",text:" PDF Coming soon"}
+];
 const CONTACT=[
   ["Authority","বাংলাদেশ ইসলামী ছাত্রশিবির"],["Phone","+880 1819-203208"],
   ["Email","tanvirahmedsifat8@gmail.com"],["Address"," আইএইচটি-শাখা , রাজশাহী"]
 ];
 const DEVELOPER="Tanvir Ahmed Sifat";
-/* ADMIN: এই email দিয়ে লগইন করলে "Verify Students" মেনু দেখা যাবে (Firestore Rules এর email এর সাথে মিলতে হবে) */
+/* ADMIN: এই email দিয়ে লগইন করলে "Students" মেনু দেখা যাবে (Firestore Rules এর email এর সাথে মিলতে হবে) */
 const ADMIN_EMAIL="tanvirahmedsifat8@gmail.com";
 let unsub=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -457,11 +436,12 @@ const BOARD_Q={n:"Last 5 Years Board Questions",subs:[
   {n:"Basic Computer Science",link:"computer-board.pdf"},
   {n:"English",link:"english-board.pdf"}
 ]};
-const WEEKLY={n:"Weekly Exam",link:"exam.html"};
+/* Weekly Model Test: exam.html এই সাইটেরই অংশ (একই domain/ফোল্ডারে থাকতে হবে) */
+const WEEKLY={n:"Weekly Model Test",link:"exam.html"};
 /* Teachers Special: প্রতিটা স্যারের শীট PDF */
 const TEACHERS=[
   {n:"Milon sir",link:""},
-  
+
 ];
 /* Tutorial / Class Slides: সাবজেক্ট > টপিক (প্রতি সাবজেক্টে ২০টা Topic)
    কোনো topic এর link বসাতে: TOPICS(20) এর জায়গায় TOPICS(20,{3:"https://..."}) লিখুন (3 = Topic 3) */
@@ -473,21 +453,21 @@ const TUTORIALS=[
   {n:"Topic 3",link:"এখানে লিংক"},
   {n:"Topic 4",link:""},
   {n:"Topic 5",link:""}
-]},        
+]},
   {n:"Physiology",topics:[
   {n:"Topic 1",link:"এখানে লিংক"},
   {n:"Topic 2",link:"www.daraz.com"},
   {n:"Topic 3",link:"এখানে লিংক"},
   {n:"Topic 4",link:""},
   {n:"Topic 5",link:""}
-]},        
+]},
   {n:"Community Medicine",topics:[
   {n:"Topic 1",link:"এখানে লিংক"},
   {n:"Topic 2",link:"www.mlbd.com"},
   {n:"Topic 3",link:"এখানে লিংক"},
   {n:"Topic 4",link:""},
   {n:"Topic 5",link:""}
-]},        
+]},
   {n:"Basic Computer Science",topics:[
   {n:"Topic 1",link:"এখানে লিংক"},
   {n:"Topic 2",link:"www.openhub.com"},
@@ -501,7 +481,7 @@ const TUTORIALS=[
   {n:"Topic 3",link:"এখানে লিংক"},
   {n:"Topic 4",link:""},
   {n:"Topic 5",link:""}
-]},        
+]},
 ];
 const Y1="Anatomy, Physiology, Community Medicine, Basic Computer Science, English";
 const D=[
@@ -559,7 +539,9 @@ const lnk=s=>`<a href="${s.link||'#'}" ${s.link?'target="_blank" rel="noopener"'
 const book=b=>b.vols?`<div class="sg sg2"><button>${b.n}<i>⌄</i></button><div class="sb"><div>${b.vols.map(lnk).join('')}</div></div></div>`:lnk(b);
 const sub=s=>s.books?`<div class="sg"><button>${s.n}<i>⌄</i></button><div class="sb"><div>${s.books.map(book).join('')}</div></div></div>`:lnk(s);
 const grp=(n,arr,cls)=>`<div class="sg${cls?' '+cls:''}"><button>${n}<i>⌄</i></button><div class="sb"><div>${arr.map(lnk).join('')}</div></div></div>`;
-$('dl').innerHTML='<small>FIRST YEAR SUBJECTS</small>'+SUBJECTS.map(sub).join('')+'<small>PRACTICE</small>'+grp(BOARD_Q.n,BOARD_Q.subs,'q')+`<a class="q" href="exam.html">${WEEKLY.n}<em>Start →</em></a>`;
+/* Weekly Model Test একই ট্যাবে খোলে (সাইটেরই অংশ), PDF লিংকগুলো নতুন ট্যাবে */
+const weeklyLink=lnk(WEEKLY).replace('<a ','<a class="q" ').replace(' target="_blank" rel="noopener"','').replace('PDF ↗','Exam →');
+$('dl').innerHTML='<small>FIRST YEAR SUBJECTS</small>'+SUBJECTS.map(sub).join('')+'<small>PRACTICE</small>'+grp(BOARD_Q.n,BOARD_Q.subs,'q')+weeklyLink;
 document.querySelectorAll('.sg>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
 const t=()=>document.body.classList.toggle('m');
 $('bg').onclick=t;$('ov').onclick=t;$('cl').onclick=t;
@@ -620,7 +602,7 @@ pw.onkeydown=e=>{if(e.key==='Enter')go.click()};
 $('gg').onclick=()=>{if(!need())return;const pr=new firebase.auth.GoogleAuthProvider();auth.signInWithPopup(pr).catch(e=>{if(e.code==='auth/popup-blocked'||e.code==='auth/operation-not-supported-in-this-environment')auth.signInWithRedirect(pr);else fail(e)})};
 $('fp').onclick=()=>{if(!need())return;const e=em.value.trim();if(!e)return say('উপরে email লিখে আবার চাপুন।');auth.sendPasswordResetEmail(e).then(()=>say('Password reset link email এ পাঠানো হয়েছে।',1)).catch(fail)};
 let db=null;
-const SCREENS=['kyc','pending','rejected'];
+const SCREENS=['profile','blocked'];
 const hideAll=()=>{A.style.display='none';SCREENS.forEach(s=>$(s).style.display='none')};
 const showScreen=id=>{hideAll();$(id).style.display='flex'};
 /* ---- Presence (কে online আছে) ---- */
@@ -663,39 +645,43 @@ async function enter(u){
   $('adminBox').style.display='none';
   startPresence(u,u.displayName||u.email);
 
-  // Student verification status check
+  // প্রোফাইল চেক: আছে → ঢুকবে (blocked হলে আটকাবে) | নেই → প্রোফাইল তৈরির পর্দা
   try{
-    const doc=await db.collection('students').doc(u.uid).get();
-
-    if(!doc.exists){
-      // প্রথমবার: KYC দেখাবে
-      showScreen('kyc');
+    const snap=await db.collection('profiles').doc(u.uid).get();
+    if(snap.exists){
+      const p=snap.data();
+      if(p.status==='blocked'){
+        $('bReason').textContent=p.reason?('কারণ: '+p.reason):'';
+        showScreen('blocked');
+        return;
+      }
+      openSite(u,p);
       return;
     }
-
-    const d=doc.data();
-
-    if(d.status==='approved'){
-      // Approved: website খুলবে
-      hideAll();
-      presName=d.name||presName;ping();
+    // আগে KYC দিয়েছে এমন পুরনো ছাত্র: আগের তথ্য থেকে নিজে নিজে প্রোফাইল বানিয়ে ঢুকিয়ে দেওয়া হবে
+    let old=null;
+    try{const o=await db.collection('students').doc(u.uid).get();if(o.exists)old=o.data()}catch(_){}
+    if(old&&old.name&&old.mobile){
+      const p={uid:u.uid,name:String(old.name).slice(0,90),mobile:String(old.mobile).slice(0,20),email:u.email||'',photo:'',
+        father:String(old.father||'').slice(0,90),department:String(old.department||'').slice(0,90),session:String(old.session||'').slice(0,30),address:'',
+        status:'active',legacy:true,createdAt:firebase.firestore.FieldValue.serverTimestamp()};
+      try{await db.collection('profiles').doc(u.uid).set(p)}catch(_){}
+      openSite(u,p);
       return;
     }
-
-    if(d.status==='rejected'){
-      // Rejected: আবার KYC জমা দিতে পারবে
-      showScreen('rejected');
-      if(d.reason) $('rReason').textContent=d.reason;
-      return;
-    }
-
-    // pending
-    showScreen('pending');
-
+    fillProfileForm(u,old);
+    showScreen('profile');
   }catch(e){
     console.error(e);
-    showScreen('kyc');
+    fillProfileForm(u);
+    showScreen('profile');
   }
+}
+function openSite(u,p){
+  hideAll();
+  presName=p.name||presName;
+  $('who').textContent=p.name||u.displayName||u.email;
+  ping();
 }
 const CFG_SET=!/^YOUR/.test(FIREBASE_CONFIG.apiKey||'YOUR');
 const LOCAL=['localhost','127.0.0.1',''].includes(location.hostname);
@@ -704,74 +690,87 @@ if(FB_OK){firebase.initializeApp(FIREBASE_CONFIG);auth=firebase.auth();db=fireba
 else{A.classList.remove('ld');if(LOCAL){A.style.display='none';$('who').textContent='Preview mode'}else if(CFG_SET)say('Firebase লোড হয়নি — ইন্টারনেট চেক করে পেজ রিফ্রেশ করুন।');else $('pv').style.display='block'}
 $('pv').onclick=()=>{A.style.display='none';$('who').textContent='Preview mode'};
 $('lo').onclick=e=>{e.preventDefault();document.body.classList.remove('m');location.hash='home';auth?auth.signOut():(A.style.display='flex')};
-/* ---- KYC (ID card verification) ---- */
-$('kDept').innerHTML='<option value="">ডিপার্টমেন্ট বাছাই করুন</option>'+D.map(d=>`<option>${d.n}</option>`).join('');
-const kMsg=(t,ok)=>{$('kMsg').textContent=t;$('kMsg').className='msg'+(ok?' ok':'')};
-function toCompressedB64(file){
+/* ---- Profile (ছবি, নাম, ফোন, ইমেইল = বাধ্যতামূলক; বাকি ঐচ্ছিক) ---- */
+$('pDept').innerHTML='<option value="">ডিপার্টমেন্ট (ঐচ্ছিক)</option>'+D.map(d=>`<option>${d.n}</option>`).join('');
+const pMsg=(t,ok)=>{$('pMsg').textContent=t;$('pMsg').className='msg'+(ok?' ok':'')};
+let pPhotoB64='';
+function toAvatarB64(file){
   return new Promise((res,rej)=>{
     const img=new Image(),r=new FileReader();
     r.onload=()=>{img.onload=()=>{
-      const max=1400;let w=img.width,h=img.height;
-      if(w>h&&w>max){h=Math.round(h*max/w);w=max}else if(h>max){w=Math.round(w*max/h);h=max}
-      const c=document.createElement('canvas');c.width=w;c.height=h;
-      c.getContext('2d').drawImage(img,0,0,w,h);
-      // quality কমিয়ে কমিয়ে ~400KB এর নিচে আনা (দুই ছবি + তথ্য মিলে Firestore 1MB limit এর ভেতরে থাকবে)
+      const S=256,c=document.createElement('canvas');c.width=c.height=S;
+      const m=Math.min(img.width,img.height),sx=(img.width-m)/2,sy=(img.height-m)/2;
+      c.getContext('2d').drawImage(img,sx,sy,m,m,0,0,S,S);
       let q=0.85,out=c.toDataURL('image/jpeg',q);
-      while(out.length>400000&&q>0.4){q-=0.1;out=c.toDataURL('image/jpeg',q)}
+      while(out.length>60000&&q>0.4){q-=0.1;out=c.toDataURL('image/jpeg',q)}
       res(out);
     };img.onerror=()=>rej(new Error('bad image'));img.src=r.result};
     r.onerror=()=>rej(new Error('read failed'));r.readAsDataURL(file);
   });
 }
-$('kSubmit').onclick=async()=>{
-  const name=$('kName').value.trim(),father=$('kFather').value.trim(),dept=$('kDept').value,session=$('kSession').value.trim(),mobile=$('kMobile').value.trim();
-  const front=$('kFront').files[0],back=$('kBack').files[0];
-  if(!name||!father||!dept||!session||!mobile)return kMsg('সব তথ্য পূরণ করুন।');
-  if(!front||!back)return kMsg('আইডি কার্ডের দুই পাশের ছবি দিন।');
-  $('kSubmit').disabled=true;kMsg('জমা হচ্ছে…',1);
-  try{
-    const[frontImage,backImage]=await Promise.all([toCompressedB64(front),toCompressedB64(back)]);
-    await db.collection('students').doc(auth.currentUser.uid).set({
-      name,father,department:dept,session,mobile,
-      email:auth.currentUser.email||'',frontImage,backImage,status:'pending',
-      submittedAt:firebase.firestore.FieldValue.serverTimestamp()
-    });
-    $('kSubmit').disabled=false;
-    kMsg('');
-    showScreen('pending');
-  }catch(e){$('kSubmit').disabled=false;kMsg('সমস্যা হয়েছে, আবার চেষ্টা করুন। ('+(e.message||e.code)+')')}
+$('pPhoto').onchange=async e=>{
+  const f=e.target.files[0];if(!f)return;
+  try{pPhotoB64=await toAvatarB64(f);$('pPrev').style.backgroundImage=`url(${pPhotoB64})`;$('pPrev').classList.add('has');pMsg('')}
+  catch(_){pPhotoB64='';pMsg('ছবিটি পড়া যায়নি, অন্য ছবি দিন।')}
 };
-$('pLogout').onclick=()=>auth&&auth.signOut();
-$('rRetry').onclick=()=>showScreen('kyc');
-/* ---- Admin: Application ---- */
-let admTab='pending',admData=[];
-const ST={pending:'Verification Running',approved:'Approved',rejected:'Rejected'};
+function fillProfileForm(u,old){
+  old=old||{};pPhotoB64='';
+  $('pPrev').style.backgroundImage='';$('pPrev').classList.remove('has');$('pPhoto').value='';
+  $('pName').value=old.name||u.displayName||'';
+  $('pMobile').value=old.mobile||'';
+  $('pEmail').value=u.email||'';
+  $('pFather').value=old.father||'';
+  $('pDept').value=old.department||'';
+  $('pSession').value=old.session||'';
+  $('pAddr').value='';
+  $('pSubmit').disabled=false;pMsg('');
+}
+const normMobile=s=>String(s||'').replace(/[০-৯]/g,d=>'০১২৩৪৫৬৭৮৯'.indexOf(d)).replace(/[\s-]/g,'');
+$('pSubmit').onclick=async()=>{
+  const u=auth&&auth.currentUser;if(!u)return;
+  const name=$('pName').value.trim(),mobile=normMobile($('pMobile').value);
+  if(!pPhotoB64)return pMsg('আপনার ছবি দিন।');
+  if(name.length<2)return pMsg('আপনার নাম লিখুন।');
+  if(!/^\+?\d{10,15}$/.test(mobile))return pMsg('সঠিক মোবাইল নম্বর দিন।');
+  if(!u.email)return pMsg('ইমেইল পাওয়া যায়নি, আবার লগইন করুন।');
+  $('pSubmit').disabled=true;pMsg('সংরক্ষণ হচ্ছে…',1);
+  const p={uid:u.uid,name:name.slice(0,90),mobile,email:u.email,photo:pPhotoB64,
+    father:$('pFather').value.trim().slice(0,90),department:$('pDept').value,session:$('pSession').value.trim().slice(0,30),address:$('pAddr').value.trim().slice(0,200),
+    status:'active',createdAt:firebase.firestore.FieldValue.serverTimestamp()};
+  try{
+    await db.collection('profiles').doc(u.uid).set(p);
+    $('pSubmit').disabled=false;pMsg('');
+    openSite(u,p);
+  }catch(e){$('pSubmit').disabled=false;pMsg('সমস্যা হয়েছে, আবার চেষ্টা করুন। ('+(e.code||e.message)+')')}
+};
+$('pLogout').onclick=$('bLogout').onclick=()=>auth&&auth.signOut();
+/* ---- Admin: Students (প্রোফাইল দেখা, Block / Delete) ---- */
+let admTab='active',admData=[];
+const ST={active:'Active',blocked:'Blocked',approved:'Active',pending:'Active',rejected:'Active'};
 function loadAdmin(){
   $('advList').innerHTML='<p style="color:var(--mu)">Loading...</p>';$('acnt').textContent='';
-  db.collection('students').where('status','==',admTab).get().then(snap=>{
+  db.collection('profiles').where('status','==',admTab).get().then(snap=>{
     admData=snap.docs.map(x=>({id:x.id,...x.data()}));
-    admData.sort((p,q)=>((q.submittedAt&&q.submittedAt.seconds)||0)-((p.submittedAt&&p.submittedAt.seconds)||0));
+    admData.sort((p,q)=>((q.createdAt&&q.createdAt.seconds)||0)-((p.createdAt&&p.createdAt.seconds)||0));
     renderAdmin();
   }).catch(e=>{$('advList').innerHTML='<p style="color:#ff8a8a">লোড করা যায়নি: '+esc(e.code||e.message)+'</p>'});
 }
 function renderAdmin(){
   const q=$('aq').value.trim().toLowerCase();
-  const list=admData.filter(d=>!q||[d.name,d.father,d.mobile,d.email,d.department,d.session].some(v=>String(v||'').toLowerCase().includes(q)));
+  const list=admData.filter(d=>!q||[d.name,d.father,d.mobile,d.email,d.department,d.session,d.address].some(v=>String(v||'').toLowerCase().includes(q)));
   $('acnt').textContent=`${ST[admTab]} — মোট ${list.length} জন`+(q?` (খোঁজা হয়েছে: ${admData.length} জনের মধ্যে)`:'');
-  if(!list.length){$('advList').innerHTML='<p style="color:var(--mu)">কোনো আবেদন পাওয়া যায়নি।</p>';return}
+  if(!list.length){$('advList').innerHTML='<p style="color:var(--mu)">কোনো ছাত্র পাওয়া যায়নি।</p>';return}
   $('advList').innerHTML=list.map(d=>{
-    const when=d.submittedAt&&d.submittedAt.toDate?d.submittedAt.toDate().toLocaleString('bn-BD'):'—';
+    const when=d.createdAt&&d.createdAt.toDate?d.createdAt.toDate().toLocaleString('bn-BD'):'—';
     const row=(k,v)=>`<div class="irow"><small>${k}</small><span>${esc(v)||'—'}</span></div>`;
     const id=esc(d.id);
-    const acts=d.status==='pending'?`<button class="aok" data-id="${id}" data-act="approved">Approve</button><button class="ano" data-id="${id}" data-act="rejected">Reject</button>`
-      :d.status==='approved'?`<button class="ano" data-id="${id}" data-act="rejected">Access বাতিল (Reject)</button>`
-      :`<button class="aok" data-id="${id}" data-act="approved">Approve করুন</button>`;
+    const av=d.photo?`<img class="avu zi" src="${esc(d.photo)}" alt="">`:`<div class="avn">${esc(String(d.name||'?').trim().charAt(0))}</div>`;
+    const acts=(d.status==='blocked'?`<button class="aok" data-id="${id}" data-act="active">Unblock</button>`:`<button class="ano" data-id="${id}" data-act="blocked">Block</button>`)
+      +`<button class="ano" data-id="${id}" data-act="delete">Delete</button>`;
     return`<div class="vcard">
-      <div class="vtop"><h4>${esc(d.name)}</h4><span class="bd ${esc(d.status)}">${esc(ST[d.status]||d.status)}</span></div>
-      ${row('নাম',d.name)}${row('বাবার নাম',d.father)}${row('ডিপার্টমেন্ট',d.department)}${row('সেশন',d.session)}${row('মোবাইল',d.mobile)}${row('ইমেইল',d.email)}${row('জমার সময়',when)}${row('User ID',d.id)}
-      ${d.status==='rejected'&&d.reason?`<div class="rsn">বাতিলের কারণ: ${esc(d.reason)}</div>`:''}
-      <div class="vph"><p>আইডি কার্ড — সামনের পাশ</p><img class="zi" src="${esc(d.frontImage)}" alt="Front"><div class="hint">ছবিতে ট্যাপ করলে বড় হবে</div></div>
-      <div class="vph"><p>আইডি কার্ড — পেছনের পাশ</p><img class="zi" src="${esc(d.backImage)}" alt="Back"><div class="hint">ছবিতে ট্যাপ করলে বড় হবে</div></div>
+      <div class="vtop"><div class="who">${av}<h4>${esc(d.name)}</h4></div><span class="bd ${esc(d.status)}">${esc(ST[d.status]||d.status)}</span></div>
+      ${row('মোবাইল',d.mobile)}${row('ইমেইল',d.email)}${row('বাবার নাম',d.father)}${row('ডিপার্টমেন্ট',d.department)}${row('সেশন',d.session)}${row('ঠিকানা',d.address)}${row('যোগ দিয়েছে',when)}${row('User ID',d.id)}
+      ${d.status==='blocked'&&d.reason?`<div class="rsn">ব্লকের কারণ: ${esc(d.reason)}</div>`:''}
       <div class="arow">${acts}</div>
     </div>`}).join('');
 }
@@ -790,14 +789,26 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
 $('advList').onclick=e=>{
   const im=e.target.closest('img.zi');if(im){openLB(im.src);return}
   const b=e.target.closest('button[data-id]');if(!b)return;
-  const upd={status:b.dataset.act};
-  if(b.dataset.act==='rejected'){
-    const cur=admData.find(x=>x.id===b.dataset.id);
-    if(cur&&cur.status==='approved'&&!confirm('এই ছাত্রের access বাতিল করবেন?'))return;
-    const r=prompt('বাতিলের কারণ (ঐচ্ছিক):');if(r===null)return;if(r)upd.reason=r;
+  const id=b.dataset.id,act=b.dataset.act,cur=admData.find(x=>x.id===id)||{};
+  const done=()=>{delete liveInfo[id];loadAdmin()};
+  const bad=err=>{b.disabled=false;alert('সমস্যা: '+(err.code||err.message))};
+  if(act==='delete'){
+    if(!confirm('"'+(cur.name||'এই ব্যবহারকারী')+'"-এর প্রোফাইল মুছে ফেলবেন?\n\nসে চাইলে আবার লগইন করে নতুন প্রোফাইল বানিয়ে ঢুকতে পারবে।'))return;
+    b.disabled=true;
+    Promise.all([
+      db.collection('profiles').doc(id).delete(),
+      db.collection('students').doc(id).delete().catch(()=>{}),
+      db.collection('presence').doc(id).delete().catch(()=>{})
+    ]).then(done).catch(bad);
+    return;
+  }
+  const upd={status:act};
+  if(act==='blocked'){
+    const r=prompt('ব্লকের কারণ (ঐচ্ছিক):');if(r===null)return;
+    upd.reason=r||firebase.firestore.FieldValue.delete();
   }else{upd.reason=firebase.firestore.FieldValue.delete()}
   b.disabled=true;
-  db.collection('students').doc(b.dataset.id).update(upd).then(loadAdmin).catch(err=>{b.disabled=false;alert('সমস্যা: '+(err.code||err.message))});
+  db.collection('profiles').doc(id).update(upd).then(done).catch(bad);
 };
 /* ---- Admin: Live Users ---- */
 let liveT=null;const liveOpen=new Set(),liveInfo={};
@@ -822,8 +833,10 @@ $('liveList').onclick=async e=>{
     if(!liveInfo[id]){
       box.querySelector('.ld2').innerHTML='<p style="color:var(--mu)">লোড হচ্ছে…</p>';
       try{
-        const doc=await db.collection('students').doc(id).get();
-        liveInfo[id]=doc.exists?(d=>irowH('নাম',d.name)+irowH('বাবার নাম',d.father)+irowH('ডিপার্টমেন্ট',d.department)+irowH('সেশন',d.session)+irowH('মোবাইল',d.mobile)+irowH('স্ট্যাটাস',ST[d.status]||d.status))(doc.data()):'<p style="color:var(--mu)">এখনও KYC জমা দেয়নি।</p>';
+        let doc=await db.collection('profiles').doc(id).get();
+        let d=doc.exists?doc.data():null;
+        if(!d){const o=await db.collection('students').doc(id).get().catch(()=>null);d=o&&o.exists?o.data():null}
+        liveInfo[id]=d?(d.photo?`<img class="avu" src="${esc(d.photo)}" alt="" style="margin:4px 0 8px">`:'')+irowH('নাম',d.name)+irowH('মোবাইল',d.mobile)+irowH('ইমেইল',d.email)+irowH('বাবার নাম',d.father)+irowH('ডিপার্টমেন্ট',d.department)+irowH('সেশন',d.session)+irowH('ঠিকানা',d.address)+irowH('স্ট্যাটাস',ST[d.status]||d.status):'<p style="color:var(--mu)">এখনও প্রোফাইল তৈরি করেনি।</p>';
       }catch(err){liveInfo[id]='<p style="color:#ff8a8a">লোড হয়নি</p>'}
     }
     box.querySelector('.ld2').innerHTML=liveInfo[id];
@@ -866,6 +879,5 @@ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
  if(img.complete&&img.naturalWidth)clean(); else img.onload=clean;
 })();
 </script>
-<script src="lamp-login.js"></script>
 </body>
 </html>
