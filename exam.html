@@ -114,7 +114,7 @@ onAuthStateChanged(auth,async u=>{
     S.off=p.data().t.toMillis()-Date.now();
     const ad=await getDoc(doc(db,'admins',u.uid)),own=(u.email||'').toLowerCase()===ADMIN_EMAIL;S.isAdmin=own||ad.exists();S.role=own?'owner':(ad.data()?.role||'owner');
     await loadExam();
-    (S.isAdmin&&S.mode!=='student')?adminView():home();
+    await ((S.isAdmin&&S.mode!=='student')?adminView():home());
   }catch(e){app.innerHTML=`<div class="card"><p>লোড করা যায়নি: ${esc(e.message)}</p></div>`}
 });
 async function loadExam(){
@@ -126,7 +126,7 @@ async function loadExam(){
 async function home(){
   clearInterval(S.tk);
   const u=S.user,e=S.exam;
-  let h=`<div class="top"><a href="about">← হোম</a><span>${S.isAdmin?'<button class="ghost" data-a="toadm">অ্যাডমিন</button> ':''}<button class="ghost" data-a="logout">লগআউট</button></span></div><h1>সাপ্তাহিক পরীক্ষা</h1>`;
+  let h=`<div class="top"><a href="index.html">← হোম</a><span>${S.isAdmin?'<button class="ghost" data-a="toadm">অ্যাডমিন</button> ':''}<button class="ghost" data-a="logout">লগআউট</button></span></div><h1>সাপ্তাহিক পরীক্ষা</h1>`;
   if(!e){app.innerHTML=h+`<div class="card"><p>এখনো কোনো পরীক্ষা ঘোষণা হয়নি।</p></div>`;return}
   const aid=e.id+'_'+u.uid;
   const [ap,at]=await Promise.all([getDoc(doc(db,'apps',aid)),getDoc(doc(db,'attempts',aid))]);
@@ -266,7 +266,7 @@ async function adminView(){
 }
 const ex=()=>AD.exams.find(x=>x.id===AD.id);
 async function renderAdmin(){
-  let h=`<div class="top"><a href="index.html">← Home</a><span><button class="ghost" data-a="tostu">শিক্ষার্থী ভিউ</button> <button class="ghost" data-a="logout">লগআউট</button></span></div><h1>নিয়ন্ত্রণ কক্ষ</h1><p style="color:var(--mu);margin:-6px 0 12px">স্বাগতম, ${esc(S.user.displayName||'')}</p>
+  let h=`<div class="top"><a href="index.html">← সাইট</a><span><button class="ghost" data-a="tostu">শিক্ষার্থী ভিউ</button> <button class="ghost" data-a="logout">লগআউট</button></span></div><h1>নিয়ন্ত্রণ কক্ষ</h1><p style="color:var(--mu);margin:-6px 0 12px">স্বাগতম, ${esc(S.user.displayName||'')}</p>
   <label>পরীক্ষা বাছুন</label><select id="sel"><option value="">+ নতুন পরীক্ষা</option>${AD.exams.map(x=>`<option value="${x.id}" ${x.id===AD.id?'selected':''}>${esc(x.title)} (${fmt(x.s)})</option>`).join('')}</select>
   <div class="tabs">${[['dash','ড্যাশবোর্ড'],['exam','পরীক্ষা'],['apps','আবেদন'],['res','ফলাফল'],['adm','অ্যাডমিন']].filter(t=>S.role==='owner'||['dash','apps'].includes(t[0])).map(([k,t])=>`<button data-a="tab" data-k="${k}" class="${AD.tab===k?'on':''}">${t}</button>`).join('')}</div><div id="tabc"><div class="card"><p>লোড হচ্ছে…</p></div></div>`;
   app.innerHTML=h;
@@ -298,7 +298,7 @@ act.csv=async()=>{
   const [R,T,P]=await Promise.all([g('results'),g('attempts'),g('apps')]);
   const rows=Object.keys(R).map(k=>[P[k]?.name||R[k].name,P[k]?.phone||'',P[k]?.inst||'',P[k]?.batch||'',R[k].score,R[k].failed?'হ্যাঁ':'না',T[k]?.flags||0]).sort((a,b)=>b[4]-a[4]);
   rows.unshift(['নাম','ফোন','প্রতিষ্ঠান','ব্যাচ','নম্বর','ফেল','ট্যাব বদল']);
-  const csv='\ufeff'+rows.map(r=>r.map(c=>'"'+String(c??'').replace(/"/g,'""')+'"').join(',')).join('\n');
+  const csv='\ufeff'+rows.map(r=>r.map(c=>{c=String(c??'');if(/^[=+\-@]/.test(c))c="'"+c;return '"'+c.replace(/"/g,'""')+'"'}).join(',')).join('\n');
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='result.csv';a.click();
 };
 async function tabExam(){
@@ -334,7 +334,7 @@ act.saveex=async b=>{
     const items=parseQ(val('x_q')),s=new Date(val('x_s')),en=new Date(val('x_e'));
     if(isNaN(s)||isNaN(en)||en<=s)throw new Error('সময় ঠিক করুন।');
     const ref=AD.id?doc(db,'exams',AD.id):doc(collection(db,'exams'));
-    const data={title:val('x_t'),startAt:Timestamp.fromDate(s),endAt:Timestamp.fromDate(en),secPerQ:+val('x_p')||25,neg:+val('x_n')||0,qCount:items.length};
+    const data={title:val('x_t'),startAt:Timestamp.fromDate(s),endAt:Timestamp.fromDate(en),secPerQ:Math.round(+val('x_p'))||25,neg:+val('x_n')||0,qCount:items.length};
     if(!AD.id)data.resultsPublished=false;
     b.disabled=true;
     const w=writeBatch(db);
