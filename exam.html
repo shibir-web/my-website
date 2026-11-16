@@ -6,7 +6,7 @@
 <title>সাপ্তাহিক পরীক্ষা</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070b16;--bg2:#0d1426;--card:#111a30;--line:rgba(212,175,55,.25);--gold:#e6c65c;--gold2:#b8912a;--tx:#eef1f8;--mu:#9aa6c2;--ok:#7ee0a0;--bad:#ff8a8a;color-scheme:dark}
+:root{--bg:#04140f;--bg2:#0a2219;--card:#0e2d22;--line:rgba(212,175,55,.3);--gold:#e8c96a;--gold2:#b8912a;--tx:#f4efdc;--mu:#a3bfb0;--ok:#8fe3b0;--bad:#ff9a8a;color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--tx);font-family:'Hind Siliguri',sans-serif;line-height:1.65;min-height:100vh}
 #app{max-width:720px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 16px) 16px calc(env(safe-area-inset-bottom,0px) + 40px)}
@@ -123,11 +123,9 @@ act.google=()=>signInWithPopup(auth,new GoogleAuthProvider()).catch(fail);
 act.emlogin=()=>signInWithEmailAndPassword(auth,val('em'),val('pw')).catch(fail);
 act.emreg=()=>createUserWithEmailAndPassword(auth,val('em'),val('pw')).catch(fail);
 act.logout=()=>signOut(auth);
-
 function gateView(msg){
   app.innerHTML=`<div class="top"><a href="index.html">← হোম</a><button class="ghost" data-a="logout">লগআউট</button></div><h1>সাপ্তাহিক পরীক্ষা</h1><div class="card"><p>${msg}</p><p style="margin-top:10px"><a class="tel" href="index.html">মূল সাইটে যান</a></p></div>`;
 }
-
 onAuthStateChanged(auth,async u=>{
   S.user=u;if(!u)return loginView();
   try{
@@ -419,7 +417,6 @@ act.kycact=async b=>{
   try{await w.commit();toast('হয়েছে')}catch(e){toast(e.message)}
   renderAdmin();
 };
-
 async function tabDash(){
   const e=ex();if(!e)return $('#tabc').innerHTML=`<div class="card"><p>আগে "পরীক্ষা" ট্যাবে নতুন পরীক্ষা তৈরি করুন।</p></div>`;
   const [a,t,r]=await Promise.all(['apps','attempts','results'].map(c=>getDocs(query(collection(db,c),where('examId','==',e.id)))));
@@ -493,7 +490,6 @@ act.saveex=async b=>{
     await w.commit();AD.id=ref.id;toast('সংরক্ষিত হয়েছে');await adminView();
   }catch(e){b.disabled=false;$('#er').textContent=e.message}
 };
-
 async function tabApps(){
   if(!AD.id)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
   const q=await getDocs(query(collection(db,'apps'),where('examId','==',AD.id)));
@@ -513,7 +509,6 @@ act.st=async b=>{
   }else await updateDoc(ref,{status:b.dataset.v});
   toast('হয়েছে');tabApps();
 };
-
 async function tabRes(){
   const e=ex();if(!e)return $('#tabc').innerHTML=`<div class="card"><p>আগে পরীক্ষা তৈরি করুন।</p></div>`;
   const q=await getDocs(query(collection(db,'attempts'),where('examId','==',e.id)));
