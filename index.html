@@ -1,192 +1,189 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title> বাংলাদেশ ইসলামী ছাত্রশিবির ,আইএইচটি শাখা রাজশাহী| “আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</title>
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<style>
-:root{--bg:#070b16;--bg2:#0d1426;--card:#111a30;--line:rgba(212,175,55,.25);--gold:#e6c65c;--gold2:#b8912a;--tx:#eef1f8;--mu:#9aa6c2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-:root:not([data-theme="light"]){color-scheme:dark}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b16}}
-:root[data-theme="dark"]{--bg:#070b16}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
-body{background:var(--bg);color:var(--tx);font-family:'Hind Siliguri',sans-serif;line-height:1.7;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% 10%,rgba(230,198,92,.12),transparent),radial-gradient(500px 500px at 0% 60%,rgba(60,90,200,.14),transparent);pointer-events:none;z-index:0}
-header{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(env(safe-area-inset-top,0px) + 10px) 16px 10px;display:flex;align-items:center;gap:14px;background:rgba(7,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.burger{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--card);display:grid;place-content:center;gap:5px;cursor:pointer}
-.burger i{display:block;width:20px;height:2px;background:var(--gold);border-radius:2px}
-.burger i:nth-child(2){width:14px}
-.brand{font-family:'Tiro Bangla',serif;font-size:26px;line-height:1.7;padding:0 .15em .1em;display:inline-block;background:linear-gradient(90deg,var(--gold),#fff3c4,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}
-nav.top{margin-left:auto;display:none;gap:22px;font-size:15px}
-nav.top a{color:var(--mu);text-decoration:none}
-nav.top a:hover{color:var(--gold)}
-@media(min-width:800px){nav.top{display:flex}}
-.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 20px}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:110px 20px 60px;position:relative;z-index:1}
-.eye{font-family:'Hind Siliguri','Tiro Bangla',sans-serif;font-weight:600;letter-spacing:.04em;line-height:1.6;font-size:clamp(16px,3.4vw,26px);color:var(--gold);border:1px solid var(--line);padding:10px 22px;border-radius:30px;margin-bottom:26px;max-width:92%;text-align:center}
-.logo{font-family:'Tiro Bangla',serif;font-size:clamp(64px,18vw,150px);line-height:1.7;padding:.05em .2em .12em;display:inline-block;overflow:visible;background:linear-gradient(100deg,#b8912a 0%,#fff3c4 30%,#e6c65c 50%,#fff3c4 70%,#b8912a 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite;filter:drop-shadow(0 8px 30px rgba(230,198,92,.25))}
-@keyframes shine{to{background-position:-200% 0}}
-.tag{max-width:560px;margin-top:18px;font-size:clamp(16px,4.2vw,21px);color:var(--tx)}
-.tag b{color:var(--gold);font-weight:600}
-.pill{display:inline-block;margin-top:16px;padding:6px 18px;border-radius:99px;background:rgba(230,198,92,.12);border:1px solid var(--line);color:var(--gold);font-size:14px;font-weight:600}
-.orn{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}
-.btn{display:inline-block;padding:13px 30px;border-radius:99px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(230,198,92,.25);transition:transform .3s}
-.btn:active{transform:scale(.96)}
-section{position:relative;z-index:1;padding:80px 0}
-.sec-h{text-align:center;margin-bottom:38px}
-.sec-h small{font-family:'Cinzel',serif;letter-spacing:.3em;color:var(--gold);font-size:12px}
-.sec-h h2{font-size:clamp(28px,6vw,40px);font-weight:700;margin-top:4px}
-.glass{background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:22px;padding:26px}
-.about p{color:var(--mu);font-size:17px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;text-align:center}
-.stats div{border:1px solid var(--line);border-radius:16px;padding:14px 6px}
-.stats b{display:block;font-family:'Cinzel',serif;font-size:24px;color:var(--gold)}
-.stats span{font-size:13px;color:var(--mu)}
-.depts{margin-top:34px;display:grid;gap:12px}
-.dept{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.dept button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer}
-.num{width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:'Cinzel',serif;font-weight:700;color:#1a1300;background:linear-gradient(135deg,var(--gold),var(--gold2))}
-.dn{font-weight:600;font-size:17px;flex:1;line-height:1.35}
-.chev{color:var(--gold);transition:transform .35s;font-size:20px}
-.dept.open .chev{transform:rotate(180deg)}
-.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
-.dept.open .body{grid-template-rows:1fr}
-.body>div{overflow:hidden}
-.in{padding:0 18px 20px}
-.in h4{color:var(--gold);font-size:14px;margin:12px 0 4px;letter-spacing:.05em}
-.in p{color:var(--mu);font-size:15px}
-.yr{display:flex;gap:10px;align-items:flex-start;margin-top:8px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03)}
-.yr b{color:var(--gold);white-space:nowrap;font-size:14px}
-.yr span{font-size:14.5px;color:var(--tx)}
-.notice{display:grid;gap:12px}
-.n{display:flex;gap:14px;padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold)}
-.n time{font-size:12px;color:var(--gold);white-space:nowrap;font-family:'Cinzel',serif;padding-top:3px}
-.n h5{font-size:16px;font-weight:600}
-.n p{color:var(--mu);font-size:14.5px}
-.cgrid{display:grid;gap:12px}
-@media(min-width:700px){.cgrid{grid-template-columns:1fr 1fr}}
-.c{padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
-.c small{color:var(--gold);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.c div{font-size:16.5px;word-break:break-word}
-footer{position:relative;z-index:1;text-align:center;padding:30px 20px 40px;color:var(--mu);font-size:14px;border-top:1px solid var(--line)}
-.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .35s;z-index:80}
-.drawer{position:fixed;top:0;bottom:0;left:0;width:min(86vw,340px);z-index:90;background:var(--bg2);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .4s cubic-bezier(.2,.8,.2,1);padding:calc(env(safe-area-inset-top,0px) + 20px) 20px 30px;overflow-y:auto;will-change:transform}
-body.m .drawer{transform:none}
-body.m .ov{opacity:1;pointer-events:auto}
-.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.x{all:unset;cursor:pointer;color:var(--gold);font-size:28px;padding:4px 10px}
-.dl small{display:block;margin:16px 0 8px;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:.2em;font-size:11px}
-.dl a{display:flex;align-items:center;gap:12px;padding:14px 14px;margin-bottom:8px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--tx);text-decoration:none;font-size:16px;font-family:system-ui,'Hind Siliguri',sans-serif}
-.dl a:active{transform:scale(.98)}
-.dl a em{font-style:normal;color:var(--gold);font-size:12px;margin-left:auto}
-.dl a.q{background:linear-gradient(135deg,rgba(230,198,92,.18),rgba(230,198,92,.05))}
-.dl .sg.q>button{background:linear-gradient(135deg,rgba(230,198,92,.18),rgba(230,198,92,.05));color:var(--gold);font-weight:600}
-.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
-.rv.on{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.logo{animation:none}}
-.sg{margin-bottom:8px;border-radius:14px;background:var(--card);border:1px solid var(--line);overflow:hidden}
-.sg>button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;padding:14px;color:var(--tx);font-size:16px;font-family:system-ui,'Hind Siliguri',sans-serif;cursor:pointer}
-.sg>button i{margin-left:auto;color:var(--gold);font-style:normal;transition:transform .3s}
-.sg.open>button i{transform:rotate(180deg)}
-.sb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
-.sg.open .sb{grid-template-rows:1fr}
-.sb>div{overflow:hidden}
-.dl .sg a{margin:0 10px 8px;background:rgba(255,255,255,.04);font-size:15px}
-.dl .sg2{margin:0 10px 8px;border-radius:12px}
-.dl .sg2>button{padding:12px 14px;font-size:15px;color:var(--gold)}
-.dl .sg2 a{margin:0 10px 8px;font-size:14px}
-#auth,.ov-screen{position:fixed;inset:0;z-index:200;background:var(--bg);overflow-y:auto;display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 20px)}
-#auth:before,.ov-screen:before{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% 10%,rgba(230,198,92,.14),transparent),radial-gradient(500px 500px at 0 70%,rgba(60,90,200,.16),transparent);pointer-events:none}
-.ov-screen{display:none}
-.flabel{color:var(--mu);font-size:13.5px;margin:14px 2px 6px}
-.ac select,.ac input[type=file]{width:100%;padding:13px 14px;margin-bottom:4px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font:inherit;font-size:15px;outline:none}
-.ac input[type=file]{border-style:dashed;color:var(--mu);font-size:13.5px;margin-bottom:10px}
-.acard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px}
-.acard h4{font-size:16px;margin-bottom:8px}
-.acard p{color:var(--mu);font-size:13.5px;margin:2px 0}
-.acard img{width:48%;border-radius:10px;border:1px solid var(--line);margin-top:10px}
-.arow{display:flex;gap:10px;margin-top:12px}
-.arow button{flex:1;border:0;border-radius:12px;padding:11px;font:inherit;font-weight:700;cursor:pointer}
-.aok{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}
-.ano{background:rgba(255,138,138,.15);color:#ff8a8a;border:1px solid rgba(255,138,138,.3)!important}
-#auth.ld .abox,#auth.ld .asub{visibility:hidden}
-.ac{position:relative;width:100%;max-width:400px;text-align:center;margin:auto}
-.ac .logo{font-size:clamp(56px,16vw,90px);animation:shine 6s linear infinite}
-.asub{color:var(--mu);font-size:15px;margin:2px 0 18px}
-.abox{padding:22px;text-align:left}
-.tg{display:flex;background:rgba(255,255,255,.05);border-radius:14px;padding:4px;margin-bottom:16px}
-.tg button{all:unset;flex:1;text-align:center;padding:10px;border-radius:11px;cursor:pointer;color:var(--mu);font-weight:600;font-size:15px}
-.tg button.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}
-.ac input{width:100%;padding:14px 16px;margin-bottom:12px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font:inherit;font-size:16px;outline:none}
-.ac input:focus{border-color:var(--gold)}
-.ac .btn{width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px;text-align:center}
-.gb{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:13px;border-radius:99px;background:#fff;color:#222;font-weight:600;font-size:16px;cursor:pointer;font-family:system-ui,sans-serif}
-.or{text-align:center;color:var(--mu);font-size:13px;margin:14px 0}
-.msg{min-height:20px;font-size:14px;color:#ff8a8a;margin-top:10px;text-align:center}
-.msg.ok{color:#7ee0a0}
-.fp{background:none;border:0;color:var(--gold);cursor:pointer;font:inherit;font-size:14px;display:block;margin:12px auto 0}
-.pv{display:none;margin:14px auto 0;background:none;border:1px dashed var(--line);color:var(--mu);border-radius:99px;padding:8px 18px;font:inherit;font-size:13px;cursor:pointer}
-.depts{grid-template-columns:repeat(2,1fr);gap:14px;margin-top:0}
-@media(min-width:700px){.depts{grid-template-columns:repeat(3,1fr)}}
-.ic{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:var(--gold);background:radial-gradient(circle at 30% 25%,rgba(230,198,92,.3),rgba(230,198,92,.04));border:1px solid var(--line);margin:0 auto 12px}
-.ic svg{width:50%;height:50%}
-.ic.big{width:86px;height:86px}
-.dc{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:22px 10px 18px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01)),var(--card);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;transition:transform .3s,border-color .3s}
-.dc:hover{border-color:var(--gold)}
-.dc:active{transform:scale(.96)}
-.dc b{font-size:16px;line-height:1.3;font-weight:600}
-.dc small{color:var(--mu);font-size:12.5px;margin-top:2px}
-.dc em{font-style:normal;color:var(--gold);font-size:12.5px;margin-top:10px}
-.sov{position:fixed;inset:0;background:rgba(0,0,0,.65);opacity:0;pointer-events:none;transition:opacity .35s;z-index:110}
-.sheet{position:fixed;left:0;right:0;bottom:0;top:calc(env(safe-area-inset-top,0px) + 30px);z-index:120;max-width:760px;margin:0 auto;background:var(--bg2);border-radius:26px 26px 0 0;border-top:1px solid var(--line);overflow-y:auto;padding:22px 20px calc(env(safe-area-inset-bottom,0px) + 40px);transform:translateY(105%);transition:transform .45s cubic-bezier(.2,.8,.2,1);will-change:transform}
-body.so #sh,body.adv #advS{transform:none}
-body.so #sov,body.adv #advO{opacity:1;pointer-events:auto}
-body.so,body.adv{overflow:hidden}
-.sx{float:right;position:sticky;top:0;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:var(--card);border:1px solid var(--line);z-index:2;padding:0}
-.sh-h{text-align:center;clear:both}
-.sh-h h3{font-size:22px;line-height:1.3;margin:6px 0 10px}
-#sb2 h4{color:var(--gold);font-family:'Cinzel',serif;letter-spacing:.2em;font-size:12px;margin:26px 0 10px}
-#sb2 p{color:var(--mu);font-size:15.5px}
-.ul{list-style:none;display:grid;gap:8px}
-.ul li{padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:15px}
-.ul li:before{content:"✦";color:var(--gold);margin-right:10px;font-size:12px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{padding:7px 14px;border-radius:99px;border:1px solid var(--line);color:var(--gold);font-size:14px;background:rgba(230,198,92,.08)}
-.yc{margin-top:12px;padding:16px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
-.yc.f{border-color:var(--gold)}
-.yc h5{display:flex;justify-content:space-between;align-items:center;font-size:16px;color:var(--gold);margin-bottom:6px}
-.yc h5 span{font-size:12px;color:var(--mu);font-weight:500}
-.yc ol{padding-left:22px;font-size:15px}
-.yc li{margin:4px 0}
-.sub-h{color:var(--gold);font-size:17px;font-weight:600;margin-bottom:14px}
-.acc{display:grid;gap:12px}
-.trow{display:flex;align-items:center;gap:14px;padding:15px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--tx)}
-.trow:active{transform:scale(.98)}
-.trow .ic2{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;display:grid;place-items:center;flex:none}
-.trow .ic2 svg{width:55%;height:55%}
-.trow b{flex:1;font-size:15.5px;font-weight:600;line-height:1.3}
-.trow em{font-style:normal;color:var(--gold);font-size:12.5px;white-space:nowrap}
-.tgal{display:block;margin-top:2px;color:var(--mu);font-size:12px;font-weight:500}
-.pg{display:none}
-.pg.act{display:block;animation:pgin .55s cubic-bezier(.2,.8,.2,1)}
-.hero.pg.act{display:flex}
-@keyframes pgin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.pg .rv{opacity:1;transform:none}
-section.pg{padding:100px 0 120px}
-body.home footer,body.home .tabs,body.home .burger{display:none}
-.tabs{position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:60;display:flex;padding:6px;border-radius:22px;background:rgba(13,20,38,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);max-width:520px;margin:0 auto}
-.tabs a{flex:1;text-align:center;text-decoration:none;color:var(--mu);font-size:12px;padding:8px 2px;border-radius:16px;font-weight:600;transition:background .3s,color .3s}
-.tabs a svg{width:22px;height:22px;display:block;margin:0 auto 2px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.tabs a.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}
-.brand{cursor:pointer}
-/* Google login সবার উপরে */
-.abox{display:flex;flex-direction:column}
-.abox .gb{order:-2}
-.abox .or{order:-1}
-/* ---- Admin: Students / Live Users viewer ---- */
+<!DOCTYPE html>  <html lang="bn">  
+<head>  
+<meta charset="utf-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">  
+<title> বাংলাদেশ ইসলামী ছাত্রশিবির ,আইএইচটি শাখা রাজশাহী “আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</title>  
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600;700&family=Cinzel:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">  
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>  
+<style>  
+:root{--bg:#F7FBF8;--bg2:#FFFFFF;--card:#FFFFFF;--line:rgba(8,122,69,.18);--gold:#087A45;--gold2:#14532D;--tx:#173327;--mu:#64786D;--soft:#EAF5EE;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}  
+:root:not([data-theme="dark"]){color-scheme:light}  
+:root[data-theme="dark"]{--bg:#F7FBF8;--bg2:#FFFFFF;--card:#FFFFFF;--tx:#173327;--mu:#64786D;color-scheme:light}  
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}  
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}  
+body{background:var(--bg);color:var(--tx);font-family:'Hind Siliguri',sans-serif;line-height:1.7;overflow-x:hidden}  
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% 10%,rgba(230,198,92,.12),transparent),radial-gradient(500px 500px at 0% 60%,rgba(60,90,200,.14),transparent);pointer-events:none;z-index:0}  
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(env(safe-area-inset-top,0px) + 10px) 16px 10px;display:flex;align-items:center;gap:14px;background:rgba(7,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}  
+.burger{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--card);display:grid;place-content:center;gap:5px;cursor:pointer}  
+.burger i{display:block;width:20px;height:2px;background:var(--gold);border-radius:2px}  
+.burger i:nth-child(2){width:14px}  
+.brand{font-family:'Tiro Bangla',serif;font-size:26px;line-height:1.7;padding:0 .15em .1em;display:inline-block;background:linear-gradient(90deg,var(--gold),#fff3c4,var(--gold2));-webkit-background-clip:text;background-clip:text;color:transparent}  
+nav.top{margin-left:auto;display:none;gap:22px;font-size:15px}  
+nav.top a{color:var(--mu);text-decoration:none}  
+nav.top a:hover{color:var(--gold)}  
+@media(min-width:800px){nav.top{display:flex}}  
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 20px}  
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:110px 20px 60px;position:relative;z-index:1}  
+.eye{font-family:'Hind Siliguri','Tiro Bangla',sans-serif;font-weight:600;letter-spacing:.04em;line-height:1.6;font-size:clamp(16px,3.4vw,26px);color:var(--gold);border:1px solid var(--line);padding:10px 22px;border-radius:30px;margin-bottom:26px;max-width:92%;text-align:center}  
+.logo{font-family:'Tiro Bangla',serif;font-size:clamp(64px,18vw,150px);line-height:1.7;padding:.05em .2em .12em;display:inline-block;overflow:visible;background:linear-gradient(100deg,#b8912a 0%,#fff3c4 30%,#e6c65c 50%,#fff3c4 70%,#b8912a 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite;filter:drop-shadow(0 8px 30px rgba(230,198,92,.25))}  
+@keyframes shine{to{background-position:-200% 0}}  
+.tag{max-width:560px;margin-top:18px;font-size:clamp(16px,4.2vw,21px);color:var(--tx)}  
+.tag b{color:var(--gold);font-weight:600}  
+.pill{display:inline-block;margin-top:16px;padding:6px 18px;border-radius:99px;background:rgba(230,198,92,.12);border:1px solid var(--line);color:var(--gold);font-size:14px;font-weight:600}  
+.orn{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}  
+.btn{display:inline-block;padding:13px 30px;border-radius:99px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(230,198,92,.25);transition:transform .3s}  
+.btn:active{transform:scale(.96)}  
+section{position:relative;z-index:1;padding:80px 0}  
+.sec-h{text-align:center;margin-bottom:38px}  
+.sec-h small{font-family:'Cinzel',serif;letter-spacing:.3em;color:var(--gold);font-size:12px}  
+.sec-h h2{font-size:clamp(28px,6vw,40px);font-weight:700;margin-top:4px}  
+.glass{background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:22px;padding:26px}  
+.about p{color:var(--mu);font-size:17px}  
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;text-align:center}  
+.stats div{border:1px solid var(--line);border-radius:16px;padding:14px 6px}  
+.stats b{display:block;font-family:'Cinzel',serif;font-size:24px;color:var(--gold)}  
+.stats span{font-size:13px;color:var(--mu)}  
+.depts{margin-top:34px;display:grid;gap:12px}  
+.dept{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}  
+.dept button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer}  
+.num{width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:'Cinzel',serif;font-weight:700;color:#1a1300;background:linear-gradient(135deg,var(--gold),var(--gold2))}  
+.dn{font-weight:600;font-size:17px;flex:1;line-height:1.35}  
+.chev{color:var(--gold);transition:transform .35s;font-size:20px}  
+.dept.open .chev{transform:rotate(180deg)}  
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}  
+.dept.open .body{grid-template-rows:1fr}  
+.body>div{overflow:hidden}  
+.in{padding:0 18px 20px}  
+.in h4{color:var(--gold);font-size:14px;margin:12px 0 4px;letter-spacing:.05em}  
+.in p{color:var(--mu);font-size:15px}  
+.yr{display:flex;gap:10px;align-items:flex-start;margin-top:8px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03)}  
+.yr b{color:var(--gold);white-space:nowrap;font-size:14px}  
+.yr span{font-size:14.5px;color:var(--tx)}  
+.notice{display:grid;gap:12px}  
+.n{display:flex;gap:14px;padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold)}  
+.n time{font-size:12px;color:var(--gold);white-space:nowrap;font-family:'Cinzel',serif;padding-top:3px}  
+.n h5{font-size:16px;font-weight:600}  
+.n p{color:var(--mu);font-size:14.5px}  
+.cgrid{display:grid;gap:12px}  
+@media(min-width:700px){.cgrid{grid-template-columns:1fr 1fr}}  
+.c{padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line)}  
+.c small{color:var(--gold);font-size:12px;letter-spacing:.1em;text-transform:uppercase}  
+.c div{font-size:16.5px;word-break:break-word}  
+footer{position:relative;z-index:1;text-align:center;padding:30px 20px 40px;color:var(--mu);font-size:14px;border-top:1px solid var(--line)}  
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .35s;z-index:80}  
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(86vw,340px);z-index:90;background:var(--bg2);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .4s cubic-bezier(.2,.8,.2,1);padding:calc(env(safe-area-inset-top,0px) + 20px) 20px 30px;overflow-y:auto;will-change:transform}  
+body.m .drawer{transform:none}  
+body.m .ov{opacity:1;pointer-events:auto}  
+.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}  
+.x{all:unset;cursor:pointer;color:var(--gold);font-size:28px;padding:4px 10px}  
+.dl small{display:block;margin:16px 0 8px;font-family:'Cinzel',serif;color:var(--gold);letter-spacing:.2em;font-size:11px}  
+.dl a{display:flex;align-items:center;gap:12px;padding:14px 14px;margin-bottom:8px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--tx);text-decoration:none;font-size:16px;font-family:system-ui,'Hind Siliguri',sans-serif}  
+.dl a:active{transform:scale(.98)}  
+.dl a em{font-style:normal;color:var(--gold);font-size:12px;margin-left:auto}  
+.dl a.q{background:linear-gradient(135deg,rgba(230,198,92,.18),rgba(230,198,92,.05))}  
+.dl .sg.q>button{background:linear-gradient(135deg,rgba(230,198,92,.18),rgba(230,198,92,.05));color:var(--gold);font-weight:600}  
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}  
+.rv.on{opacity:1;transform:none}  
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.logo{animation:none}}  
+.sg{margin-bottom:8px;border-radius:14px;background:var(--card);border:1px solid var(--line);overflow:hidden}  
+.sg>button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;padding:14px;color:var(--tx);font-size:16px;font-family:system-ui,'Hind Siliguri',sans-serif;cursor:pointer}  
+.sg>button i{margin-left:auto;color:var(--gold);font-style:normal;transition:transform .3s}  
+.sg.open>button i{transform:rotate(180deg)}  
+.sb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}  
+.sg.open .sb{grid-template-rows:1fr}  
+.sb>div{overflow:hidden}  
+.dl .sg a{margin:0 10px 8px;background:rgba(255,255,255,.04);font-size:15px}  
+.dl .sg2{margin:0 10px 8px;border-radius:12px}  
+.dl .sg2>button{padding:12px 14px;font-size:15px;color:var(--gold)}  
+.dl .sg2 a{margin:0 10px 8px;font-size:14px}  
+#auth,.ov-screen{position:fixed;inset:0;z-index:200;background:var(--bg);overflow-y:auto;display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 20px)}  
+#auth:before,.ov-screen:before{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% 10%,rgba(230,198,92,.14),transparent),radial-gradient(500px 500px at 0 70%,rgba(60,90,200,.16),transparent);pointer-events:none}  
+.ov-screen{display:none}  
+.flabel{color:var(--mu);font-size:13.5px;margin:14px 2px 6px}  
+.ac select,.ac input[type=file]{width:100%;padding:13px 14px;margin-bottom:4px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font:inherit;font-size:15px;outline:none}  
+.ac input[type=file]{border-style:dashed;color:var(--mu);font-size:13.5px;margin-bottom:10px}  
+.acard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px}  
+.acard h4{font-size:16px;margin-bottom:8px}  
+.acard p{color:var(--mu);font-size:13.5px;margin:2px 0}  
+.acard img{width:48%;border-radius:10px;border:1px solid var(--line);margin-top:10px}  
+.arow{display:flex;gap:10px;margin-top:12px}  
+.arow button{flex:1;border:0;border-radius:12px;padding:11px;font:inherit;font-weight:700;cursor:pointer}  
+.aok{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}  
+.ano{background:rgba(255,138,138,.15);color:#ff8a8a;border:1px solid rgba(255,138,138,.3)!important}  
+#auth.ld .abox,#auth.ld .asub{visibility:hidden}  
+.ac{position:relative;width:100%;max-width:400px;text-align:center;margin:auto}  
+.ac .logo{font-size:clamp(56px,16vw,90px);animation:shine 6s linear infinite}  
+.asub{color:var(--mu);font-size:15px;margin:2px 0 18px}  
+.abox{padding:22px;text-align:left}  
+.tg{display:flex;background:rgba(255,255,255,.05);border-radius:14px;padding:4px;margin-bottom:16px}  
+.tg button{all:unset;flex:1;text-align:center;padding:10px;border-radius:11px;cursor:pointer;color:var(--mu);font-weight:600;font-size:15px}  
+.tg button.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}  
+.ac input{width:100%;padding:14px 16px;margin-bottom:12px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font:inherit;font-size:16px;outline:none}  
+.ac input:focus{border-color:var(--gold)}  
+.ac .btn{width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px;text-align:center}  
+.gb{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:13px;border-radius:99px;background:#fff;color:#222;font-weight:600;font-size:16px;cursor:pointer;font-family:system-ui,sans-serif}  
+.or{text-align:center;color:var(--mu);font-size:13px;margin:14px 0}  
+.msg{min-height:20px;font-size:14px;color:#ff8a8a;margin-top:10px;text-align:center}  
+.msg.ok{color:#7ee0a0}  
+.fp{background:none;border:0;color:var(--gold);cursor:pointer;font:inherit;font-size:14px;display:block;margin:12px auto 0}  
+.pv{display:none;margin:14px auto 0;background:none;border:1px dashed var(--line);color:var(--mu);border-radius:99px;padding:8px 18px;font:inherit;font-size:13px;cursor:pointer}  
+.depts{grid-template-columns:repeat(2,1fr);gap:14px;margin-top:0}  
+@media(min-width:700px){.depts{grid-template-columns:repeat(3,1fr)}}  
+.ic{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;color:var(--gold);background:radial-gradient(circle at 30% 25%,rgba(230,198,92,.3),rgba(230,198,92,.04));border:1px solid var(--line);margin:0 auto 12px}  
+.ic svg{width:50%;height:50%}  
+.ic.big{width:86px;height:86px}  
+.dc{all:unset;box-sizing:border-box;cursor:pointer;text-align:center;padding:22px 10px 18px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01)),var(--card);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;transition:transform .3s,border-color .3s}  
+.dc:hover{border-color:var(--gold)}  
+.dc:active{transform:scale(.96)}  
+.dc b{font-size:16px;line-height:1.3;font-weight:600}  
+.dc small{color:var(--mu);font-size:12.5px;margin-top:2px}  
+.dc em{font-style:normal;color:var(--gold);font-size:12.5px;margin-top:10px}  
+.sov{position:fixed;inset:0;background:rgba(0,0,0,.65);opacity:0;pointer-events:none;transition:opacity .35s;z-index:110}  
+.sheet{position:fixed;left:0;right:0;bottom:0;top:calc(env(safe-area-inset-top,0px) + 30px);z-index:120;max-width:760px;margin:0 auto;background:var(--bg2);border-radius:26px 26px 0 0;border-top:1px solid var(--line);overflow-y:auto;padding:22px 20px calc(env(safe-area-inset-bottom,0px) + 40px);transform:translateY(105%);transition:transform .45s cubic-bezier(.2,.8,.2,1);will-change:transform}  
+body.so #sh,body.adv #advS{transform:none}  
+body.so #sov,body.adv #advO{opacity:1;pointer-events:auto}  
+body.so,body.adv{overflow:hidden}  
+.sx{float:right;position:sticky;top:0;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:var(--card);border:1px solid var(--line);z-index:2;padding:0}  
+.sh-h{text-align:center;clear:both}  
+.sh-h h3{font-size:22px;line-height:1.3;margin:6px 0 10px}  
+#sb2 h4{color:var(--gold);font-family:'Cinzel',serif;letter-spacing:.2em;font-size:12px;margin:26px 0 10px}  
+#sb2 p{color:var(--mu);font-size:15.5px}  
+.ul{list-style:none;display:grid;gap:8px}  
+.ul li{padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:15px}  
+.ul li:before{content:"✦";color:var(--gold);margin-right:10px;font-size:12px}  
+.chips{display:flex;flex-wrap:wrap;gap:8px}  
+.chips span{padding:7px 14px;border-radius:99px;border:1px solid var(--line);color:var(--gold);font-size:14px;background:rgba(230,198,92,.08)}  
+.yc{margin-top:12px;padding:16px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}  
+.yc.f{border-color:var(--gold)}  
+.yc h5{display:flex;justify-content:space-between;align-items:center;font-size:16px;color:var(--gold);margin-bottom:6px}  
+.yc h5 span{font-size:12px;color:var(--mu);font-weight:500}  
+.yc ol{padding-left:22px;font-size:15px}  
+.yc li{margin:4px 0}  
+.sub-h{color:var(--gold);font-size:17px;font-weight:600;margin-bottom:14px}  
+.acc{display:grid;gap:12px}  
+.trow{display:flex;align-items:center;gap:14px;padding:15px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--tx)}  
+.trow:active{transform:scale(.98)}  
+.trow .ic2{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;display:grid;place-items:center;flex:none}  
+.trow .ic2 svg{width:55%;height:55%}  
+.trow b{flex:1;font-size:15.5px;font-weight:600;line-height:1.3}  
+.trow em{font-style:normal;color:var(--gold);font-size:12.5px;white-space:nowrap}  
+.tgal{display:block;margin-top:2px;color:var(--mu);font-size:12px;font-weight:500}  
+.pg{display:none}  
+.pg.act{display:block;animation:pgin .55s cubic-bezier(.2,.8,.2,1)}  
+.hero.pg.act{display:flex}  
+@keyframes pgin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}  
+.pg .rv{opacity:1;transform:none}  
+section.pg{padding:100px 0 120px}  
+body.home footer,body.home .tabs,body.home .burger{display:none}  
+.tabs{position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:60;display:flex;padding:6px;border-radius:22px;background:rgba(13,20,38,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);max-width:520px;margin:0 auto}  
+.tabs a{flex:1;text-align:center;text-decoration:none;color:var(--mu);font-size:12px;padding:8px 2px;border-radius:16px;font-weight:600;transition:background .3s,color .3s}  
+.tabs a svg{width:22px;height:22px;display:block;margin:0 auto 2px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}  
+.tabs a.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300}  
+.brand{cursor:pointer}  
+/* Google login সবার উপরে */  
+.abox{display:flex;flex-direction:column}  
+.abox .gb{order:-2}  
+.abox .or{order:-1}  /* ---- Admin KYC viewer ---- */
 .vcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:16px}
 .vcard h4{font-size:18px;color:var(--gold);margin-bottom:10px}
 .irow{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:15px}
@@ -271,614 +268,744 @@ model-viewer{width:100%;height:420px;background:#05070d}
 body.ap-open{overflow:hidden}
 .kyc-logo{display:flex;justify-content:center;margin:0 auto 14px}
 .kyc-logo .logo-img{width:120px;height:auto;max-width:60vw;box-shadow:none!important;background:none!important;border-radius:0;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
-.pprev{display:grid;place-items:center;width:108px;height:108px;margin:0 auto;border-radius:50%;border:2px dashed var(--gold);background:var(--bg2) center/cover no-repeat;color:var(--gold);font-size:36px;cursor:pointer;overflow:hidden}
-.pprev.has{border-style:solid}.pprev.has span{display:none}
-.req{color:#ff8a8a}
-.ac input[readonly]{opacity:.65}
-.avu{width:54px;height:54px;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--bg2);flex:none}
-img.avu.zi{cursor:zoom-in}
-.avn{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line);color:var(--gold);font-weight:700;font-size:20px;flex:none}
-.vtop .who{display:flex;align-items:center;gap:12px;min-width:0}
-.bd.active{background:rgba(126,224,160,.14);color:#7ee0a0;border:1px solid rgba(126,224,160,.35)}
-.bd.blocked{background:rgba(255,138,138,.14);color:#ff8a8a;border:1px solid rgba(255,138,138,.35)}
-</style>
 
-</head>
-<body>
-<div id="auth" class="ld"><div class="ac">
-  <div class="logo">বাংলাদেশ ইসলামী ছাত্রশিবির</div>
-  <div class="asub">IHT Help Center • Sign in to continue</div>
-  <div class="glass abox">
-    <div class="tg"><button class="on" data-m="in">Sign in</button><button data-m="up">Create account</button></div>
-    <input id="em" type="email" placeholder="Email address" autocomplete="email">
-    <input id="pw" type="password" placeholder="Password" autocomplete="current-password">
-    <button class="btn" id="go">Sign in</button>
-    <div class="or">— or —</div>
-<button class="gb" id="gg"><svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Continue with Google</button>
-    <button class="fp" id="fp">Forgot password?</button>
-    <div class="msg" id="ms"></div>
-  </div>
-  <button class="pv" id="pv">Preview site (Firebase setup pending)</button>
-</div></div>
-<div id="profile" class="ov-screen"><div class="ac">
-  <div class="kyc-logo"><img id="authLogo" src="logo.png" alt="Logo" class="logo-img"></div>
-  <div class="asub">আপনার প্রোফাইল তৈরি করুন</div>
-  <div class="glass abox">
-    <label for="pPhoto" id="pPrev" class="pprev"><span>+</span></label>
-    <div class="flabel" style="margin:8px 0 14px;text-align:center">আপনার ছবি <b class="req">*</b></div>
-    <input id="pPhoto" type="file" accept="image/*" style="display:none">
-    <input id="pName" type="text" placeholder="পূর্ণ নাম *" autocomplete="name">
-    <input id="pMobile" type="tel" placeholder="মোবাইল নম্বর *" autocomplete="tel">
-    <input id="pEmail" type="email" placeholder="ইমেইল" readonly>
-    <div class="flabel">ঐচ্ছিক তথ্য (না দিলেও চলবে)</div>
-    <input id="pFather" type="text" placeholder="বাবার নাম">
-    <select id="pDept"></select>
-    <input id="pSession" type="text" placeholder="Session (যেমন 2025-2026)">
-    <input id="pAddr" type="text" placeholder="ঠিকানা">
-    <button class="btn" id="pSubmit" style="margin-top:16px">প্রোফাইল তৈরি করুন</button>
-    <div class="msg" id="pMsg"></div>
-    <button class="fp" id="pLogout">Log out</button>
-  </div>
-</div></div>
-<div id="blocked" class="ov-screen"><div class="ac">
-  <div class="logo" style="font-size:clamp(40px,10vw,64px)">আমার-শিবির</div>
-  <div class="glass abox" style="text-align:center">
-    <h3 style="color:#ca1e1e;margin-bottom:10px">আপনার অ্যাকাউন্ট ব্লক করা হয়েছে</h3>
-    <p style="color:var(--mu)" id="bReason"></p>
-    <p style="color:var(--mu);margin-top:8px">প্রয়োজনে অ্যাডমিনের সাথে যোগাযোগ করুন।</p>
-    <button class="fp" id="bLogout">Log out</button>
-  </div>
-</div></div>
-<div class="sov" id="advO"></div>
-<div class="sheet" id="advS"><button class="x sx" id="advX" aria-label="Close">×</button><h3 style="margin:6px 0 14px">Students</h3><div class="atabs" id="atabs"><button data-s="active" class="on">Active</button><button data-s="blocked">Blocked</button></div><input id="aq" type="search" placeholder="নাম / মোবাইল / ইমেইল দিয়ে খুঁজুন"><div class="acnt" id="acnt"></div><div id="advList"></div></div>
-<div class="lb" id="lb"><button class="x lbx" id="lbx" aria-label="Close">×</button><div class="lbs" id="lbs"><img id="lbi" alt="ID card"></div><div class="lbt"><button id="lbm" aria-label="Zoom out">−</button><span class="lbz" id="lbz">100%</span><button id="lbp" aria-label="Zoom in">+</button><button id="lbr" style="font-size:14px">Reset</button></div></div>
-<div class="sov" id="liveO"></div>
-<div class="sheet" id="liveS"><button class="x sx" id="liveX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">Live Users</h3><div class="acnt" id="liveSum"></div><div id="liveList"></div></div>
-<header>
-  <div class="burger" id="bg" aria-label="Menu" role="button"><i></i><i></i><i></i></div>
-  <div class="brand" onclick="location.hash='home'">বাংলাদেশ ইসলামী ছাত্রশিবির</div>
-  <nav class="top"><a href="#about">About</a><a href="#anatomy">Anatomy</a><a href="#depts">Departments</a><a href="#notice">Notice</a><a href="#contact">Contact</a></nav>
-</header>
-<div class="ov" id="ov"></div>
-<aside class="drawer" id="dr">
-  <div class="dh"><div class="brand">আমার-শিবির</div><button class="x" id="cl">×</button></div>
-  <div class="dl" id="dl"></div>
-  <div class="dl"><small>LEARNING</small><a href="#anatomy">🧠 Anatomy &amp; Physiology</a></div>
-  <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">Students</a><a href="#" id="openLive">Live Users</a><a href="exam.html" class="q">Exam &amp; KYC প্যানেল</a></div>
-  <div class="dl"><small>ACCOUNT</small><div id="who" style="color:var(--mu);font-size:14px;margin:0 4px 10px;word-break:break-all"></div><a href="#" id="lo">Log out</a></div>
-</aside>
-<div class="hero pg" id="home">
-  <div class="eye rv">“আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</div>
-  <img src="logo.png" alt="logo" class="site-logo">
-  <h1 class="logo rv">আমার-শিবির</h1>
-  <div class="pill rv">4-Year Diploma • IHT</div>
-  <div class="orn"></div>
-  <p class="tag rv"><b>বিশেষ দ্রষ্টব্য:</b><br>এখানে শুধু আই এইচ টি ফার্স্ট ইয়ারের গাইড লাইন দেওয়া হয়।</p>
-  <div class="rv" style="margin-top:30px"><a class="btn" href="#about">Explore</a></div>
-</div>
-<section id="about" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>ABOUT US</small><h2>আমার-শিবির</h2></div>
-  <div class="glass rv about">
-    <p>আমার-শিবির হলো বাংলাদেশ ইসলামী ছাত্রশিবির রাজশাহী-শাখার প্রতিষ্ঠান, যেখানে IHT (Institute of Health Technology) First Year শিক্ষার্থীদের জন্য গোছানো গাইডলাইন, নোট ও পরীক্ষার প্রস্তুতির সহায়তা দেওয়া হয়।</p>
-    <div class="stats"><div><b>6</b><span>Departments</span></div><div><b>4 Yrs</b><span>Diploma Course</span></div><div><b>5</b><span>1st Year Subjects</span></div></div>
-  </div>
-</div></section>
-<section id="anatomy" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>ANATOMY &amp; PHYSIOLOGY</small><h2>Human Body Systems</h2><p style="color:var(--mu);margin-top:6px">System নির্বাচন করে বিস্তারিত পড়ুন এবং 3D Model দেখে বুঝুন</p></div>
-  <div class="ap-grid" id="apSystems"></div>
-</div></section>
-<section id="depts" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>DEPARTMENTS</small><h2>IHT Departments</h2><p style="color:var(--mu);margin-top:6px">4-Year Diploma Course • ডিপার্টমেন্টে ট্যাপ করলে সব details দেখা যাবে</p></div>
-  <div class="depts" id="dp"></div>
-</div></section>
-<section id="notice" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>NOTICE BOARD</small><h2>Notice Board</h2></div>
-  <div class="notice" id="nb"></div>
-</div></section>
-<section id="contact" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>CONTACT US</small><h2>Contact Us</h2></div>
-  <div class="cgrid" id="ct"></div>
-</div></section>
-<section id="teachers" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>TEACHERS SPECIAL</small><h2>Teachers Special</h2></div>
-  <h3 class="sub-h rv">Teacher's Sheet</h3>
-  <div class="acc" id="tsh"></div>
-  <h3 class="sub-h rv" style="margin-top:40px">Tutorial / Class Slides</h3>
-  <div class="acc" id="tut"></div>
-</div></section>
-<div class="sov" id="sov"></div>
-<div class="sheet" id="sh"><button class="x sx" id="sx" aria-label="Close">×</button><div id="sb2"></div></div>
-<nav class="tabs" id="tb"><a href="#about"><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 11v6M12 7.5v.01'/></svg>About</a><a href="#anatomy"><svg viewBox='0 0 24 24'><path d='M3 12h4l3-8 4 16 3-8h4'/></svg>Anatomy</a><a href="#depts"><svg viewBox='0 0 24 24'><path d='M2 9l10-5 10 5-10 5z'/><path d='M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5'/></svg>Depts</a><a href="#teachers"><svg viewBox='0 0 24 24'><path d='M3 6.5c3-1.5 6-1.5 9 0c3-1.5 6-1.5 9 0v12c-3-1.5-6-1.5-9 0c-3-1.5-6-1.5-9 0z'/><path d='M12 6.5v12'/></svg>Teachers</a><a href="#notice"><svg viewBox='0 0 24 24'><path d='M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z'/><path d='M10 21h4'/></svg>Notice</a><a href="#contact"><svg viewBox='0 0 24 24'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/></svg>Contact</a></nav>
+/* ---- User profile system ---- */
+.profile-photo-wrap{width:112px;height:112px;margin:0 auto 12px;position:relative}
+.profile-photo-wrap img{width:112px;height:112px;object-fit:cover;border-radius:50%;border:2px solid var(--gold);background:var(--bg2)}
+.profile-photo-wrap label{position:absolute;right:0;bottom:0;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1300;font-weight:800;cursor:pointer;border:2px solid var(--bg)}
+.profile-photo-wrap input{display:none}
+.profile-note{color:var(--mu);font-size:13px;text-align:center;margin:0 0 12px}
+.profile-field-label{display:block;text-align:left;color:var(--mu);font-size:13px;margin:10px 2px 5px}
+.profile-email{opacity:.75}
+.user-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0}
+.user-card-head{display:flex;align-items:center;gap:12px}
+.user-card-head img{width:54px;height:54px;object-fit:cover;border-radius:50%;border:1px solid var(--line);background:var(--bg2)}
+.user-card-info{min-width:0;flex:1}
+.user-card-info b{display:block;font-size:16px;overflow-wrap:anywhere}
+.user-card-info small{display:block;color:var(--mu);font-size:12px;overflow-wrap:anywhere}
+.user-meta{font-size:13px;color:var(--mu);margin-top:10px;overflow-wrap:anywhere}
+.user-actions{display:flex;gap:8px;margin-top:12px}
+.user-actions button{flex:1;border:0;border-radius:10px;padding:10px;font:inherit;font-weight:700;cursor:pointer}
+.user-state{font-size:12px;border-radius:30px;padding:3px 9px;background:rgba(126,224,160,.12);color:#7ee0a0}
+.user-state.disabled{background:rgba(255,138,138,.12);color:#ff8a8a}
+.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.admin-stat{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:13px;padding:12px 5px;text-align:center}
+.admin-stat b{display:block;color:var(--gold);font:700 22px Cinzel,serif}
+.admin-stat small{font-size:11px;color:var(--mu)}
+#userSearch{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font:inherit;margin:8px 0}
+.profile-secondary{background:transparent;border:1px solid var(--line);color:var(--gold);border-radius:99px;padding:10px 18px;font:inherit;cursor:pointer}
+
+/* ================= ISLAMIC THEME: emerald • ivory • gold =================
+Visual-only layer. HTML structure, Firebase, login, profile, admin and navigation logic are untouched. */
+:root{--bg:#FBF7EA;--bg2:#FFFDF6;--card:#FFFDF6;--line:rgba(11,107,58,.20);--gold:#0B6B3A;--gold2:#064E2B;--zar:#B8902B;--zar-d:#8A6A12;--tx:#12281D;--mu:#5B6E62;--soft:#E8F3EA;--err:#B3261E;--err-bg:#FDECEA;--ok-bg:#E3F2E8;--warn-bg:#FBF1D3;color-scheme:light}
+:root[data-theme="dark"]{--bg:#FBF7EA;--bg2:#FFFDF6;--card:#FFFDF6;--tx:#12281D;--mu:#5B6E62;color-scheme:light}
+body{background:var(--bg);color:var(--tx)}
+/* geometric eight-pointed star (khatam) pattern + soft emerald glow */
+body:before{background:
+ radial-gradient(640px 420px at 90% 6%,rgba(11,107,58,.10),transparent),
+ radial-gradient(560px 560px at 0% 70%,rgba(184,144,43,.10),transparent),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%230B6B3A' stroke-opacity='.10' stroke-width='1'%3E%3Cpath d='M44 6l9.2 15.8L70 18l-3.8 17.8L82 44l-15.8 8.2L70 70l-16.8-3.8L44 82l-9.2-15.8L18 70l3.8-17.8L6 44l15.8-8.2L18 18l16.8 3.8z'/%3E%3Ccircle cx='44' cy='44' r='9'/%3E%3C/g%3E%3C/svg%3E");
+ background-size:auto,auto,88px 88px}
+/* header */
+header{background:rgba(251,247,234,.92);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(184,144,43,.35),0 6px 20px rgba(11,107,58,.06)}
+.burger{background:var(--soft);border-color:var(--line)}
+.burger i{background:var(--gold2)}
+.brand,.logo{background:linear-gradient(100deg,#064E2B 0%,#0B6B3A 38%,#A67C1A 58%,#064E2B 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;filter:none}
+nav.top a{color:var(--mu)}nav.top a:hover{color:var(--gold)}
+/* bismillah + ornaments */
+.bism{font-family:'Amiri','Tiro Bangla',serif;font-size:clamp(26px,6vw,40px);line-height:1.8;color:var(--gold2);margin-bottom:6px;direction:rtl}
+.eye{background:rgba(11,107,58,.05);border:1px solid rgba(184,144,43,.45);color:var(--gold2)}
+.pill{background:var(--soft);border-color:var(--line);color:var(--gold2)}
+.orn{width:200px;height:20px;background:
+ linear-gradient(90deg,transparent,var(--zar)) left center/calc(50% - 18px) 1px no-repeat,
+ linear-gradient(270deg,transparent,var(--zar)) right center/calc(50% - 18px) 1px no-repeat,
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23B8902B' d='M12 1l2.6 6.4L21 5l-2.4 6.4L23 12l-4.4.6L21 19l-6.4-2.4L12 23l-2.6-6.4L3 19l2.4-6.4L1 12l4.4-.6L3 5l6.4 2.4z'/%3E%3C/svg%3E") center/18px no-repeat}
+.sec-h small{color:var(--zar-d)}
+.sec-h h2{color:var(--gold2)}
+.sec-h h2:after{content:"";display:block;width:70px;height:2px;margin:10px auto 0;background:linear-gradient(90deg,transparent,var(--zar),transparent)}
+/* buttons / active states: white text on emerald */
+.btn,.tg button.on,.atabs button.on,.tabs a.on,.aok,.num,.trow .ic2,.profile-photo-wrap label{background:linear-gradient(135deg,#0B6B3A,#064E2B);color:#fff}
+.btn{box-shadow:0 10px 24px rgba(11,107,58,.22),inset 0 0 0 1px rgba(184,144,43,.55)}
+/* cards: ivory with a thin gold frame */
+.glass{background:linear-gradient(160deg,rgba(11,107,58,.05),#FFFDF6);border:1px solid var(--line);box-shadow:inset 0 0 0 5px #FFFDF6,inset 0 0 0 6px rgba(184,144,43,.40),0 8px 26px rgba(11,107,58,.07)}
+.dept,.dc,.c,.n,.acard,.vcard,.yc,.trow,.ap-box,.model-box,.user-card,.lu{background:var(--card);border-color:var(--line);box-shadow:0 4px 16px rgba(11,107,58,.06)}
+.dc:hover,.ap-card:hover{border-color:var(--zar);box-shadow:0 8px 22px rgba(184,144,43,.18)}
+.ap-card{background:var(--card);border-color:var(--line)}
+.n{border-left:3px solid var(--zar)}
+.yc.f{border-color:var(--zar)}
+.ic,.ap-icon{color:var(--gold);background:radial-gradient(circle at 30% 25%,rgba(11,107,58,.14),rgba(184,144,43,.08));border:1px solid rgba(184,144,43,.45)}
+.stats div{background:var(--bg2);border-color:var(--line)}
+.stats b,.admin-stat b{color:var(--gold)}
+.drawer,.sheet,.ap-detail,#auth,.ov-screen{background:var(--bg)}
+.dl small{color:var(--zar-d)}
+.dl a,.sg,.sg>button,.tabs,.atabs,.tg{background:var(--card);border-color:var(--line);color:var(--tx)}
+.dl .sg a,.ul li,.yr,.admin-stat,.dl .sg2{background:#F6F1E0;border-color:var(--line);color:var(--tx)}
+.dl a.q,.dl .sg.q>button{background:var(--soft);color:var(--gold2)}
+.tabs{background:rgba(255,253,246,.95);border:1px solid rgba(184,144,43,.45);box-shadow:0 8px 26px rgba(11,107,58,.12)}
+.tabs a{color:var(--mu)}
+.ul li:before{color:var(--zar)}
+.chips span{background:var(--soft);border-color:var(--line);color:var(--gold2)}
+.irow{border-bottom-color:rgba(11,107,58,.12)}
+/* forms */
+.ac input,.ac select,.ac textarea,#aq,#userSearch{background:#fff!important;color:var(--tx)!important;border:1px solid var(--line)!important}
+.ac input::placeholder{color:#8A9A90}
+.ac input:focus,.ac select:focus,#aq:focus,#userSearch:focus{border-color:var(--gold)!important;box-shadow:0 0 0 3px rgba(11,107,58,.12)}
+.gb{background:#fff;color:var(--tx);border:1px solid var(--line)}
+.abox{background:var(--card)}
+.fp,.profile-secondary{color:var(--gold)}
+.profile-photo-wrap img{border-color:var(--zar)}
+.profile-photo-wrap label{border-color:var(--bg)}
+/* status colours readable on ivory */
+.msg{color:var(--err)}
+.msg.ok{color:var(--gold)}
+.bd.pending{background:var(--warn-bg);color:var(--zar-d);border:1px solid rgba(184,144,43,.45)}
+.bd.approved,.user-state{background:var(--ok-bg);color:var(--gold2);border:1px solid rgba(11,107,58,.30)}
+.bd.rejected,.user-state.disabled{background:var(--err-bg);color:var(--err);border:1px solid rgba(179,38,30,.30)}
+.ano{background:var(--err-bg);color:var(--err);border:1px solid rgba(179,38,30,.30)!important}
+.rsn{background:var(--err-bg);border-color:rgba(179,38,30,.25);color:var(--err)}
+.dot{background:#9CA9A0}
+.dot.on{background:#16A34A;box-shadow:0 0 0 4px rgba(22,163,74,.18)}
+.lu .dot.on~.lt{color:var(--gold)}
+/* overlays */
+.sov,.ov{background:rgba(6,40,24,.38)}
+.ap-box h3,.ap-topic-title,.sub-h{color:var(--gold2)}
+/* 3D box: deep emerald "night" so pale bone/organ models stand out */
+.model-box{background:radial-gradient(circle at 50% 38%,#1B5E43 0%,#0C3322 62%,#082317 100%);border:1px solid rgba(184,144,43,.6);box-shadow:0 10px 30px rgba(6,40,24,.25)}
+.model-head{background:rgba(0,0,0,.22);border-bottom:1px solid rgba(233,210,138,.25)}
+.model-head h3{color:#F0DC9B}
+.model-head p,.model-help{color:#D5E6DB}
+model-viewer{background:transparent}
+/* lightbox stays dark so ID-card photos are easy to inspect */
+.lb{background:rgba(6,20,13,.96)}
+.lbt{background:#0F2A1D;border-top-color:rgba(255,255,255,.12)}
+.lbt button,.lbx{background:#173d2a;border-color:rgba(255,255,255,.2);color:#fff}
+.lbt .lbz{color:#cfe3d6}
+footer{background:var(--bg);border-top:1px solid rgba(184,144,43,.45);color:var(--mu)}
+footer span{color:var(--gold)!important}
+
+/* ---- topic chips + topic page ---- */
+.chips .tp-chip{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:var(--soft);color:var(--gold2);font-size:14px;font-weight:600;transition:border-color .25s,box-shadow .25s,transform .2s}
+.chips .tp-chip i{font-style:normal;color:var(--zar-d);font-size:16px;line-height:1}
+.chips .tp-chip:hover{border-color:var(--zar);box-shadow:0 4px 14px rgba(184,144,43,.2)}
+.chips .tp-chip:active{transform:scale(.96)}
+.tp-hint{color:var(--mu);font-size:13px;margin:-6px 0 10px}
+#tpDetail{z-index:170}
+.tp-bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:2px 0 12px;background:var(--bg)}
+.tp-bar .ap-close{position:static;margin:0;flex:none}
+.tp-back{all:unset;cursor:pointer;box-sizing:border-box;max-width:calc(100% - 60px);padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--gold);font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tp-crumb{text-align:center;color:var(--zar-d);letter-spacing:.08em;font-size:13px;margin-top:4px}
+.tp-h{text-align:center;font-size:clamp(26px,6vw,36px);line-height:1.25;color:var(--gold2);margin-top:4px}
+.tp-sec{margin-bottom:12px}
+.tp-sec p{color:var(--tx)}
+.tp-sec .ap-list{color:var(--tx)}
+.tp-soon{color:var(--mu)!important;font-style:italic}
+.tp-navrow{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.tp-nav{all:unset;cursor:pointer;box-sizing:border-box;max-width:48%;padding:11px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--gold);font-weight:600;font-size:14px;line-height:1.3}
+.tp-nav:active{transform:scale(.97)}
+</style>  
+</head>  
+<body>  
+<div id="auth" class="ld"><div class="ac">  
+  <div class="logo">বাংলাদেশ ইসলামী ছাত্রশিবির</div>  
+  <div class="asub">• Pull the lapm cord</div>  
+  <div class="glass abox">  
+    <div class="tg"><button class="on" data-m="in">Sign in</button><button data-m="up">Create account</button></div>  
+    <input id="em" type="email" placeholder="Email address" autocomplete="email">  
+    <input id="pw" type="password" placeholder="Password" autocomplete="current-password">  
+    <button class="btn" id="go">Sign in</button>  
+    <div class="or">— or —</div>  
+<button class="gb" id="gg"><svg width="18" hei    ght="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>Continue with Google</button>  
+    <button class="fp" id="fp">Forgot password?</button>  
+    <div class="msg" id="ms"></div>  
+  </div>  
+  <button class="pv" id="pv">Preview site (Firebase setup pending)</button>  
+</div></div>  <div id="profileSetup" class="ov-screen"><div class="ac">  
+  <div class="logo" style="font-size:clamp(40px,10vw,64px)">আইএইচটি ছাত্রশিবির</div>  
+  <div class="asub" id="profileHeading">Create Your Profile</div>  
+  <div class="glass abox">  
+    <div class="profile-photo-wrap">  
+      <img id="profilePreview" src="" alt="Profile photo">  
+      <label for="profilePhoto" title="ছবি নির্বাচন করুন">✎</label>  
+      <input id="profilePhoto" type="file" accept="image/*">  
+    </div>  
+    <p class="profile-note" id="profileNote">Fill in the gaps with right information</p>  
+    <label class="profile-field-label" for="profileName">name</label>  
+    <input id="profileName" type="text" maxlength="80" placeholder="Full name ">  
+    <label class="profile-field-label" for="profileMobile">Mobile</label>  
+    <input id="profileMobile" type="tel" maxlength="16" placeholder="01XXXXXXXXX">  
+    <label class="profile-field-label" for="profileEmail">Email</label>  
+    <input id="profileEmail" class="profile-email" type="email" readonly>  
+    <button class="btn" id="profileSave" style="margin-top:12px">Create Profile &amp; Continue</button>  
+    <button class="profile-secondary" id="profileCancel" style="display:none;width:100%;margin-top:10px">Back to Website</button>  
+    <div class="msg" id="profileMsg"></div>  
+    <button class="fp" id="profileLogout">Log out</button>  
+  </div>  
+</div></div>  <div class="sov" id="advO"></div>  
+<div class="sheet" id="advS"><button class="x sx" id="advX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">User Management</h3><p style="color:var(--mu);font-size:13px">সকল নিবন্ধিত অ্যাকাউন্ট ও তাদের প্রবেশাধিকার</p><div class="admin-stats"><div class="admin-stat"><b id="totalUsers">0</b><small>মোট অ্যাকাউন্ট</small></div><div class="admin-stat"><b id="onlineUsers">0</b><small>এখন Active</small></div><div class="admin-stat"><b id="disabledUsers">0</b><small>বাতিল</small></div></div><input id="aq" type="search" placeholder="নাম / মোবাইল / ইমেইল দিয়ে খুঁজুন"><div class="atabs" id="userTabs"><button data-filter="all" class="on">সবাই</button><button data-filter="active">Active</button><button data-filter="disabled">বাতিল</button></div><div class="acnt" id="acnt"></div><div id="advList"></div></div>  <div class="lb" id="lb"><button class="x lbx" id="lbx" aria-label="Close">×</button><div class="lbs" id="lbs"><img id="lbi" alt="ID card"></div><div class="lbt"><button id="lbm" aria-label="Zoom out">−</button><span class="lbz" id="lbz">100%</span><button id="lbp" aria-label="Zoom in">+</button><button id="lbr" style="font-size:14px">Reset</button></div></div>  <div class="sov" id="liveO"></div>  
+<div class="sheet" id="liveS"><button class="x sx" id="liveX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">Live Users</h3><div class="acnt" id="liveSum"></div><div id="liveList"></div></div>  <header>  
+  <div class="burger" id="bg" aria-label="Menu" role="button"><i></i><i></i><i></i></div>  
+  <div class="brand" onclick="location.hash='home'">আইএইচটি ছাত্রশিবির</div>  
+  <nav class="top"><a href="#about">About</a><a href="#anatomy">3D models</a><a href="#depts">Departments</a><a href="#notice">Notice</a><a href="#contact">Contact</a></nav>  
+</header>  <div class="ov" id="ov"></div>  
+<aside class="drawer" id="dr">  
+  <div class="dh"><div class="brand">আমার-শিবির</div><button class="x" id="cl">×</button></div>  
+  <div class="dl" id="dl"></div>  
+  <div class="dl"><small>LEARNING</small><a href="#anatomy">🧠 Anatomy &amp; Physiology</a></div>  
+  <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">User Management</a><a href="#" id="openLive">Live Users</a></div>  
+  <div class="dl"><small>ACCOUNT</small><a href="#" id="openProfile">My Profile</a><div id="who" style="color:var(--mu);font-size:14px;margin:0 4px 10px;word-break:break-all"></div><a href="#" id="lo">Log out</a></div>  
+</aside>  <div class="hero pg" id="home">  
+  <div class="bism rv">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <div class="eye rv">“আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</div>  
+  <img src="logo.png" alt="logo" class="site-logo">  
+  <h1 class="logo rv">আইএইচটি ছাত্রশিবির</h1>  
+  <div class="pill rv">রাজশাহী-মহানগর</div>  
+  <div class="orn"></div>  
+  <p class="tag rv"><b>বিশেষ দ্রষ্টব্য:</b><br>সাপ্তাহিক পরীক্ষায় অংশগ্রহণ করতে ভুলবেন না যেন</p>  
+  <div class="rv" style="margin-top:30px"><a class="btn" href="#about">Explore</a></div>  
+</div>  <section id="about" class="pg"><div class="wrap">  
+  <div class="sec-h rv"><small>ABOUT US</small></div>  
+  <div class="glass rv about">  
+    <p>### একজন আদর্শ তরুণ গড়ার প্রত্যয়ে বাংলাদেশ ইসলামী ছাত্রশিবির  দেশের প্রতিটি জনপদে নিরলসভাবে কাজ করে যাচ্ছে বাংলাদেশ ইসলামী ছাত্রশিবির। একজন তরুণকে একই সঙ্গে আদর্শ শিক্ষার্থী, সৎ, যোগ্য ও নৈতিকতাসম্পন্ন মানুষ হিসেবে গড়ে তোলাই সংগঠনটির অন্যতম লক্ষ্য।
+
+ইসলাম সকল মানুষের কল্যাণের বার্তা বহন করে। সেই বার্তা ও ইসলামের সুমহান সৌন্দর্য মুসলমান, হিন্দু, বৌদ্ধ, খ্রিস্টানসহ সব ধর্মের মানুষের কাছে সুন্দর ও ইতিবাচকভাবে তুলে ধরার প্রত্যয়ে এগিয়ে যাচ্ছে ইসলামী ছাত্রশিবির।
+
+শিক্ষা, নৈতিকতা, মানবিকতা ও চরিত্র গঠনের এই প্রচেষ্টায় অনুপ্রাণিত হয়ে দিন দিন মানুষের আগ্রহ ও সমর্থন বাড়ছে।
+
+আসুন, নিজেকে জ্ঞান, নৈতিকতা ও যোগ্যতায় সমৃদ্ধ করে একজন আদর্শ মানুষ হিসেবে গড়ে তুলি। অংশ হই একটি সুন্দর, মানবিক ও কল্যাণমুখী সমাজ গড়ার প্রচেষ্টায়।</p>
+<div class="stats"><div><b>6</b><span>Departments</span></div><div><b>4 Yrs</b><span>Diploma Course</span></div><div><b>5</b><span>1st Year Subjects</span></div></div>
+
+  </div>    </div></section>  
+<section id="anatomy" class="pg"><div class="wrap">  
+  <div class="sec-h rv"><small>ANATOMY &amp; PHYSIOLOGY</small><h2>Human Body Systems</h2><p style="color:var(--mu);margin-top:6px">Read the system</p></div>  
+  <div class="ap-grid" id="apSystems"></div>  
+</div></section>  
+<section id="depts" class="pg"><div class="wrap">  
+  <div class="sec-h rv"><small>DEPARTMENTS</small><h2>IHT Departments</h2><p style="color:var(--mu);margin-top:6px">4-Year Diploma Course • Tap department and view details</p></div>  
+  <div class="depts" id="dp"></div>  
+</div></section>  <section id="notice" class="pg"><div class="wrap">  
+  <div class="sec-h rv"><small>NOTICE BOARD</small><h2>Notice Board</h2></div>  
+  <div class="notice" id="nb"></div>  
+</div></section>  <section id="contact" class="pg"><div class="wrap">  
+  <div class="sec-h rv"><small>CONTACT US</small><h2>Contact Us</h2></div>  
+  <div class="cgrid" id="ct"></div>  
+</div></section>  <section id="teachers" class="pg"><div class="wrap">  
+  <div class="sec-h rv"><small>TEACHERS SPECIAL</small><h2>Teachers Special</h2></div>  
+  <h3 class="sub-h rv">Teacher's Sheet</h3>  
+  <div class="acc" id="tsh"></div>  
+  <h3 class="sub-h rv" style="margin-top:40px">Tutorial / Class Slides</h3>  
+  <div class="acc" id="tut"></div>  
+</div></section>  <div class="sov" id="sov"></div>  
+<div class="sheet" id="sh"><button class="x sx" id="sx" aria-label="Close">×</button><div id="sb2"></div></div>  
+<nav class="tabs" id="tb"><a href="#about"><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 11v6M12 7.5v.01'/></svg>About</a><a href="#anatomy"><svg viewBox='0 0 24 24'><path d='M3 12h4l3-8 4 16 3-8h4'/></svg>Anatomy</a><a href="#depts"><svg viewBox='0 0 24 24'><path d='M2 9l10-5 10 5-10 5z'/><path d='M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5'/></svg>Depts</a><a href="#teachers"><svg viewBox='0 0 24 24'><path d='M3 6.5c3-1.5 6-1.5 9 0c3-1.5 6-1.5 9 0v12c-3-1.5-6-1.5-9 0c-3-1.5-6-1.5-9 0z'/><path d='M12 6.5v12'/></svg>Teachers</a><a href="#notice"><svg viewBox='0 0 24 24'><path d='M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z'/><path d='M10 21h4'/></svg>Notice</a><a href="#contact"><svg viewBox='0 0 24 24'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/></svg>Contact</a></nav>  
 <div class="ap-detail" id="apDetail"><div class="ap-detail-inner"><button class="ap-close" id="apClose" aria-label="Close">×</button><div id="apContent"></div></div></div>
-<footer>Shaheed ali-Raihan developers<br>Website developed by:-<span style="color:var(--gold)" id="dev"></span></footer>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script>
-/* ===== FIREBASE SETUP: Firebase Console > Project settings > Your apps > Web > firebaseConfig এখানে বসান ===== */
-const FIREBASE_CONFIG={
-  apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",
-  authDomain:"cornea-help-center.firebaseapp.com",
-  projectId:"cornea-help-center",
-  storageBucket:"cornea-help-center.firebasestorage.app",
-  messagingSenderId:"755555154486",
-  appId:"1:755555154486:web:df02dec5573a7a9f203697",
-  measurementId:"G-57TLGQC5V6"
-};
-</script>
-<script>
-/* ============ এখানে সহজে এডিট করুন / EDIT HERE ============ */
-const NOTICES=[
-  {date:"2 oct 2026",title:"Welcome to Cornea",text:"First Year guideline"},
-  {date:"2 oct 2026",title:"Anatomy & Physiology",text:"Eleven Anatomical and Physiological systems are mentioned here"},
-  {date:"2 oct 2026",title:"Notes Upload",text:" PDF Coming soon"}
-];
+<div class="ap-detail" id="tpDetail"><div class="ap-detail-inner"><div class="tp-bar"><button class="tp-back" id="tpBack">← Back</button><button class="ap-close" id="tpClose" aria-label="Close">×</button></div><div id="tpContent"></div></div></div>  <footer>Shaheed ali-Raihan developers<br>Website developed by:-<span style="color:var(--gold)" id="dev"></span></footer>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>  <script>  
+/* ===== FIREBASE SETUP: Firebase Console > Project settings > Your apps > Web > firebaseConfig এখানে বসান ===== */  
+const FIREBASE_CONFIG={  
+  apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",  
+  authDomain:"cornea-help-center.firebaseapp.com",  
+  projectId:"cornea-help-center",  
+  storageBucket:"cornea-help-center.firebasestorage.app",  
+  messagingSenderId:"755555154486",  
+  appId:"1:755555154486:web:df02dec5573a7a9f203697",  
+  measurementId:"G-57TLGQC5V6"  
+};  
+</script>  <script>  
+/* ============ এখানে সহজে এডিট করুন / EDIT HERE ============ */  
+const NOTICES=[  
+  {date:"2 oct 2026",title:"Welcome to Cornea",text:"First Year guideline"},  
+  {date:"2 oct 2026",title:"Anatomy & Physiology",text:"Thanks for yours priority"},  
+  {date:"8 & 9 Jan 2027",title:"🎉 গৌরবের ৫০ বছর, স্মৃতির এক অনন্য অধ্যায়! 🎉",text:"আগামী ৮ ও ৯ জানুয়ারি ২০২৭ আমাদের প্রিয় কলেজের ৫০ বছর পূর্তি উপলক্ষে উদ্‌যাপিত হতে যাচ্ছে সুবর্ণজয়ন্তী উৎসব "}];  
+  
 const CONTACT=[
   ["Authority","বাংলাদেশ ইসলামী ছাত্রশিবির"],["Phone","+880 1819-203208"],
-  ["Email","tanvirahmedsifat8@gmail.com"],["Address"," আইএইচটি-শাখা , রাজশাহী"]
+  ["Email","tanvirahmedsifat8@gmail.com"],["Address"," আইএইচটি-শাখা , রাজশাহী"],
+  ["Facebook",'<a href="https://www.facebook.com/YOUR_ID" target="_blank" rel="noopener" style="color:var(--gold)">আমাদের Facebook-এ যান</a>'],
+  ["WhatsApp",'<a href="https://wa.me/8801819203208" target="_blank" rel="noopener" style="color:var(--gold)">WhatsApp-এ মেসেজ করুন</a>']
 ];
-const DEVELOPER="Tanvir Ahmed Sifat";
-/* ADMIN: এই email দিয়ে লগইন করলে "Students" মেনু দেখা যাবে (Firestore Rules এর email এর সাথে মিলতে হবে) */
-const ADMIN_EMAIL="tanvirahmedsifat8@gmail.com";
-let unsub=null;
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-/* PDF লিংক: link:"" এর ভেতরে PDF এর URL বসান */
-const SUBJECTS=[
-  {n:"Anatomy",books:[{n:"BD Chaurasia",vols:[{n:"Volume 1",link:"Https://drive.google.com/file/d/1kPzuwPl1QjTk0RQKy6cO8-l4vLeUNwun/view?usp=drivesdk"},{n:"Volume 2",link:"Https://drive.google.com/file/d/1rPhg3ykt6IKt87nsPssb8XUNXhoMdM6a/view?usp=drivesdk"},{n:"Volume 3 & 4",link:"Https://drive.google.com/file/d/1y5qG2nSdd0GGqInKSy9Ia4w6GjI7PG8q/view?usp=drivesdk"}]},{n:"Concise",link:""},{n:"Salim Reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},
-  {n:"Physiology",books:[{n:"Guyton-hall",link:"Guytun-and-Hall.pdf"},{n:"Concise",link:""},{n:"Park",link:""}]},
-  {n:"Community Medicine",books:[{n:"Park",link:""},{n:"Concise",link:"https://drive.google.com/file/d/1u0KxeW1KZNn1La0W4czxVDN8HJB-wz3k/view?usp=drivesdk"},{n:"Selim reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},
-  {n:"Basic Computer Science",link:""},{n:"English",link:""}
-];
-const BOARD_Q={n:"Last 5 Years Board Questions",subs:[
-  {n:"Anatomy",link:"anatomy-board.pdf"},
-  {n:"Physiology",link:"physiology-board.pdf"},
-  {n:"Community Medicine",link:"comunitymed-board.pdf"},
-  {n:"Basic Computer Science",link:"computer-board.pdf"},
-  {n:"English",link:"english-board.pdf"}
-]};
-/* Weekly Model Test: exam.html এই সাইটেরই অংশ (একই domain/ফোল্ডারে থাকতে হবে) */
-const WEEKLY={n:"Weekly Model Test",link:"exam.html"};
-/* Teachers Special: প্রতিটা স্যারের শীট PDF */
-const TEACHERS=[
-  {n:"Milon sir",link:""},
-
-];
-/* Tutorial / Class Slides: সাবজেক্ট > টপিক (প্রতি সাবজেক্টে ২০টা Topic)
-   কোনো topic এর link বসাতে: TOPICS(20) এর জায়গায় TOPICS(20,{3:"https://..."}) লিখুন (3 = Topic 3) */
-const TOPICS=(c,m={})=>Array.from({length:c},(_,i)=>({n:"Topic "+(i+1),link:m[i+1]||""}));
-const TUTORIALS=[
-  {n:"Anatomy",topics:[
-  {n:"Topic 1",link:"এখানে লিংক"},
-  {n:"Topic 2",link:"এখানে লিংক"},
-  {n:"Topic 3",link:"এখানে লিংক"},
-  {n:"Topic 4",link:""},
-  {n:"Topic 5",link:""}
-]},
-  {n:"Physiology",topics:[
-  {n:"Topic 1",link:"এখানে লিংক"},
-  {n:"Topic 2",link:"www.daraz.com"},
-  {n:"Topic 3",link:"এখানে লিংক"},
-  {n:"Topic 4",link:""},
-  {n:"Topic 5",link:""}
-]},
-  {n:"Community Medicine",topics:[
-  {n:"Topic 1",link:"এখানে লিংক"},
-  {n:"Topic 2",link:"www.mlbd.com"},
-  {n:"Topic 3",link:"এখানে লিংক"},
-  {n:"Topic 4",link:""},
-  {n:"Topic 5",link:""}
-]},
-  {n:"Basic Computer Science",topics:[
-  {n:"Topic 1",link:"এখানে লিংক"},
-  {n:"Topic 2",link:"www.openhub.com"},
-  {n:"Topic 3",link:"এখানে লিংক"},
-  {n:"Topic 4",link:""},
-  {n:"Topic 5",link:""}
-]},
-  {n:"English",topics:[
-  {n:"Topic 1",link:"এখানে লিংক"},
-  {n:"Topic 2",link:"www.3d.com"},
-  {n:"Topic 3",link:"এখানে লিংক"},
-  {n:"Topic 4",link:""},
-  {n:"Topic 5",link:""}
-]},
-];
-const Y1="Anatomy, Physiology, Community Medicine, Basic Computer Science, English";
-const D=[
- {n:"Medical Technology (Laboratory)",s:"Laboratory",t:"Medical Technology",i:"<path d='M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7.5 15h9'/>",
-  a:"Blood, urine ও অন্যান্য নমুনা পরীক্ষা করে রোগ নির্ণয়ে সহায়তা করার প্রযুক্তি। Diagnostic lab এর মেরুদণ্ড বলা হয় এই বিভাগকে।",
-  c:"Medical Technologist|Pathology Lab Technologist|Blood Bank Technologist|Microbiology Lab Assistant|Research Assistant|Diagnostic Centre Owner",
-  w:"Govt. & Private Hospitals|Diagnostic Centres|Blood Banks|Research Institutes",f:"B.Sc. in Medical Technology|M.Sc. / MPH",
-  y2:"Biochemistry|Microbiology|Hematology|Pathology",y3:"Clinical Pathology|Immunology & Serology|Blood Banking|Histopathology",y4:"Advanced Lab Practice|Lab Management|Research Methodology|Professional Ethics"},
- {n:"Medical Technology (Radiology & Imaging)",s:"Radiology & Imaging",t:"Medical Technology",i:"<path d='M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16'/>",
-  a:"X-ray, CT Scan, MRI ও Ultrasound এর মাধ্যমে শরীরের ভেতরের ছবি তুলে রোগ নির্ণয়ে ডাক্তারকে সহায়তা করা।",
-  c:"Radiographer|CT Scan Technologist|MRI Technologist|Ultrasound Sonographer|Imaging Centre Manager|Medical Equipment Specialist",
-  w:"Hospitals|Diagnostic & Imaging Centres|Medical Colleges|Equipment Companies",f:"B.Sc. in Radiology & Imaging|M.Sc. / MPH",
-  y2:"Radiographic Physics|Radiographic Anatomy|Radiographic Positioning|Radiation Protection",y3:"Conventional X-ray|Contrast Studies|CT Scan|Ultrasound",y4:"MRI|Interventional Radiography|Research Methodology|Professional Ethics"},
- {n:"Medical Technology (Radiotherapy)",s:"Radiotherapy",t:"Medical Technology",i:"<circle cx='12' cy='12' r='2'/><path d='M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8'/>",
-  a:"Cancer রোগীদের radiation দিয়ে চিকিৎসার পরিকল্পনা ও প্রয়োগে সহায়তা করা।",
-  c:"Radiotherapy Technologist|Treatment Planning Assistant|Dosimetry Assistant|Cancer Care Support|Radiation Safety Officer|Oncology Centre Technologist",
-  w:"Cancer Hospitals|Oncology Centres|Nuclear Medicine Centres|Medical Colleges",f:"B.Sc. in Radiotherapy Technology|M.Sc. in Medical Physics",
-  y2:"Radiation Physics|Radiobiology|Oncology Basics|Patient Care",y3:"Treatment Planning|Brachytherapy|Dosimetry|Radiation Safety",y4:"Advanced Radiotherapy|Quality Assurance|Research Methodology|Professional Ethics"},
- {n:"Physiotherapy",s:"Physiotherapy",t:"Rehabilitation",i:"<circle cx='12' cy='5' r='2'/><path d='M12 8v6M7.5 10l4.5-2 4.5 2M12 14l-3 7M12 14l3 7'/>",
-  a:"ব্যায়াম, electrotherapy ও manual therapy দিয়ে ব্যথা ও শারীরিক অক্ষমতা থেকে রোগীকে সুস্থ করার বিভাগ।",
-  c:"Physiotherapist|Rehabilitation Therapist|Sports Physiotherapist|Pediatric Therapist|Physio Clinic Owner|Home-care Therapist",
-  w:"Hospitals|Rehabilitation Centres|Sports Clubs|NGOs & Private Chambers",f:"B.Sc. in Physiotherapy|M.Sc. / MPH",
-  y2:"Kinesiology|Electrotherapy|Exercise Therapy|Biomechanics",y3:"Orthopedic PT|Neuro PT|Cardio-pulmonary PT|Pediatric PT",y4:"Rehabilitation|Sports & Community PT|Research Methodology|Professional Ethics"},
- {n:"Dental Technology",s:"Dental Technology",t:"Dental Care",i:"<path d='M12 6.5C10.5 4.8 6.5 4.3 5.7 7.6c-.7 2.7 1.2 4.7 1.7 7.2.4 2 .7 5.2 2.2 5.2 1.3 0 1-3.3 2.4-3.3s1.1 3.3 2.4 3.3c1.5 0 1.8-3.2 2.2-5.2.5-2.5 2.4-4.5 1.7-7.2C17.5 4.3 13.5 4.8 12 6.5z'/>",
-  a:"Denture, crown, bridge ও orthodontic appliance তৈরির প্রযুক্তি — dentist দের পাশে থেকে কাজ করা।",
-  c:"Dental Technologist|Denture Maker|Crown & Bridge Technician|Orthodontic Appliance Maker|Dental Lab Owner|Dental Assistant",
-  w:"Dental Clinics|Dental Hospitals|Dental Labs|Dental Material Companies",f:"B.Sc. in Dental Technology|Dental Materials Specialisation",
-  y2:"Dental Anatomy|Dental Materials|Oral Pathology|Prosthetics",y3:"Crown & Bridge|Orthodontic Appliances|Dental Ceramics|Lab Practice",y4:"Advanced Prosthodontics|Dental Lab Management|Research Methodology|Professional Ethics"},
- {n:"Pharmacy",s:"Pharmacy",t:"Medicine Science",i:"<path d='M10.5 20.5 3.5 13.5a4.95 4.95 0 0 1 7-7l7 7a4.95 4.95 0 0 1-7 7zM8.5 8.5l7 7'/>",
-  a:"ওষুধ তৈরি, সংরক্ষণ, বিতরণ ও সঠিক ব্যবহার সম্পর্কিত বিজ্ঞান। রোগী ও ডাক্তারের মাঝে ওষুধ বিষয়ে নির্ভরযোগ্য সেতু।",
-  c:"Pharmacist|Hospital Pharmacist|Drug Inspector|Production / QC Officer|Medical Representative|Pharmacy Owner",
-  w:"Pharmaceutical Companies|Hospitals|Retail Pharmacies|Drug Administration (DGDA)",f:"B.Pharm|M.Pharm",
-  y2:"Pharmaceutics|Pharmaceutical Chemistry|Pharmacognosy|Biochemistry",y3:"Pharmacology|Medicinal Chemistry|Pharmaceutical Microbiology|Dispensing Practice",y4:"Hospital & Clinical Pharmacy|Pharmaceutical Jurisprudence|Pharmaceutical Marketing|Quality Control"}
-];
-/* ============================================================ */
-const $=id=>document.getElementById(id);
-const svg=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
-const L=t=>t.split('|').map(x=>`<li>${x}</li>`).join('');
-$('dp').innerHTML=D.map((d,i)=>`<button class="dc rv" data-i="${i}"><span class="ic">${svg(d.i)}</span><b>${d.s}</b><small>${d.t}</small><em>View details →</em></button>`).join('');
-const yrs=d=>[['1st Year',Y1.split(', ').join('|')],['2nd Year',d.y2],['3rd Year',d.y3],['4th Year',d.y4]].map((y,k)=>`<div class="yc${k?'':' f'}"><h5>${y[0]}<span>${y[1].split('|').length} subjects</span></h5><ol>${L(y[1])}</ol></div>`).join('');
-function openD(i){const d=D[i];$('sb2').innerHTML=`<div class="sh-h"><span class="ic big">${svg(d.i)}</span><h3>${d.n}</h3><div class="pill">4-Year Diploma • IHT</div></div><h4>ABOUT</h4><p>${d.a}</p><h4>CAREER OPPORTUNITIES</h4><ul class="ul">${L(d.c)}</ul><h4>WHERE YOU CAN WORK</h4><div class="chips">${d.w.split('|').map(x=>`<span>${x}</span>`).join('')}</div><h4>FURTHER STUDY</h4><ul class="ul">${L(d.f)}</ul><h4>YEAR-WISE SUBJECTS</h4>${yrs(d)}`;$('sh').scrollTop=0;document.body.classList.add('so')}
-const cs=()=>document.body.classList.remove('so');
-$('dp').onclick=e=>{const b=e.target.closest('.dc');if(b)openD(+b.dataset.i)};
-$('sx').onclick=cs;$('sov').onclick=cs;addEventListener('keydown',e=>{if(e.key==='Escape')cs()});
-$('nb').innerHTML=NOTICES.map(n=>`<div class="n rv"><time>${n.date}</time><div><h5>${n.title}</h5><p>${n.text}</p></div></div>`).join('');
-$('ct').innerHTML=CONTACT.map(c=>`<div class="c rv"><small>${c[0]}</small><div>${c[1]}</div></div>`).join('');
-$('dev').textContent=DEVELOPER;
-const icP="<circle cx='12' cy='8' r='4'/><path d='M4 21c0-4 4-6 8-6s8 2 8 6'/>";
-const icD="<path d='M6 3h9l3 3v15H6z'/><path d='M14 3v4h4'/>";
-const trow=(t,ic)=>`<a class="trow rv" href="${t.link||'#'}" ${t.link?'target="_blank" rel="noopener"':''}><span class="ic2">${svg(ic)}</span><b>${t.n}</b><em>PDF ↗</em></a>`;
-$('tsh').innerHTML=TEACHERS.map(t=>trow(t,icP)).join('');
-$('tut').innerHTML=TUTORIALS.map((s,i)=>`<div class="dept rv"><button><span class="num">${i+1}</span><span class="dn">${s.n}</span><span class="chev">⌄</span></button><div class="body"><div><div class="in" style="display:grid;gap:10px;padding-top:12px">${s.topics.map(t=>trow(t,icD)).join('')}</div></div></div></div>`).join('');
-document.querySelectorAll('#tut .dept>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
-const lnk=s=>`<a href="${s.link||'#'}" ${s.link?'target="_blank" rel="noopener"':''}>${s.n}<em>PDF ↗</em></a>`;
-const book=b=>b.vols?`<div class="sg sg2"><button>${b.n}<i>⌄</i></button><div class="sb"><div>${b.vols.map(lnk).join('')}</div></div></div>`:lnk(b);
-const sub=s=>s.books?`<div class="sg"><button>${s.n}<i>⌄</i></button><div class="sb"><div>${s.books.map(book).join('')}</div></div></div>`:lnk(s);
-const grp=(n,arr,cls)=>`<div class="sg${cls?' '+cls:''}"><button>${n}<i>⌄</i></button><div class="sb"><div>${arr.map(lnk).join('')}</div></div></div>`;
-/* Weekly Model Test একই ট্যাবে খোলে (সাইটেরই অংশ), PDF লিংকগুলো নতুন ট্যাবে */
-const weeklyLink=lnk(WEEKLY).replace('<a ','<a class="q" ').replace(' target="_blank" rel="noopener"','').replace('PDF ↗','Exam →');
-$('dl').innerHTML='<small>FIRST YEAR SUBJECTS</small>'+SUBJECTS.map(sub).join('')+'<small>PRACTICE</small>'+grp(BOARD_Q.n,BOARD_Q.subs,'q')+weeklyLink;
-document.querySelectorAll('.sg>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
-const t=()=>document.body.classList.toggle('m');
-$('bg').onclick=t;$('ov').onclick=t;$('cl').onclick=t;
-document.querySelectorAll('.dl a').forEach(a=>a.addEventListener('click',e=>{if(a.getAttribute('href')==='#')e.preventDefault()}));
-const pgs=[...document.querySelectorAll('.pg')],tabs=[...document.querySelectorAll('#tb a')];
-function route(){let h=(location.hash||'#home').slice(1);if(!document.getElementById(h)||!pgs.some(p=>p.id===h))h='home';
-pgs.forEach(p=>p.classList.toggle('act',p.id===h));tabs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));
-document.body.classList.toggle('home',h==='home');document.body.classList.remove('m');window.scrollTo(0,0)}
-/* ---- Anatomy & Physiology ---- */
-const AP_SYSTEMS=[
-{name:"Cardiovascular System",bn:"",icon:"❤️",definition:"হৃদপিণ্ড, রক্ত ও রক্তনালীর সমন্বয়ে গঠিত ব্যবস্থা যা সারা শরীরে রক্ত সঞ্চালন করে।",composition:["Heart","Blood","Arteries","Veins","Capillaries"],functions:["অক্সিজেন পরিবহন","পুষ্টি পরিবহন","বর্জ্য পরিবহন","হরমোন পরিবহন","তাপমাত্রা নিয়ন্ত্রণ"],topics:["Heart","Blood","Blood Vessels","Cardiac Cycle","Blood Pressure","Circulation"],model:"HEART.glb"},
-{name:"Nervous System",bn:"",icon:"🧠",definition:"মস্তিষ্ক, spinal cord ও nerves-এর মাধ্যমে শরীরের নিয়ন্ত্রণ ও যোগাযোগ পরিচালনা করে।",composition:["Brain","Spinal Cord","Cranial Nerves","Spinal Nerves","Peripheral Nerves"],functions:["শরীরের কার্যক্রম নিয়ন্ত্রণ","অনুভূতি গ্রহণ","চিন্তা ও স্মৃতি","Movement নিয়ন্ত্রণ","অঙ্গের মধ্যে যোগাযোগ"],topics:["Brain","Spinal Cord","Neuron","Cranial Nerves","Spinal Nerves","Autonomic Nervous System"],model:"NERVOUS.glb"},
-{name:"Respiratory System",bn:"",icon:"🫁",definition:"অক্সিজেন গ্রহণ ও কার্বন ডাই-অক্সাইড ত্যাগের জন্য দায়ী অঙ্গসমূহের ব্যবস্থা।",composition:["Nose","Pharynx","Larynx","Trachea","Bronchi","Lungs","Alveoli"],functions:["অক্সিজেন গ্রহণ","কার্বন ডাই-অক্সাইড ত্যাগ","Gas exchange","রক্তের pH নিয়ন্ত্রণে সহায়তা"],topics:["Nose","Larynx","Trachea","Bronchi","Lungs","Alveoli","Mechanism of Breathing"],model:"RESPIRATORY.glb"},
-{name:"Digestive System",bn:"",icon:"🍽️",definition:"খাদ্য গ্রহণ, পরিপাক, পুষ্টি শোষণ এবং বর্জ্য অপসারণের জন্য দায়ী ব্যবস্থা।",composition:["Mouth","Pharynx","Esophagus","Stomach","Small Intestine","Large Intestine","Rectum","Anus","Liver","Gallbladder","Pancreas"],functions:["খাদ্য গ্রহণ","খাদ্য পরিপাক","পুষ্টি শোষণ","পানি শোষণ","বর্জ্য অপসারণ"],topics:["Mouth","Esophagus","Stomach","Small Intestine","Large Intestine","Liver","Gallbladder","Pancreas","Digestion"],model:"DIGESTIVE.glb"},
-{name:"Urinary System",bn:"",icon:"🚽",definition:"শরীর থেকে বর্জ্য অপসারণ এবং পানি ও electrolyte balance বজায় রাখতে সাহায্য করে।",composition:["Kidneys","Ureters","Urinary Bladder","Urethra"],functions:["রক্ত পরিশোধন","মূত্র তৈরি","বর্জ্য অপসারণ","পানি ও electrolyte balance","রক্তচাপ নিয়ন্ত্রণে সহায়তা"],topics:["Kidney","Nephron","Ureter","Urinary Bladder","Urethra","Urine Formation"],model:"URINARY.glb"},
-{name:"Skeletal System",bn:"",icon:"🦴",definition:"শরীরের কাঠামো তৈরি করে এবং অভ্যন্তরীণ অঙ্গকে সুরক্ষা দেয়।",composition:["Bones","Joints","Cartilage","Ligaments"],functions:["শরীরকে আকৃতি দেওয়া","Support","অঙ্গ সুরক্ষা","Movement-এ সহায়তা","Blood cell formation"],topics:["Bones","Joints","Skull","Vertebral Column","Thorax","Upper Limb","Lower Limb"],model:"SKELETON.glb"},
-{name:"Muscular System",bn:"",icon:"💪",definition:"বিভিন্ন ধরনের muscle-এর সমন্বয়ে গঠিত ব্যবস্থা যা movement ও posture বজায় রাখে।",composition:["Skeletal Muscle","Smooth Muscle","Cardiac Muscle"],functions:["Movement","Posture","তাপ উৎপাদন","অভ্যন্তরীণ অঙ্গের movement"],topics:["Skeletal Muscle","Smooth Muscle","Cardiac Muscle","Muscle Contraction","Major Muscles"],model:"MUSCLE.glb"},
-{name:"Endocrine System",bn:"",icon:"🧬",definition:"বিভিন্ন gland-এর মাধ্যমে hormone তৈরি ও নিঃসরণ করে শরীরের গুরুত্বপূর্ণ কার্যক্রম নিয়ন্ত্রণ করে।",composition:["Pituitary","Thyroid","Parathyroid","Adrenal","Pancreas","Pineal","Gonads"],functions:["Growth","Metabolism","Reproduction","Stress response","Blood glucose regulation"],topics:["Pituitary","Thyroid","Parathyroid","Adrenal Gland","Pancreas","Hormones"],model:"ENDOCRINE.glb"},
-{name:"Lymphatic & Immune System",bn:"",icon:"🛡️",definition:"শরীরের তরল ভারসাম্য এবং রোগজীবাণুর বিরুদ্ধে প্রতিরোধে সাহায্য করে।",composition:["Lymph","Lymph Nodes","Lymphatic Vessels","Spleen","Thymus","Tonsils"],functions:["রোগ প্রতিরোধ","Tissue fluid নিষ্কাশন","Immune response","চর্বি শোষণে সহায়তা"],topics:["Lymph","Lymph Nodes","Spleen","Thymus","Immune Cells","Immune Response"],model:"LYMPHATIC.glb"},
-{name:"Reproductive System",bn:"",icon:"👶",definition:"মানব প্রজনন এবং reproductive hormones-এর সঙ্গে সম্পর্কিত অঙ্গসমূহের ব্যবস্থা।",composition:["Male Reproductive Organs","Female Reproductive Organs","Reproductive Glands"],functions:["Reproductive cell উৎপাদন","Fertilization","Reproductive hormones","প্রজনন প্রক্রিয়া"],topics:["Male Reproductive System","Female Reproductive System","Gametogenesis","Menstrual Cycle","Fertilization"],model:"REPRODUCTIVE.glb"},
-{name:"Integumentary System",bn:"",icon:"🧴",definition:"Skin এবং associated structures নিয়ে গঠিত ব্যবস্থা যা শরীরকে বাইরের পরিবেশ থেকে রক্ষা করে।",composition:["Skin","Hair","Nails","Sweat Glands","Sebaceous Glands"],functions:["সুরক্ষা","তাপমাত্রা নিয়ন্ত্রণ","অনুভূতি","পানি হারানো কমানো","Vitamin D তৈরিতে সহায়তা"],topics:["Epidermis","Dermis","Subcutaneous Layer","Hair","Nails","Sweat Glands"],model:"SKIN.glb"}
-];
-
-$("apSystems").innerHTML=AP_SYSTEMS.map((s,i)=>`<button class="ap-card" data-ap="${i}"><div class="ap-icon">${s.icon}</div><b>${s.name}</b><small>${s.bn}</small></button>`).join("");
-
-function openAP(i){
- const s=AP_SYSTEMS[i];
- const model=s.model?`
- <div class="model-box"><div class="model-head"><h3>🧊 3D Model</h3><p>আঙুল দিয়ে ঘোরান এবং দুই আঙুল দিয়ে Zoom করুন।</p></div>
- <model-viewer src="${s.model}" camera-controls auto-rotate shadow-intensity="1" alt="${esc(s.name)} 3D Model"></model-viewer>
- <div class="model-help">↔️ Drag করে ঘোরান • 🔍 Pinch করে Zoom করুন</div></div>`
- :`<div class="model-box"><div class="model-head"><h3>🧊 3D Model</h3><p>এই System-এর 3D Model শীঘ্রই যুক্ত করা হবে।</p></div><div style="height:260px;display:grid;place-items:center;color:var(--mu);text-align:center"><div><div style="font-size:55px">🧊</div>3D Model Coming Soon</div></div></div>`;
- $("apContent").innerHTML=`
- <div class="ap-title"><div class="ap-big-icon">${s.icon}</div><h2>${s.name}</h2><p>${s.bn}</p></div>
- <div class="ap-info">
- <div class="ap-box"><h3>📖 Definition</h3><p>${s.definition}</p></div>
- <div class="ap-box"><h3>🧩 Composition</h3><ul class="ap-list">${s.composition.map(x=>`<li>${x}</li>`).join("")}</ul></div>
- <div class="ap-box"><h3>⚙️ Functions</h3><ul class="ap-list">${s.functions.map(x=>`<li>${x}</li>`).join("")}</ul></div>
- </div>
- <h3 class="ap-topic-title">📚 Important Topics</h3>
- <div class="chips">${s.topics.map(x=>`<span>${x}</span>`).join("")}</div>
- ${model}`;
- $("apDetail").style.display="block";document.body.classList.add("ap-open");$("apDetail").scrollTop=0;
+  
+const DEVELOPER="Tanvir Ahmed Sifat";  
+/* ADMIN: এই email দিয়ে লগইন করলে "Verify Students" মেনু দেখা যাবে (Firestore Rules এর email এর সাথে মিলতে হবে) */  
+const ADMIN_EMAIL="tanvirahmedsifat8@gmail.com";  
+let unsub=null;  
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));  
+/* PDF লিংক: link:"" এর ভেতরে PDF এর URL বসান */  
+const SUBJECTS=[  
+  {n:"Anatomy",books:[{n:"BD Chaurasia",vols:[{n:"Volume 1",link:"Https://drive.google.com/file/d/1kPzuwPl1QjTk0RQKy6cO8-l4vLeUNwun/view?usp=drivesdk"},{n:"Volume 2",link:"Https://drive.google.com/file/d/1rPhg3ykt6IKt87nsPssb8XUNXhoMdM6a/view?usp=drivesdk"},{n:"Volume 3 & 4",link:"Https://drive.google.com/file/d/1y5qG2nSdd0GGqInKSy9Ia4w6GjI7PG8q/view?usp=drivesdk"}]},{n:"Concise",link:""},{n:"Salim Reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},  
+  {n:"Physiology",books:[{n:"Guyton-hall",link:"Guytun-and-Hall.pdf"},{n:"Concise",link:""},{n:"Park",link:""}]},  
+  {n:"Community Medicine",books:[{n:"Park",link:""},{n:"Concise",link:"https://drive.google.com/file/d/1u0KxeW1KZNn1La0W4czxVDN8HJB-wz3k/view?usp=drivesdk"},{n:"Selim reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},  
+  {n:"Basic Computer Science",link:""},{n:"English",link:""}  
+];  
+const BOARD_Q={n:"Last 5 Years Board Questions",subs:[  
+  {n:"Anatomy",link:"anatomy-board.pdf"},  
+  {n:"Physiology",link:"physiology-board.pdf"},  
+  {n:"Community Medicine",link:"comunitymed-board.pdf"},  
+  {n:"Basic Computer Science",link:"computer-board.pdf"},  
+  {n:"English",link:"english-board.pdf"}  
+]};  
+const WEEKLY={n:"Weekly Exam",link:"exam.html"};  
+/* Teachers Special: প্রতিটা স্যারের শীট PDF */  
+const TEACHERS=[  
+  {n:"Milon sir",link:""},  
+    
+];  
+/* Tutorial / Class Slides: সাবজেক্ট > টপিক (প্রতি সাবজেক্টে ২০টা Topic)  
+   কোনো topic এর link বসাতে: TOPICS(20) এর জায়গায় TOPICS(20,{3:"https://..."}) লিখুন (3 = Topic 3) */  
+const TOPICS=(c,m={})=>Array.from({length:c},(_,i)=>({n:"Topic "+(i+1),link:m[i+1]||""}));  
+const TUTORIALS=[  
+  {n:"Anatomy",topics:[  
+  {n:"Topic 1",link:"এখানে লিংক"},  
+  {n:"Topic 2",link:"এখানে লিংক"},  
+  {n:"Topic 3",link:"এখানে লিংক"},  
+  {n:"Topic 4",link:""},  
+  {n:"Topic 5",link:""}  
+]},          
+  {n:"Physiology",topics:[  
+  {n:"Topic 1",link:"এখানে লিংক"},  
+  {n:"Topic 2",link:"www.daraz.com"},  
+  {n:"Topic 3",link:"এখানে লিংক"},  
+  {n:"Topic 4",link:""},  
+  {n:"Topic 5",link:""}  
+]},          
+  {n:"Community Medicine",topics:[  
+  {n:"Topic 1",link:"এখানে লিংক"},  
+  {n:"Topic 2",link:"www.mlbd.com"},  
+  {n:"Topic 3",link:"এখানে লিংক"},  
+  {n:"Topic 4",link:""},  
+  {n:"Topic 5",link:""}  
+]},          
+  {n:"Basic Computer Science",topics:[  
+  {n:"Topic 1",link:"এখানে লিংক"},  
+  {n:"Topic 2",link:"www.openhub.com"},  
+  {n:"Topic 3",link:"এখানে লিংক"},  
+  {n:"Topic 4",link:""},  
+  {n:"Topic 5",link:""}  
+]},  
+  {n:"English",topics:[  
+  {n:"Topic 1",link:"এখানে লিংক"},  
+  {n:"Topic 2",link:"www.3d.com"},  
+  {n:"Topic 3",link:"এখানে লিংক"},  
+  {n:"Topic 4",link:""},  
+  {n:"Topic 5",link:""}  
+]},          
+];  
+const Y1="Anatomy, Physiology, Community Medicine, Basic Computer Science, English";  
+const D=[  
+ {n:"Medical Technology (Laboratory)",s:"Laboratory",t:"Medical Technology",i:"<path d='M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7.5 15h9'/>",  
+  a:"Blood, urine ও অন্যান্য নমুনা পরীক্ষা করে রোগ নির্ণয়ে সহায়তা করার প্রযুক্তি। Diagnostic lab এর মেরুদণ্ড বলা হয় এই বিভাগকে।",  
+  c:"Medical Technologist|Pathology Lab Technologist|Blood Bank Technologist|Microbiology Lab Assistant|Research Assistant|Diagnostic Centre Owner",  
+  w:"Govt. & Private Hospitals|Diagnostic Centres|Blood Banks|Research Institutes",f:"B.Sc. in Medical Technology|M.Sc. / MPH",  
+  y2:"Biochemistry|Microbiology|Hematology|Pathology",y3:"Clinical Pathology|Immunology & Serology|Blood Banking|Histopathology",y4:"Advanced Lab Practice|Lab Management|Research Methodology|Professional Ethics"},  
+ {n:"Medical Technology (Radiology & Imaging)",s:"Radiology & Imaging",t:"Medical Technology",i:"<path d='M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16'/>",  
+  a:"X-ray, CT Scan, MRI ও Ultrasound এর মাধ্যমে শরীরের ভেতরের ছবি তুলে রোগ নির্ণয়ে ডাক্তারকে সহায়তা করা।",  
+  c:"Radiographer|CT Scan Technologist|MRI Technologist|Ultrasound Sonographer|Imaging Centre Manager|Medical Equipment Specialist",  
+  w:"Hospitals|Diagnostic & Imaging Centres|Medical Colleges|Equipment Companies",f:"B.Sc. in Radiology & Imaging|M.Sc. / MPH",  
+  y2:"Radiographic Physics|Radiographic Anatomy|Radiographic Positioning|Radiation Protection",y3:"Conventional X-ray|Contrast Studies|CT Scan|Ultrasound",y4:"MRI|Interventional Radiography|Research Methodology|Professional Ethics"},  
+ {n:"Medical Technology (Radiotherapy)",s:"Radiotherapy",t:"Medical Technology",i:"<circle cx='12' cy='12' r='2'/><path d='M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8'/>",  
+  a:"Cancer রোগীদের radiation দিয়ে চিকিৎসার পরিকল্পনা ও প্রয়োগে সহায়তা করা।",  
+  c:"Radiotherapy Technologist|Treatment Planning Assistant|Dosimetry Assistant|Cancer Care Support|Radiation Safety Officer|Oncology Centre Technologist",  
+  w:"Cancer Hospitals|Oncology Centres|Nuclear Medicine Centres|Medical Colleges",f:"B.Sc. in Radiotherapy Technology|M.Sc. in Medical Physics",  
+  y2:"Radiation Physics|Radiobiology|Oncology Basics|Patient Care",y3:"Treatment Planning|Brachytherapy|Dosimetry|Radiation Safety",y4:"Advanced Radiotherapy|Quality Assurance|Research Methodology|Professional Ethics"},  
+ {n:"Physiotherapy",s:"Physiotherapy",t:"Rehabilitation",i:"<circle cx='12' cy='5' r='2'/><path d='M12 8v6M7.5 10l4.5-2 4.5 2M12 14l-3 7M12 14l3 7'/>",  
+  a:"ব্যায়াম, electrotherapy ও manual therapy দিয়ে ব্যথা ও শারীরিক অক্ষমতা থেকে রোগীকে সুস্থ করার বিভাগ।",  
+  c:"Physiotherapist|Rehabilitation Therapist|Sports Physiotherapist|Pediatric Therapist|Physio Clinic Owner|Home-care Therapist",  
+  w:"Hospitals|Rehabilitation Centres|Sports Clubs|NGOs & Private Chambers",f:"B.Sc. in Physiotherapy|M.Sc. / MPH",  
+  y2:"Kinesiology|Electrotherapy|Exercise Therapy|Biomechanics",y3:"Orthopedic PT|Neuro PT|Cardio-pulmonary PT|Pediatric PT",y4:"Rehabilitation|Sports & Community PT|Research Methodology|Professional Ethics"},  
+ {n:"Dental Technology",s:"Dental Technology",t:"Dental Care",i:"<path d='M12 6.5C10.5 4.8 6.5 4.3 5.7 7.6c-.7 2.7 1.2 4.7 1.7 7.2.4 2 .7 5.2 2.2 5.2 1.3 0 1-3.3 2.4-3.3s1.1 3.3 2.4 3.3c1.5 0 1.8-3.2 2.2-5.2.5-2.5 2.4-4.5 1.7-7.2C17.5 4.3 13.5 4.8 12 6.5z'/>",  
+  a:"Denture, crown, bridge ও orthodontic appliance তৈরির প্রযুক্তি — dentist দের পাশে থেকে কাজ করা।",  
+  c:"Dental Technologist|Denture Maker|Crown & Bridge Technician|Orthodontic Appliance Maker|Dental Lab Owner|Dental Assistant",  
+  w:"Dental Clinics|Dental Hospitals|Dental Labs|Dental Material Companies",f:"B.Sc. in Dental Technology|Dental Materials Specialisation",  
+  y2:"Dental Anatomy|Dental Materials|Oral Pathology|Prosthetics",y3:"Crown & Bridge|Orthodontic Appliances|Dental Ceramics|Lab Practice",y4:"Advanced Prosthodontics|Dental Lab Management|Research Methodology|Professional Ethics"},  
+ {n:"Pharmacy",s:"Pharmacy",t:"Medicine Science",i:"<path d='M10.5 20.5 3.5 13.5a4.95 4.95 0 0 1 7-7l7 7a4.95 4.95 0 0 1-7 7zM8.5 8.5l7 7'/>",  
+  a:"ওষুধ তৈরি, সংরক্ষণ, বিতরণ ও সঠিক ব্যবহার সম্পর্কিত বিজ্ঞান। রোগী ও ডাক্তারের মাঝে ওষুধ বিষয়ে নির্ভরযোগ্য সেতু।",  
+  c:"Pharmacist|Hospital Pharmacist|Drug Inspector|Production / QC Officer|Medical Representative|Pharmacy Owner",  
+  w:"Pharmaceutical Companies|Hospitals|Retail Pharmacies|Drug Administration (DGDA)",f:"B.Pharm|M.Pharm",  
+  y2:"Pharmaceutics|Pharmaceutical Chemistry|Pharmacognosy|Biochemistry",y3:"Pharmacology|Medicinal Chemistry|Pharmaceutical Microbiology|Dispensing Practice",y4:"Hospital & Clinical Pharmacy|Pharmaceutical Jurisprudence|Pharmaceutical Marketing|Quality Control"}  
+];  
+/* ============================================================ */  
+const $=id=>document.getElementById(id);  
+const svg=p=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;  
+const L=t=>t.split('|').map(x=>`<li>${x}</li>`).join('');  
+$('dp').innerHTML=D.map((d,i)=>`<button class="dc rv" data-i="${i}"><span class="ic">${svg(d.i)}</span><b>${d.s}</b><small>${d.t}</small><em>View details →</em></button>`).join('');  
+const yrs=d=>[['1st Year',Y1.split(', ').join('|')],['2nd Year',d.y2],['3rd Year',d.y3],['4th Year',d.y4]].map((y,k)=>`<div class="yc${k?'':' f'}"><h5>${y[0]}<span>${y[1].split('|').length} subjects</span></h5><ol>${L(y[1])}</ol></div>`).join('');  
+function openD(i){const d=D[i];$('sb2').innerHTML=`<div class="sh-h"><span class="ic big">${svg(d.i)}</span><h3>${d.n}</h3><div class="pill">4-Year Diploma • IHT</div></div><h4>ABOUT</h4><p>${d.a}</p><h4>CAREER OPPORTUNITIES</h4><ul class="ul">${L(d.c)}</ul><h4>WHERE YOU CAN WORK</h4><div class="chips">${d.w.split('|').map(x=>`<span>${x}</span>`).join('')}</div><h4>FURTHER STUDY</h4><ul class="ul">${L(d.f)}</ul><h4>YEAR-WISE SUBJECTS</h4>${yrs(d)}`;$('sh').scrollTop=0;document.body.classList.add('so')}  
+const cs=()=>document.body.classList.remove('so');  
+$('dp').onclick=e=>{const b=e.target.closest('.dc');if(b)openD(+b.dataset.i)};  
+$('sx').onclick=cs;$('sov').onclick=cs;addEventListener('keydown',e=>{if(e.key==='Escape')cs()});  
+$('nb').innerHTML=NOTICES.map(n=>`<div class="n rv"><time>${n.date}</time><div><h5>${n.title}</h5><p>${n.text}</p></div></div>`).join('');  
+$('ct').innerHTML=CONTACT.map(c=>`<div class="c rv"><small>${c[0]}</small><div>${c[1]}</div></div>`).join('');  
+$('dev').textContent=DEVELOPER;  
+const icP="<circle cx='12' cy='8' r='4'/><path d='M4 21c0-4 4-6 8-6s8 2 8 6'/>";  
+const icD="<path d='M6 3h9l3 3v15H6z'/><path d='M14 3v4h4'/>";  
+const trow=(t,ic)=>`<a class="trow rv" href="${t.link||'#'}" ${t.link?'target="_blank" rel="noopener"':''}><span class="ic2">${svg(ic)}</span><b>${t.n}</b><em>PDF ↗</em></a>`;  
+$('tsh').innerHTML=TEACHERS.map(t=>trow(t,icP)).join('');  
+$('tut').innerHTML=TUTORIALS.map((s,i)=>`<div class="dept rv"><button><span class="num">${i+1}</span><span class="dn">${s.n}</span><span class="chev">⌄</span></button><div class="body"><div><div class="in" style="display:grid;gap:10px;padding-top:12px">${s.topics.map(t=>trow(t,icD)).join('')}</div></div></div></div>`).join('');  
+document.querySelectorAll('#tut .dept>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));  
+const lnk=s=>`<a href="${s.link||'#'}" ${s.link?'target="_blank" rel="noopener"':''}>${s.n}<em>PDF ↗</em></a>`;  
+const book=b=>b.vols?`<div class="sg sg2"><button>${b.n}<i>⌄</i></button><div class="sb"><div>${b.vols.map(lnk).join('')}</div></div></div>`:lnk(b);  
+const sub=s=>s.books?`<div class="sg"><button>${s.n}<i>⌄</i></button><div class="sb"><div>${s.books.map(book).join('')}</div></div></div>`:lnk(s);  
+const grp=(n,arr,cls)=>`<div class="sg${cls?' '+cls:''}"><button>${n}<i>⌄</i></button><div class="sb"><div>${arr.map(lnk).join('')}</div></div></div>`;  
+$('dl').innerHTML='<small>FIRST YEAR SUBJECTS</small>'+SUBJECTS.map(sub).join('')+'<small>PRACTICE</small>'+grp(BOARD_Q.n,BOARD_Q.subs,'q')+`<a class="q" href="exam.html">${WEEKLY.n}<em>Start →</em></a>`;  
+document.querySelectorAll('.sg>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));  
+const t=()=>document.body.classList.toggle('m');  
+$('bg').onclick=t;$('ov').onclick=t;$('cl').onclick=t;  
+document.querySelectorAll('.dl a').forEach(a=>a.addEventListener('click',e=>{if(a.getAttribute('href')==='#')e.preventDefault()}));  
+const pgs=[...document.querySelectorAll('.pg')],tabs=[...document.querySelectorAll('#tb a')];  
+function route(){let h=(location.hash||'#home').slice(1);if(!document.getElementById(h)||!pgs.some(p=>p.id===h))h='home';  
+pgs.forEach(p=>p.classList.toggle('act',p.id===h));tabs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));  
+document.body.classList.toggle('home',h==='home');document.body.classList.remove('m');window.scrollTo(0,0)}  
+/* ---- Anatomy & Physiology ---- */  
+const AP_SYSTEMS=[  
+{name:"Cardiovascular System",bn:"",icon:"❤️",definition:"হৃদপিণ্ড, রক্ত ও রক্তনালীর সমন্বয়ে গঠিত ব্যবস্থা যা সারা শরীরে রক্ত সঞ্চালন করে।",composition:["Heart","Blood","Arteries","Veins","Capillaries"],functions:["অক্সিজেন পরিবহন","পুষ্টি পরিবহন","বর্জ্য পরিবহন","হরমোন পরিবহন","তাপমাত্রা নিয়ন্ত্রণ"],topics:["Heart","Blood","Blood Vessels","Cardiac Cycle","Blood Pressure","Circulation"],model:"HEART.glb"},  
+{name:"Nervous System",bn:"",icon:"🧠",definition:"মস্তিষ্ক, spinal cord ও nerves-এর মাধ্যমে শরীরের নিয়ন্ত্রণ ও যোগাযোগ পরিচালনা করে।",composition:["Brain","Spinal Cord","Cranial Nerves","Spinal Nerves","Peripheral Nerves"],functions:["শরীরের কার্যক্রম নিয়ন্ত্রণ","অনুভূতি গ্রহণ","চিন্তা ও স্মৃতি","Movement নিয়ন্ত্রণ","অঙ্গের মধ্যে যোগাযোগ"],topics:["Brain","Spinal Cord","Neuron","Cranial Nerves","Spinal Nerves","Autonomic Nervous System"],model:"NERVOUS.glb"},  
+{name:"Respiratory System",bn:"",icon:"🫁",definition:"অক্সিজেন গ্রহণ ও কার্বন ডাই-অক্সাইড ত্যাগের জন্য দায়ী অঙ্গসমূহের ব্যবস্থা।",composition:["Nose","Pharynx","Larynx","Trachea","Bronchi","Lungs","Alveoli"],functions:["অক্সিজেন গ্রহণ","কার্বন ডাই-অক্সাইড ত্যাগ","Gas exchange","রক্তের pH নিয়ন্ত্রণে সহায়তা"],topics:["Nose","Larynx","Trachea","Bronchi","Lungs","Alveoli","Mechanism of Breathing"],model:"RESPIRATORY.glb"},  
+{name:"Digestive System",bn:"",icon:"🍽️",definition:"খাদ্য গ্রহণ, পরিপাক, পুষ্টি শোষণ এবং বর্জ্য অপসারণের জন্য দায়ী ব্যবস্থা।",composition:["Mouth","Pharynx","Esophagus","Stomach","Small Intestine","Large Intestine","Rectum","Anus","Liver","Gallbladder","Pancreas"],functions:["খাদ্য গ্রহণ","খাদ্য পরিপাক","পুষ্টি শোষণ","পানি শোষণ","বর্জ্য অপসারণ"],topics:["Mouth","Esophagus","Stomach","Small Intestine","Large Intestine","Liver","Gallbladder","Pancreas","Digestion"],model:"DIGESTIVE.glb"},  
+{name:"Urinary System",bn:"",icon:"🚽",definition:"শরীর থেকে বর্জ্য অপসারণ এবং পানি ও electrolyte balance বজায় রাখতে সাহায্য করে।",composition:["Kidneys","Ureters","Urinary Bladder","Urethra"],functions:["রক্ত পরিশোধন","মূত্র তৈরি","বর্জ্য অপসারণ","পানি ও electrolyte balance","রক্তচাপ নিয়ন্ত্রণে সহায়তা"],topics:["Kidney","Nephron","Ureter","Urinary Bladder","Urethra","Urine Formation"],model:"URINARY.glb"},  
+{name:"Skeletal System",bn:"",icon:"🦴",definition:"শরীরের কাঠামো তৈরি করে এবং অভ্যন্তরীণ অঙ্গকে সুরক্ষা দেয়।",composition:["Bones","Joints","Cartilage","Ligaments"],functions:["শরীরকে আকৃতি দেওয়া","Support","অঙ্গ সুরক্ষা","Movement-এ সহায়তা","Blood cell formation"],topics:["Bones","Joints","Skull","Vertebral Column","Thorax","Upper Limb","Lower Limb"],model:"SKELETON.glb"},  
+{name:"Muscular System",bn:"",icon:"💪",definition:"বিভিন্ন ধরনের muscle-এর সমন্বয়ে গঠিত ব্যবস্থা যা movement ও posture বজায় রাখে।",composition:["Skeletal Muscle","Smooth Muscle","Cardiac Muscle"],functions:["Movement","Posture","তাপ উৎপাদন","অভ্যন্তরীণ অঙ্গের movement"],topics:["Skeletal Muscle","Smooth Muscle","Cardiac Muscle","Muscle Contraction","Major Muscles"],model:"MUSCLE.glb"},  
+{name:"Endocrine System",bn:"",icon:"🧬",definition:"বিভিন্ন gland-এর মাধ্যমে hormone তৈরি ও নিঃসরণ করে শরীরের গুরুত্বপূর্ণ কার্যক্রম নিয়ন্ত্রণ করে।",composition:["Pituitary","Thyroid","Parathyroid","Adrenal","Pancreas","Pineal","Gonads"],functions:["Growth","Metabolism","Reproduction","Stress response","Blood glucose regulation"],topics:["Pituitary","Thyroid","Parathyroid","Adrenal Gland","Pancreas","Hormones"],model:"ENDOCRINE.glb"},  
+{name:"Lymphatic & Immune System",bn:"",icon:"🛡️",definition:"শরীরের তরল ভারসাম্য এবং রোগজীবাণুর বিরুদ্ধে প্রতিরোধে সাহায্য করে।",composition:["Lymph","Lymph Nodes","Lymphatic Vessels","Spleen","Thymus","Tonsils"],functions:["রোগ প্রতিরোধ","Tissue fluid নিষ্কাশন","Immune response","চর্বি শোষণে সহায়তা"],topics:["Lymph","Lymph Nodes","Spleen","Thymus","Immune Cells","Immune Response"],model:"LYMPHATIC.glb"},  
+{name:"Reproductive System",bn:"",icon:"👶",definition:"মানব প্রজনন এবং reproductive hormones-এর সঙ্গে সম্পর্কিত অঙ্গসমূহের ব্যবস্থা।",composition:["Male Reproductive Organs","Female Reproductive Organs","Reproductive Glands"],functions:["Reproductive cell উৎপাদন","Fertilization","Reproductive hormones","প্রজনন প্রক্রিয়া"],topics:["Male Reproductive System","Female Reproductive System","Gametogenesis","Menstrual Cycle","Fertilization"],model:"REPRODUCTIVE.glb"},  
+{name:"Integumentary System",bn:"",icon:"🧴",definition:"Skin এবং associated structures নিয়ে গঠিত ব্যবস্থা যা শরীরকে বাইরের পরিবেশ থেকে রক্ষা করে।",composition:["Skin","Hair","Nails","Sweat Glands","Sebaceous Glands"],functions:["সুরক্ষা","তাপমাত্রা নিয়ন্ত্রণ","অনুভূতি","পানি হারানো কমানো","Vitamin D তৈরিতে সহায়তা"],topics:["Epidermis","Dermis","Subcutaneous Layer","Hair","Nails","Sweat Glands"],model:"SKIN.glb"}  
+];  
+  
+$("apSystems").innerHTML=AP_SYSTEMS.map((s,i)=>`<button class="ap-card" data-ap="${i}"><div class="ap-icon">${s.icon}</div><b>${s.name}</b><small>${s.bn}</small></button>`).join("");  
+  
+let curAP=-1;
+function openAP(i){  
+ curAP=i;const s=AP_SYSTEMS[i];  
+ const model=s.model?`  
+ <div class="model-box"><div class="model-head"><h3>🧊 3D Model</h3><p>আঙুল দিয়ে ঘোরান এবং দুই আঙুল দিয়ে Zoom করুন।</p></div>  
+ <model-viewer src="${s.model}" camera-controls auto-rotate shadow-intensity="1" alt="${esc(s.name)} 3D Model"></model-viewer>  
+ <div class="model-help">↔️ Drag করে ঘোরান • 🔍 Pinch করে Zoom করুন</div></div>`  
+ :`<div class="model-box"><div class="model-head"><h3>🧊 3D Model</h3><p>এই System-এর 3D Model শীঘ্রই যুক্ত করা হবে।</p></div><div style="height:260px;display:grid;place-items:center;color:var(--mu);text-align:center"><div><div style="font-size:55px">🧊</div>3D Model Coming Soon</div></div></div>`;  
+ $("apContent").innerHTML=`  
+ <div class="ap-title"><div class="ap-big-icon">${s.icon}</div><h2>${s.name}</h2><p>${s.bn}</p></div>  
+ <div class="ap-info">  
+ <div class="ap-box"><h3>📖 Definition</h3><p>${s.definition}</p></div>  
+ <div class="ap-box"><h3>🧩 Composition</h3><ul class="ap-list">${s.composition.map(x=>`<li>${x}</li>`).join("")}</ul></div>  
+ <div class="ap-box"><h3>⚙️ Functions</h3><ul class="ap-list">${s.functions.map(x=>`<li>${x}</li>`).join("")}</ul></div>  
+ </div>  
+ <h3 class="ap-topic-title">📚 Important Topics</h3>  
+ <p class="tp-hint">Tap a topic to read its details</p>
+ <div class="chips">${s.topics.map((x,j)=>`<button class="tp-chip" data-ti="${j}">${x}<i>›</i></button>`).join("")}</div>  
+ ${model}`;  
+ $("apDetail").style.display="block";document.body.classList.add("ap-open");$("apDetail").scrollTop=0;  
+}  
+$("apSystems").onclick=e=>{const b=e.target.closest("[data-ap]");if(b)openAP(+b.dataset.ap)};  
+function closeAP(){$("apDetail").style.display="none";document.body.classList.remove("ap-open");if(typeof closeTopic==="function")closeTopic()}  
+$("apClose").onclick=closeAP;  
+/* ============ TOPIC PAGES / টপিক পেজের লেখা এখানে এডিট করুন ============
+   প্রতিটি টপিক: T( Definition, Composition, Functions, Classification, Important Points, Clinical Importance )
+   Composition/Functions/... এর একাধিক পয়েন্ট | (পাইপ) দিয়ে আলাদা করুন। কোনো ঘর ফাঁকা ("") রাখলে "Coming soon" দেখাবে।
+   লেখার ভেতরে ডাবল কোটেশন (") ব্যবহার করবেন না। */
+const T=(d,c,f,k,p,n)=>({def:d,comp:c,func:f,cls:k,pts:p,clin:n});
+const TOPIC_INFO={
+"Cardiovascular System":{
+"Heart":T("A hollow, four-chambered muscular organ that pumps blood through the body. It lies in the middle mediastinum and is about the size of a closed fist.","Right atrium|Right ventricle|Left atrium|Left ventricle|Valves: tricuspid, pulmonary, mitral, aortic|Wall layers: epicardium, myocardium, endocardium|Pericardium","Pumps deoxygenated blood to the lungs|Pumps oxygenated blood to the body|Maintains blood pressure|Secretes atrial natriuretic peptide","Right heart: pulmonary circulation|Left heart: systemic circulation","Weighs about 250-300 g in adults|Blood supply: right and left coronary arteries|Natural pacemaker: SA node","Myocardial infarction|Heart failure|Valvular heart disease"),
+"Blood":T("A fluid connective tissue made of plasma and cells that circulates through the blood vessels.","Plasma (about 55%)|Red blood cells|White blood cells|Platelets","Transport of oxygen, carbon dioxide, nutrients and hormones|Defence against infection|Clotting (haemostasis)|Regulation of pH and temperature","Blood groups: ABO and Rh systems|WBC: granulocytes and agranulocytes","Total blood volume is about 5 L in adults|Normal blood pH is 7.35-7.45|Haemoglobin carries oxygen","Anaemia|Leukaemia|Haemophilia|Polycythaemia"),
+"Blood Vessels":T("Tubes that carry blood between the heart and the tissues.","Arteries|Arterioles|Capillaries|Venules|Veins|Wall layers: tunica intima, media and externa","Arteries carry blood away from the heart|Capillaries allow exchange of gases and nutrients|Veins return blood to the heart|Resistance vessels regulate blood pressure","Elastic arteries|Muscular arteries|Continuous, fenestrated and sinusoidal capillaries|Superficial, deep and perforating veins","Veins have valves; arteries do not|Arteries have a thicker tunica media|Capillary walls are one cell thick","Atherosclerosis|Varicose veins|Aneurysm|Deep vein thrombosis"),
+"Cardiac Cycle":T("The sequence of electrical and mechanical events in one heartbeat, from the start of one beat to the start of the next.","Atrial systole|Isovolumetric contraction|Ventricular ejection|Isovolumetric relaxation|Ventricular filling","Ensures one-way blood flow|Produces cardiac output (stroke volume x heart rate)","Systole (contraction)|Diastole (relaxation)","One cycle lasts about 0.8 s at 75 beats/min|S1 is due to closure of AV valves; S2 due to closure of semilunar valves|Cardiac output is about 5 L/min","Heart murmurs|Arrhythmias|Atrial fibrillation"),
+"Blood Pressure":T("The lateral pressure exerted by circulating blood on the vessel wall, measured in mmHg.","Systolic pressure|Diastolic pressure|Pulse pressure|Mean arterial pressure","Drives blood flow to the tissues|Maintains organ perfusion","Normal: about 120/80 mmHg|Hypertension: persistently 140/90 mmHg or above|Hypotension: abnormally low pressure","BP = cardiac output x peripheral resistance|Measured with a sphygmomanometer|Regulated by baroreceptors, the renin-angiotensin system and the nervous system","Hypertension|Shock|Stroke|Orthostatic hypotension"),
+"Circulation":T("The continuous movement of blood through the heart and blood vessels.","Heart (pump)|Arteries|Capillaries|Veins","Delivers oxygen and nutrients|Removes carbon dioxide and waste|Distributes hormones and heat","Systemic circulation|Pulmonary circulation|Coronary circulation|Portal circulation","Pulmonary arteries carry deoxygenated blood|Pulmonary veins carry oxygenated blood|Hepatic portal vein carries blood from the gut to the liver","Pulmonary embolism|Portal hypertension|Ischaemia")
+},
+"Nervous System":{
+"Brain":T("The central organ of the nervous system, housed in the cranial cavity. It controls thought, movement, sensation and homeostasis.","Cerebrum|Diencephalon (thalamus, hypothalamus)|Brainstem (midbrain, pons, medulla)|Cerebellum|Meninges and ventricles","Thinking, memory and speech|Control of voluntary movement|Sensory processing|Regulation of heart rate, breathing and temperature|Coordination and balance (cerebellum)","Forebrain|Midbrain|Hindbrain","Weighs about 1.4 kg|Four lobes: frontal, parietal, temporal, occipital|Cerebrospinal fluid cushions the brain","Stroke|Meningitis|Epilepsy|Head injury"),
+"Spinal Cord":T("A cylindrical extension of the brainstem lying within the vertebral canal, from the foramen magnum to about L1-L2.","31 segments|Grey matter (H-shaped)|White matter tracts|Central canal|Meninges","Conducts impulses between the brain and the body|Reflex centre","Ascending (sensory) tracts|Descending (motor) tracts","Ends as the conus medullaris|Cauda equina lies below L2|Dorsal root is sensory; ventral root is motor","Spinal cord injury|Poliomyelitis|Syringomyelia|Lumbar puncture is done at L3-L4"),
+"Neuron":T("The structural and functional unit of the nervous system.","Cell body (soma)|Dendrites|Axon|Myelin sheath|Axon terminals and synapses","Receive stimuli|Conduct nerve impulses|Release neurotransmitters","Structural: multipolar, bipolar, unipolar|Functional: sensory, motor, interneurons","Resting membrane potential is about -70 mV|Myelin speeds up conduction (saltatory conduction)|Mature neurons do not normally divide","Multiple sclerosis|Guillain-Barre syndrome|Alzheimer disease"),
+"Cranial Nerves":T("Twelve pairs of nerves that arise directly from the brain and brainstem.","I Olfactory|II Optic|III Oculomotor|IV Trochlear|V Trigeminal|VI Abducens|VII Facial|VIII Vestibulocochlear|IX Glossopharyngeal|X Vagus|XI Accessory|XII Hypoglossal","Smell, vision, hearing and balance|Eye movements|Facial sensation and expression|Taste, swallowing and speech|Parasympathetic supply to viscera (vagus)","Sensory: I, II, VIII|Motor: III, IV, VI, XI, XII|Mixed: V, VII, IX, X","Vagus is the longest cranial nerve|Mnemonic for names: On Old Olympus Towering Tops, A Finn And German Viewed Some Hops|Only nerves I and II attach to the forebrain","Bell palsy (VII)|Trigeminal neuralgia|Anosmia|Optic neuritis"),
+"Spinal Nerves":T("Thirty-one pairs of mixed nerves that arise from the spinal cord.","8 cervical|12 thoracic|5 lumbar|5 sacral|1 coccygeal|Dorsal and ventral roots|Nerve plexuses","Carry sensory information to the cord|Carry motor commands to muscles and glands","Cervical plexus (C1-C4)|Brachial plexus (C5-T1)|Lumbar plexus (L1-L4)|Sacral plexus (L4-S4)","There are 8 cervical nerves but only 7 cervical vertebrae|Each nerve supplies a dermatome (skin) and myotome (muscle)|Cervical nerves C1-C7 exit above the vertebra of the same number","Sciatica|Carpal tunnel syndrome|Brachial plexus injury|Herpes zoster"),
+"Autonomic Nervous System":T("The part of the nervous system that controls involuntary functions of smooth muscle, cardiac muscle and glands.","Sympathetic division (thoracolumbar)|Parasympathetic division (craniosacral)|Preganglionic and postganglionic neurons|Autonomic ganglia","Sympathetic: fight or flight|Parasympathetic: rest and digest|Maintains homeostasis","Sympathetic|Parasympathetic|Enteric","Postganglionic sympathetic transmitter: noradrenaline (mostly)|Parasympathetic transmitter: acetylcholine|All preganglionic fibres release acetylcholine","Horner syndrome|Autonomic neuropathy|Raynaud phenomenon")
+},
+"Respiratory System":{
+"Nose":T("The first part of the respiratory tract and the organ of smell.","External nose|Nasal cavity|Nasal septum|Conchae (turbinates)|Paranasal sinuses|Olfactory epithelium","Warms, filters and humidifies air|Smell|Resonance of the voice","Vestibule|Respiratory region|Olfactory region","Lined by ciliated pseudostratified columnar epithelium|Kiesselbach plexus is the common site of nosebleed|Four pairs of paranasal sinuses","Epistaxis|Sinusitis|Deviated septum|Allergic rhinitis"),
+"Larynx":T("The voice box, a cartilaginous structure between the pharynx and the trachea at the level of C3-C6.","Thyroid, cricoid and epiglottic cartilages|Arytenoid, corniculate and cuneiform cartilages|Vocal folds|Intrinsic and extrinsic muscles","Phonation (voice production)|Protects the airway during swallowing|Passage of air","Supraglottic|Glottic|Subglottic","The epiglottis closes the inlet during swallowing|Recurrent laryngeal nerve supplies most intrinsic muscles|Cricoid is the only complete cartilage ring","Laryngitis|Vocal cord palsy|Laryngeal carcinoma|Tracheostomy and cricothyrotomy"),
+"Trachea":T("A flexible tube about 10-12 cm long, extending from the larynx (C6) to its bifurcation at T4-T5.","16-20 C-shaped hyaline cartilage rings|Trachealis muscle|Ciliated columnar epithelium with goblet cells|Carina","Conducts air to the bronchi|Mucociliary clearance of dust and microbes","Cervical part|Thoracic part","The carina is very sensitive and triggers coughing|The right main bronchus is wider, shorter and more vertical","Foreign body aspiration|Tracheal stenosis|Tracheo-oesophageal fistula"),
+"Bronchi":T("The branches of the trachea that carry air into the lungs.","Right and left principal bronchi|Lobar (secondary) bronchi|Segmental (tertiary) bronchi|Bronchioles and terminal bronchioles","Air conduction|Warming and humidifying air|Defence by mucus and cilia","Right lung: 3 lobar bronchi|Left lung: 2 lobar bronchi|Conducting and respiratory bronchioles","Right lung has 10 bronchopulmonary segments|Left lung has 8-10 segments|Bronchioles have no cartilage","Asthma|Bronchitis|Bronchiectasis|Bronchial carcinoma"),
+"Lungs":T("The paired organs of gas exchange, lying in the thoracic cavity on each side of the mediastinum.","Right lung: 3 lobes and 2 fissures|Left lung: 2 lobes, 1 fissure and cardiac notch|Hilum and root of the lung|Pleura (visceral and parietal)","Gas exchange|Acid-base balance|Filtering small blood clots|Metabolic functions (angiotensin converting enzyme)","Surfaces: costal, mediastinal, diaphragmatic|Borders: anterior, posterior, inferior","The right lung is larger and heavier|Surfactant lowers surface tension|The apex rises above the clavicle","Pneumonia|Tuberculosis|Pneumothorax|COPD|Lung cancer"),
+"Alveoli":T("Tiny air sacs at the end of the respiratory tree where gas exchange takes place.","Type I pneumocytes|Type II pneumocytes (secrete surfactant)|Alveolar macrophages|Capillary network|Respiratory membrane","Exchange of oxygen and carbon dioxide|Surfactant secretion|Phagocytosis of inhaled particles","Alveolar duct|Alveolar sac|Individual alveoli","About 300 million alveoli in adult lungs|Total surface area is about 70 square metres|Respiratory membrane is about 0.5 micrometre thick","Respiratory distress syndrome of the newborn|Emphysema|Pulmonary oedema"),
+"Mechanism of Breathing":T("The process of moving air into and out of the lungs by pressure differences.","Diaphragm|External and internal intercostal muscles|Accessory muscles|Intrapleural pressure","Inspiration: active; thoracic volume rises and pressure falls|Expiration: mainly passive elastic recoil","Quiet breathing|Forced breathing|Diaphragmatic and costal breathing","The diaphragm is supplied by the phrenic nerve (C3-C5)|Normal rate is 12-20 breaths per minute|Boyle law: pressure is inversely related to volume","Respiratory failure|Diaphragmatic paralysis|Flail chest")
+},
+"Digestive System":{
+"Mouth":T("The first part of the alimentary canal, where food is taken in and chewing begins.","Lips and cheeks|Teeth (32 permanent)|Tongue|Hard and soft palate|Salivary glands: parotid, submandibular, sublingual","Ingestion|Mastication (chewing)|Taste|Starch digestion by salivary amylase|Speech","Vestibule|Oral cavity proper","Adults secrete about 1-1.5 L of saliva per day|There are 20 deciduous (milk) teeth|The tongue has taste buds for sweet, sour, salty, bitter and umami","Dental caries|Stomatitis|Mumps|Oral cancer"),
+"Esophagus":T("A muscular tube about 25 cm long that connects the pharynx to the stomach.","Cervical, thoracic and abdominal parts|Upper and lower oesophageal sphincters|Skeletal muscle above and smooth muscle below|Stratified squamous epithelium","Transports food by peristalsis|Prevents reflux of stomach contents","Three parts by location","Starts at C6 and ends at T11|Passes through the diaphragm at T10|Four constrictions along its course","GERD|Achalasia|Oesophageal varices|Barrett oesophagus"),
+"Stomach":T("A J-shaped dilated part of the gut between the oesophagus and the duodenum.","Cardia|Fundus|Body|Pylorus|Rugae|Glands: mucous, parietal, chief and G cells","Storage of food|Churning and mixing|Secretion of HCl and pepsin|Intrinsic factor for vitamin B12 absorption","Greater and lesser curvatures|Regions: cardia, fundus, body, pylorus","Capacity is about 1-1.5 L|Gastric pH is about 1.5-3.5|Parietal cells secrete HCl and intrinsic factor","Peptic ulcer|Gastritis|H. pylori infection|Gastric carcinoma"),
+"Small Intestine":T("The longest part of the gut, about 6 m long, where most digestion and absorption occur.","Duodenum|Jejunum|Ileum|Villi and microvilli|Crypts of Lieberkuhn|Brunner glands (duodenum)|Peyer patches (ileum)","Final digestion|Absorption of nutrients|Hormone secretion (secretin, CCK)","Duodenum (about 25 cm)|Jejunum (about 2.5 m)|Ileum (about 3.5 m)","Bile and pancreatic ducts open into the duodenum|The ileum absorbs vitamin B12 and bile salts|Villi greatly increase surface area","Duodenal ulcer|Coeliac disease|Crohn disease|Typhoid"),
+"Large Intestine":T("The part of the gut from the ileocaecal valve to the anus, about 1.5 m long.","Caecum and appendix|Ascending, transverse, descending and sigmoid colon|Rectum|Anal canal|Taeniae coli, haustra, appendices epiploicae","Absorbs water and electrolytes|Forms and stores faeces|Gut flora produce vitamin K","Caecum|Colon|Rectum|Anal canal","No villi; many goblet cells|Taeniae coli are three longitudinal muscle bands|Defecation is controlled by internal and external anal sphincters","Appendicitis|Ulcerative colitis|Colorectal cancer|Haemorrhoids"),
+"Liver":T("The largest gland of the body, lying in the right upper abdomen.","Right, left, caudate and quadrate lobes|Hepatocytes|Kupffer cells|Hepatic lobules|Portal triad","Bile production|Metabolism of carbohydrate, fat and protein|Detoxification|Synthesis of plasma proteins and clotting factors|Storage of glycogen and vitamins","Anatomical lobes: 4|Functional segments: 8 (Couinaud)","Weighs about 1.5 kg|Dual blood supply: hepatic artery and portal vein|About 70% of its blood comes from the portal vein","Hepatitis|Cirrhosis|Jaundice|Hepatocellular carcinoma"),
+"Gallbladder":T("A pear-shaped sac under the liver that stores and concentrates bile.","Fundus|Body|Neck|Cystic duct|Mucosal folds","Stores bile (30-50 mL)|Concentrates bile|Releases bile when stimulated by cholecystokinin (CCK)","Parts: fundus, body, infundibulum, neck","The fundus touches the tip of the 9th costal cartilage|Cystic artery is a branch of the right hepatic artery|Calot triangle is important in surgery","Gallstones|Cholecystitis|Biliary colic|Obstructive jaundice"),
+"Pancreas":T("A mixed gland lying behind the stomach with both exocrine and endocrine parts.","Head, neck, body and tail|Acini (exocrine)|Islets of Langerhans (endocrine)|Main pancreatic duct and accessory duct","Secretes pancreatic juice (amylase, lipase, trypsinogen)|Neutralises acid with bicarbonate|Secretes insulin and glucagon","Exocrine part (about 98%)|Endocrine part (about 2%)","Lies at the level of L1-L2|The head sits in the curve of the duodenum|Secretin stimulates bicarbonate release","Acute pancreatitis|Chronic pancreatitis|Pancreatic carcinoma|Diabetes mellitus"),
+"Digestion":T("The mechanical and chemical breakdown of food into small absorbable molecules.","Mouth|Stomach|Small intestine|Liver, gallbladder and pancreas|Enzymes and bile","Carbohydrate to glucose|Protein to amino acids|Fat to fatty acids and glycerol|Absorption of nutrients","Mechanical digestion|Chemical digestion|Phases of gastric secretion: cephalic, gastric, intestinal","Salivary amylase acts on starch|Pepsin acts on protein|Pancreatic lipase acts on fat|Most absorption occurs in the small intestine","Malabsorption|Lactose intolerance|Diarrhoea|Constipation")
+},
+"Urinary System":{
+"Kidney":T("A pair of bean-shaped retroperitoneal organs that filter blood and form urine.","Cortex|Medulla (renal pyramids)|Renal pelvis and calyces|Nephrons|Renal capsule","Filtration of blood and urine formation|Regulation of water, electrolytes and acid-base balance|Secretion of erythropoietin and renin|Activation of vitamin D","Cortical nephrons|Juxtamedullary nephrons","Lie from T12 to L3; the right kidney is slightly lower|Each kidney has about 1 million nephrons|Receives about 20-25% of cardiac output","Renal stones|Pyelonephritis|Chronic kidney disease|Nephrotic syndrome"),
+"Nephron":T("The structural and functional unit of the kidney.","Renal corpuscle (glomerulus and Bowman capsule)|Proximal convoluted tubule|Loop of Henle|Distal convoluted tubule|Collecting duct (receives urine from nephrons)","Glomerular filtration|Tubular reabsorption|Tubular secretion","Cortical nephrons (about 85%)|Juxtamedullary nephrons (about 15%)","GFR is about 125 mL/min|About 65% of filtrate is reabsorbed in the PCT|Juxtaglomerular apparatus regulates renin release","Glomerulonephritis|Diabetic nephropathy|Acute tubular necrosis"),
+"Ureter":T("A muscular tube about 25 cm long that carries urine from the renal pelvis to the bladder.","Abdominal part|Pelvic part|Intramural part|Transitional epithelium|Smooth muscle coat","Transports urine by peristalsis|Prevents backflow at the vesicoureteric junction","Three parts by location","Three constrictions: pelviureteric junction, pelvic brim, vesicoureteric junction|Stones commonly lodge at these constrictions","Ureteric calculi|Hydronephrosis|Ureteric colic"),
+"Urinary Bladder":T("A hollow muscular organ in the pelvis that stores urine.","Apex, body, fundus and neck|Trigone|Detrusor muscle|Internal urethral sphincter|Transitional epithelium","Stores urine (about 400-600 mL)|Expels urine by micturition","Empty bladder: pelvic organ|Full bladder: rises into the abdomen","Micturition reflex centre is at S2-S4|The detrusor is parasympathetic; the external sphincter is voluntary (pudendal nerve)","Cystitis|Bladder stones|Bladder carcinoma|Urinary retention"),
+"Urethra":T("A tube that carries urine from the bladder to the exterior.","Male: prostatic, membranous and spongy parts|Female: short tube about 4 cm|Internal and external sphincters","Conducts urine|The male urethra also conducts semen","Male urethra (about 20 cm)|Female urethra (about 4 cm)","The male urethra has two curves|The female urethra opens in front of the vagina","Urethritis|Urethral stricture|Urinary tract infection (commoner in females)"),
+"Urine Formation":T("The process by which the kidney removes waste and regulates body fluid and electrolytes.","Glomerular filtration|Tubular reabsorption|Tubular secretion|Concentration of urine","Removes urea, creatinine and toxins|Balances water and electrolytes|Maintains blood pH","Three steps: filtration, reabsorption, secretion","Net filtration pressure is about 10 mmHg|ADH increases water reabsorption in the collecting duct|Normal urine output is about 1-2 L/day","Oliguria|Polyuria|Proteinuria|Glycosuria in diabetes")
+},
+"Skeletal System":{
+"Bones":T("Hard connective tissue organs that form the framework of the body.","Compact bone|Spongy bone|Periosteum|Bone marrow|Osteoblasts, osteocytes and osteoclasts|Matrix: collagen and hydroxyapatite","Support|Protection of organs|Movement (levers)|Mineral storage (calcium, phosphate)|Haematopoiesis (blood cell formation)","Long|Short|Flat|Irregular|Sesamoid","The adult skeleton has 206 bones|Axial skeleton: 80 bones; appendicular skeleton: 126 bones|Longest bone: femur; smallest bone: stapes","Fracture|Osteoporosis|Osteomyelitis|Rickets and osteomalacia"),
+"Joints":T("A site where two or more bones meet.","Articular cartilage|Joint capsule|Synovial membrane and fluid|Ligaments|Bursae","Movement|Stability|Growth (at some joints)","Fibrous|Cartilaginous|Synovial: plane, hinge, pivot, condyloid, saddle, ball-and-socket","Synovial fluid lubricates the joint|The shoulder is the most mobile joint|The hip is a stable ball-and-socket joint","Osteoarthritis|Rheumatoid arthritis|Gout|Dislocation"),
+"Skull":T("The bony framework of the head that protects the brain and supports the face.","Cranium: frontal, 2 parietal, 2 temporal, occipital, sphenoid, ethmoid|Facial bones: mandible, maxillae, zygomatic, nasal, lacrimal, palatine, vomer, inferior conchae|Sutures|Foramina","Protects the brain|Houses the sense organs|Supports the face and teeth","Neurocranium (8 bones)|Viscerocranium (14 bones)","Main sutures: coronal, sagittal, lambdoid, squamous|The foramen magnum lies in the occipital bone|The mandible is the only movable skull bone","Skull fractures|Craniosynostosis|Extradural haematoma"),
+"Vertebral Column":T("A flexible column of 33 vertebrae that forms the axis of the body.","7 cervical|12 thoracic|5 lumbar|5 sacral (fused)|4 coccygeal (fused)|Intervertebral discs","Supports the body|Protects the spinal cord|Allows movement|Gives attachment to muscles","Typical vertebrae|Atypical vertebrae: atlas, axis, vertebra prominens","Primary curves: thoracic and sacral|Secondary curves: cervical and lumbar|Discs have a nucleus pulposus and an annulus fibrosus","Slipped disc|Scoliosis|Kyphosis|Lordosis|Spina bifida"),
+"Thorax":T("The bony and muscular cage that surrounds the heart and lungs.","Sternum (manubrium, body, xiphoid process)|12 pairs of ribs|12 thoracic vertebrae|Costal cartilages","Protects the heart and lungs|Assists breathing|Supports the shoulder girdle","True ribs (1-7)|False ribs (8-10)|Floating ribs (11-12)","The sternal angle is at T4-T5, level with the 2nd rib|A typical rib has a head, neck, tubercle, angle and shaft|Intercostal vessels run along the lower border of each rib","Rib fracture|Flail chest|Pectus excavatum|Pneumothorax"),
+"Upper Limb":T("The part of the body used for reaching, grasping and manipulation.","Clavicle and scapula (shoulder girdle)|Humerus (arm)|Radius and ulna (forearm)|8 carpal bones|5 metacarpals|14 phalanges","Reaching and grasping|Lifting and manipulating|Tool use","Shoulder girdle|Arm|Forearm|Hand","The clavicle is the most commonly fractured bone|The radius is lateral; the ulna is medial|Carpals: Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate","Colles fracture|Scaphoid fracture|Clavicle fracture|Erb palsy"),
+"Lower Limb":T("The part of the body for weight bearing and locomotion.","Hip bone (ilium, ischium, pubis)|Femur|Patella|Tibia and fibula|7 tarsal bones|5 metatarsals|14 phalanges","Supports body weight|Walking, running and standing|Balance","Pelvic girdle|Thigh|Leg|Foot","The femur is the longest and strongest bone|The tibia is medial and bears weight|Foot arches: medial, lateral and transverse","Fracture of neck of femur|Genu varum and genu valgum|Flat foot|Club foot")
+},
+"Muscular System":{
+"Skeletal Muscle":T("Voluntary striated muscle attached to bones and controlled by the somatic nervous system.","Muscle fibres (cells)|Myofibrils with actin and myosin|Sarcomere|Endomysium, perimysium, epimysium|Tendons","Movement|Posture|Heat production|Joint stability","Type I (slow, oxidative)|Type IIa and IIb (fast)","Cells are multinucleated and striated|The neuromuscular junction uses acetylcholine|Makes up about 40% of body weight","Muscular dystrophy|Myasthenia gravis|Rhabdomyolysis"),
+"Smooth Muscle":T("Involuntary, non-striated muscle found in the walls of hollow organs and vessels.","Spindle-shaped cells with one nucleus|Actin and myosin without sarcomeres|Gap junctions|Dense bodies","Peristalsis|Control of blood vessel diameter|Contraction of bladder and uterus|Control of pupil size","Single-unit (visceral)|Multi-unit","Controlled by the autonomic nervous system|Calcium binds calmodulin to start contraction|Contracts slowly and can stay contracted for long","Asthma (bronchial smooth muscle)|Leiomyoma|Hypertension"),
+"Cardiac Muscle":T("Involuntary striated muscle that forms the wall of the heart.","Branching cells with a single central nucleus|Intercalated discs|Gap junctions and desmosomes|Many mitochondria","Pumps blood|Generates its own rhythm","Contractile fibres|Conducting fibres (nodal tissue)","Does not fatigue easily|Long refractory period prevents tetanus|Autorhythmic","Cardiomyopathy|Myocardial infarction|Myocarditis"),
+"Muscle Contraction":T("The process in which actin and myosin filaments slide past each other to shorten the muscle.","Actin|Myosin|Troponin and tropomyosin|Calcium ions|ATP","Produces force and movement","Isotonic|Isometric|Concentric and eccentric","Sliding filament theory|Nerve impulse then acetylcholine then Ca2+ release from the sarcoplasmic reticulum then cross-bridge cycling|ATP is needed for detachment of myosin","Rigor mortis|Muscle cramps|Tetanus|Malignant hyperthermia"),
+"Major Muscles":T("The large muscles responsible for the main movements of the body.","Deltoid|Biceps and triceps brachii|Pectoralis major|Latissimus dorsi|Trapezius|Rectus abdominis|Gluteus maximus|Quadriceps femoris|Hamstrings|Gastrocnemius","Shoulder and arm movements|Trunk movement and posture|Hip and knee movement|Plantar flexion of the foot","Head and neck|Upper limb|Trunk|Lower limb","Gluteus maximus is the largest muscle|Gastrocnemius and soleus form the calf and join the Achilles tendon|The diaphragm is the main muscle of respiration","Muscle strain|Intramuscular injection sites (deltoid, gluteal)|Achilles tendon rupture")
+},
+"Endocrine System":{
+"Pituitary":T("The master endocrine gland, lying in the sella turcica of the sphenoid bone.","Anterior lobe (adenohypophysis)|Posterior lobe (neurohypophysis)|Infundibulum|Hypothalamo-hypophyseal portal system","Anterior: GH, TSH, ACTH, FSH, LH, prolactin|Posterior: stores and releases ADH and oxytocin","Anterior pituitary|Intermediate part|Posterior pituitary","Controlled by the hypothalamus|About the size of a pea (0.5 g)|Lies below the optic chiasma","Acromegaly and gigantism|Dwarfism|Diabetes insipidus|Pituitary adenoma (bitemporal hemianopia)"),
+"Thyroid":T("A butterfly-shaped gland in the front of the neck at the level of C5-T1.","Right and left lobes|Isthmus|Follicles filled with colloid|Follicular cells and parafollicular (C) cells","T3 and T4 regulate metabolism|Calcitonin lowers blood calcium|Growth and development","Follicular cells: thyroid hormones|C cells: calcitonin","Iodine is needed to make thyroid hormone|The gland moves up on swallowing|Recurrent laryngeal nerve lies close to it","Goitre|Hyperthyroidism (Graves disease)|Hypothyroidism|Cretinism and myxoedema"),
+"Parathyroid":T("Four small glands on the back of the thyroid gland.","Chief cells|Oxyphil cells|Superior and inferior glands","Secrete parathyroid hormone (PTH)|Raise blood calcium|Activate vitamin D","Superior pair|Inferior pair","PTH increases bone resorption and renal calcium reabsorption|Normal serum calcium is about 8.5-10.5 mg/dL","Hyperparathyroidism|Hypoparathyroidism and tetany|Hypocalcaemia after thyroidectomy"),
+"Adrenal Gland":T("A pair of glands lying on top of the kidneys.","Cortex: zona glomerulosa, fasciculata, reticularis|Medulla: chromaffin cells","Cortex: aldosterone, cortisol, androgens|Medulla: adrenaline and noradrenaline","Adrenal cortex|Adrenal medulla","Memory aid: salt (glomerulosa), sugar (fasciculata), sex (reticularis)|Cortisol is the stress hormone","Cushing syndrome|Addison disease|Phaeochromocytoma|Conn syndrome"),
+"Pancreas":T("The islets of Langerhans of the pancreas secrete hormones that control blood glucose.","Alpha cells (glucagon)|Beta cells (insulin)|Delta cells (somatostatin)|PP cells","Insulin lowers blood glucose|Glucagon raises blood glucose|Somatostatin inhibits both","Islets make up about 1-2% of the pancreas","Beta cells are about 70% of islet cells|Normal fasting glucose is 70-100 mg/dL","Type 1 diabetes|Type 2 diabetes|Hypoglycaemia|Diabetic ketoacidosis"),
+"Hormones":T("Chemical messengers secreted by endocrine glands into the blood that act on target organs.","Gland|Hormone|Receptor|Target tissue|Feedback loop","Growth and development|Metabolism|Reproduction|Stress response|Homeostasis","Peptide and protein hormones|Steroid hormones|Amine hormones","Negative feedback controls most hormones|Steroid hormones act on intracellular receptors|Peptide hormones act on cell-surface receptors","Hormone deficiency|Hormone excess|Endocrine tumours")
+},
+"Lymphatic & Immune System":{
+"Lymph":T("A clear fluid derived from interstitial fluid that flows in the lymphatic vessels.","Water|Proteins|Lymphocytes|Fat (chyle in intestinal lymph)","Returns fluid to the blood|Transports absorbed fat|Carries immune cells","Lymph capillaries, then lymph vessels, then trunks, then ducts","The thoracic duct drains most of the body into the left venous angle|The right lymphatic duct drains the right upper body|About 2-3 L returns to blood each day","Lymphoedema|Filariasis|Lymphangitis"),
+"Lymph Nodes":T("Small bean-shaped organs along lymphatic vessels that filter lymph.","Capsule|Cortex with follicles|Paracortex|Medulla|Afferent and efferent vessels","Filtering lymph|Antigen presentation|Lymphocyte proliferation","Cervical|Axillary|Inguinal|Mediastinal|Abdominal groups","There are many afferent vessels but only one efferent vessel|Nodes enlarge during infection|Virchow node is the left supraclavicular node","Lymphadenopathy|Lymphoma|Cancer metastasis|Tuberculous lymphadenitis"),
+"Spleen":T("The largest lymphoid organ, lying in the left hypochondrium behind ribs 9-11.","White pulp|Red pulp|Capsule and trabeculae|Splenic artery and vein","Filters blood and removes old red cells|Immune response|Stores platelets and blood|Haematopoiesis in the fetus","White pulp (lymphoid tissue)|Red pulp (sinusoids)","Weighs about 150 g|Not palpable normally|The tail of the pancreas reaches the splenic hilum","Splenomegaly|Splenic rupture|Hypersplenism|Asplenia (infection risk)"),
+"Thymus":T("A primary lymphoid organ in the superior and anterior mediastinum where T cells mature.","Cortex|Medulla|Hassall corpuscles|Thymic epithelial cells","T-lymphocyte maturation|Secretes thymosin","Right and left lobes","Largest in childhood and shrinks after puberty|T cells undergo positive and negative selection here","DiGeorge syndrome|Thymoma|Myasthenia gravis"),
+"Immune Cells":T("The white blood cells that defend the body against infection.","Neutrophils|Eosinophils|Basophils|Monocytes and macrophages|T lymphocytes|B lymphocytes|NK cells|Plasma cells","Phagocytosis|Antibody production|Cell-mediated killing|Antigen presentation","Innate: neutrophils, macrophages, NK cells|Adaptive: T and B cells","Neutrophils are the most common WBC|Plasma cells make antibodies|CD4 helper T cells are destroyed in HIV","HIV/AIDS|Leukaemia|Immunodeficiency|Allergy"),
+"Immune Response":T("The body's coordinated defence against pathogens and foreign substances.","Innate immunity|Adaptive immunity|Antigens|Antibodies: IgG, IgA, IgM, IgE, IgD|Memory cells","Recognise and destroy pathogens|Develop immune memory|Tolerate self","Innate (non-specific)|Adaptive (specific): humoral and cell-mediated|Active and passive immunity","IgG crosses the placenta|IgA is found in secretions|Vaccines produce active immunity","Autoimmune diseases|Hypersensitivity|Transplant rejection|Immunodeficiency")
+},
+"Reproductive System":{
+"Male Reproductive System":T("The organs that produce sperm and male hormones and deliver sperm to the female tract.","Testes|Epididymis|Vas deferens|Seminal vesicles|Prostate|Bulbourethral glands|Penis|Scrotum","Spermatogenesis|Testosterone secretion|Delivery of semen","Primary organ: testis|Accessory ducts and glands|External genitalia","The testes lie in the scrotum, about 2-3 degrees C below body temperature|Sperm production takes about 74 days|Leydig cells make testosterone; Sertoli cells nourish sperm","Undescended testis|Varicocele|Prostate enlargement|Testicular torsion"),
+"Female Reproductive System":T("The organs for production of ova and hormones, fertilisation, pregnancy and childbirth.","Ovaries|Uterine tubes|Uterus|Vagina|Vulva|Mammary glands","Oogenesis|Oestrogen and progesterone secretion|Site of fertilisation (ampulla of tube)|Pregnancy and childbirth|Lactation","Internal genital organs|External genital organs (vulva)","The ovary measures about 3 x 2 x 1 cm|Uterus parts: fundus, body, cervix|Fertilisation usually occurs in the ampulla of the tube","Ovarian cyst|Uterine fibroids|Cervical cancer|Ectopic pregnancy|PCOS"),
+"Gametogenesis":T("The formation of mature sex cells (gametes) by meiosis.","Spermatogenesis|Oogenesis|Meiosis I and II|Primary and secondary spermatocytes|Primary oocyte","Produces haploid gametes (n = 23)|Creates genetic variation","Spermatogenesis occurs in the seminiferous tubules|Oogenesis occurs in the ovarian follicles","One spermatogonium gives 4 sperm|One oogonium gives 1 ovum and polar bodies|The primary oocyte is arrested in prophase I until puberty","Down syndrome (non-disjunction)|Infertility|Klinefelter syndrome|Turner syndrome"),
+"Menstrual Cycle":T("The monthly cycle of changes in the ovary and uterus.","Ovarian cycle: follicular phase, ovulation, luteal phase|Uterine cycle: menstrual, proliferative, secretory phase|Hormones: FSH, LH, oestrogen, progesterone","Prepares the uterus for implantation|Releases an ovum each month","Ovarian cycle|Uterine (endometrial) cycle","The average cycle is 28 days|Ovulation occurs around day 14|The LH surge triggers ovulation","Amenorrhoea|Dysmenorrhoea|Menorrhagia|Premenstrual syndrome"),
+"Fertilization":T("The union of a sperm and an ovum to form a zygote.","Sperm|Ovum (secondary oocyte)|Acrosome reaction|Zona pellucida|Zygote","Restores the diploid number (46)|Determines the sex of the child|Starts embryonic development","Steps: capacitation, acrosome reaction, penetration, fusion, completion of meiosis II","Occurs in the ampulla of the uterine tube|Occurs within about 24 hours of ovulation|Implantation follows about 6-7 days later","Ectopic pregnancy|Infertility|IVF (in vitro fertilisation)")
+},
+"Integumentary System":{
+"Epidermis":T("The outer, avascular layer of the skin made of keratinised stratified squamous epithelium.","Stratum corneum|Stratum lucidum|Stratum granulosum|Stratum spinosum|Stratum basale","Barrier against water loss and germs|Protection from UV light by melanin|Keratin production|Immune role (Langerhans cells)","Thick skin (5 layers)|Thin skin (4 layers)","Cells: keratinocytes, melanocytes, Langerhans cells, Merkel cells|Epidermal turnover takes about 28 days|Thick skin is found on palms and soles","Psoriasis|Eczema|Melanoma|Basal cell carcinoma"),
+"Dermis":T("The thick, vascular connective tissue layer beneath the epidermis.","Papillary layer|Reticular layer|Collagen and elastin|Blood vessels and nerves|Receptors (Meissner, Pacinian)","Strength and elasticity|Temperature regulation|Sensation|Nutrition of the epidermis","Papillary dermis|Reticular dermis","Fingerprints are formed by dermal papillae|Contains hair follicles and glands","Second-degree burns|Stretch marks|Scleroderma"),
+"Subcutaneous Layer":T("The deepest layer (hypodermis) of loose connective tissue and fat below the dermis.","Adipose tissue|Loose connective tissue|Blood vessels and nerves","Insulation|Energy storage|Cushioning and shock absorption|Anchors skin to muscle","Superficial fatty layer|Deep membranous layer","Site of subcutaneous injections|Thickness varies with sex and body region","Cellulitis|Lipoma|Obesity"),
+"Hair":T("Keratinised filaments that grow from follicles in the skin.","Shaft|Root|Follicle|Bulb and papilla|Arrector pili muscle|Sebaceous gland","Protection|Heat retention|Sensation|Social appearance","Lanugo|Vellus hair|Terminal hair","Hair grows about 1 cm per month|Colour is due to melanin|Arrector pili causes goosebumps","Alopecia|Hirsutism|Dandruff|Folliculitis"),
+"Nails":T("Hard keratin plates on the back of the fingers and toes.","Nail plate|Nail bed|Nail matrix|Lunula|Cuticle (eponychium)|Nail folds","Protect fingertips|Help grip and scratching|Enhance fine touch","Fingernails|Toenails","Fingernails grow about 3 mm per month|Growth arises from the matrix","Clubbing|Koilonychia (iron deficiency)|Fungal infection|Paronychia"),
+"Sweat Glands":T("Exocrine glands in the skin that secrete sweat.","Secretory coil|Duct|Pore","Thermoregulation by evaporation|Excretion of small amounts of waste|Scent and defence","Eccrine glands (all over the body)|Apocrine glands (axilla and groin)","Sweat is about 99% water|Sympathetic cholinergic control|Apocrine glands become active at puberty","Hyperhidrosis|Miliaria (heat rash)|Hidradenitis suppurativa|Cystic fibrosis (salty sweat)")
 }
-$("apSystems").onclick=e=>{const b=e.target.closest("[data-ap]");if(b)openAP(+b.dataset.ap)};
-function closeAP(){$("apDetail").style.display="none";document.body.classList.remove("ap-open")}
-$("apClose").onclick=closeAP;
-addEventListener('keydown',e=>{if(e.key==='Escape')closeAP()});
-/* ---- LOGIN ---- */
-const A=$('auth'),em=$('em'),pw=$('pw'),ms=$('ms'),go=$('go');let mode='in',auth=null;
-const say=(t,ok)=>{ms.textContent=t;ms.className='msg'+(ok?' ok':'')};
-const ERR={'auth/invalid-credential':'Email বা password ভুল হয়েছে।','auth/invalid-email':'Email ঠিক নেই।','auth/email-already-in-use':'এই email দিয়ে আগেই account আছে — Sign in করুন।','auth/weak-password':'Password কমপক্ষে ৬ অক্ষরের দিন।','auth/too-many-requests':'অনেকবার চেষ্টা হয়েছে, একটু পরে আবার করুন।','auth/network-request-failed':'ইন্টারনেট সংযোগ চেক করুন।','auth/popup-closed-by-user':'Google window বন্ধ হয়ে গেছে।','auth/unauthorized-domain':'এই domain Firebase এ authorized করা নেই।'};
-const fail=e=>say(ERR[e.code]||('সমস্যা: '+(e.code||e.message)));
-const need=()=>{if(!auth){say('Firebase সেটআপ এখনও হয়নি।');return false}return true};
-document.querySelectorAll('.tg button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.tg button').forEach(x=>x.classList.toggle('on',x===b));go.textContent=mode==='in'?'Sign in':'Create account';$('fp').style.display=mode==='in'?'block':'none';say('')});
-go.onclick=()=>{if(!need())return;const e=em.value.trim(),p=pw.value;if(!e||!p)return say('Email ও password দিন।');say('অপেক্ষা করুন…',1);(mode==='in'?auth.signInWithEmailAndPassword(e,p):auth.createUserWithEmailAndPassword(e,p)).catch(fail)};
-pw.onkeydown=e=>{if(e.key==='Enter')go.click()};
-$('gg').onclick=()=>{if(!need())return;const pr=new firebase.auth.GoogleAuthProvider();auth.signInWithPopup(pr).catch(e=>{if(e.code==='auth/popup-blocked'||e.code==='auth/operation-not-supported-in-this-environment')auth.signInWithRedirect(pr);else fail(e)})};
-$('fp').onclick=()=>{if(!need())return;const e=em.value.trim();if(!e)return say('উপরে email লিখে আবার চাপুন।');auth.sendPasswordResetEmail(e).then(()=>say('Password reset link email এ পাঠানো হয়েছে।',1)).catch(fail)};
-let db=null;
-const SCREENS=['profile','blocked'];
-const hideAll=()=>{A.style.display='none';SCREENS.forEach(s=>$(s).style.display='none')};
-const showScreen=id=>{hideAll();$(id).style.display='flex'};
-/* ---- Presence (কে online আছে) ---- */
-let presUser=null,presName='',presTimer=null,presLast=0;
-function ping(){
-  if(!presUser||!db||document.visibilityState!=='visible')return;
-  presLast=Date.now();
-  db.collection('presence').doc(presUser.uid).set({
-    name:String(presName||'').slice(0,90),email:String(presUser.email||'').slice(0,140),
-    page:((location.hash||'#home').slice(1)||'home').slice(0,25),
-    lastSeen:firebase.firestore.FieldValue.serverTimestamp()
-  }).catch(()=>{});
-}
-function startPresence(u,name){presUser=u;presName=name;ping();if(!presTimer)presTimer=setInterval(ping,90000)}
-function stopPresence(){presUser=null;clearInterval(presTimer);presTimer=null}
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&Date.now()-presLast>20000)ping()});
-addEventListener('hashchange',()=>{if(Date.now()-presLast>8000)ping()});
-async function enter(u){
-  A.classList.remove('ld');
-
-  if(!u){
-    stopPresence();
-    hideAll();
-    A.style.display='flex';
-    pw.value='';
-    say('');
-    return;
-  }
-
-  $('who').textContent=u.displayName||u.email;
-
-  // Admin account
-  if(u.email && u.email.toLowerCase()===ADMIN_EMAIL.toLowerCase()){
-    hideAll();
-    A.style.display='none';
-    $('adminBox').style.display='block';
-    return;
-  }
-
-  $('adminBox').style.display='none';
-  startPresence(u,u.displayName||u.email);
-
-  // প্রোফাইল চেক: আছে → ঢুকবে (blocked হলে আটকাবে) | নেই → প্রোফাইল তৈরির পর্দা
-  try{
-    const snap=await db.collection('profiles').doc(u.uid).get();
-    if(snap.exists){
-      const p=snap.data();
-      if(p.status==='blocked'){
-        $('bReason').textContent=p.reason?('কারণ: '+p.reason):'';
-        showScreen('blocked');
-        return;
-      }
-      openSite(u,p);
-      return;
-    }
-    // আগে KYC দিয়েছে এমন পুরনো ছাত্র: আগের তথ্য থেকে নিজে নিজে প্রোফাইল বানিয়ে ঢুকিয়ে দেওয়া হবে
-    let old=null;
-    try{const o=await db.collection('students').doc(u.uid).get();if(o.exists)old=o.data()}catch(_){}
-    if(old&&old.name&&old.mobile){
-      const p={uid:u.uid,name:String(old.name).slice(0,90),mobile:String(old.mobile).slice(0,20),email:u.email||'',photo:'',
-        father:String(old.father||'').slice(0,90),department:String(old.department||'').slice(0,90),session:String(old.session||'').slice(0,30),address:'',
-        status:'active',legacy:true,createdAt:firebase.firestore.FieldValue.serverTimestamp()};
-      try{await db.collection('profiles').doc(u.uid).set(p)}catch(_){}
-      openSite(u,p);
-      return;
-    }
-    fillProfileForm(u,old);
-    showScreen('profile');
-  }catch(e){
-    console.error(e);
-    fillProfileForm(u);
-    showScreen('profile');
-  }
-}
-function openSite(u,p){
-  hideAll();
-  presName=p.name||presName;
-  $('who').textContent=p.name||u.displayName||u.email;
-  ping();
-}
-const CFG_SET=!/^YOUR/.test(FIREBASE_CONFIG.apiKey||'YOUR');
-const LOCAL=['localhost','127.0.0.1',''].includes(location.hostname);
-const FB_OK=typeof firebase!=='undefined'&&CFG_SET&&!LOCAL;
-if(FB_OK){firebase.initializeApp(FIREBASE_CONFIG);auth=firebase.auth();db=firebase.firestore();auth.getRedirectResult().catch(fail);auth.onAuthStateChanged(enter)}
-else{A.classList.remove('ld');if(LOCAL){A.style.display='none';$('who').textContent='Preview mode'}else if(CFG_SET)say('Firebase লোড হয়নি — ইন্টারনেট চেক করে পেজ রিফ্রেশ করুন।');else $('pv').style.display='block'}
-$('pv').onclick=()=>{A.style.display='none';$('who').textContent='Preview mode'};
-$('lo').onclick=e=>{e.preventDefault();document.body.classList.remove('m');location.hash='home';auth?auth.signOut():(A.style.display='flex')};
-/* ---- Profile (ছবি, নাম, ফোন, ইমেইল = বাধ্যতামূলক; বাকি ঐচ্ছিক) ---- */
-$('pDept').innerHTML='<option value="">ডিপার্টমেন্ট (ঐচ্ছিক)</option>'+D.map(d=>`<option>${d.n}</option>`).join('');
-const pMsg=(t,ok)=>{$('pMsg').textContent=t;$('pMsg').className='msg'+(ok?' ok':'')};
-let pPhotoB64='';
-function toAvatarB64(file){
-  return new Promise((res,rej)=>{
-    const img=new Image(),r=new FileReader();
-    r.onload=()=>{img.onload=()=>{
-      const S=256,c=document.createElement('canvas');c.width=c.height=S;
-      const m=Math.min(img.width,img.height),sx=(img.width-m)/2,sy=(img.height-m)/2;
-      c.getContext('2d').drawImage(img,sx,sy,m,m,0,0,S,S);
-      let q=0.85,out=c.toDataURL('image/jpeg',q);
-      while(out.length>60000&&q>0.4){q-=0.1;out=c.toDataURL('image/jpeg',q)}
-      res(out);
-    };img.onerror=()=>rej(new Error('bad image'));img.src=r.result};
-    r.onerror=()=>rej(new Error('read failed'));r.readAsDataURL(file);
-  });
-}
-$('pPhoto').onchange=async e=>{
-  const f=e.target.files[0];if(!f)return;
-  try{pPhotoB64=await toAvatarB64(f);$('pPrev').style.backgroundImage=`url(${pPhotoB64})`;$('pPrev').classList.add('has');pMsg('')}
-  catch(_){pPhotoB64='';pMsg('ছবিটি পড়া যায়নি, অন্য ছবি দিন।')}
 };
-function fillProfileForm(u,old){
-  old=old||{};pPhotoB64='';
-  $('pPrev').style.backgroundImage='';$('pPrev').classList.remove('has');$('pPhoto').value='';
-  $('pName').value=old.name||u.displayName||'';
-  $('pMobile').value=old.mobile||'';
-  $('pEmail').value=u.email||'';
-  $('pFather').value=old.father||'';
-  $('pDept').value=old.department||'';
-  $('pSession').value=old.session||'';
-  $('pAddr').value='';
-  $('pSubmit').disabled=false;pMsg('');
+
+/* ---- Topic detail pages (same page overlay) ---- */
+const TP_SEC=[['📖','Definition','def',0],['🧩','Composition','comp',1],['⚙️','Functions','func',1],['🗂️','Classification','cls',1],['⭐','Important Points','pts',1],['🩺','Clinical Importance','clin',1]];
+let tpSys=-1;
+function openTopic(si,ti){
+ const s=AP_SYSTEMS[si],name=s.topics[ti],d=(TOPIC_INFO[s.name]||{})[name]||{};
+ tpSys=si;
+ const secs=TP_SEC.map(([ic,h,k,list])=>{
+  const v=d[k],has=v&&String(v).trim();
+  const body=!has?'<p class="tp-soon">Coming soon</p>':(list?`<ul class="ap-list">${v.split('|').map(x=>`<li>${esc(x.trim())}</li>`).join('')}</ul>`:`<p>${esc(v)}</p>`);
+  return `<div class="ap-box tp-sec"><h3>${ic} ${h}</h3>${body}</div>`}).join('');
+ const prev=ti>0?`<button class="tp-nav" data-tn="${ti-1}">← ${esc(s.topics[ti-1])}</button>`:'<span></span>';
+ const next=ti<s.topics.length-1?`<button class="tp-nav" data-tn="${ti+1}">${esc(s.topics[ti+1])} →</button>`:'<span></span>';
+ $('tpBack').textContent='← '+s.name;
+ $('tpContent').innerHTML=`<div class="tp-crumb">${s.icon} ${esc(s.name)}</div><h2 class="tp-h">${esc(name)}</h2><div class="orn" style="margin:14px auto 22px"></div>${secs}<div class="tp-navrow">${prev}${next}</div>`;
+ $('tpDetail').style.display='block';$('tpDetail').scrollTop=0;
 }
-const normMobile=s=>String(s||'').replace(/[০-৯]/g,d=>'০১২৩৪৫৬৭৮৯'.indexOf(d)).replace(/[\s-]/g,'');
-$('pSubmit').onclick=async()=>{
-  const u=auth&&auth.currentUser;if(!u)return;
-  const name=$('pName').value.trim(),mobile=normMobile($('pMobile').value);
-  if(!pPhotoB64)return pMsg('আপনার ছবি দিন।');
-  if(name.length<2)return pMsg('আপনার নাম লিখুন।');
-  if(!/^\+?\d{10,15}$/.test(mobile))return pMsg('সঠিক মোবাইল নম্বর দিন।');
-  if(!u.email)return pMsg('ইমেইল পাওয়া যায়নি, আবার লগইন করুন।');
-  $('pSubmit').disabled=true;pMsg('সংরক্ষণ হচ্ছে…',1);
-  const p={uid:u.uid,name:name.slice(0,90),mobile,email:u.email,photo:pPhotoB64,
-    father:$('pFather').value.trim().slice(0,90),department:$('pDept').value,session:$('pSession').value.trim().slice(0,30),address:$('pAddr').value.trim().slice(0,200),
-    status:'active',createdAt:firebase.firestore.FieldValue.serverTimestamp()};
-  try{
-    await db.collection('profiles').doc(u.uid).set(p);
-    $('pSubmit').disabled=false;pMsg('');
-    openSite(u,p);
-  }catch(e){$('pSubmit').disabled=false;pMsg('সমস্যা হয়েছে, আবার চেষ্টা করুন। ('+(e.code||e.message)+')')}
-};
-$('pLogout').onclick=$('bLogout').onclick=()=>auth&&auth.signOut();
-/* ---- Admin: Students (প্রোফাইল দেখা, Block / Delete) ---- */
-let admTab='active',admData=[];
-const ST={active:'Active',blocked:'Blocked',approved:'Active',pending:'Active',rejected:'Active'};
-function loadAdmin(){
-  $('advList').innerHTML='<p style="color:var(--mu)">Loading...</p>';$('acnt').textContent='';
-  db.collection('profiles').where('status','==',admTab).get().then(snap=>{
-    admData=snap.docs.map(x=>({id:x.id,...x.data()}));
-    admData.sort((p,q)=>((q.createdAt&&q.createdAt.seconds)||0)-((p.createdAt&&p.createdAt.seconds)||0));
-    renderAdmin();
-  }).catch(e=>{$('advList').innerHTML='<p style="color:#ff8a8a">লোড করা যায়নি: '+esc(e.code||e.message)+'</p>'});
-}
-function renderAdmin(){
-  const q=$('aq').value.trim().toLowerCase();
-  const list=admData.filter(d=>!q||[d.name,d.father,d.mobile,d.email,d.department,d.session,d.address].some(v=>String(v||'').toLowerCase().includes(q)));
-  $('acnt').textContent=`${ST[admTab]} — মোট ${list.length} জন`+(q?` (খোঁজা হয়েছে: ${admData.length} জনের মধ্যে)`:'');
-  if(!list.length){$('advList').innerHTML='<p style="color:var(--mu)">কোনো ছাত্র পাওয়া যায়নি।</p>';return}
-  $('advList').innerHTML=list.map(d=>{
-    const when=d.createdAt&&d.createdAt.toDate?d.createdAt.toDate().toLocaleString('bn-BD'):'—';
-    const row=(k,v)=>`<div class="irow"><small>${k}</small><span>${esc(v)||'—'}</span></div>`;
-    const id=esc(d.id);
-    const av=d.photo?`<img class="avu zi" src="${esc(d.photo)}" alt="">`:`<div class="avn">${esc(String(d.name||'?').trim().charAt(0))}</div>`;
-    const acts=(d.status==='blocked'?`<button class="aok" data-id="${id}" data-act="active">Unblock</button>`:`<button class="ano" data-id="${id}" data-act="blocked">Block</button>`)
-      +`<button class="ano" data-id="${id}" data-act="delete">Delete</button>`;
-    return`<div class="vcard">
-      <div class="vtop"><div class="who">${av}<h4>${esc(d.name)}</h4></div><span class="bd ${esc(d.status)}">${esc(ST[d.status]||d.status)}</span></div>
-      ${row('মোবাইল',d.mobile)}${row('ইমেইল',d.email)}${row('বাবার নাম',d.father)}${row('ডিপার্টমেন্ট',d.department)}${row('সেশন',d.session)}${row('ঠিকানা',d.address)}${row('যোগ দিয়েছে',when)}${row('User ID',d.id)}
-      ${d.status==='blocked'&&d.reason?`<div class="rsn">ব্লকের কারণ: ${esc(d.reason)}</div>`:''}
-      <div class="arow">${acts}</div>
-    </div>`}).join('');
-}
-document.querySelectorAll('#atabs button').forEach(b=>b.onclick=()=>{admTab=b.dataset.s;document.querySelectorAll('#atabs button').forEach(x=>x.classList.toggle('on',x===b));$('aq').value='';loadAdmin()});
-$('aq').oninput=renderAdmin;
-/* ---- Lightbox (zoom) ---- */
-let zl=1;
-const lbi=$('lbi'),lbs=$('lbs');
-function setZ(v){zl=Math.min(4,Math.max(1,v));lbi.style.width=zl>1?(zl*100)+'%':'';lbs.classList.toggle('z',zl>1);$('lbz').textContent=Math.round(zl*100)+'%'}
-function openLB(src){lbi.src=src;setZ(1);lbs.scrollTop=0;lbs.scrollLeft=0;document.body.classList.add('lbo')}
-const closeLB=()=>document.body.classList.remove('lbo');
-$('lbx').onclick=closeLB;
-$('lbp').onclick=()=>setZ(zl+.5);$('lbm').onclick=()=>setZ(zl-.5);$('lbr').onclick=()=>setZ(1);
-lbi.onclick=()=>setZ(zl>1?1:2);
-addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
-$('advList').onclick=e=>{
-  const im=e.target.closest('img.zi');if(im){openLB(im.src);return}
-  const b=e.target.closest('button[data-id]');if(!b)return;
-  const id=b.dataset.id,act=b.dataset.act,cur=admData.find(x=>x.id===id)||{};
-  const done=()=>{delete liveInfo[id];loadAdmin()};
-  const bad=err=>{b.disabled=false;alert('সমস্যা: '+(err.code||err.message))};
-  if(act==='delete'){
-    if(!confirm('"'+(cur.name||'এই ব্যবহারকারী')+'"-এর প্রোফাইল মুছে ফেলবেন?\n\nসে চাইলে আবার লগইন করে নতুন প্রোফাইল বানিয়ে ঢুকতে পারবে।'))return;
-    b.disabled=true;
-    Promise.all([
-      db.collection('profiles').doc(id).delete(),
-      db.collection('students').doc(id).delete().catch(()=>{}),
-      db.collection('presence').doc(id).delete().catch(()=>{})
-    ]).then(done).catch(bad);
-    return;
-  }
-  const upd={status:act};
-  if(act==='blocked'){
-    const r=prompt('ব্লকের কারণ (ঐচ্ছিক):');if(r===null)return;
-    upd.reason=r||firebase.firestore.FieldValue.delete();
-  }else{upd.reason=firebase.firestore.FieldValue.delete()}
-  b.disabled=true;
-  db.collection('profiles').doc(id).update(upd).then(done).catch(bad);
-};
-/* ---- Admin: Live Users ---- */
-let liveT=null;const liveOpen=new Set(),liveInfo={};
-const PGN={anatomy:'Anatomy',home:'Home',about:'About',depts:'Departments',notice:'Notice',contact:'Contact',teachers:'Teachers'};
-const ago=ms=>{const s=Math.floor(ms/1000);return s<60?'এইমাত্র':s<3600?Math.floor(s/60)+' মিনিট আগে':s<86400?Math.floor(s/3600)+' ঘণ্টা আগে':Math.floor(s/86400)+' দিন আগে'};
-const irowH=(k,v)=>`<div class="irow"><small>${k}</small><span>${esc(v)||'—'}</span></div>`;
-function loadLive(){
-  db.collection('presence').orderBy('lastSeen','desc').limit(300).get().then(snap=>{
-    const now=Date.now();
-    const all=snap.docs.map(x=>{const d=x.data();const t=d.lastSeen&&d.lastSeen.toMillis?d.lastSeen.toMillis():0;return{id:x.id,...d,t,on:now-t<200000}});
-    const on=all.filter(u=>u.on),off=all.filter(u=>!u.on);
-    $('liveSum').textContent=`এখন online: ${on.length} জন • মোট ব্যবহারকারী: ${all.length} জন • নামে ট্যাপ করলে বিস্তারিত`;
-    const card=u=>`<div class="lu${liveOpen.has(u.id)?' open':''}" data-id="${esc(u.id)}"><div class="lr"><i class="dot${u.on?' on':''}"></i><div class="lm"><b>${esc(u.name||u.email)}</b><small>${esc(u.email)}</small></div><div class="lt">${u.on?'Online • '+esc(PGN[u.page]||u.page):esc(ago(now-u.t))}</div></div><div class="ld2">${liveInfo[u.id]||''}</div></div>`;
-    $('liveList').innerHTML=(on.length?`<div class="lh">🟢 এখন Active (${on.length})</div>`+on.map(card).join(''):'<p style="color:var(--mu);margin-top:14px">এই মুহূর্তে কেউ online নেই।</p>')+(off.length?`<div class="lh">আগে ব্যবহার করেছে (${off.length})</div>`+off.map(card).join(''):'');
-  }).catch(e=>{$('liveList').innerHTML='<p style="color:#ff8a8a">লোড করা যায়নি: '+esc(e.code||e.message)+'</p>'});
-}
-$('liveList').onclick=async e=>{
-  const r=e.target.closest('.lr');if(!r)return;
-  const box=r.parentElement,id=box.dataset.id;
-  if(box.classList.toggle('open')){
-    liveOpen.add(id);
-    if(!liveInfo[id]){
-      box.querySelector('.ld2').innerHTML='<p style="color:var(--mu)">লোড হচ্ছে…</p>';
-      try{
-        let doc=await db.collection('profiles').doc(id).get();
-        let d=doc.exists?doc.data():null;
-        if(!d){const o=await db.collection('students').doc(id).get().catch(()=>null);d=o&&o.exists?o.data():null}
-        liveInfo[id]=d?(d.photo?`<img class="avu" src="${esc(d.photo)}" alt="" style="margin:4px 0 8px">`:'')+irowH('নাম',d.name)+irowH('মোবাইল',d.mobile)+irowH('ইমেইল',d.email)+irowH('বাবার নাম',d.father)+irowH('ডিপার্টমেন্ট',d.department)+irowH('সেশন',d.session)+irowH('ঠিকানা',d.address)+irowH('স্ট্যাটাস',ST[d.status]||d.status):'<p style="color:var(--mu)">এখনও প্রোফাইল তৈরি করেনি।</p>';
-      }catch(err){liveInfo[id]='<p style="color:#ff8a8a">লোড হয়নি</p>'}
-    }
-    box.querySelector('.ld2').innerHTML=liveInfo[id];
-  }else liveOpen.delete(id);
-};
-const closeLive=()=>{document.body.classList.remove('live');clearInterval(liveT)};
-$('openLive').onclick=e=>{e.preventDefault();document.body.classList.remove('m');loadLive();document.body.classList.add('live');clearInterval(liveT);liveT=setInterval(loadLive,20000);$('liveO').onclick=$('liveX').onclick=closeLive};
-$('openAdmin').onclick=e=>{e.preventDefault();document.body.classList.remove('m');loadAdmin();document.body.classList.add('adv');
-$('advO').onclick=$('advX').onclick=()=>document.body.classList.remove('adv')};
-addEventListener('hashchange',route);route();
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+function closeTopic(){$('tpDetail').style.display='none';tpSys=-1}
+$('apContent').addEventListener('click',e=>{const b=e.target.closest('.tp-chip');if(b)openTopic(curAP,+b.dataset.ti)});
+$('tpContent').onclick=e=>{const b=e.target.closest('[data-tn]');if(b)openTopic(tpSys,+b.dataset.tn)};
+$('tpBack').onclick=closeTopic;
+$('tpClose').onclick=()=>{closeTopic();closeAP()};
+addEventListener('keydown',e=>{if(e.key==='Escape'){if($('tpDetail').style.display==='block')closeTopic();else closeAP()}});
+  
+/* ---- LOGIN + PROFILE + PRESENCE ---- */  
+const A=$('auth'),em=$('em'),pw=$('pw'),ms=$('ms'),go=$('go');let mode='in',auth=null,db=null,storage=null;  
+let currentProfile=null,profileRequired=false,profilePhotoURL='',profileBusy=false,profileUnsub=null;  
+function stopProfileWatch(){if(profileUnsub){profileUnsub();profileUnsub=null}}  
+const say=(t,ok)=>{ms.textContent=t;ms.className='msg'+(ok?' ok':'')};  
+const ERR={'auth/invalid-credential':'Email বা password ভুল হয়েছে।','auth/invalid-email':'Email ঠিক নেই।','auth/email-already-in-use':'এই email দিয়ে আগেই account আছে — Sign in করুন।','auth/weak-password':'Password কমপক্ষে ৬ অক্ষরের দিন।','auth/too-many-requests':'অনেকবার চেষ্টা হয়েছে, একটু পরে আবার করুন।','auth/network-request-failed':'ইন্টারনেট সংযোগ চেক করুন।','auth/popup-closed-by-user':'Google window বন্ধ হয়ে গেছে।','auth/unauthorized-domain':'এই domain Firebase এ authorized করা নেই।'};  
+const fail=e=>say(ERR[e.code]||('সমস্যা: '+(e.code||e.message)));  
+const need=()=>{if(!auth){say('Firebase সেটআপ এখনও হয়নি।');return false}return true};  
+document.querySelectorAll('.tg button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.tg button').forEach(x=>x.classList.toggle('on',x===b));go.textContent=mode==='in'?'Sign in':'Create account';$('fp').style.display=mode==='in'?'block':'none';say('')});  
+go.onclick=()=>{if(!need())return;const e=em.value.trim(),p=pw.value;if(!e||!p)return say('Email ও password দিন।');say('অপেক্ষা করুন…',1);(mode==='in'?auth.signInWithEmailAndPassword(e,p):auth.createUserWithEmailAndPassword(e,p)).catch(fail)};  
+pw.onkeydown=e=>{if(e.key==='Enter')go.click()};  
+$('gg').onclick=()=>{if(!need())return;const pr=new firebase.auth.GoogleAuthProvider();auth.signInWithPopup(pr).catch(e=>{if(e.code==='auth/popup-blocked'||e.code==='auth/operation-not-supported-in-this-environment')auth.signInWithRedirect(pr);else fail(e)})};  
+$('fp').onclick=()=>{if(!need())return;const e=em.value.trim();if(!e)return say('উপরে email লিখে আবার চাপুন।');auth.sendPasswordResetEmail(e).then(()=>say('Password reset link email এ পাঠানো হয়েছে।',1)).catch(fail)};  
+const hideProfile=()=>{A.style.display='none';$('profileSetup').style.display='none'};  
+function showProfile(p={},required=true,note=''){  
+  profileRequired=required;profilePhotoURL=p.photoURL||'';  
+  $('profileHeading').textContent=required?'Create Your Profile':'Edit Your Profile';  
+  $('profileNote').textContent=note||(required?'আপনার ছবি, নাম ও মোবাইল নম্বর দিন। প্রোফাইল তৈরি হলেই ওয়েবসাইট ব্যবহার করতে পারবেন।':'আপনার প্রোফাইলের তথ্য পরিবর্তন করুন।');  
+  $('profileName').value=p.name||'';$('profileMobile').value=p.mobile||'';$('profileEmail').value=auth.currentUser?.email||p.email||'';  
+  $('profilePreview').src=profilePhotoURL||'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="100%" height="100%" fill="#E8F3EA"/><circle cx="60" cy="43" r="22" fill="#0B6B3A"/><path d="M18 112c4-25 19-38 42-38s38 13 42 38" fill="#0B6B3A"/></svg>');  
+  $('profilePhoto').value='';$('profileMsg').textContent='';$('profileMsg').className='msg';  
+  $('profileSave').textContent=required?'Create Profile & Continue':'Save Changes';  
+  $('profileCancel').style.display=required?'none':'block';  
+  A.style.display='none';$('profileSetup').style.display='flex';  
+}  
+function imageBlob(file){return new Promise((resolve,reject)=>{const im=new Image(),reader=new FileReader();reader.onload=()=>{im.onload=()=>{let w=im.width,h=im.height,max=900;if(w>h&&w>max){h=Math.round(h*max/w);w=max}else if(h>max){w=Math.round(w*max/h);h=max}const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);c.toBlob(b=>b?resolve(b):reject(new Error('ছবি প্রস্তুত করা যায়নি')),'image/jpeg',.82)};im.onerror=()=>reject(new Error('ছবিটি খোলা যায়নি'));im.src=reader.result};reader.onerror=()=>reject(new Error('ছবি পড়া যায়নি'));reader.readAsDataURL(file)})}  
+$('profilePhoto').onchange=()=>{const f=$('profilePhoto').files[0];if(!f)return;if(!f.type.startsWith('image/')){profileMsg('শুধু ছবি নির্বাচন করুন।');return}const url=URL.createObjectURL(f);$('profilePreview').src=url};  
+function profileMsg(t,ok=false){$('profileMsg').textContent=t;$('profileMsg').className='msg'+(ok?' ok':'')}  
+function watchProfile(u){  
+  stopProfileWatch();  
+  profileUnsub=db.collection('profiles').doc(u.uid).onSnapshot(doc=>{  
+    if(auth.currentUser?.uid!==u.uid)return;  
+    const latest=doc.exists?doc.data():null;  
+    if(!latest||latest.status!=='active'){  
+      stopPresence();currentProfile=null;  
+      showProfile(latest||{email:u.email},true,'আপনার প্রবেশাধিকার Admin বাতিল করেছেন। আবার প্রবেশ করতে চাইলে প্রোফাইলটি পুনরায় তৈরি করুন।');  
+    }else{  
+      currentProfile=latest;$('who').textContent=(latest.name||u.email)+' • '+(u.email||'');  
+      if($('profileSetup').style.display==='flex')hideProfile();  
+      if(!presUser||presUser.uid!==u.uid)startPresence(u,latest.name||u.displayName||u.email);  
+    }  
+  },err=>console.error('Profile listener:',err));  
+}  
+$('profileSave').onclick=async()=>{  
+  if(profileBusy||!auth?.currentUser)return;  
+  const u=auth.currentUser,name=$('profileName').value.trim(),mobile=$('profileMobile').value.trim(),file=$('profilePhoto').files[0];  
+  if(name.length<2)return profileMsg('কমপক্ষে ২ অক্ষরের নাম লিখুন।');  
+  if(!/^(?:\+?8801|01)[3-9]\d{8}$/.test(mobile))return profileMsg('সঠিক বাংলাদেশি মোবাইল নম্বর লিখুন। যেমন 01XXXXXXXXX');  
+  if(!file&&!profilePhotoURL)return profileMsg('আপনার প্রোফাইল ছবি নির্বাচন করুন।');  
+  profileBusy=true;$('profileSave').disabled=true;profileMsg('প্রোফাইল সংরক্ষণ হচ্ছে…',true);  
+  try{  
+    if(file){const blob=await imageBlob(file),ref=storage.ref().child('profilePhotos/'+u.uid+'/avatar.jpg');await ref.put(blob,{contentType:'image/jpeg'});profilePhotoURL=await ref.getDownloadURL()}  
+    const old=(await db.collection('profiles').doc(u.uid).get()).data()||{};  
+    const data={name,email:u.email||'',mobile,photoURL:profilePhotoURL,status:'active',createdAt:old.createdAt||firebase.firestore.FieldValue.serverTimestamp(),updatedAt:firebase.firestore.FieldValue.serverTimestamp()};  
+    const batch=db.batch();  
+    batch.set(db.collection('profiles').doc(u.uid),data,{merge:false});  
+    batch.set(db.collection('publicProfiles').doc(u.uid),{name,photoURL:profilePhotoURL,status:'active',updatedAt:firebase.firestore.FieldValue.serverTimestamp()},{merge:true});  
+    await batch.commit();  
+    currentProfile=data;$('who').textContent=name+' • '+(u.email||'');$('profileSetup').style.display='none';A.style.display='none';startPresence(u,name);watchProfile(u);profileMsg('');  
+  }catch(e){console.error(e);profileMsg('সংরক্ষণ করা যায়নি: '+(e.code||e.message))}  
+  finally{profileBusy=false;$('profileSave').disabled=false}  
+};  
+$('profileCancel').onclick=()=>{if(profileRequired)return;hideProfile();if(currentProfile)startPresence(auth.currentUser,currentProfile.name)};  
+$('profileLogout').onclick=()=>auth&&auth.signOut();  
+$('openProfile').onclick=e=>{e.preventDefault();document.body.classList.remove('m');if(currentProfile)showProfile(currentProfile,false);};  
+let presUser=null,presName='',presTimer=null,presLast=0;  
+function ping(){if(!presUser||!db||document.visibilityState!=='visible')return;presLast=Date.now();db.collection('presence').doc(presUser.uid).set({name:String(presName||'').slice(0,80),email:String(presUser.email||'').slice(0,140),page:((location.hash||'#home').slice(1)||'home').slice(0,25),lastSeen:firebase.firestore.FieldValue.serverTimestamp()},{merge:true}).catch(()=>{})}  
+function startPresence(u,name){presUser=u;presName=name;ping();if(!presTimer)presTimer=setInterval(ping,90000)}  
+function stopPresence(){presUser=null;clearInterval(presTimer);presTimer=null}  
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&Date.now()-presLast>20000)ping()});  
+addEventListener('hashchange',()=>{if(Date.now()-presLast>8000)ping()});  
+async function enter(u){  
+  stopProfileWatch();  
+  A.classList.remove('ld');$('profileSetup').style.display='none';  
+  if(!u){stopProfileWatch();stopPresence();hideProfile();A.style.display='flex';pw.value='';say('');currentProfile=null;$('adminBox').style.display='none';return}  
+  $('who').textContent=u.displayName||u.email||'';  
+  const isAdmin=!!(u.email&&u.email.toLowerCase()===ADMIN_EMAIL.toLowerCase()&&u.emailVerified);  
+  if(isAdmin){stopProfileWatch();stopPresence();currentProfile=null;hideProfile();$('adminBox').style.display='block';return}  
+  $('adminBox').style.display='none';  
+  try{  
+    const snap=await db.collection('profiles').doc(u.uid).get();  
+    if(auth.currentUser?.uid!==u.uid)return;  
+    if(!snap.exists){currentProfile=null;stopPresence();showProfile({email:u.email},true);return}  
+    const p=snap.data();  
+    if(p.status!=='active'){  
+      currentProfile=null;stopPresence();showProfile(p,true,'আপনার আগের প্রবেশাধিকার বাতিল করা হয়েছে। আবার ব্যবহার করতে চাইলে প্রোফাইলটি পুনরায় জমা দিন।');return;  
+    }  
+    currentProfile=p;hideProfile();$('adminBox').style.display='none';$('who').textContent=(p.name||u.email)+' • '+(u.email||'');startPresence(u,p.name||u.displayName||u.email);watchProfile(u);  
+  }catch(e){console.error(e);stopPresence();showProfile({email:u.email},true,'প্রোফাইল লোড করা যায়নি। ইন্টারনেট ও Firebase Rules পরীক্ষা করুন।')}  
+}  
+const CFG_SET=!/^YOUR/.test(FIREBASE_CONFIG.apiKey||'YOUR');  
+const LOCAL=['localhost','127.0.0.1',''].includes(location.hostname);  
+const FB_OK=typeof firebase!=='undefined'&&CFG_SET&&!LOCAL;  
+if(FB_OK){firebase.initializeApp(FIREBASE_CONFIG);auth=firebase.auth();db=firebase.firestore();storage=firebase.storage();auth.getRedirectResult().catch(fail);auth.onAuthStateChanged(enter)}  
+else{A.classList.remove('ld');if(LOCAL){A.style.display='none';$('who').textContent='Preview mode'}else if(CFG_SET)say('Firebase লোড হয়নি — ইন্টারনেট চেক করে পেজ রিফ্রেশ করুন।');else $('pv').style.display='block'}  
+$('pv').onclick=()=>{A.style.display='none';$('who').textContent='Preview mode'};  
+$('lo').onclick=e=>{e.preventDefault();document.body.classList.remove('m');location.hash='home';auth?auth.signOut():(A.style.display='flex')};  
+/* ---- Lightbox (zoom) ---- */  
+let zl=1;  
+const lbi=$('lbi'),lbs=$('lbs');  
+function setZ(v){zl=Math.min(4,Math.max(1,v));lbi.style.width=zl>1?(zl*100)+'%':'';lbs.classList.toggle('z',zl>1);$('lbz').textContent=Math.round(zl*100)+'%'}  
+function openLB(src){lbi.src=src;setZ(1);lbs.scrollTop=0;lbs.scrollLeft=0;document.body.classList.add('lbo')}  
+const closeLB=()=>document.body.classList.remove('lbo');  
+$('lbx').onclick=closeLB;  
+$('lbp').onclick=()=>setZ(zl+.5);$('lbm').onclick=()=>setZ(zl-.5);$('lbr').onclick=()=>setZ(1);  
+lbi.onclick=()=>setZ(zl>1?1:2);  
+addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});  
+/* ---- Admin: User Management ---- */  
+let admData=[],admFilter='all';  
+const whenText=t=>t&&t.toDate?t.toDate().toLocaleString('bn-BD'):'—';  
+async function loadAdmin(){  
+  $('advList').innerHTML='<p style="color:var(--mu)">অ্যাকাউন্ট লোড হচ্ছে…</p>';$('acnt').textContent='';  
+  try{  
+    const [ps,ls]=await Promise.all([db.collection('profiles').orderBy('createdAt','desc').get(),db.collection('presence').limit(500).get()]);  
+    const live={};const now=Date.now();ls.forEach(d=>{const v=d.data(),t=v.lastSeen&&v.lastSeen.toMillis?v.lastSeen.toMillis():0;live[d.id]=now-t<200000});  
+    admData=ps.docs.map(d=>({id:d.id,...d.data(),online:!!live[d.id]}));  
+    $('totalUsers').textContent=admData.length;$('onlineUsers').textContent=admData.filter(x=>x.status==='active'&&x.online).length;$('disabledUsers').textContent=admData.filter(x=>x.status!=='active').length;  
+    renderAdmin();  
+  }catch(e){$('advList').innerHTML='<p style="color:#B3261E">লোড করা যায়নি: '+esc(e.code||e.message)+'</p>'}  
+}  
+function renderAdmin(){  
+  const q=$('aq').value.trim().toLowerCase();  
+  const list=admData.filter(d=>(admFilter==='all'||(admFilter==='active'?d.status==='active':d.status!=='active'))&&(!q||[d.name,d.email,d.mobile,d.id].some(v=>String(v||'').toLowerCase().includes(q))));  
+  $('acnt').textContent='দেখানো হচ্ছে '+list.length+' / '+admData.length+'টি অ্যাকাউন্ট';  
+  if(!list.length){$('advList').innerHTML='<p style="color:var(--mu)">কোনো অ্যাকাউন্ট পাওয়া যায়নি।</p>';return}  
+  $('advList').innerHTML=list.map(d=>`<div class="user-card"><div class="user-card-head"><img src="${esc(d.photoURL||'')}" alt="Profile"><div class="user-card-info"><b>${esc(d.name||'নাম নেই')}</b><small>${esc(d.email||'')}</small></div><span class="user-state${d.status==='active'?'':' disabled'}">${d.status==='active'?'Active':'বাতিল'}</span></div><div class="user-meta">মোবাইল: ${esc(d.mobile||'—')}<br>অ্যাকাউন্ট: ${esc(whenText(d.createdAt))}<br>সর্বশেষ অবস্থা: ${d.online&&d.status==='active'?'🟢 Online':'⚪ Offline'}<br>User ID: ${esc(d.id)}</div><div class="user-actions">${d.status==='active'?`<button class="ano" data-user-id="${esc(d.id)}" data-user-act="disable">প্রবেশাধিকার বাতিল</button>`:`<button class="aok" data-user-id="${esc(d.id)}" data-user-act="enable">আবার চালু</button>`}</div></div>`).join('');  
+}  
+document.querySelectorAll('#userTabs button').forEach(b=>b.onclick=()=>{admFilter=b.dataset.filter;document.querySelectorAll('#userTabs button').forEach(x=>x.classList.toggle('on',x===b));renderAdmin()});  
+$('aq').oninput=renderAdmin;  
+$('advList').onclick=async e=>{  
+  const b=e.target.closest('button[data-user-id]');if(!b)return;  
+  const id=b.dataset.userId,act=b.dataset.userAct;  
+  if(act==='disable'&&!confirm('এই ব্যবহারকারীর ওয়েবসাইটে প্রবেশাধিকার বাতিল করবেন?'))return;  
+  b.disabled=true;  
+  try{  
+    const user=admData.find(x=>x.id===id),status=act==='disable'?'disabled':'active',batch=db.batch(),stamp=firebase.firestore.FieldValue.serverTimestamp();  
+    batch.update(db.collection('profiles').doc(id),{status,updatedAt:stamp});  
+    batch.set(db.collection('publicProfiles').doc(id),{name:user?.name||'',photoURL:user?.photoURL||'',status,updatedAt:stamp},{merge:true});  
+    await batch.commit();await loadAdmin();  
+  }catch(err){b.disabled=false;alert('পরিবর্তন করা যায়নি: '+(err.code||err.message))}  
+};  
+/* ---- Admin: Live Users ---- */  
+let liveT=null;const liveOpen=new Set(),liveInfo={};  
+const PGN={anatomy:'Anatomy',home:'Home',about:'About',depts:'Departments',notice:'Notice',contact:'Contact',teachers:'Teachers'};  
+const ago=ms=>{const s=Math.floor(ms/1000);return s<60?'এইমাত্র':s<3600?Math.floor(s/60)+' মিনিট আগে':s<86400?Math.floor(s/3600)+' ঘণ্টা আগে':Math.floor(s/86400)+' দিন আগে'};  
+const irowH=(k,v)=>`<div class="irow"><small>${k}</small><span>${esc(v)||'—'}</span></div>`;  
+function loadLive(){  
+  db.collection('presence').orderBy('lastSeen','desc').limit(300).get().then(snap=>{  
+    const now=Date.now();const all=snap.docs.map(x=>{const d=x.data(),t=d.lastSeen&&d.lastSeen.toMillis?d.lastSeen.toMillis():0;return{id:x.id,...d,t,on:now-t<200000}});  
+    const on=all.filter(u=>u.on),off=all.filter(u=>!u.on);  
+    $('liveSum').textContent=`এখন online: ${on.length} জন • সাম্প্রতিক activity: ${all.length} জন • নামে ট্যাপ করলে বিস্তারিত`;  
+    const card=u=>`<div class="lu${liveOpen.has(u.id)?' open':''}" data-id="${esc(u.id)}"><div class="lr"><i class="dot${u.on?' on':''}"></i><div class="lm"><b>${esc(u.name||u.email)}</b><small>${esc(u.email)}</small></div><div class="lt">${u.on?'Online • '+esc(PGN[u.page]||u.page):esc(ago(now-u.t))}</div></div><div class="ld2">${liveInfo[u.id]||''}</div></div>`;  
+    $('liveList').innerHTML=(on.length?`<div class="lh">🟢 এখন Active (${on.length})</div>`+on.map(card).join(''):'<p style="color:var(--mu);margin-top:14px">এই মুহূর্তে কেউ online নেই।</p>')+(off.length?`<div class="lh">আগে ব্যবহার করেছে (${off.length})</div>`+off.map(card).join(''):'');  
+  }).catch(e=>{$('liveList').innerHTML='<p style="color:#B3261E">লোড করা যায়নি: '+esc(e.code||e.message)+'</p>'});  
+}  
+$('liveList').onclick=async e=>{  
+  const r=e.target.closest('.lr');if(!r)return;const box=r.parentElement,id=box.dataset.id;  
+  if(box.classList.toggle('open')){liveOpen.add(id);if(!liveInfo[id]){box.querySelector('.ld2').innerHTML='<p style="color:var(--mu)">লোড হচ্ছে…</p>';try{const doc=await db.collection('profiles').doc(id).get();liveInfo[id]=doc.exists?(d=>irowH('নাম',d.name)+irowH('মোবাইল',d.mobile)+irowH('ইমেইল',d.email)+irowH('অ্যাকাউন্ট',whenText(d.createdAt))+irowH('স্ট্যাটাস',d.status))(doc.data()):'<p style="color:var(--mu)">প্রোফাইল পাওয়া যায়নি।</p>'}catch(err){liveInfo[id]='<p style="color:#B3261E">লোড হয়নি</p>'}}box.querySelector('.ld2').innerHTML=liveInfo[id]}  
+  else liveOpen.delete(id);  
+};  
+const closeLive=()=>{document.body.classList.remove('live');clearInterval(liveT)};  
+$('openLive').onclick=e=>{e.preventDefault();document.body.classList.remove('m');loadLive();document.body.classList.add('live');clearInterval(liveT);liveT=setInterval(loadLive,20000);$('liveO').onclick=$('liveX').onclick=closeLive};  
+$('openAdmin').onclick=e=>{e.preventDefault();document.body.classList.remove('m');loadAdmin();document.body.classList.add('adv');$('advO').onclick=$('advX').onclick=()=>document.body.classList.remove('adv')};  
+addEventListener('hashchange',route);route();  
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});  
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));  
+</script>  <script src="bones.js"></script>  <script src="heart.js"></script>  <script src="digestive.js"></script>  <script src="respiratory.js"></script>  <script src="urinary.js"></script>  <script src="nervous-explorer.js"></script>  <script>  
+(function(){  
+ const img=document.getElementById('authLogo'); if(!img)return;  
+ function clean(){  
+  img.onload=null;  
+  const w=img.naturalWidth,h=img.naturalHeight; if(!w)return;  
+  const c=document.createElement('canvas'); c.width=w; c.height=h;  
+  const x=c.getContext('2d'); x.drawImage(img,0,0);  
+  const d=x.getImageData(0,0,w,h),p=d.data,seen=new Uint8Array(w*h),st=[];  
+  const white=i=>p[i*4]>225&&p[i*4+1]>225&&p[i*4+2]>225;  
+  for(let i=0;i<w;i++)st.push(i,(h-1)*w+i);  
+  for(let j=0;j<h;j++)st.push(j*w,j*w+w-1);  
+  while(st.length){  
+   const i=st.pop(); if(seen[i]||!white(i))continue;  
+   seen[i]=1; p[i*4+3]=0; const px=i%w;  
+   if(px>0)st.push(i-1); if(px<w-1)st.push(i+1);  
+   if(i>=w)st.push(i-w); if(i<w*(h-1))st.push(i+w);  
+  }  
+  x.putImageData(d,0,0); img.src=c.toDataURL('image/png');  
+ }  
+ if(img.complete&&img.naturalWidth)clean(); else img.onload=clean;  
+})();  
 </script>
-<script src="lamp-login.js"></script>
-<script src="bones.js"></script>
-<script src="heart.js"></script>
-<script src="digestive.js"></script>
-<script src="respiratory.js"></script>
-<script src="urinary.js"></script>
-<script src="nervous-explorer.js"></script>
-<script>
-(function(){
- const img=document.getElementById('authLogo'); if(!img)return;
- function clean(){
-  img.onload=null;
-  const w=img.naturalWidth,h=img.naturalHeight; if(!w)return;
-  const c=document.createElement('canvas'); c.width=w; c.height=h;
-  const x=c.getContext('2d'); x.drawImage(img,0,0);
-  const d=x.getImageData(0,0,w,h),p=d.data,seen=new Uint8Array(w*h),st=[];
-  const white=i=>p[i*4]>225&&p[i*4+1]>225&&p[i*4+2]>225;
-  for(let i=0;i<w;i++)st.push(i,(h-1)*w+i);
-  for(let j=0;j<h;j++)st.push(j*w,j*w+w-1);
-  while(st.length){
-   const i=st.pop(); if(seen[i]||!white(i))continue;
-   seen[i]=1; p[i*4+3]=0; const px=i%w;
-   if(px>0)st.push(i-1); if(px<w-1)st.push(i+1);
-   if(i>=w)st.push(i-w); if(i<w*(h-1))st.push(i+w);
-  }
-  x.putImageData(d,0,0); img.src=c.toDataURL('image/png');
- }
- if(img.complete&&img.naturalWidth)clean(); else img.onload=clean;
-})();
-</script>
-</body>
+  <script src="lamp-login.js"></script>  
+  <script src="explore-glow.js"></script> 
+</body>  
 </html>

@@ -32,9 +32,9 @@
   #auth{--lc:#ffd778;--lb:#fff1b8;--lg:rgba(255,200,90,.24)}
   #auth[data-theme=up]{--lc:#6ee7b7;--lb:#d1fae5;--lg:rgba(52,211,153,.22);--gold:#6ee7b7;--gold2:#10b981;--line:rgba(52,211,153,.3)}
   #auth[data-theme=g]{--lc:#8ab4ff;--lb:#dbe8ff;--lg:rgba(96,150,255,.24);--gold:#8ab4ff;--gold2:#4285f4;--line:rgba(96,150,255,.32)}
-  .lamp svg [stroke="#e6c65c"]{stroke:var(--gold)}
-  .lamp svg [fill="#e6c65c"]{fill:var(--gold)}
-  .lamp stop[stop-color="#ffd778"]{stop-color:var(--lc)}
+  .lamp svg [stroke="#4d6765"]{stroke:var(--gold)}
+  .lamp svg [fill="#4d6765"]{fill:var(--gold)}
+  .lamp stop[stop-color="#4d6765"]{stop-color:var(--lc)}
   #auth .ac.tfl{animation:lptf .6s ease}
   @keyframes lptf{from{filter:brightness(1.8) saturate(1.4)}to{filter:none}}
   /* ---- রহস্যময় পোর্টাল ---- */
@@ -67,16 +67,16 @@
       <linearGradient id="lgs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2a2a33"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
     </defs>
     <polygon class="cone" points="108,112 192,112 300,250 0,250" fill="url(#lgc)"/>
-    <ellipse cx="110" cy="238" rx="46" ry="8" fill="#17171d" stroke="#e6c65c" stroke-opacity=".5"/>
+    <ellipse cx="110" cy="238" rx="46" ry="8" fill="#000000" stroke="#2c1220" stroke-opacity=".5"/>
     <polyline points="110,232 78,160 124,92" fill="none" stroke="#2a2a33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="110" cy="232" r="5" fill="#17171d" stroke="#e6c65c"/><circle cx="78" cy="160" r="5" fill="#17171d" stroke="#e6c65c"/>
+    <circle cx="110" cy="232" r="5" fill="#17171d" stroke="#166fd4"/><circle cx="78" cy="160" r="5" fill="#17171d" stroke="#e6c65c"/>
     <path d="M108,108 C108,62 126,46 150,46 C174,46 192,62 192,108 Z" fill="url(#lgs)" stroke="#e6c65c" stroke-opacity=".35"/>
     <ellipse class="rimi" cx="150" cy="108" rx="42" ry="6" stroke="#e6c65c" stroke-width="2"/>
     <circle class="bulb" cx="150" cy="111" r="8"/>
     <line id="lstr" x1="176" y1="108" x2="176" y2="168" stroke="#e6c65c" stroke-width="1.6" style="transform-origin:176px 108px"/>
     <g id="lhd"><circle cx="176" cy="176" r="6" fill="#e6c65c"/><circle class="hit" id="lhit" cx="176" cy="176" r="22" fill="transparent" tabindex="0" role="button" aria-label="সুতা টানুন"/></g>
   </svg><div class="dust"></div>`;
-  const hint=document.createElement('div');hint.className='lhint';hint.textContent='সুতাটি টেনে আলো জ্বালান ✨';
+  const hint=document.createElement('div');hint.className='lhint';
   ac.insertBefore(lamp,box);ac.insertBefore(hint,box);
 
   const dust=lamp.querySelector('.dust');
@@ -106,7 +106,7 @@
   hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();click();setOn(!on)}});
 
   /* ---------- রঙের থিম: Sign in / Create account / Google ---------- */
-  const THEMES={in:['#e6c65c','#b8912a'],up:['#6ee7b7','#10b981'],g:['#8ab4ff','#4285f4']};
+  const THEMES={in:['#5340aa','#0230fc'],up:['#2bac70','#00c656'],g:['#ea0976','#b8074b']};
   let theme='in';
   function setTheme(t){theme=t;A.dataset.theme=t;ac.classList.remove('tfl');void ac.offsetWidth;ac.classList.add('tfl')}
   A.dataset.theme='in';
