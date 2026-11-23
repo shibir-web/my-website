@@ -402,12 +402,21 @@ footer span{color:var(--gold)!important}
 .tp-navrow{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
 .tp-nav{all:unset;cursor:pointer;box-sizing:border-box;max-width:48%;padding:11px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--gold);font-weight:600;font-size:14px;line-height:1.3}
 .tp-nav:active{transform:scale(.97)}
+.leaders{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.leader{background:rgba(255,255,255,.8);border:1px solid rgba(31,95,46,.2);border-radius:20px;padding:10px 10px 16px;text-align:center;box-shadow:0 6px 18px rgba(31,95,46,.08)}
+.leader .frame{width:100%;max-width:none;aspect-ratio:4/5;margin:0 auto 12px;padding:3px;border:3px solid #c9a227;border-radius:14px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.leader .frame img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
+.leader h4{font-size:18px;margin:4px 0;color:#1f4d2b}
+.leader .role{display:inline-block;padding:2px 14px;border-radius:99px;font-size:13px;background:#1f7a33;color:#fff;margin-bottom:8px}
+.leader p{font-size:14px;margin:2px 0;color:#4a5a4d}
+.leader a{color:#1f7a33;font-weight:600;text-decoration:none}
+@media(max-width:480px){.leaders{gap:10px}.leader .frame{max-width:none}}
 </style>  
 </head>  
 <body>  
 <div id="auth" class="ld"><div class="ac">  
-  <div class="logo">বাংলাদেশ ইসলামী ছাত্রশিবির</div>  
-  <div class="asub">IHT Help Center • Pull the lapm cord</div>  
+  <div class="logo">IHT Chatroshibir</div>  
+  <div class="asub"> Pull the lapm cord</div>  
   <div class="glass abox">  
     <div class="tg"><button class="on" data-m="in">Sign in</button><button data-m="up">Create account</button></div>  
     <input id="em" type="email" placeholder="Email address" autocomplete="email">  
@@ -420,20 +429,20 @@ footer span{color:var(--gold)!important}
   </div>  
   <button class="pv" id="pv">Preview site (Firebase setup pending)</button>  
 </div></div>  <div id="profileSetup" class="ov-screen"><div class="ac">  
-  <div class="logo" style="font-size:clamp(40px,10vw,64px)">আমার-শিবির</div>  
+  <div class="logo" style="font-size:clamp(40px,10vw,64px)">MEDIX FORUM</div>  
   <div class="asub" id="profileHeading">Create Your Profile</div>  
   <div class="glass abox">  
     <div class="profile-photo-wrap">  
       <img id="profilePreview" src="" alt="Profile photo">  
-      <label for="profilePhoto" title="ছবি নির্বাচন করুন">✎</label>  
+      <label for="profilePhoto" title="Upload photo">✎</label>  
       <input id="profilePhoto" type="file" accept="image/*">  
     </div>  
-    <p class="profile-note" id="profileNote">আপনার ছবি, নাম ও মোবাইল নম্বর দিন। প্রোফাইল তৈরি হলেই ওয়েবসাইট ব্যবহার করতে পারবেন।</p>  
-    <label class="profile-field-label" for="profileName">আপনার নাম</label>  
-    <input id="profileName" type="text" maxlength="80" placeholder="আপনার পূর্ণ নাম">  
-    <label class="profile-field-label" for="profileMobile">মোবাইল নম্বর</label>  
+    <p class="profile-note" id="profileNote">Entry Data</p>  
+    <label class="profile-field-label" for="profileName">Name</label>  
+    <input id="profileName" type="text" maxlength="80" placeholder="Full Name Only">  
+    <label class="profile-field-label" for="profileMobile">Mobile</label>  
     <input id="profileMobile" type="tel" maxlength="16" placeholder="01XXXXXXXXX">  
-    <label class="profile-field-label" for="profileEmail">ইমেইল</label>  
+    <label class="profile-field-label" for="profileEmail">Email</label>  
     <input id="profileEmail" class="profile-email" type="email" readonly>  
     <button class="btn" id="profileSave" style="margin-top:12px">Create Profile &amp; Continue</button>  
     <button class="profile-secondary" id="profileCancel" style="display:none;width:100%;margin-top:10px">Back to Website</button>  
@@ -441,31 +450,30 @@ footer span{color:var(--gold)!important}
     <button class="fp" id="profileLogout">Log out</button>  
   </div>  
 </div></div>  <div class="sov" id="advO"></div>  
-<div class="sheet" id="advS"><button class="x sx" id="advX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">User Management</h3><p style="color:var(--mu);font-size:13px">সকল নিবন্ধিত অ্যাকাউন্ট ও তাদের প্রবেশাধিকার</p><div class="admin-stats"><div class="admin-stat"><b id="totalUsers">0</b><small>মোট অ্যাকাউন্ট</small></div><div class="admin-stat"><b id="onlineUsers">0</b><small>এখন Active</small></div><div class="admin-stat"><b id="disabledUsers">0</b><small>বাতিল</small></div></div><input id="aq" type="search" placeholder="নাম / মোবাইল / ইমেইল দিয়ে খুঁজুন"><div class="atabs" id="userTabs"><button data-filter="all" class="on">সবাই</button><button data-filter="active">Active</button><button data-filter="disabled">বাতিল</button></div><div class="acnt" id="acnt"></div><div id="advList"></div></div>  <div class="lb" id="lb"><button class="x lbx" id="lbx" aria-label="Close">×</button><div class="lbs" id="lbs"><img id="lbi" alt="ID card"></div><div class="lbt"><button id="lbm" aria-label="Zoom out">−</button><span class="lbz" id="lbz">100%</span><button id="lbp" aria-label="Zoom in">+</button><button id="lbr" style="font-size:14px">Reset</button></div></div>  <div class="sov" id="liveO"></div>  
-<div class="sheet" id="liveS"><button class="x sx" id="liveX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">Live Users</h3><div class="acnt" id="liveSum"></div><div id="liveList"></div></div>  <header>  
+<div class="sheet" id="advS"><button class="x sx" id="advX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">Users</h3><p style="color:var(--mu);font-size:13px">All Profiles</p><div class="admin-stats"><div class="admin-stat"><b id="totalUsers">0</b><small>Total Account</small></div><div class="admin-stat"><b id="onlineUsers">0</b><small>Active Now</small></div><div class="admin-stat"><b id="disabledUsers">0</b><small>বাতিল</small></div></div><input id="aq" type="search" placeholder="search bar"><div class="atabs" id="userTabs"><button data-filter="all" class="on">All</button><button data-filter="active">Active</button><button data-filter="disabled">Reject</button></div><div class="acnt" id="acnt"></div><div id="advList"></div></div>  <div class="lb" id="lb"><button class="x lbx" id="lbx" aria-label="Close">×</button><div class="lbs" id="lbs"><img id="lbi" alt="ID card"></div><div class="lbt"><button id="lbm" aria-label="Zoom out">−</button><span class="lbz" id="lbz">100%</span><button id="lbp" aria-label="Zoom in">+</button><button id="lbr" style="font-size:14px">Reset</button></div></div>  <div class="sov" id="liveO"></div>  
+<div class="sheet" id="liveS"><button class="x sx" id="liveX" aria-label="Close">×</button><h3 style="margin:6px 0 6px">Active Now</h3><div class="acnt" id="liveSum"></div><div id="liveList"></div></div>  <header>  
   <div class="burger" id="bg" aria-label="Menu" role="button"><i></i><i></i><i></i></div>  
-  <div class="brand" onclick="location.hash='home'">IHT campus ছাত্রশিবির</div>  
+  <div class="brand" onclick="location.hash='home'">MEDIX FORUM</div>  
   <nav class="top"><a href="#about">About</a><a href="#anatomy">3D models</a><a href="#depts">Departments</a><a href="#notice">Notice</a><a href="#contact">Contact</a></nav>  
 </header>  <div class="ov" id="ov"></div>  
 <aside class="drawer" id="dr">  
-  <div class="dh"><div class="brand">আমার-শিবির</div><button class="x" id="cl">×</button></div>  
+  <div class="dh"><div class="brand">MEDIX FORUM</div><button class="x" id="cl">×</button></div>  
   <div class="dl" id="dl"></div>  
   <div class="dl"><small>LEARNING</small><a href="#anatomy">🧠 Anatomy &amp; Physiology</a></div>  
-  <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">User Management</a><a href="#" id="openLive">Live Users</a></div>  
+  <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">Users</a><a href="#" id="openLive">Active Now</a></div>  
   <div class="dl"><small>ACCOUNT</small><a href="#" id="openProfile">My Profile</a><div id="who" style="color:var(--mu);font-size:14px;margin:0 4px 10px;word-break:break-all"></div><a href="#" id="lo">Log out</a></div>  
 </aside>  <div class="hero pg" id="home">  
   <div class="bism rv">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
   <div class="eye rv">“আল্লাহর সন্তুষ্টি অর্জনের লক্ষ্যে সৎ, দক্ষ, মানবিক ও দেশপ্রেমিক নাগরিক গড়ে তুলে একটি সমৃদ্ধ, উন্নত ও কল্যাণময় বাংলাদেশ বিনির্মাণ।”</div>  
   <img src="logo.png" alt="logo" class="site-logo">  
-  <h1 class="logo rv">আমার-শিবির</h1>  
-  <div class="pill rv">4-Year Diploma • IHT</div>  
+  <h1 class="logo rv">MEDIX FORUM</h1>  
+  <div class="pill rv">4-Year Diploma</div>  
   <div class="orn"></div>  
   <p class="tag rv"><b>বিশেষ দ্রষ্টব্য:</b><br>সাপ্তাহিক পরীক্ষায় অংশগ্রহণ করতে ভুলবেন না যেন</p>  
   <div class="rv" style="margin-top:30px"><a class="btn" href="#about">Explore</a></div>  
 </div>  <section id="about" class="pg"><div class="wrap">  
-  <div class="sec-h rv"><small>ABOUT US</small><h2>আমার-শিবির</h2></div>  
-  <div class="glass rv about">  
-    <p>### একজন আদর্শ তরুণ গড়ার প্রত্যয়ে বাংলাদেশ ইসলামী ছাত্রশিবির  দেশের প্রতিটি জনপদে নিরলসভাবে কাজ করে যাচ্ছে বাংলাদেশ ইসলামী ছাত্রশিবির। একজন তরুণকে একই সঙ্গে আদর্শ শিক্ষার্থী, সৎ, যোগ্য ও নৈতিকতাসম্পন্ন মানুষ হিসেবে গড়ে তোলাই সংগঠনটির অন্যতম লক্ষ্য।
+  <div class="sec-h rv"><small>ABOUT US</small><h2>আইএইচটি ছাত্রশিবির</h2></div>  
+  <div class="glass rv about"> একজন আদর্শ তরুণ গড়ার প্রত্যয়ে বাংলাদেশ ইসলামী ছাত্রশিবির  দেশের প্রতিটি জনপদে নিরলসভাবে কাজ করে যাচ্ছে বাংলাদেশ ইসলামী ছাত্রশিবির। একজন তরুণকে একই সঙ্গে আদর্শ শিক্ষার্থী, সৎ, যোগ্য ও নৈতিকতাসম্পন্ন মানুষ হিসেবে গড়ে তোলাই সংগঠনটির অন্যতম লক্ষ্য।
 
 ইসলাম সকল মানুষের কল্যাণের বার্তা বহন করে। সেই বার্তা ও ইসলামের সুমহান সৌন্দর্য মুসলমান, হিন্দু, বৌদ্ধ, খ্রিস্টানসহ সব ধর্মের মানুষের কাছে সুন্দর ও ইতিবাচকভাবে তুলে ধরার প্রত্যয়ে এগিয়ে যাচ্ছে ইসলামী ছাত্রশিবির।
 
@@ -474,7 +482,24 @@ footer span{color:var(--gold)!important}
 আসুন, নিজেকে জ্ঞান, নৈতিকতা ও যোগ্যতায় সমৃদ্ধ করে একজন আদর্শ মানুষ হিসেবে গড়ে তুলি। অংশ হই একটি সুন্দর, মানবিক ও কল্যাণমুখী সমাজ গড়ার প্রচেষ্টায়।</p>
 <div class="stats"><div><b>6</b><span>Departments</span></div><div><b>4 Yrs</b><span>Diploma Course</span></div><div><b>5</b><span>1st Year Subjects</span></div></div>
 
-  </div>    </div></section>  
+  </div>
+<div class="leaders">
+  <div class="leader">
+    <div class="frame"><img src="president.jpg" alt="সভাপতি"></div>
+    <h4>Sakibur Rahman Siam</h4>
+    <span class="role">সভাপতি</span>
+    <p>Session: 23-24</p>
+    <p>Mobile: <a href="tel:01XXXXXXXXX">01798644905</a></p>
+  </div>
+  <div class="leader">
+    <div class="frame"><img src="secretary.jpg" alt="সেক্রেটারি"></div>
+    <h4>Masum Reza</h4>
+    <span class="role">সেক্রেটারি</span>
+    <p>Session: 23-24</p>
+    <p>Mobile: <a href="tel:01XXXXXXXXX">01775919867</a></p>
+  </div>
+</div>
+</div></section>  
 <section id="anatomy" class="pg"><div class="wrap">  
   <div class="sec-h rv"><small>ANATOMY &amp; PHYSIOLOGY</small><h2>Human Body Systems</h2><p style="color:var(--mu);margin-top:6px">Read the system and see the 3D model</p></div>  
   <div class="ap-grid" id="apSystems"></div>  
@@ -512,13 +537,13 @@ const FIREBASE_CONFIG={
 </script>  <script>  
 /* ============ এখানে সহজে এডিট করুন / EDIT HERE ============ */  
 const NOTICES=[  
-  {date:"2 oct 2026",title:"Welcome to Cornea",text:"First Year guideline"},  
+  {date:"2 oct 2026",title:"Welcome to MEDIX FORUM",text:"First Year guideline"},  
   {date:"2 oct 2026",title:"Anatomy & Physiology",text:"Thanks for yours priority"},  
   {date:"8 & 9 Jan 2027",title:"🎉 গৌরবের ৫০ বছর, স্মৃতির এক অনন্য অধ্যায়! 🎉",text:"আগামী ৮ ও ৯ জানুয়ারি ২০২৭ আমাদের প্রিয় কলেজের ৫০ বছর পূর্তি উপলক্ষে উদ্‌যাপিত হতে যাচ্ছে সুবর্ণজয়ন্তী উৎসব "}];  
   
 const CONTACT=[  
-  ["Authority","বাংলাদেশ ইসলামী ছাত্রশিবির"],["Phone","+880 1819-203208"],  
-  ["Email","tanvirahmedsifat8@gmail.com"],["Address"," আইএইচটি-শাখা , রাজশাহী"]  
+  ["Authority","IHT ইসলামী ছাত্রশিবির"],["Phone","+880 1819-203208"],  
+  ["Email","tanvirahmedsifat8@gmail.com"],["Address"," আইএইচটি-শাখা , রাজশাহী-মহানগর"]  
 ];  
 const DEVELOPER="Tanvir Ahmed Sifat";  
 /* ADMIN: এই email দিয়ে লগইন করলে "Verify Students" মেনু দেখা যাবে (Firestore Rules এর email এর সাথে মিলতে হবে) */  
@@ -971,7 +996,7 @@ function loadLive(){
   db.collection('presence').orderBy('lastSeen','desc').limit(300).get().then(snap=>{  
     const now=Date.now();const all=snap.docs.map(x=>{const d=x.data(),t=d.lastSeen&&d.lastSeen.toMillis?d.lastSeen.toMillis():0;return{id:x.id,...d,t,on:now-t<200000}});  
     const on=all.filter(u=>u.on),off=all.filter(u=>!u.on);  
-    $('liveSum').textContent=`এখন online: ${on.length} জন • সাম্প্রতিক activity: ${all.length} জন • নামে ট্যাপ করলে বিস্তারিত`;  
+    $('liveSum').textContent=`online: ${on.length} জন • সাম্প্রতিক activity: ${all.length} জন • নামে ট্যাপ করলে বিস্তারিত`;  
     const card=u=>`<div class="lu${liveOpen.has(u.id)?' open':''}" data-id="${esc(u.id)}"><div class="lr"><i class="dot${u.on?' on':''}"></i><div class="lm"><b>${esc(u.name||u.email)}</b><small>${esc(u.email)}</small></div><div class="lt">${u.on?'Online • '+esc(PGN[u.page]||u.page):esc(ago(now-u.t))}</div></div><div class="ld2">${liveInfo[u.id]||''}</div></div>`;  
     $('liveList').innerHTML=(on.length?`<div class="lh">🟢 এখন Active (${on.length})</div>`+on.map(card).join(''):'<p style="color:var(--mu);margin-top:14px">এই মুহূর্তে কেউ online নেই।</p>')+(off.length?`<div class="lh">আগে ব্যবহার করেছে (${off.length})</div>`+off.map(card).join(''):'');  
   }).catch(e=>{$('liveList').innerHTML='<p style="color:#B3261E">লোড করা যায়নি: '+esc(e.code||e.message)+'</p>'});  
@@ -987,7 +1012,18 @@ $('openAdmin').onclick=e=>{e.preventDefault();document.body.classList.remove('m'
 addEventListener('hashchange',route);route();  
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});  
 document.querySelectorAll('.rv').forEach(e=>io.observe(e));  
-</script>  <script src="bones.js"></script>  <script src="heart.js"></script>  <script src="digestive.js"></script>  <script src="respiratory.js"></script>  <script src="urinary.js"></script>  <script src="nervous-explorer.js"></script>  <script>  
+</script> 
+ <script src="bones.js"></script>
+ <script src="heart.js"></script> 
+ <script src="digestive.js"></script>  
+ <script src="respiratory.js"></script> 
+ <script src="urinary.js"></script> 
+ <script src="nervous-explorer.js"></script> 
+ <script src="explore-glow.js"></script> 
+ <script src="reproductive.js"></script>
+ <script src="endocrine.js"></script>
+ <script src="muscular.js"></script>
+  <script> 
 (function(){  
  const img=document.getElementById('authLogo'); if(!img)return;  
  function clean(){  
