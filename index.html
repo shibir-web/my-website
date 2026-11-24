@@ -411,12 +411,21 @@ footer span{color:var(--gold)!important}
 .leader p{font-size:14px;margin:2px 0;color:#4a5a4d}
 .leader a{color:#1f7a33;font-weight:600;text-decoration:none}
 @media(max-width:480px){.leaders{gap:10px}.leader .frame{max-width:none}}
-</style>  
+.ac .logo{
+  display:block;
+  width:100%;
+  text-align:center;
+  font-size:clamp(34px,10vw,64px);
+  line-height:1.3;
+  padding:0;
+  overflow-wrap:anywhere;
+}</style>  
+<link rel="stylesheet" href="chat.css">
 </head>  
 <body>  
 <div id="auth" class="ld"><div class="ac">  
-  <div class="logo">IHT Chatroshibir</div>  
-  <div class="asub"> Pull the lapm cord</div>  
+  <div class="logo">IHT Chatroshibir   </div>  
+  <div class="asub"> Pull the lamp cord</div>  
   <div class="glass abox">  
     <div class="tg"><button class="on" data-m="in">Sign in</button><button data-m="up">Create account</button></div>  
     <input id="em" type="email" placeholder="Email address" autocomplete="email">  
@@ -459,6 +468,7 @@ footer span{color:var(--gold)!important}
 <aside class="drawer" id="dr">  
   <div class="dh"><div class="brand">MEDIX FORUM</div><button class="x" id="cl">×</button></div>  
   <div class="dl" id="dl"></div>  
+ <div class="dl"><small>CHAT</small><a href="#chat">💬 Live Chat <em class="chat-badge"></em></a></div>
   <div class="dl"><small>LEARNING</small><a href="#anatomy">🧠 Anatomy &amp; Physiology</a></div>  
   <div class="dl" id="adminBox" style="display:none"><small>ADMIN</small><a href="#" id="openAdmin">Users</a><a href="#" id="openLive">Active Now</a></div>  
   <div class="dl"><small>ACCOUNT</small><a href="#" id="openProfile">My Profile</a><div id="who" style="color:var(--mu);font-size:14px;margin:0 4px 10px;word-break:break-all"></div><a href="#" id="lo">Log out</a></div>  
@@ -483,20 +493,36 @@ footer span{color:var(--gold)!important}
 <div class="stats"><div><b>6</b><span>Departments</span></div><div><b>4 Yrs</b><span>Diploma Course</span></div><div><b>5</b><span>1st Year Subjects</span></div></div>
 
   </div>
+  <div class="glass rv about" style="margin-top:20px">
+  <h3 class="sub-h">এখানে শিরোনাম</h3>
+  <p>এখানে আপনার লেখা। নতুন অনুচ্ছেদের জন্য আলাদা p ট্যাগ ব্যবহার করুন।</p>
+</div>
+<div class="glass rv about" style="margin-top:20px">
+  <h3 class="sub-h">এখানে শিরোনাম</h3>
+  <p>এখানে আপনার লেখা। নতুন অনুচ্ছেদের জন্য আলাদা p ট্যাগ ব্যবহার করুন।</p>
+</div>
+<div class="glass rv about" style="margin-top:20px">
+  <h3 class="sub-h">এখানে শিরোনাম</h3>
+  <p>এখানে আপনার লেখা। নতুন অনুচ্ছেদের জন্য আলাদা p ট্যাগ ব্যবহার করুন।</p>
+</div>
+<div class="glass rv about" style="margin-top:20px">
+  <h3 class="sub-h">এখানে শিরোনাম</h3>
+  <p>এখানে আপনার লেখা। নতুন অনুচ্ছেদের জন্য আলাদা p ট্যাগ ব্যবহার করুন।</p>
+</div>
 <div class="leaders">
   <div class="leader">
     <div class="frame"><img src="president.jpg" alt="সভাপতি"></div>
     <h4>Sakibur Rahman Siam</h4>
     <span class="role">সভাপতি</span>
     <p>Session: 23-24</p>
-    <p>Mobile: <a href="tel:01XXXXXXXXX">01798644905</a></p>
+    <p>Mobile: <a href="tel:01798644905">01798644905</a></p>
   </div>
   <div class="leader">
     <div class="frame"><img src="secretary.jpg" alt="সেক্রেটারি"></div>
     <h4>Masum Reza</h4>
     <span class="role">সেক্রেটারি</span>
     <p>Session: 23-24</p>
-    <p>Mobile: <a href="tel:01XXXXXXXXX">01775919867</a></p>
+    <p>Mobile: <a href="tel:01775919867">01775919867</a></p>
   </div>
 </div>
 </div></section>  
@@ -523,7 +549,25 @@ footer span{color:var(--gold)!important}
 <div class="sheet" id="sh"><button class="x sx" id="sx" aria-label="Close">×</button><div id="sb2"></div></div>  
 <nav class="tabs" id="tb"><a href="#about"><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 11v6M12 7.5v.01'/></svg>About</a><a href="#anatomy"><svg viewBox='0 0 24 24'><path d='M3 12h4l3-8 4 16 3-8h4'/></svg>Anatomy</a><a href="#depts"><svg viewBox='0 0 24 24'><path d='M2 9l10-5 10 5-10 5z'/><path d='M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5'/></svg>Depts</a><a href="#teachers"><svg viewBox='0 0 24 24'><path d='M3 6.5c3-1.5 6-1.5 9 0c3-1.5 6-1.5 9 0v12c-3-1.5-6-1.5-9 0c-3-1.5-6-1.5-9 0z'/><path d='M12 6.5v12'/></svg>Teachers</a><a href="#notice"><svg viewBox='0 0 24 24'><path d='M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z'/><path d='M10 21h4'/></svg>Notice</a><a href="#contact"><svg viewBox='0 0 24 24'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/></svg>Contact</a></nav>  
 <div class="ap-detail" id="apDetail"><div class="ap-detail-inner"><button class="ap-close" id="apClose" aria-label="Close">×</button><div id="apContent"></div></div></div>
-<div class="ap-detail" id="tpDetail"><div class="ap-detail-inner"><div class="tp-bar"><button class="tp-back" id="tpBack">← Back</button><button class="ap-close" id="tpClose" aria-label="Close">×</button></div><div id="tpContent"></div></div></div>  <footer>Shaheed ali-Raihan developers<br>Website developed by:-<span style="color:var(--gold)" id="dev"></span></footer>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>  <script>  
+<div class="ap-detail" id="tpDetail"><div class="ap-detail-inner"><div class="tp-bar"><button class="tp-back" id="tpBack">← Back</button><button class="ap-close" id="tpClose" aria-label="Close">×</button></div><div id="tpContent"></div></div>
+<section id="chat" class="pg"><div class="wrap">
+  <div class="sec-h rv"><small>LIVE CHAT</small><h2>অ্যাডমিনের সাথে চ্যাট</h2></div>
+
+  <!-- শুধু admin দেখবে: সব ইউজারের তালিকা -->
+  <div id="cAdminList" style="display:none"><div id="cList"></div></div>
+
+  <!-- চ্যাট বক্স -->
+  <div id="cThread" class="cbox">
+    <div class="chead"><button id="cBack" style="display:none">←</button><b id="cTitle">Admin</b></div>
+    <div id="cMsgs"></div>
+    <div class="cform">
+      <input id="cIn" maxlength="500" placeholder="মেসেজ লিখুন..." autocomplete="off">
+      <button id="cSend">পাঠান</button>
+    </div>
+  </div>
+</div></section>
+<a id="chatFab" href="#chat" aria-label="Live Chat">💬<em class="chat-badge"></em></a>
+</div>  <footer>Shaheed ali-Raihan developers<br>Website developed by:-<span style="color:var(--gold)" id="dev"></span></footer>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>  <script>  
 /* ===== FIREBASE SETUP: Firebase Console > Project settings > Your apps > Web > firebaseConfig এখানে বসান ===== */  
 const FIREBASE_CONFIG={  
   apiKey:"AIzaSyBOcqP74z2N5bxTKes4xfQmsPW5eGk5R0s",  
@@ -552,7 +596,7 @@ let unsub=null;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));  
 /* PDF লিংক: link:"" এর ভেতরে PDF এর URL বসান */  
 const SUBJECTS=[  
-  {n:"Anatomy",books:[{n:"BD Chaurasia",vols:[{n:"Volume 1",link:"Https://drive.google.com/file/d/1kPzuwPl1QjTk0RQKy6cO8-l4vLeUNwun/view?usp=drivesdk"},{n:"Volume 2",link:"Https://drive.google.com/file/d/1rPhg3ykt6IKt87nsPssb8XUNXhoMdM6a/view?usp=drivesdk"},{n:"Volume 3 & 4",link:"Https://drive.google.com/file/d/1y5qG2nSdd0GGqInKSy9Ia4w6GjI7PG8q/view?usp=drivesdk"}]},{n:"Concise",link:""},{n:"Salim Reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},  
+  {n:"Anatomy",books:[{n:"BD Chaurasia",vols:[{n:"Volume 1",link:"https://drive.google.com/file/d/1kPzuwPl1QjTk0RQKy6cO8-l4vLeUNwun/view?usp=drivesdk"},{n:"Volume 2",link:"https://drive.google.com/file/d/1rPhg3ykt6IKt87nsPssb8XUNXhoMdM6a/view?usp=drivesdk"},{n:"Volume 3 & 4",link:"https://drive.google.com/file/d/1y5qG2nSdd0GGqInKSy9Ia4w6GjI7PG8q/view?usp=drivesdk"}]},{n:"Concise",link:""},{n:"Salim Reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},  
   {n:"Physiology",books:[{n:"Guyton-hall",link:"Guytun-and-Hall.pdf"},{n:"Concise",link:""},{n:"Park",link:""}]},  
   {n:"Community Medicine",books:[{n:"Park",link:""},{n:"Concise",link:"https://drive.google.com/file/d/1u0KxeW1KZNn1La0W4czxVDN8HJB-wz3k/view?usp=drivesdk"},{n:"Selim reja",vols:[{n:"Part 1",link:""},{n:"Part 2",link:""}]}]},  
   {n:"Basic Computer Science",link:""},{n:"English",link:""}  
@@ -1046,5 +1090,7 @@ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
  if(img.complete&&img.naturalWidth)clean(); else img.onload=clean;  
 })();  
 </script>  <script src="lamp-login.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+<script src="chat.js"></script>
 </body>  
 </html>
