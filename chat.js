@@ -20,13 +20,13 @@ function startThread(uid,title){
   clearUnread(uid);
   unMsgs=db.collection('chats').doc(uid).collection('messages').orderBy('time').limitToLast(200).onSnapshot(snap=>{
     const box=el('cMsgs');box.innerHTML='';
-    if(snap.empty){box.innerHTML='<div class="cempty">'+(isAdmin?'এখনো কোনো মেসেজ নেই':'আপনার প্রশ্ন লিখে পাঠান, অ্যাডমিন উত্তর দেবেন।')+'</div>'}
+    if(snap.empty){box.innerHTML='<div class="cempty">'+(isAdmin?'NMo messages':'Send your question and the authority will reply')+'</div>'}
     snap.docs.forEach(d=>{
       const m=d.data({serverTimestamps:'estimate'});
       const div=document.createElement('div');div.className='cm '+(m.from===mine?'mine':'theirs');
       div.appendChild(document.createTextNode(m.text));
       const s=document.createElement('small');s.textContent=fmt(m.time);div.appendChild(s);
-      if(isAdmin){const x=document.createElement('button');x.className='cx';x.textContent='×';x.title='মুছুন';x.onclick=()=>{if(confirm('মেসেজটি মুছবেন?'))d.ref.delete()};div.appendChild(x)}
+      if(isAdmin){const x=document.createElement('button');x.className='cx';x.textContent='×';x.title='Delete';x.onclick=()=>{if(confirm('মেসেজটি মুছবেন?'))d.ref.delete()};div.appendChild(x)}
       box.appendChild(div);
     });
     box.scrollTop=box.scrollHeight;
@@ -40,7 +40,7 @@ function startList(){
   el('cAdminList').style.display='block';el('cThread').style.display='none';openUid=null;
   unList=db.collection('chats').orderBy('lastTime','desc').limit(100).onSnapshot(snap=>{
     const box=el('cList');box.innerHTML='';let total=0;
-    if(snap.empty)box.innerHTML='<div class="cempty">এখনো কেউ মেসেজ করেনি</div>';
+    if(snap.empty)box.innerHTML='<div class="cempty">No messages</div>';
     snap.docs.forEach(d=>{
       const c=d.data({serverTimestamps:'estimate'});const un=c.unreadAdmin||0;total+=un;
       const it=document.createElement('div');it.className='citem'+(un?' un':'');
@@ -84,7 +84,7 @@ async function send(){
   if(isAdmin){meta.unreadUser=FV.increment(1);meta.unreadAdmin=0}
   else Object.assign(meta,{uid:me.uid,name:uname,email:me.email||'',unreadAdmin:FV.increment(1),unreadUser:0});
   batch.set(cref,meta,{merge:true});
-  try{await batch.commit();if(!isAdmin)mail(text)}catch(e){alert('মেসেজ যায়নি, আবার চেষ্টা করুন।');inp.value=text;console.warn(e)}
+  try{await batch.commit();if(!isAdmin)mail(text)}catch(e){alert('Sending failed , Try again later');inp.value=text;console.warn(e)}
 }
 el('cSend').onclick=send;
 el('cIn').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}});

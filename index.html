@@ -551,7 +551,7 @@ footer span{color:var(--gold)!important}
 <div class="ap-detail" id="apDetail"><div class="ap-detail-inner"><button class="ap-close" id="apClose" aria-label="Close">×</button><div id="apContent"></div></div></div>
 <div class="ap-detail" id="tpDetail"><div class="ap-detail-inner"><div class="tp-bar"><button class="tp-back" id="tpBack">← Back</button><button class="ap-close" id="tpClose" aria-label="Close">×</button></div><div id="tpContent"></div></div></div>
 <section id="chat" class="pg"><div class="wrap">
-  <div class="sec-h rv"><small>LIVE CHAT</small><h2>অ্যাডমিনের সাথে চ্যাট</h2></div>
+  <div class="sec-h rv"><small>LIVE CHAT</small><h2>Chat With Authority</h2></div>
 
   <!-- শুধু admin দেখবে: সব ইউজারের তালিকা -->
   <div id="cAdminList" style="display:none"><div id="cList"></div></div>
@@ -562,7 +562,7 @@ footer span{color:var(--gold)!important}
     <div id="cMsgs"></div>
     <div class="cform">
       <input id="cIn" maxlength="500" placeholder="মেসেজ লিখুন..." autocomplete="off">
-      <button id="cSend">পাঠান</button>
+      <button id="cSend">Send</button>
     </div>
   </div>
 </div></section>
@@ -585,10 +585,14 @@ const NOTICES=[
   {date:"2 oct 2026",title:"Anatomy & Physiology",text:"Thanks for yours priority"},  
   {date:"8 & 9 Jan 2027",title:"🎉 গৌরবের ৫০ বছর, স্মৃতির এক অনন্য অধ্যায়! 🎉",text:"আগামী ৮ ও ৯ জানুয়ারি ২০২৭ আমাদের প্রিয় কলেজের ৫০ বছর পূর্তি উপলক্ষে উদ্‌যাপিত হতে যাচ্ছে সুবর্ণজয়ন্তী উৎসব "}];  
   
-const CONTACT=[  
-  ["Authority","IHT ইসলামী ছাত্রশিবির"],["Phone","+880 1819-203208"],  
-  ["Email","tanvirahmedsifat8@gmail.com"],["Address"," আইএইচটি-শাখা , রাজশাহী-মহানগর"]  
-];  
+const CONTACT=[
+  ["Authority","IHT ছাত্রশিবির"],
+  ["Phone","<a href='tel:+8801819203208'>+880 1819-203208</a>"],
+  ["WhatsApp","<a href='https://wa.me/8801819203208' target='_blank' rel='noopener'>Message on WhatsApp</a>"],
+  ["Email","<a href='mailto:tanvira'>tanvira</a>"],
+  ["Facebook","<a href='https://facebook.com/আপনার-আইডি' target='_blank' rel='noopener'>Facebook Page</a>"],
+  ["Address","আইএইচটি-শাখা, রাজশাহী-মহানগর"]
+];
 const DEVELOPER="Tanvir Ahmed Sifat";  
 /* ADMIN: এই email দিয়ে লগইন করলে "Verify Students" মেনু দেখা যাবে (Firestore Rules এর email এর সাথে মিলতে হবে) */  
 const ADMIN_EMAIL="tanvirahmedsifat8@gmail.com";  
